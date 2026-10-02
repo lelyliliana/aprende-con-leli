@@ -103,3 +103,5 @@ h1 span { color: var(--color-accent); }
 .unit-list a:hover { border-color: var(--color-accent); color: var(--color-accent); background: var(--color-light); }
 .unit-list span { color: var(--color-accent); }
 @media (max-width: 680px) { .level { grid-template-columns: 1fr; gap: 10px; } .unit-list { grid-template-columns: 1fr; } }
+
+.architecture-flow { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin:20px 0; padding:18px; background:var(--color-light); border-left:3px solid var(--color-accent); border-radius:0 7px 7px 0; font-size:.88rem; color:var(--color-muted); }.architecture-flow strong{color:var(--color-primary);}
