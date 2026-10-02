@@ -186,6 +186,30 @@
     "prerequisites": [
       "algoritmos"
     ],
+    "next": [
+      "esp32"
+    ]
+  },
+  {
+    "id": "esp32",
+    "title": "ESP32 e Internet de las Cosas",
+    "area": "iot-robotica",
+    "level": "Intermedio",
+    "status": "available",
+    "sourceRepository": "lelyliliana/Curso-ESP32",
+    "technologies": [
+      "ESP32",
+      "Wi-Fi",
+      "MQTT",
+      "HTTP",
+      "BLE",
+      "IoT"
+    ],
+    "modules": 24,
+    "internalPath": "./cursos/esp32/",
+    "prerequisites": [
+      "arduino"
+    ],
     "next": []
   }
 ]
