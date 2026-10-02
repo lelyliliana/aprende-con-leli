@@ -39,6 +39,7 @@ function pathCard(path, coursesById) {
       <h3>${escapeHTML(path.title)}</h3>
       <p>${escapeHTML(path.description)}</p>
       <p class="sequence">${names.map(escapeHTML).join(" → ")}</p>
+      ${path.internalPath ? `<a class="text-link" href="${path.internalPath}">Ver ruta →</a>` : ""}
     </article>`;
 }
 
