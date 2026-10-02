@@ -75,7 +75,8 @@
       "MySQL",
       "JUnit",
       "k6"
-    ]
+    ],
+    "internalPath": "./cursos/backend-java/"
   },
   {
     "id": "fullstack",
