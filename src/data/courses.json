@@ -41,7 +41,8 @@
     "technologies": [
       "Java",
       "Maven"
-    ]
+    ],
+    "internalPath": "./cursos/java-fundamentos/"
   },
   {
     "id": "java-avanzado",
