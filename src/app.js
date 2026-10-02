@@ -85,14 +85,34 @@ async function init() {
       .join("");
 
     const coursesGrid = document.querySelector("#courses-grid");
-    const renderCourses = areaId => {
-      const selected = areaId ? availableCourses.filter(course => course.area === areaId) : availableCourses;
-      coursesGrid.innerHTML = selected.map(courseCard).join("");
-    };
-    renderCourses();
+    const search = document.querySelector("#course-search");
+    const status = document.querySelector("#catalog-status");
+    let activeArea = "";
 
+    const renderCourses = () => {
+      const term = search.value.trim().toLowerCase();
+      const selected = availableCourses.filter(course => {
+        const inArea = !activeArea || course.area === activeArea;
+        const haystack = [course.title, course.level, ...(course.technologies || [])].join(" ").toLowerCase();
+        return inArea && (!term || haystack.includes(term));
+      });
+      coursesGrid.innerHTML = selected.map(courseCard).join("");
+      status.textContent = `${selected.length} ${selected.length === 1 ? "curso encontrado" : "cursos encontrados"}`;
+    };
+
+    renderCourses();
+    search.addEventListener("input", renderCourses);
+    document.querySelector("#show-all").addEventListener("click", () => {
+      activeArea = "";
+      search.value = "";
+      renderCourses();
+    });
     document.querySelectorAll("[data-area]").forEach(link => {
-      link.addEventListener("click", () => renderCourses(link.dataset.area));
+      link.addEventListener("click", () => {
+        activeArea = link.dataset.area;
+        search.value = "";
+        renderCourses();
+      });
     });
   } catch (error) {
     console.error(error);
