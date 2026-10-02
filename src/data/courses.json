@@ -18,7 +18,7 @@
     "next": [
       "python",
       "java",
-      "frontend"
+      "react"
     ]
   },
   {
@@ -41,28 +41,6 @@
       "algoritmos"
     ],
     "next": []
-  },
-  {
-    "id": "frontend",
-    "title": "Desarrollo Frontend",
-    "area": "desarrollo-web",
-    "level": "Principiante a intermedio",
-    "status": "available",
-    "sourceRepository": "lelyliliana/Curso-Lenguaje-de-Programacion-2",
-    "technologies": [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "React",
-      "Vite"
-    ],
-    "internalPath": "./cursos/frontend/",
-    "prerequisites": [
-      "algoritmos"
-    ],
-    "next": [
-      "fullstack"
-    ]
   },
   {
     "id": "spring-boot",
@@ -104,7 +82,7 @@
     ],
     "internalPath": "./cursos/fullstack/",
     "prerequisites": [
-      "frontend",
+      "react",
       "spring-boot"
     ],
     "next": []
@@ -238,7 +216,30 @@
       "html-css"
     ],
     "next": [
-      "frontend"
+      "react"
+    ]
+  },
+  {
+    "id": "react",
+    "title": "React",
+    "area": "desarrollo-web",
+    "level": "Intermedio a avanzado",
+    "status": "available",
+    "sourceRepository": "lelyliliana/Curso-React",
+    "technologies": [
+      "React",
+      "JSX",
+      "Hooks",
+      "Routing",
+      "Testing"
+    ],
+    "modules": 35,
+    "internalPath": "./cursos/react/",
+    "prerequisites": [
+      "javascript"
+    ],
+    "next": [
+      "fullstack"
     ]
   }
 ]
