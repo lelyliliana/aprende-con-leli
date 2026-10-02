@@ -166,5 +166,26 @@
     "internalPath": "./cursos/git-github/",
     "prerequisites": [],
     "next": []
+  },
+  {
+    "id": "arduino",
+    "title": "Arduino desde cero",
+    "area": "iot-robotica",
+    "level": "Principiante a intermedio",
+    "status": "available",
+    "sourceRepository": "lelyliliana/Curso-Arduino",
+    "technologies": [
+      "Arduino",
+      "C++",
+      "Electrónica",
+      "Sensores",
+      "Actuadores"
+    ],
+    "modules": 24,
+    "internalPath": "./cursos/arduino/",
+    "prerequisites": [
+      "algoritmos"
+    ],
+    "next": []
   }
 ]
