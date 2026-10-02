@@ -1,7 +1,6 @@
 const DATA = {
   areas: "./src/data/areas.json",
-  courses: "./src/data/courses.json",
-  paths: "./src/data/paths.json"
+  courses: "./src/data/courses.json"
 };
 
 async function loadJSON(url) {
@@ -26,21 +25,6 @@ function areaCard(area, count) {
       <h3>${escapeHTML(area.name)}</h3>
       <p>${escapeHTML(area.description)}</p>
       <a class="text-link" href="#cursos" data-area="${escapeHTML(area.id)}">Ver cursos →</a>
-    </article>`;
-}
-
-function pathCard(path, coursesById) {
-  const names = path.courses
-    .map(id => coursesById.get(id)?.title)
-    .filter(Boolean);
-
-  return `
-    <article class="card path-card">
-      <span class="tag">Ruta</span>
-      <h3>${escapeHTML(path.title)}</h3>
-      <p>${escapeHTML(path.description)}</p>
-      <p class="sequence">${names.map(escapeHTML).join(" → ")}</p>
-      ${path.internalPath ? `<a class="text-link" href="${path.internalPath}">Ver ruta →</a>` : ""}
     </article>`;
 }
 
@@ -89,29 +73,23 @@ function courseCard(course, coursesById) {
         <div class="chips">${technologies}</div>
         ${relations ? `<div class="course-relations">${relations}</div>` : ""}
       </div>
-      <a class="text-link" href="${courseURL}"${course.internalPath ? "" : ' target="_blank" rel="noreferrer"'}>${linkLabel}</a>
+      <a class="text-link" href="${courseURL}"${course.internalPath ? "" : ' target="_blank" rel="noopener noreferrer"'}>${linkLabel}</a>
     </article>`;
 }
 
 async function init() {
   try {
-    const [areas, courses, paths] = await Promise.all([
+    const [areas, courses] = await Promise.all([
       loadJSON(DATA.areas),
-      loadJSON(DATA.courses),
-      loadJSON(DATA.paths)
+      loadJSON(DATA.courses)
     ]);
 
     const availableAreas = areas.filter(item => item.status === "available");
     const availableCourses = courses.filter(item => item.status === "available");
-    const availablePaths = paths.filter(item => item.status === "available");
     const coursesById = new Map(availableCourses.map(course => [course.id, course]));
 
     document.querySelector("#areas-grid").innerHTML = availableAreas
       .map(area => areaCard(area, availableCourses.filter(course => course.area === area.id).length))
-      .join("");
-
-    document.querySelector("#paths-grid").innerHTML = availablePaths
-      .map(path => pathCard(path, coursesById))
       .join("");
 
     const coursesGrid = document.querySelector("#courses-grid");
