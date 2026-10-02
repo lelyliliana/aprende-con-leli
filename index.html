@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aprende con Leli: rutas abiertas para aprender programación y tecnología haciendo.">
+  <title>Aprende con Leli | lelyliliana</title>
+  <link rel="stylesheet" href="./src/styles/main.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./">lelyliliana</a>
+    <nav aria-label="Navegación principal">
+      <a href="#rutas">Rutas</a>
+      <a href="#cursos">Cursos</a>
+      <a href="https://github.com/lelyliliana" target="_blank" rel="noreferrer">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Aprende con Leli</p>
+      <h1>Aprende tecnología construyendo cosas reales.</h1>
+      <p class="lead">Explora cursos y rutas de aprendizaje organizadas por lo que quieres lograr, no por asignaturas.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#rutas">Explorar rutas</a>
+        <a class="button secondary" href="#cursos">Ver cursos</a>
+      </div>
+    </section>
+
+    <section class="section" id="areas">
+      <div class="section-heading">
+        <p class="eyebrow">Explora</p>
+        <h2>¿Qué quieres aprender?</h2>
+      </div>
+      <div class="grid" id="areas-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="section alt" id="rutas">
+      <div class="section-heading">
+        <p class="eyebrow">Elige tu camino</p>
+        <h2>Rutas de aprendizaje</h2>
+        <p>No necesitas recorrer todo. Empieza donde estés y avanza hacia tu objetivo.</p>
+      </div>
+      <div class="grid" id="paths-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="section" id="cursos">
+      <div class="section-heading">
+        <p class="eyebrow">Aprende a tu ritmo</p>
+        <h2>Cursos disponibles</h2>
+      </div>
+      <div class="grid courses" id="courses-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="manifesto">
+      <p class="eyebrow">Aprende haciendo</p>
+      <h2>Lee. Ejecuta. Modifica. Construye.</h2>
+      <p>Los contenidos se conectan con ejemplos y código fuente para que puedas experimentar y convertir conceptos en proyectos.</p>
+    </section>
+  </main>
+
+  <footer>
+    <strong>lelyliliana</strong>
+    <span>Tecnología · Educación · Investigación</span>
+  </footer>
+
+  <script type="module" src="./src/app.js"></script>
+</body>
+</html>
