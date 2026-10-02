@@ -1,0 +1,50 @@
+[
+  {
+    "id": "empieza-programar",
+    "title": "Empieza a programar",
+    "status": "available",
+    "description": "Ruta para comenzar desde los fundamentos y avanzar hacia programación orientada a objetos.",
+    "courses": [
+      "java-fundamentos"
+    ]
+  },
+  {
+    "id": "frontend",
+    "title": "Crea aplicaciones web",
+    "status": "available",
+    "description": "Desde los fundamentos de la Web hasta interfaces modernas con React.",
+    "courses": [
+      "frontend"
+    ]
+  },
+  {
+    "id": "backend-java",
+    "title": "Crea APIs con Java",
+    "status": "available",
+    "description": "Ruta para desarrollar servicios web, persistencia, pruebas y observabilidad con Spring Boot.",
+    "courses": [
+      "java-fundamentos",
+      "backend-java"
+    ]
+  },
+  {
+    "id": "fullstack",
+    "title": "Construye una aplicación Full Stack",
+    "status": "available",
+    "description": "Integra frontend, backend, comunicación HTTP, persistencia y despliegue.",
+    "courses": [
+      "frontend",
+      "backend-java",
+      "fullstack"
+    ]
+  },
+  {
+    "id": "python",
+    "title": "Aprende Python",
+    "status": "available",
+    "description": "Recorrido progresivo desde los fundamentos hasta Python aplicado y profesional.",
+    "courses": [
+      "python"
+    ]
+  }
+]
