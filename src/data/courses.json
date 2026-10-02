@@ -1,5 +1,21 @@
 [
   {
+    "id": "algoritmos",
+    "title": "Algoritmos y lógica de programación",
+    "area": "programacion",
+    "level": "Principiante a avanzado",
+    "status": "available",
+    "sourceRepository": "lelyliliana/Curso-Algoritmos",
+    "technologies": [
+      "Pseudocódigo",
+      "Python",
+      "Java",
+      "JavaScript"
+    ],
+    "modules": 25,
+    "internalPath": "./cursos/algoritmos/"
+  },
+  {
     "id": "python",
     "title": "Python desde cero",
     "area": "programacion",
