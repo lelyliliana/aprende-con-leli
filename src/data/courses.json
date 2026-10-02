@@ -92,7 +92,8 @@
       "HTTP",
       "JSON",
       "JPA"
-    ]
+    ],
+    "internalPath": "./cursos/fullstack/"
   },
   {
     "id": "git-github",
