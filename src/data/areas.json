@@ -1,0 +1,32 @@
+[
+  {
+    "id": "programacion",
+    "name": "Programación",
+    "description": "Fundamentos, lenguajes y técnicas de programación.",
+    "status": "available"
+  },
+  {
+    "id": "desarrollo-web",
+    "name": "Desarrollo Web",
+    "description": "Frontend, backend, APIs y aplicaciones web.",
+    "status": "available"
+  },
+  {
+    "id": "datos-ia",
+    "name": "Datos e IA",
+    "description": "Análisis de datos e inteligencia artificial.",
+    "status": "planned"
+  },
+  {
+    "id": "iot-robotica",
+    "name": "IoT y Robótica",
+    "description": "Electrónica, dispositivos conectados y robótica.",
+    "status": "planned"
+  },
+  {
+    "id": "herramientas",
+    "name": "Herramientas para desarrolladores",
+    "description": "Git, GitHub, entornos y flujos de trabajo.",
+    "status": "available"
+  }
+]
