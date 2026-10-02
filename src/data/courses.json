@@ -13,7 +13,8 @@
       "NumPy",
       "pandas"
     ],
-    "modules": 22
+    "modules": 22,
+    "internalPath": "./cursos/python/"
   },
   {
     "id": "frontend",
