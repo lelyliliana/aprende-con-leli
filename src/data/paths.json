@@ -17,7 +17,9 @@
     "status": "available",
     "description": "Desde los fundamentos de la Web hasta interfaces modernas con React.",
     "courses": [
-      "frontend"
+      "html-css",
+      "javascript",
+      "react"
     ],
     "internalPath": "./rutas/frontend/"
   },
@@ -38,7 +40,7 @@
     "status": "available",
     "description": "Integra frontend, backend, comunicación HTTP, persistencia y despliegue.",
     "courses": [
-      "frontend",
+      "react",
       "spring-boot",
       "fullstack"
     ],
