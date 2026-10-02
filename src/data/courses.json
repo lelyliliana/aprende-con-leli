@@ -17,7 +17,7 @@
     "prerequisites": [],
     "next": [
       "python",
-      "java-fundamentos",
+      "java",
       "frontend"
     ]
   },
@@ -65,49 +65,6 @@
     ]
   },
   {
-    "id": "java-fundamentos",
-    "title": "Fundamentos y POO con Java",
-    "area": "programacion",
-    "level": "Principiante a intermedio",
-    "status": "available",
-    "sourceRepository": "lelyliliana/Curso-Desarrollo-de-Software-1",
-    "technologies": [
-      "Java",
-      "Maven"
-    ],
-    "internalPath": "./cursos/java-fundamentos/",
-    "prerequisites": [
-      "algoritmos"
-    ],
-    "next": [
-      "java-avanzado",
-      "backend-java"
-    ]
-  },
-  {
-    "id": "java-avanzado",
-    "title": "Java: concurrencia, redes y programación funcional",
-    "area": "programacion",
-    "level": "Intermedio",
-    "status": "available",
-    "sourceRepository": "lelyliliana/Curso-Lenguaje-de-Programacion-1",
-    "technologies": [
-      "Java",
-      "Maven",
-      "Threads",
-      "TCP",
-      "UDP",
-      "Streams"
-    ],
-    "internalPath": "./cursos/java-avanzado/",
-    "prerequisites": [
-      "java-fundamentos"
-    ],
-    "next": [
-      "backend-java"
-    ]
-  },
-  {
     "id": "backend-java",
     "title": "Backend y APIs con Java",
     "area": "desarrollo-web",
@@ -124,7 +81,7 @@
     ],
     "internalPath": "./cursos/backend-java/",
     "prerequisites": [
-      "java-fundamentos"
+      "java"
     ],
     "next": [
       "fullstack"
@@ -211,5 +168,30 @@
       "arduino"
     ],
     "next": []
+  },
+  {
+    "id": "java",
+    "title": "Java desde cero",
+    "area": "programacion",
+    "level": "Principiante a avanzado",
+    "status": "available",
+    "sourceRepository": "lelyliliana/Curso-Java",
+    "technologies": [
+      "Java 21",
+      "POO",
+      "Maven",
+      "JUnit",
+      "Mockito",
+      "Streams",
+      "Concurrencia"
+    ],
+    "modules": 31,
+    "internalPath": "./cursos/java/",
+    "prerequisites": [
+      "algoritmos"
+    ],
+    "next": [
+      "backend-java"
+    ]
   }
 ]
