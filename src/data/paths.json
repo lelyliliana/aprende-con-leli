@@ -6,7 +6,8 @@
     "description": "Ruta para comenzar desde los fundamentos y avanzar hacia programación orientada a objetos.",
     "courses": [
       "java-fundamentos"
-    ]
+    ],
+    "internalPath": "./rutas/empieza-programar/"
   },
   {
     "id": "frontend",
@@ -15,7 +16,8 @@
     "description": "Desde los fundamentos de la Web hasta interfaces modernas con React.",
     "courses": [
       "frontend"
-    ]
+    ],
+    "internalPath": "./rutas/frontend/"
   },
   {
     "id": "backend-java",
@@ -25,7 +27,8 @@
     "courses": [
       "java-fundamentos",
       "backend-java"
-    ]
+    ],
+    "internalPath": "./rutas/backend-java/"
   },
   {
     "id": "fullstack",
@@ -36,7 +39,8 @@
       "frontend",
       "backend-java",
       "fullstack"
-    ]
+    ],
+    "internalPath": "./rutas/fullstack/"
   },
   {
     "id": "python",
@@ -45,6 +49,7 @@
     "description": "Recorrido progresivo desde los fundamentos hasta Python aplicado y profesional.",
     "courses": [
       "python"
-    ]
+    ],
+    "internalPath": "./rutas/python/"
   }
 ]
