@@ -214,6 +214,30 @@
     "internalPath": "./cursos/html-css/",
     "prerequisites": [],
     "next": [
+      "javascript"
+    ]
+  },
+  {
+    "id": "javascript",
+    "title": "JavaScript desde cero",
+    "area": "desarrollo-web",
+    "level": "Principiante a avanzado",
+    "status": "available",
+    "sourceRepository": "lelyliliana/Curso-JavaScript",
+    "technologies": [
+      "JavaScript",
+      "DOM",
+      "Fetch",
+      "APIs",
+      "ES Modules",
+      "npm"
+    ],
+    "modules": 34,
+    "internalPath": "./cursos/javascript/",
+    "prerequisites": [
+      "html-css"
+    ],
+    "next": [
       "frontend"
     ]
   }
