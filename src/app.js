@@ -95,7 +95,8 @@ async function init() {
     const coursesGrid = document.querySelector("#courses-grid");
     const search = document.querySelector("#course-search");
     const status = document.querySelector("#catalog-status");
-    let activeArea = "";
+    const requestedArea = new URLSearchParams(window.location.search).get("area");
+    let activeArea = availableAreas.some(area => area.id === requestedArea) ? requestedArea : "";
 
     const renderCourses = () => {
       const term = search.value.trim().toLowerCase();
