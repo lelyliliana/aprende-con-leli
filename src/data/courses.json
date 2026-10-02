@@ -65,27 +65,28 @@
     ]
   },
   {
-    "id": "backend-java",
-    "title": "Backend y APIs con Java",
+    "id": "spring-boot",
+    "title": "Spring Boot y APIs REST",
     "area": "desarrollo-web",
     "level": "Intermedio a avanzado",
     "status": "available",
-    "sourceRepository": "lelyliliana/Curso-Lenguaje-de-Programacion-3",
+    "sourceRepository": "lelyliliana/Curso-Spring-Boot",
     "technologies": [
-      "Java",
+      "Java 21",
       "Spring Boot",
+      "REST",
       "JPA",
-      "MySQL",
       "JUnit",
-      "k6"
+      "Docker"
     ],
-    "internalPath": "./cursos/backend-java/",
+    "internalPath": "./cursos/spring-boot/",
     "prerequisites": [
       "java"
     ],
     "next": [
       "fullstack"
-    ]
+    ],
+    "modules": 31
   },
   {
     "id": "fullstack",
@@ -104,7 +105,7 @@
     "internalPath": "./cursos/fullstack/",
     "prerequisites": [
       "frontend",
-      "backend-java"
+      "spring-boot"
     ],
     "next": []
   },
@@ -191,7 +192,7 @@
       "algoritmos"
     ],
     "next": [
-      "backend-java"
+      "spring-boot"
     ]
   }
 ]
