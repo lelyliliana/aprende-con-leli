@@ -44,6 +44,28 @@ function pathCard(path, coursesById) {
     </article>`;
 }
 
+const COURSE_VISUALS = {
+  "algoritmos": ["01", "Lógica"],
+  "java": ["{ }", "Java"],
+  "spring-boot": ["API", "Spring"],
+  "html-css": ["</>", "HTML · CSS"],
+  "javascript": ["JS", "JavaScript"],
+  "react": ["⚛", "React"],
+  "bases-datos-sql": ["SQL", "PostgreSQL"],
+  "arduino": ["∞", "Arduino"],
+  "esp32": ["IoT", "ESP32"],
+  "python": ["Py", "Python"],
+  "fullstack": ["FS", "Full Stack"]
+};
+
+function courseVisual(course) {
+  const [symbol, label] = COURSE_VISUALS[course.id] || ["<>", course.area || "Curso"];
+  return `<div class="course-cover" aria-hidden="true">
+    <span class="course-cover-symbol">${escapeHTML(symbol)}</span>
+    <span class="course-cover-label">${escapeHTML(label)}</span>
+  </div>`;
+}
+
 function courseCard(course, coursesById) {
   const repoURL = `https://github.com/${course.sourceRepository}`;
   const courseURL = course.internalPath || repoURL;
@@ -60,7 +82,8 @@ function courseCard(course, coursesById) {
 
   return `
     <article class="card course-card">
-      <div>
+      ${courseVisual(course)}
+      <div class="course-card-body">
         <span class="tag">${escapeHTML(course.level)}</span>
         <h3>${escapeHTML(course.title)}</h3>
         <div class="chips">${technologies}</div>
