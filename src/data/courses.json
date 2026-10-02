@@ -29,7 +29,8 @@
       "JavaScript",
       "React",
       "Vite"
-    ]
+    ],
+    "internalPath": "./cursos/frontend/"
   },
   {
     "id": "java-fundamentos",
