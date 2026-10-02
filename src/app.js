@@ -44,6 +44,8 @@ function pathCard(path, coursesById) {
 
 function courseCard(course) {
   const repoURL = `https://github.com/${course.sourceRepository}`;
+  const courseURL = course.internalPath || repoURL;
+  const linkLabel = course.internalPath ? "Ver curso →" : "Explorar material →";
   const technologies = (course.technologies || [])
     .map(item => `<span class="chip">${escapeHTML(item)}</span>`)
     .join("");
@@ -55,7 +57,7 @@ function courseCard(course) {
         <h3>${escapeHTML(course.title)}</h3>
         <div class="chips">${technologies}</div>
       </div>
-      <a class="text-link" href="${repoURL}" target="_blank" rel="noreferrer">Explorar material →</a>
+      <a class="text-link" href="${courseURL}"${course.internalPath ? "" : ' target="_blank" rel="noreferrer"'}>${linkLabel}</a>
     </article>`;
 }
 
