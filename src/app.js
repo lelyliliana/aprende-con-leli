@@ -25,6 +25,7 @@ function areaCard(area, count) {
       <span class="count">${count} ${count === 1 ? "curso" : "cursos"}</span>
       <h3>${escapeHTML(area.name)}</h3>
       <p>${escapeHTML(area.description)}</p>
+      <a class="text-link" href="#cursos" data-area="${escapeHTML(area.id)}">Ver cursos →</a>
     </article>`;
 }
 
@@ -83,9 +84,16 @@ async function init() {
       .map(path => pathCard(path, coursesById))
       .join("");
 
-    document.querySelector("#courses-grid").innerHTML = availableCourses
-      .map(courseCard)
-      .join("");
+    const coursesGrid = document.querySelector("#courses-grid");
+    const renderCourses = areaId => {
+      const selected = areaId ? availableCourses.filter(course => course.area === areaId) : availableCourses;
+      coursesGrid.innerHTML = selected.map(courseCard).join("");
+    };
+    renderCourses();
+
+    document.querySelectorAll("[data-area]").forEach(link => {
+      link.addEventListener("click", () => renderCourses(link.dataset.area));
+    });
   } catch (error) {
     console.error(error);
     document.querySelector("main").insertAdjacentHTML(
