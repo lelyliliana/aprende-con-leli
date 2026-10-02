@@ -28,7 +28,7 @@
     "description": "Ruta para desarrollar servicios web, persistencia, pruebas y observabilidad con Spring Boot.",
     "courses": [
       "java",
-      "backend-java"
+      "spring-boot"
     ],
     "internalPath": "./rutas/backend-java/"
   },
@@ -39,7 +39,7 @@
     "description": "Integra frontend, backend, comunicación HTTP, persistencia y despliegue.",
     "courses": [
       "frontend",
-      "backend-java",
+      "spring-boot",
       "fullstack"
     ],
     "internalPath": "./rutas/fullstack/"
