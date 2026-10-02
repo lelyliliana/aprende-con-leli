@@ -194,5 +194,27 @@
     "next": [
       "spring-boot"
     ]
+  },
+  {
+    "id": "html-css",
+    "title": "HTML y CSS desde cero",
+    "area": "desarrollo-web",
+    "level": "Principiante a intermedio",
+    "status": "available",
+    "sourceRepository": "lelyliliana/Curso-HTML-CSS",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "Flexbox",
+      "Grid",
+      "Responsive",
+      "Accesibilidad"
+    ],
+    "modules": 33,
+    "internalPath": "./cursos/html-css/",
+    "prerequisites": [],
+    "next": [
+      "frontend"
+    ]
   }
 ]
