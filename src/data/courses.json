@@ -59,7 +59,8 @@
       "TCP",
       "UDP",
       "Streams"
-    ]
+    ],
+    "internalPath": "./cursos/java-avanzado/"
   },
   {
     "id": "backend-java",
