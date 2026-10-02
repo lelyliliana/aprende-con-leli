@@ -59,7 +59,8 @@
     ],
     "internalPath": "./cursos/spring-boot/",
     "prerequisites": [
-      "java"
+      "java",
+      "bases-datos-sql"
     ],
     "next": [
       "fullstack"
@@ -240,6 +241,27 @@
     ],
     "next": [
       "fullstack"
+    ]
+  },
+  {
+    "id": "bases-datos-sql",
+    "title": "Bases de Datos y SQL desde cero",
+    "area": "programacion",
+    "level": "Principiante a intermedio",
+    "status": "available",
+    "sourceRepository": "lelyliliana/Curso-Bases-de-Datos-SQL",
+    "technologies": [
+      "SQL",
+      "PostgreSQL",
+      "Modelo relacional",
+      "Índices",
+      "Transacciones"
+    ],
+    "modules": 33,
+    "internalPath": "./cursos/bases-datos-sql/",
+    "prerequisites": [],
+    "next": [
+      "spring-boot"
     ]
   }
 ]
