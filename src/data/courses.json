@@ -1,0 +1,105 @@
+[
+  {
+    "id": "python",
+    "title": "Python desde cero",
+    "area": "programacion",
+    "level": "Principiante a avanzado",
+    "status": "available",
+    "sourceRepository": "lelyliliana/Curso-Python",
+    "technologies": [
+      "Python",
+      "SQLite",
+      "FastAPI",
+      "NumPy",
+      "pandas"
+    ],
+    "modules": 22
+  },
+  {
+    "id": "frontend",
+    "title": "Desarrollo Frontend",
+    "area": "desarrollo-web",
+    "level": "Principiante a intermedio",
+    "status": "available",
+    "sourceRepository": "lelyliliana/Curso-Lenguaje-de-Programacion-2",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Vite"
+    ]
+  },
+  {
+    "id": "java-fundamentos",
+    "title": "Fundamentos y POO con Java",
+    "area": "programacion",
+    "level": "Principiante a intermedio",
+    "status": "available",
+    "sourceRepository": "lelyliliana/Curso-Desarrollo-de-Software-1",
+    "technologies": [
+      "Java",
+      "Maven"
+    ]
+  },
+  {
+    "id": "java-avanzado",
+    "title": "Java: concurrencia, redes y programación funcional",
+    "area": "programacion",
+    "level": "Intermedio",
+    "status": "available",
+    "sourceRepository": "lelyliliana/Curso-Lenguaje-de-Programacion-1",
+    "technologies": [
+      "Java",
+      "Maven",
+      "Threads",
+      "TCP",
+      "UDP",
+      "Streams"
+    ]
+  },
+  {
+    "id": "backend-java",
+    "title": "Backend y APIs con Java",
+    "area": "desarrollo-web",
+    "level": "Intermedio a avanzado",
+    "status": "available",
+    "sourceRepository": "lelyliliana/Curso-Lenguaje-de-Programacion-3",
+    "technologies": [
+      "Java",
+      "Spring Boot",
+      "JPA",
+      "MySQL",
+      "JUnit",
+      "k6"
+    ]
+  },
+  {
+    "id": "fullstack",
+    "title": "Desarrollo Full Stack",
+    "area": "desarrollo-web",
+    "level": "Intermedio",
+    "status": "available",
+    "sourceRepository": "lelyliliana/Curso-Desarrollo-de-Software-2",
+    "technologies": [
+      "React",
+      "Spring Boot",
+      "HTTP",
+      "JSON",
+      "JPA"
+    ]
+  },
+  {
+    "id": "git-github",
+    "title": "Git, GitHub y VS Code",
+    "area": "herramientas",
+    "level": "Principiante",
+    "status": "available",
+    "sourceRepository": "lelyliliana/Guia-Git-GitHub-VSCode",
+    "technologies": [
+      "Git",
+      "GitHub",
+      "Visual Studio Code"
+    ]
+  }
+]
