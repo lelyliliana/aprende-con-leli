@@ -13,7 +13,13 @@
       "JavaScript"
     ],
     "modules": 25,
-    "internalPath": "./cursos/algoritmos/"
+    "internalPath": "./cursos/algoritmos/",
+    "prerequisites": [],
+    "next": [
+      "python",
+      "java-fundamentos",
+      "frontend"
+    ]
   },
   {
     "id": "python",
@@ -30,7 +36,11 @@
       "pandas"
     ],
     "modules": 22,
-    "internalPath": "./cursos/python/"
+    "internalPath": "./cursos/python/",
+    "prerequisites": [
+      "algoritmos"
+    ],
+    "next": []
   },
   {
     "id": "frontend",
@@ -46,7 +56,13 @@
       "React",
       "Vite"
     ],
-    "internalPath": "./cursos/frontend/"
+    "internalPath": "./cursos/frontend/",
+    "prerequisites": [
+      "algoritmos"
+    ],
+    "next": [
+      "fullstack"
+    ]
   },
   {
     "id": "java-fundamentos",
@@ -59,7 +75,14 @@
       "Java",
       "Maven"
     ],
-    "internalPath": "./cursos/java-fundamentos/"
+    "internalPath": "./cursos/java-fundamentos/",
+    "prerequisites": [
+      "algoritmos"
+    ],
+    "next": [
+      "java-avanzado",
+      "backend-java"
+    ]
   },
   {
     "id": "java-avanzado",
@@ -76,7 +99,13 @@
       "UDP",
       "Streams"
     ],
-    "internalPath": "./cursos/java-avanzado/"
+    "internalPath": "./cursos/java-avanzado/",
+    "prerequisites": [
+      "java-fundamentos"
+    ],
+    "next": [
+      "backend-java"
+    ]
   },
   {
     "id": "backend-java",
@@ -93,7 +122,13 @@
       "JUnit",
       "k6"
     ],
-    "internalPath": "./cursos/backend-java/"
+    "internalPath": "./cursos/backend-java/",
+    "prerequisites": [
+      "java-fundamentos"
+    ],
+    "next": [
+      "fullstack"
+    ]
   },
   {
     "id": "fullstack",
@@ -109,7 +144,12 @@
       "JSON",
       "JPA"
     ],
-    "internalPath": "./cursos/fullstack/"
+    "internalPath": "./cursos/fullstack/",
+    "prerequisites": [
+      "frontend",
+      "backend-java"
+    ],
+    "next": []
   },
   {
     "id": "git-github",
@@ -123,6 +163,8 @@
       "GitHub",
       "Visual Studio Code"
     ],
-    "internalPath": "./cursos/git-github/"
+    "internalPath": "./cursos/git-github/",
+    "prerequisites": [],
+    "next": []
   }
 ]
