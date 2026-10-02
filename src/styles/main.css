@@ -105,3 +105,18 @@ h1 span { color: var(--color-accent); }
 @media (max-width: 680px) { .level { grid-template-columns: 1fr; gap: 10px; } .unit-list { grid-template-columns: 1fr; } }
 
 .architecture-flow { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin:20px 0; padding:18px; background:var(--color-light); border-left:3px solid var(--color-accent); border-radius:0 7px 7px 0; font-size:.88rem; color:var(--color-muted); }.architecture-flow strong{color:var(--color-primary);}
+
+.breadcrumbs { padding-top: 28px; font-size: .82rem; color: var(--color-muted); }
+.breadcrumbs a { color: var(--color-accent); }
+.breadcrumbs a:hover { text-decoration: underline; }
+.area-card { cursor: pointer; }
+.area-card .text-link { margin-top: auto; }
+@media (max-width: 680px) {
+  .site-header { position: static; }
+  .header-inner { flex-direction: column; align-items: flex-start; gap: 4px; padding-block: 14px; }
+  .brand span { display: block; }
+  .navigation { width: 100%; margin-left: 0; overflow-x: auto; gap: 18px; padding-bottom: 2px; scrollbar-width: none; }
+  .navigation::-webkit-scrollbar { display: none; }
+  .navigation a, .navigation a:first-child { display: block; white-space: nowrap; font-size: .82rem; }
+  .intro-strip .container { flex-direction: column; align-items: flex-start; gap: 4px; }
+}
