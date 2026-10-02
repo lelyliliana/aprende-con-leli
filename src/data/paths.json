@@ -53,5 +53,17 @@
       "python"
     ],
     "internalPath": "./rutas/python/"
+  },
+  {
+    "id": "electronica-iot",
+    "title": "Empieza con electrónica e IoT",
+    "status": "available",
+    "description": "Desde circuitos y Arduino hasta dispositivos ESP32 conectados mediante Wi-Fi, HTTP y MQTT.",
+    "courses": [
+      "algoritmos",
+      "arduino",
+      "esp32"
+    ],
+    "internalPath": "./rutas/electronica-iot/"
   }
 ]
