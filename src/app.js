@@ -44,13 +44,19 @@ function pathCard(path, coursesById) {
     </article>`;
 }
 
-function courseCard(course) {
+function courseCard(course, coursesById) {
   const repoURL = `https://github.com/${course.sourceRepository}`;
   const courseURL = course.internalPath || repoURL;
   const linkLabel = course.internalPath ? "Ver curso →" : "Explorar material →";
   const technologies = (course.technologies || [])
     .map(item => `<span class="chip">${escapeHTML(item)}</span>`)
     .join("");
+  const prerequisiteNames = (course.prerequisites || []).map(id => coursesById.get(id)?.title).filter(Boolean);
+  const nextNames = (course.next || []).map(id => coursesById.get(id)?.title).filter(Boolean);
+  const relations = [
+    prerequisiteNames.length ? `<span><strong>Antes:</strong> ${prerequisiteNames.map(escapeHTML).join(", ")}</span>` : "",
+    nextNames.length ? `<span><strong>Después:</strong> ${nextNames.map(escapeHTML).join(", ")}</span>` : ""
+  ].filter(Boolean).join("");
 
   return `
     <article class="card course-card">
@@ -58,6 +64,7 @@ function courseCard(course) {
         <span class="tag">${escapeHTML(course.level)}</span>
         <h3>${escapeHTML(course.title)}</h3>
         <div class="chips">${technologies}</div>
+        ${relations ? `<div class="course-relations">${relations}</div>` : ""}
       </div>
       <a class="text-link" href="${courseURL}"${course.internalPath ? "" : ' target="_blank" rel="noreferrer"'}>${linkLabel}</a>
     </article>`;
@@ -96,7 +103,7 @@ async function init() {
         const haystack = [course.title, course.level, ...(course.technologies || [])].join(" ").toLowerCase();
         return inArea && (!term || haystack.includes(term));
       });
-      coursesGrid.innerHTML = selected.map(courseCard).join("");
+      coursesGrid.innerHTML = selected.map(course => courseCard(course, coursesById)).join("");
       status.textContent = `${selected.length} ${selected.length === 1 ? "curso encontrado" : "cursos encontrados"}`;
     };
 
