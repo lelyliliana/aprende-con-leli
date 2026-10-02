@@ -3,8 +3,10 @@
     "id": "empieza-programar",
     "title": "Empieza a programar",
     "status": "available",
-    "description": "Ruta para comenzar desde los fundamentos y avanzar hacia programación orientada a objetos.",
+    "description": "Ruta para comenzar con pensamiento algorítmico, aprender a programar y avanzar hacia programación orientada a objetos.",
     "courses": [
+      "algoritmos",
+      "git-github",
       "java-fundamentos"
     ],
     "internalPath": "./rutas/empieza-programar/"
