@@ -7,7 +7,7 @@
     "courses": [
       "algoritmos",
       "git-github",
-      "java-fundamentos"
+      "java"
     ],
     "internalPath": "./rutas/empieza-programar/"
   },
@@ -27,7 +27,7 @@
     "status": "available",
     "description": "Ruta para desarrollar servicios web, persistencia, pruebas y observabilidad con Spring Boot.",
     "courses": [
-      "java-fundamentos",
+      "java",
       "backend-java"
     ],
     "internalPath": "./rutas/backend-java/"
