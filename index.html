@@ -64,6 +64,13 @@
         <h2>Cursos disponibles</h2>
         <div class="heading-rule" aria-hidden="true"></div>
       </div>
+      <div class="catalog-tools">
+        <label class="search-box">Buscar en los cursos
+          <input id="course-search" type="search" placeholder="Python, Java, React, algoritmos..." autocomplete="off">
+        </label>
+        <button class="button button-secondary" id="show-all" type="button">Mostrar todos</button>
+      </div>
+      <p class="catalog-status" id="catalog-status" aria-live="polite"></p>
       <div class="grid" id="courses-grid" aria-live="polite"></div>
     </section>
 
