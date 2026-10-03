@@ -4,7 +4,7 @@ const DATA = {
 };
 
 async function loadJSON(url) {
-  const response = await fetch(url);
+  const response = await fetch(url, { cache: "no-store" });
   if (!response.ok) throw new Error(`No fue posible cargar ${url}`);
   return response.json();
 }
