@@ -22,6 +22,25 @@
     ]
   },
   {
+    "id": "c",
+    "title": "C desde cero",
+    "area": "programacion",
+    "level": "Principiante a intermedio",
+    "status": "available",
+    "sourceRepository": "lelyliliana/Curso-C",
+    "technologies": [
+      "C17",
+      "Punteros",
+      "Memoria dinámica",
+      "Archivos",
+      "GNU make"
+    ],
+    "modules": 26,
+    "internalPath": "./cursos/c/",
+    "prerequisites": [],
+    "next": []
+  },
+  {
     "id": "python",
     "title": "Python desde cero",
     "area": "programacion",

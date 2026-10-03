@@ -38,6 +38,7 @@ const COURSE_VISUALS = {
   "bases-datos-sql": ["SQL", "PostgreSQL"],
   "arduino": ["∞", "Arduino"],
   "esp32": ["IoT", "ESP32"],
+  "c": ["C", "C17"],
   "python": ["Py", "Python"],
   "fullstack": ["FS", "Full Stack"]
 };
