@@ -194,6 +194,28 @@
     ]
   },
   {
+    "id": "estructuras-datos",
+    "title": "Estructuras de Datos desde los fundamentos",
+    "area": "programacion",
+    "level": "Fundamentos a avanzado",
+    "status": "available",
+    "sourceRepository": "lelyliliana/Curso-Estructura-de-Datos",
+    "technologies": [
+      "Java 21",
+      "Listas",
+      "Árboles",
+      "Hashing",
+      "Grafos"
+    ],
+    "modules": 6,
+    "internalPath": "./cursos/estructuras-datos/",
+    "prerequisites": [
+      "algoritmos",
+      "java"
+    ],
+    "next": []
+  },
+  {
     "id": "html-css",
     "title": "HTML y CSS desde cero",
     "area": "desarrollo-web",

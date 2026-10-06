@@ -29,6 +29,7 @@ function areaCard(area, count) {
 }
 
 const COURSE_VISUALS = {
+  "estructuras-datos": ["ED", "Estructuras"],
   "algoritmos": ["01", "Lógica"],
   "java": ["{ }", "Java"],
   "spring-boot": ["API", "Spring"],
