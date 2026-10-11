@@ -59,7 +59,9 @@
     "prerequisites": [
       "algoritmos"
     ],
-    "next": []
+    "next": [
+      "inteligencia-artificial"
+    ]
   },
   {
     "id": "spring-boot",
@@ -304,5 +306,28 @@
     "next": [
       "spring-boot"
     ]
+  },
+  {
+    "id": "inteligencia-artificial",
+    "title": "Inteligencia Artificial: fundamentos y aplicaciones",
+    "area": "datos-ia",
+    "level": "Fundamentos a avanzado",
+    "status": "available",
+    "sourceRepository": "lelyliliana/Curso-Inteligencia-Artificial",
+    "technologies": [
+      "Python",
+      "IA simbólica",
+      "Aprendizaje automático",
+      "PyTorch",
+      "IA generativa",
+      "RAG",
+      "Agentes"
+    ],
+    "modules": 36,
+    "internalPath": "./cursos/inteligencia-artificial/",
+    "prerequisites": [
+      "python"
+    ],
+    "next": []
   }
 ]
