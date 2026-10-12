@@ -350,5 +350,28 @@
     "next": [
       "fullstack"
     ]
+  },
+  {
+    "id": "backend-java",
+    "title": "Backend y APIs con Java",
+    "area": "desarrollo-web",
+    "level": "Intermedio",
+    "status": "available",
+    "sourceRepository": "lelyliliana/aprende-con-leli",
+    "technologies": [
+      "Java 21",
+      "Spring Boot",
+      "REST",
+      "JPA",
+      "Spring Security"
+    ],
+    "modules": 9,
+    "internalPath": "./cursos/backend-java/",
+    "prerequisites": [
+      "java"
+    ],
+    "next": [
+      "fullstack"
+    ]
   }
 ]
