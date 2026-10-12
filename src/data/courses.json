@@ -329,5 +329,26 @@
       "python"
     ],
     "next": []
+  },
+  {
+    "id": "frontend",
+    "title": "Desarrollo Frontend",
+    "area": "desarrollo-web",
+    "level": "Principiante a intermedio",
+    "status": "available",
+    "sourceRepository": "lelyliliana/aprende-con-leli",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Local Storage"
+    ],
+    "modules": 8,
+    "internalPath": "./cursos/frontend/",
+    "prerequisites": [],
+    "next": [
+      "fullstack"
+    ]
   }
 ]
