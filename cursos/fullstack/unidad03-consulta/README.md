@@ -70,3 +70,11 @@ Puedes modificar la consulta, explicar el proxy, recuperar la interfaz tras dete
 - [Volver al índice](../README.md)
 - [Soluciones (después de intentar)](SOLUCIONES.md)
 - [Siguiente unidad: Escrituras, validación y persistencia](../unidad04-escrituras/README.md)
+
+---
+
+### ¿Necesitas apoyo con este tema?
+
+Si te bloqueaste con la práctica, necesitas revisar tu entorno o adaptar lo aprendido a tu proyecto, podemos trabajarlo en una sesión personalizada.
+
+[**Solicitar asesoría para este tema por WhatsApp**](https://wa.me/573103618296?text=Hola%2C%20Leli.%20Estoy%20estudiando%20React%20conectado%20a%20una%20API%20del%20curso%20Desarrollo%20Full%20Stack%20%28https%3A%2F%2Fgithub.com%2Flelyliliana%2Faprende-con-leli%2Fblob%2Fmain%2Fcursos%2Ffullstack%2Funidad03-consulta%2FREADME.md%29%20y%20necesito%20una%20asesor%C3%ADa%20personalizada.%20Mi%20duda%20es%E2%80%A6)
