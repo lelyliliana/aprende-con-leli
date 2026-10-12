@@ -53,6 +53,6 @@ Ruta pública para relacionar frontend, backend y persistencia. Consulta los tem
 
 Lee, ejecuta el ejemplo del curso enlazado y modifica un comportamiento. Comprueba el resultado antes de avanzar. Sigue las instrucciones de ejecución del repositorio correspondiente (las aplicaciones no se ejecutan desde esta página).
 
-Esta primera revisión organiza las fuentes públicas. La guía de integración define el contrato y las verificaciones; el laboratorio integrado React + Spring Boot queda como siguiente ampliación.
+El [laboratorio integrado de catálogo de productos](laboratorio/README.md) conecta React con el laboratorio público de Spring Boot y H2. Incluye CRUD, búsqueda, paginación, manejo de errores, conflictos de versión, pruebas y persistencia entre reinicios. Empieza allí si ya conoces los fundamentos.
 
 **Autora:** Leli Liliana Díaz Izquierdo.

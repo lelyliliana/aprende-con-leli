@@ -1,0 +1,7 @@
+{
+  "repository": "https://github.com/lelyliliana/Curso-Spring-Boot.git",
+  "commit": "28abba405067d59f8670c144443727772ee5db17",
+  "project": "laboratorios/jpa-productos",
+  "java": 21,
+  "port": 8080
+}

@@ -37,6 +37,6 @@ No uses `mode: 'no-cors'` para ocultar un error: una respuesta opaca no permite 
 | Detener API | Se muestra un error recuperable |
 | Volver a iniciarla | La interfaz permite reintentar |
 
-Esta guía prepara la integración. El código del cliente React conectado a este laboratorio y su configuración conjunta se incorporarán en la siguiente ampliación del curso.
+El [laboratorio integrado](../laboratorio/README.md) incluye el cliente React, el proxy de desarrollo, pruebas de interfaz y una comprobación contra la API real. Sigue su recorrido desde la instalación hasta CRUD, errores y persistencia entre reinicios.
 
 [Continuar: nube y producción](nube.md)
