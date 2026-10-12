@@ -1,58 +1,49 @@
 # Desarrollo Full Stack
 
+**[Comenzar: Unidad 00. Punto de entrada y forma de estudiar](unidad00-ruta/README.md)**
+
 [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/fullstack/)
 
-Ruta pública para relacionar frontend, backend y persistencia. Consulta los temas de otros cursos cuando los necesites; puedes pasar directamente a la siguiente etapa si ya puedes realizar sus comprobaciones.
+Curso integrador de nivel intermedio para construir y explicar una aplicación con React, Spring Boot y base de datos. Incluye diagnóstico de entrada, prácticas por etapas, ejercicios, soluciones, pruebas y un proyecto propio.
 
-## 1. Fundamentos web
+Los conceptos de cada tecnología se consultan en los cursos públicos de Aprende con Leli cuando hacen falta. Si aún no dominas los requisitos, el diagnóstico te dirige al tema correspondiente. Este recorrido no depende de cursos universitarios ni vuelve a enseñar todos los lenguajes desde cero.
 
-- [Cliente, servidor, HTTP y JSON (práctica propia)](https://github.com/lelyliliana/aprende-con-leli/blob/main/cursos/fullstack/material/fundamentos-web.md)
+## Qué podrás hacer
 
-## 2. Interfaces web
+- Definir un contrato HTTP y relacionarlo con campos de interfaz.
+- Consultar datos reales y representar carga, vacío y error.
+- Crear, editar y eliminar con validación y conflictos de versión.
+- Demostrar persistencia y distinguir memoria de archivo.
+- Probar comportamientos y contratos con evidencia de su alcance.
+- Generar artefactos y entregar un proyecto reproducible.
 
-- [HTML: estructura y semántica](https://github.com/lelyliliana/Curso-HTML-CSS/blob/main/unidad05-semantica/README.md)
-- [Formularios HTML](https://github.com/lelyliliana/Curso-HTML-CSS/blob/main/unidad07-formularios/README.md)
-- [CSS: cascada y estilos](https://github.com/lelyliliana/Curso-HTML-CSS/blob/main/unidad09-css-cascada/README.md)
-- [Diseño responsivo](https://github.com/lelyliliana/Curso-HTML-CSS/blob/main/unidad19-responsive/README.md)
-- [DOM y eventos](https://github.com/lelyliliana/Curso-JavaScript/blob/main/unidad12-dom/README.md)
-- [Promesas y async/await](https://github.com/lelyliliana/Curso-JavaScript/blob/main/unidad19-async-await/README.md)
-- [Fetch y HTTP](https://github.com/lelyliliana/Curso-JavaScript/blob/main/unidad20-fetch/README.md)
+## Recorrido
 
-## 3. Frontend con React
-
-- [Entorno y ejecución de los laboratorios](https://github.com/lelyliliana/Curso-React/blob/main/docs/ENTORNO.md)
-- [Componentes y props](https://github.com/lelyliliana/Curso-React/blob/main/unidad03-componentes/README.md)
-- [Estado e interactividad](https://github.com/lelyliliana/Curso-React/blob/main/unidad07-usestate/README.md)
-- [Formularios](https://github.com/lelyliliana/Curso-React/blob/main/unidad10-formularios/README.md)
-- [Datos remotos](https://github.com/lelyliliana/Curso-React/blob/main/unidad14-datos-remotos/README.md)
-- [Carga, error y lista vacía](https://github.com/lelyliliana/Curso-React/blob/main/unidad15-estados-remotos/README.md)
-- [Pruebas de componentes](https://github.com/lelyliliana/Curso-React/blob/main/unidad24-pruebas/README.md)
-
-## 4. Backend con Spring Boot
-
-- [Java: requisito previo](https://github.com/lelyliliana/Curso-Java)
-- [Entorno y primer proyecto](https://github.com/lelyliliana/Curso-Spring-Boot/blob/main/unidad00-entorno/README.md)
-- [Controllers y endpoints](https://github.com/lelyliliana/Curso-Spring-Boot/blob/main/unidad05-controllers/README.md)
-- [DTO y contrato de entrada](https://github.com/lelyliliana/Curso-Spring-Boot/blob/main/unidad07-dto/README.md)
-- [Validación y errores](https://github.com/lelyliliana/Curso-Spring-Boot/blob/main/unidad08-validacion/README.md)
-- [Persistencia con JPA](https://github.com/lelyliliana/Curso-Spring-Boot/blob/main/unidad11-jpa/README.md)
-- [Laboratorio ejecutable de persistencia](https://github.com/lelyliliana/Curso-Spring-Boot/blob/main/laboratorios/jpa-productos/README.md)
-- [Pruebas de controllers](https://github.com/lelyliliana/Curso-Spring-Boot/blob/main/unidad19-mockmvc/README.md)
-- [APIs externas](https://github.com/lelyliliana/Curso-Spring-Boot/blob/main/unidad15-apis-externas/README.md)
-
-## 5. Integración y preparación para producción
-
-- [Contrato, conexión y comprobaciones (guía propia)](https://github.com/lelyliliana/aprende-con-leli/blob/main/cursos/fullstack/material/integracion.md)
-- [Nube y responsabilidades (guía propia)](https://github.com/lelyliliana/aprende-con-leli/blob/main/cursos/fullstack/material/nube.md)
-- [React: configuración de la API](https://github.com/lelyliliana/Curso-React/blob/main/unidad31-configuracion/README.md)
-- [React: build y publicación](https://github.com/lelyliliana/Curso-React/blob/main/unidad32-build/README.md)
-- [Spring Boot: configuración de producción](https://github.com/lelyliliana/Curso-Spring-Boot/blob/main/unidad27-produccion/README.md)
-- [Spring Boot: contenedores](https://github.com/lelyliliana/Curso-Spring-Boot/blob/main/unidad28-docker/README.md)
+- [ ] [Unidad 00. Punto de entrada y forma de estudiar](unidad00-ruta/README.md)
+- [ ] [Unidad 01. Comunicación HTTP y contrato](unidad01-http/README.md)
+- [ ] [Unidad 02. Interfaz y recorrido del usuario](unidad02-interfaz/README.md)
+- [ ] [Unidad 03. React conectado a una API](unidad03-consulta/README.md)
+- [ ] [Unidad 04. Escrituras, validación y persistencia](unidad04-escrituras/README.md)
+- [ ] [Unidad 05. Errores, concurrencia y pruebas](unidad05-calidad/README.md)
+- [ ] [Unidad 06. Build, configuración y entrega](unidad06-entrega/README.md)
+- [ ] [Unidad 07. Proyecto propio y evaluación](unidad07-proyecto/README.md)
 
 ## Cómo estudiar
 
-Lee, ejecuta el ejemplo del curso enlazado y modifica un comportamiento. Comprueba el resultado antes de avanzar. Sigue las instrucciones de ejecución del repositorio correspondiente (las aplicaciones no se ejecutan desde esta página).
+Predice, ejecuta, observa, modifica y explica. Cada unidad indica objetivos, conocimientos previos, práctica, ejercicios, reto, errores frecuentes y comprobaciones de cierre. Abre las soluciones después de tu intento. Usa Unidad anterior, Siguiente unidad y Volver al índice para navegar sin conocer GitHub.
 
-El [laboratorio integrado de catálogo de productos](laboratorio/README.md) conecta React con el laboratorio público de Spring Boot y H2. Incluye CRUD, búsqueda, paginación, manejo de errores, conflictos de versión, pruebas y persistencia entre reinicios. Empieza allí si ya conoces los fundamentos.
+## Laboratorio progresivo
+
+El [laboratorio de catálogo](laboratorio/README.md) usa la misma API y base en tres etapas ejecutables: consulta, creación y catálogo completo. Empieza por las etapas pequeñas; vuelve al código completo para comparar decisiones después de intentar tus cambios.
+
+La interfaz se ejecuta localmente después de instalar las herramientas. La publicación del curso entrega fuentes e instrucciones, no una API abierta para guardar datos reales.
+
+## Proyecto y consulta
+
+- [Proyecto propio y criterios de autoevaluación](unidad07-proyecto/README.md).
+- [Plantilla de entrega](docs/PLANTILLA_PROYECTO.md).
+- [Mapa de temas públicos para consultar cuando haga falta](RECURSOS.md).
+- [Arquitectura y contrato del laboratorio](laboratorio/docs/ARQUITECTURA.md).
+- [Verificación y límites](laboratorio/docs/VERIFICACION.md).
 
 **Autora:** Leli Liliana Díaz Izquierdo.

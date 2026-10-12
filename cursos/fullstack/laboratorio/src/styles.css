@@ -37,3 +37,7 @@ footer { padding: 2rem 0; color: #506671; font-size: .85rem; }
 .modal { background: white; border-radius: 12px; width: min(460px, 100%); padding: 1.5rem; }
 .solo-lectores { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
 @media (max-width: 850px) { .columnas { grid-template-columns: 1fr; } .tarjeta { padding: 1rem; } }
+
+.etapas { display: flex; flex-wrap: wrap; gap: .5rem; padding: 1rem 0; }
+.etapas a { color: #184457; padding: .45rem .65rem; border: 1px solid #8ca4ae; border-radius: 6px; text-decoration: none; }
+.etapas a[aria-current="page"] { background: #153e4c; color: white; }

@@ -1,4 +1,4 @@
-# Verificación del laboratorio 1.0
+# Verificación del laboratorio 1.1
 
 [Volver al laboratorio](../README.md)
 
@@ -8,7 +8,7 @@ Comprobación realizada el 11 de octubre de 2026 (Colombia), con el backend regi
 
 | Comprobación | Resultado |
 |---|---|
-| Pruebas del cliente (Vitest y Testing Library) | 17 correctas |
+| Pruebas del cliente (Vitest y Testing Library) | 22 correctas |
 | Pruebas del laboratorio público JPA (Maven verify) | 7 correctas |
 | Build del cliente | Correcto |
 | Peticiones reales a través del proxy de desarrollo | Correctas |
@@ -19,6 +19,8 @@ Comprobación realizada el 11 de octubre de 2026 (Colombia), con el backend regi
 | DELETE sin cuerpo (204) y consulta posterior (404) | Correctos |
 | API detenida | Proxy devuelve error; no inventa datos |
 | H2 en archivo tras dos reinicios del backend | Producto conservado |
+
+La versión 1.1 añade etapas ejecutables de consulta y creación y cinco pruebas específicas: lectura paginada, vacío/error recuperable, POST con tipos correctos y nueva consulta, conservación de formulario ante duplicado y recuperación de categorías.
 
 Las pruebas de interfaz incluyen formulario, tipos numéricos, versión de actualización, conservación de campos, validación, confirmación de eliminación, reintento, lista vacía, cancelación de carga, bloqueo de doble envío, paginación tras eliminar y foco del diálogo.
 

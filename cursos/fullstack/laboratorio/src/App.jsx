@@ -4,7 +4,7 @@ import { actualizarProducto, crearProducto, eliminarProducto, listarCategorias, 
 const vacio = { sku: '', nombre: '', precio: '', categoriaId: '' };
 const moneda = new Intl.NumberFormat('es-CO', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
-export default function App() {
+export default function App({ navigation = null }) {
   const [productos, setProductos] = useState([]);
   const [categorias, setCategorias] = useState([]);
   const [paginacion, setPaginacion] = useState({ total: 0, paginas: 0 });
@@ -114,6 +114,7 @@ export default function App() {
   const controlesFondo = pendienteEliminar ? { inert: true } : {};
   return <>
     <div {...controlesFondo}>
+      {navigation}
       <header className="cabecera"><div className="contenedor"><p className="marca">APRENDE CON LELI · LABORATORIO FULL STACK</p><h1>Catálogo de productos</h1><p>Consulta, crea y actualiza productos con una API y una base de datos.</p></div></header>
       <main className="contenedor">
         <aside className="nota">Práctica local con datos ficticios. Al reiniciar el perfil H2 de demostración, vuelven los datos iniciales.</aside>

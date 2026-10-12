@@ -75,7 +75,19 @@ Si ya descargaste Aprende con Leli, actualiza tu copia sin perder cambios propio
 
 Abre `http://127.0.0.1:5173/`. Debes ver cuatro productos y el formulario de creación. No abras `index.html` haciendo doble clic: Vite procesa JSX y reenvía las peticiones a la API.
 
+## Recorrido por etapas
+
+Con los mismos procesos iniciados, utiliza la navegación superior para avanzar:
+
+1. Abre `http://127.0.0.1:5173/?etapa=1`: consulta y observa carga, datos, vacío y error. Lee [Consulta.jsx](src/etapas/Consulta.jsx) y realiza la [Unidad 03](../unidad03-consulta/README.md).
+2. Abre `http://127.0.0.1:5173/?etapa=2`: crea un registro y sigue la confirmación y la nueva consulta. Lee [Creacion.jsx](src/etapas/Creacion.jsx) y realiza la [Unidad 04](../unidad04-escrituras/README.md).
+3. Abre `http://127.0.0.1:5173/?etapa=3`: integra edición, eliminación, búsqueda, paginación y conflictos.
+
+Las primeras etapas muestran hasta cinco productos de la primera página y el total. Si un producto recién creado queda fuera de ella, búscalo en la etapa 3. Las tres etapas comparten API y base; no son catálogos separados.
+
 ## Paso 4. Completar el recorrido CRUD
+
+Abre la etapa 3 antes de este recorrido.
 
 1. Crea un producto con SKU `FS-01`, nombre `Cuaderno de práctica`, precio `25.50` y categoría `Libros`. Comprueba el mensaje de confirmación y el registro en el catálogo.
 2. Busca `Cuaderno`. Observa la petición en Red (Network) y su respuesta paginada.
@@ -137,7 +149,9 @@ Intenta los [retos](docs/RETOS.md) y después compara con las [soluciones razona
 
 | Archivo | Responsabilidad |
 |---|---|
-| src/App.jsx | Estados, formulario, catálogo y acciones del usuario |
+| src/etapas/Consulta.jsx | Primera etapa: lectura y estados remotos |
+| src/etapas/Creacion.jsx | Segunda etapa: formulario, POST y nueva consulta |
+| src/App.jsx | Tercera etapa: catálogo completo y acciones del usuario |
 | src/api.js | Contrato HTTP, errores y tiempos de espera |
 | vite.config.js | Proxy y puertos de práctica |
 | src/App.test.jsx | Comportamientos de la interfaz |
