@@ -179,3 +179,8 @@ h1 span { color: var(--color-accent); }
   .course-card-body{padding:22px 22px 6px}
   .course-card > .text-link{margin:18px 22px 24px}
 }
+
+.course-assistance { margin-top: 28px; padding: 20px 24px; border: 1px solid var(--color-border); border-radius: 10px; background: var(--color-light); }
+.course-assistance h2 { font-size: 1.1rem; margin: 0 0 8px; color: var(--color-primary); }
+.course-assistance p { max-width: 75ch; margin: 0 0 16px; font-size: .95rem; }
+.course-assistance .button { white-space: normal; text-align: center; }
