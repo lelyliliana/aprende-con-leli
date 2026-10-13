@@ -245,3 +245,9 @@ h1 span { color: var(--color-accent); }
   .theme-toggle { grid-column: 2; grid-row: 1; }
   .navigation { grid-column: 1 / -1; grid-row: 2; min-width: 0; }
 }
+
+/* Contacto para consultar y coordinar una asesoría. */
+.consultation-link { display: inline-flex; align-items: center; justify-content: center; gap: 10px; }
+.whatsapp-icon { display: block; flex: 0 0 20px; width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.consultation-link > span { min-width: 0; }
+.contact-links .consultation-link { justify-content: flex-start; gap: 12px; }
