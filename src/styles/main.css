@@ -8,6 +8,9 @@
   --color-muted: #5d6b7a;
   --color-border: #dce6f1;
   --color-footer: #082844;
+  --color-button: #0969da;
+  --color-button-hover: #0554ad;
+  --color-manifesto: #0b2f5b;
   --header-height: 88px;
   color-scheme: light;
 }
@@ -34,8 +37,8 @@ h1 span { color: var(--color-accent); }
 .lead { max-width: 680px; font-size: 1.1rem; color: var(--color-muted); line-height: 1.85; margin-bottom: 30px; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 .button { min-height: 48px; padding: 12px 20px; display: inline-flex; align-items: center; justify-content: center; border-radius: 7px; font-size: .875rem; font-weight: 600; border: 1px solid transparent; }
-.button-primary { background: var(--color-accent); color: #fff; }
-.button-primary:hover { background: var(--color-accent-dark); }
+.button-primary { background: var(--color-button); color: #fff; }
+.button-primary:hover { background: var(--color-button-hover); }
 .button-secondary { border-color: var(--color-border); color: var(--color-primary); }
 .button-secondary:hover { background: var(--color-light); border-color: var(--color-accent); }
 .intro-strip { background: var(--color-light); border-block: 1px solid var(--color-border); }
@@ -60,7 +63,7 @@ h1 span { color: var(--color-accent); }
 .chip { padding: 5px 9px; border-radius: 5px; background: var(--color-light); color: var(--color-primary); font-size: .75rem; }
 .text-link { margin-top: 28px; color: var(--color-accent); font-size: .875rem; font-weight: 600; }
 .text-link:hover { text-decoration: underline; }
-.manifesto-wrap { background: var(--color-primary); color: #fff; }
+.manifesto-wrap { background: var(--color-manifesto); color: #fff; }
 .manifesto { padding-block: 72px; max-width: 850px; }
 .manifesto h2 { color: #fff; }
 .manifesto .eyebrow { color: #a8d0ff; }
@@ -144,7 +147,7 @@ h1 span { color: var(--color-accent); }
   padding: 22px 26px;
   background:
     radial-gradient(circle at 82% 22%, rgba(9,105,218,.18) 0 12%, transparent 13%),
-    linear-gradient(135deg, var(--color-light), #fff 62%);
+    linear-gradient(135deg, var(--color-light), var(--color-background) 62%);
   border-bottom: 1px solid var(--color-border);
 }
 .course-cover::before,
@@ -184,3 +187,61 @@ h1 span { color: var(--color-accent); }
 .course-assistance h2 { font-size: 1.1rem; margin: 0 0 8px; color: var(--color-primary); }
 .course-assistance p { max-width: 75ch; margin: 0 0 16px; font-size: .95rem; }
 .course-assistance .button { white-space: normal; text-align: center; }
+
+/* Tema compartido por el catálogo, las fichas y las rutas. */
+:root[data-theme="dark"] {
+  --color-primary: #e5efff;
+  --color-accent: #83baff;
+  --color-accent-dark: #b4d5ff;
+  --color-light: #182b42;
+  --color-background: #101c2b;
+  --color-text: #e1e9f3;
+  --color-muted: #b0bfd0;
+  --color-border: #354960;
+  --color-footer: #091421;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+  --color-primary: #e5efff;
+  --color-accent: #83baff;
+  --color-accent-dark: #b4d5ff;
+  --color-light: #182b42;
+  --color-background: #101c2b;
+  --color-text: #e1e9f3;
+  --color-muted: #b0bfd0;
+  --color-border: #354960;
+  --color-footer: #091421;
+  color-scheme: dark;
+  }
+}
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 7px;
+  background: var(--color-background);
+  color: var(--color-primary);
+  cursor: pointer;
+}
+.theme-toggle[hidden] { display: none; }
+.theme-toggle:hover { background: var(--color-light); border-color: var(--color-accent); }
+.theme-toggle svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.theme-sun { display: none; }
+:root[data-theme="dark"] .theme-moon { display: none; }
+:root[data-theme="dark"] .theme-sun { display: block; }
+@media (max-width: 900px) {
+  .header-inner { gap: 16px; }
+  .brand strong { font-size: .9rem; }
+}
+@media (max-width: 680px) {
+  .header-inner { display: grid; grid-template-columns: minmax(0, 1fr) 44px; gap: 6px 12px; }
+  .brand { min-width: 0; overflow-wrap: anywhere; }
+  .theme-toggle { grid-column: 2; grid-row: 1; }
+  .navigation { grid-column: 1 / -1; grid-row: 2; min-width: 0; }
+}
