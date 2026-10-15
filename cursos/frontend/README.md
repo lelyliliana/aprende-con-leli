@@ -19,6 +19,9 @@ Ruta pública para construir un plan de estudio que evoluciona de HTML y CSS a J
 
 ## Cómo estudiar
 
+Cada unidad incluye una **Construcción paso a paso** y soluciones desarrolladas. Empieza con las [cinco versiones ejecutables](laboratorio/pasos/README.md): HTML, CSS, JavaScript en memoria, guardado y React. Después compara con la aplicación completa.
+
+
 Lee la explicación, predice el resultado, ejecuta la etapa, modifica un comportamiento y explica lo observado. Cada unidad incluye ejercicios, reto, soluciones, errores frecuentes y una comprobación de cierre. Si un concepto es nuevo, sigue el tema público enlazado antes de continuar.
 
 ## Proyecto progresivo
@@ -26,6 +29,8 @@ Lee la explicación, predice el resultado, ejecuta la etapa, modifica un comport
 El [laboratorio](laboratorio/README.md) comparte reglas y almacenamiento entre JavaScript y React. La primera etapa permite observar estructura/diseño; la segunda activa tareas locales; la tercera organiza la interfaz con componentes y añade una práctica HTTP.
 
 GitHub muestra fuentes e instrucciones. Para ejecutar las tres etapas necesitas iniciar el entorno local. El plan guarda información solo en tu navegador; no ofrece cuentas ni sincronización remota.
+
+Consulta las [fuentes técnicas](FUENTES_TECNICAS.md) y el [registro de cambios del curso](VERSION.md).
 
 **Autora:** Leli Liliana Díaz Izquierdo.
 

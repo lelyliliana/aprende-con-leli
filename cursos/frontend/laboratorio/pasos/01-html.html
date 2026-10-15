@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paso 1. Estructura sin estilos · Construcción Frontend</title>
+  
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al plan</a>
+  <nav class="contenedor pasos" aria-label="Construcción paso a paso"><a href="./01-html.html" aria-current="page">1. HTML</a><a href="./02-css.html">2. CSS</a><a href="./03-memoria.html">3. JavaScript</a><a href="./04-guardado.html">4. JavaScript</a><a href="./05-react.html">5. React</a></nav>
+  <header class="contenedor"><p class="etiqueta">APRENDE CON LELI · CONSTRUCCIÓN FRONTEND</p><h1>Mi plan de estudio</h1><p>Paso 1. Estructura sin estilos</p></header>
+  <main id="contenido" class="contenedor">
+    <section class="tarjeta" aria-labelledby="plan-title">
+      <h2 id="plan-title">¿Qué vas a estudiar?</h2>
+      <p>Primero definimos la estructura. Estos controles todavía no agregan tareas.</p>
+      <form>
+        <label for="titulo">Título de la tarea</label>
+        <p id="ayuda">Ejemplo: practicar formularios HTML.</p>
+        <div class="acciones"><input id="titulo" aria-describedby="ayuda" disabled><button disabled>Agregar tarea</button></div>
+      </form>
+      <ul><li><span>Repasar HTML</span><strong>Pendiente</strong></li></ul>
+    </section></main>
+  <footer class="contenedor"><a href="./index.html">Ver el recorrido</a> · <a href="../react.html">Ver la aplicación completa</a></footer>
+  
+</body>
+</html>

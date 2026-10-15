@@ -1,5 +1,7 @@
 # Unidad 05. Del DOM a componentes React
 
+**[Construcción paso a paso: Pasar a React conservando reglas y significado](DESARROLLO.md)**. Compara versiones ejecutables, sigue el recorrido y después resuelve los ejercicios.
+
 [Volver al índice](../README.md)
 
 ## Objetivos

@@ -4,6 +4,10 @@
 
 Un proyecto, tres etapas: estructura/diseño, tareas con JavaScript y componentes React. JavaScript y React usan las mismas funciones de dominio y la misma clave de almacenamiento, sin cursos universitarios.
 
+## Construcción antes de la integración
+
+Sigue el [recorrido de cinco versiones pequeñas](pasos/README.md) y los desarrollos de cada unidad. Una vez iniciado dev, abre http://127.0.0.1:5174/pasos/. Las versiones guardadas de esa construcción usan una clave distinta de la aplicación principal.
+
 ## Paso 1. Preparar
 
 Necesitas Node.js 24 LTS desde 24.15.0, npm y Git. Si necesitas instalar o verificar, consulta [entorno del curso público React](https://github.com/lelyliliana/Curso-React/blob/main/docs/ENTORNO.md).
@@ -53,7 +57,7 @@ npm run preview
 
 Preview sirve en http://127.0.0.1:4174/. Abre las tres páginas por sus nombres y repite el recorrido. Los datos de 5174 no aparecen automáticamente en 4174 porque cambia el origen.
 
-Con dev iniciado, también puedes ejecutar `npm run verify:http`: comprueba las tres páginas y las respuestas del endpoint.
+Con dev iniciado, también puedes ejecutar `npm run verify:http`: comprueba las nueve páginas y las respuestas del endpoint.
 
 ## Almacenamiento y recuperación
 
@@ -62,6 +66,8 @@ La clave propia es leli.frontend.plan.v1 y guarda version 1 con tareas. El plan 
 Un contenido inválido se conserva y las modificaciones se bloquean hasta corregirlo. Para una prueba con datos ficticios, copia el valor en las herramientas de desarrollo antes de repararlo; actúa únicamente sobre esa clave y recarga. No borres todo el almacenamiento del sitio.
 
 Si guardar falla, el cambio continúa en memoria y se muestra un aviso. No es respaldo remoto ni una cuenta; otro navegador u origen tiene otro almacenamiento. Usa datos ficticios de práctica.
+
+Para verificar el servidor preview con el mismo script utiliza `npm run verify:http -- http://127.0.0.1:4174`.
 
 ## Estructura
 
@@ -77,7 +83,7 @@ Si guardar falla, el cambio continúa en memoria y se muestra un aviso. No es re
 
 ## Publicación y límites
 
-El build genera tres páginas. Las tareas locales funcionan en alojamiento estático. La API de recursos existe solo mientras dev o preview sirven: para conservar esa vista publicada necesitas una API en el destino o declarar una variante estática. No publiques dist esperando que incluya el proceso Vite.
+El build genera nueve páginas: tres principales y seis del recorrido de construcción, contando su índice. Las tareas locales funcionan en alojamiento estático. La API de recursos existe solo mientras dev o preview sirven: para conservar esa vista publicada necesitas una API en el destino o declarar una variante estática. No publiques dist esperando que incluya el proceso Vite.
 
 No se publicó una aplicación con cuentas o sincronización remota. La publicación del curso entrega código e instrucciones. Sigue la unidad 07 para entregar un proyecto propio y registra sus límites.
 

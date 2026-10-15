@@ -1,5 +1,7 @@
 # Unidad 07. Pruebas, publicación y proyecto propio
 
+**[Construcción paso a paso: Verificar una entrega que otra persona pueda ejecutar](DESARROLLO.md)**. Compara versiones ejecutables, sigue el recorrido y después resuelve los ejercicios.
+
 [Volver al índice](../README.md)
 
 ## Objetivos
@@ -10,7 +12,7 @@ Verificar y entregar un proyecto propio con alcance claro.
 
 Ejecuta npm test y npm run build desde laboratorio. Las pruebas comprueban reglas, almacenamiento, componentes y transferencia entre JavaScript y React. Las comprobaciones de HTTP evalúan el endpoint local. Ninguna sustituye por sí sola la lectura y el teclado en un navegador real.
 
-Generar dist prepara tres páginas y sus assets. Ejecuta npm run preview para revisar ese resultado. Las tareas locales pueden funcionar en alojamiento estático; el endpoint de recursos requiere un servidor disponible. Documenta esa diferencia antes de publicar una copia.
+Generar dist prepara tres páginas principales y seis del recorrido de construcción (contando su índice), junto con sus assets. Ejecuta npm run preview para revisar ese resultado. Las tareas locales pueden funcionar en alojamiento estático; el endpoint de recursos requiere un servidor disponible. Documenta esa diferencia antes de publicar una copia.
 
 Si necesitas profundizar, consulta [pruebas React](https://github.com/lelyliliana/Curso-React/blob/main/unidad24-pruebas/README.md) y [build](https://github.com/lelyliliana/Curso-React/blob/main/unidad32-build/README.md).
 

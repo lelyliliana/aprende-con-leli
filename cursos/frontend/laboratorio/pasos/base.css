@@ -1,0 +1,43 @@
+:root {
+  font-family: system-ui, sans-serif;
+  color: #19323b;
+  background: #f2f6f5;
+  line-height: 1.6;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+.contenedor { width: min(54rem, 92%); margin-inline: auto; }
+header { padding-block: 1.5rem; }
+h1 { font-size: clamp(2rem, 6vw, 3rem); margin-block: .25rem; line-height: 1.15; }
+h2 { font-size: 1.3rem; }
+.etiqueta { color: #285c5d; font-size: .8rem; font-weight: 700; letter-spacing: .08em; }
+a { color: #155558; }
+.pasos { display: flex; flex-wrap: wrap; gap: .5rem; padding-block: 1rem; }
+.pasos a { padding: .4rem .65rem; border: 1px solid #8ea9aa; border-radius: .4rem; text-decoration: none; }
+.pasos [aria-current] { background: #164d50; color: white; }
+.tarjeta { padding: 1.4rem; margin-block: 1rem 2rem; border: 1px solid #cedddd; border-radius: .8rem; background: white; }
+label { font-weight: 600; }
+form > label, label[for=filtro] { display: block; }
+.acciones { display: flex; gap: .6rem; margin-block: .5rem; }
+input:not([type=checkbox]), select { width: 100%; min-width: 0; padding: .65rem; font: inherit; border: 1px solid #91abaa; border-radius: .4rem; }
+input[type=checkbox] { width: 1.2rem; height: 1.2rem; flex: 0 0 auto; accent-color: #164d50; }
+button { padding: .6rem .8rem; font: inherit; color: white; background: #164d50; border: 1px solid #164d50; border-radius: .4rem; cursor: pointer; }
+button.secundario { background: white; color: #164d50; }
+button:disabled, input:disabled { opacity: .55; cursor: default; }
+ul { list-style: none; padding: 0; }
+li { display: flex; align-items: center; justify-content: space-between; gap: .75rem; padding-block: .8rem; border-bottom: 1px solid #dbe5e3; }
+li label { display: flex; align-items: center; gap: .7rem; min-width: 0; overflow-wrap: anywhere; }
+li > span { min-width: 0; overflow-wrap: anywhere; }
+li button { flex-shrink: 0; }
+input:checked + span { text-decoration: line-through; }
+[role=status] { min-height: 1.5rem; color: #185931; }
+.error { color: #871a23; background: #fff1ef; padding: .6rem; }
+.error:empty { display: none; }
+:focus-visible { outline: 3px solid #bf6812; outline-offset: 3px; }
+footer { padding-block: 1rem 2rem; }
+.saltar { position: absolute; left: 1rem; top: -5rem; padding: .5rem; background: white; }
+.saltar:focus { top: .5rem; }
+@media (max-width: 500px) {
+  .acciones { flex-direction: column; }
+  .tarjeta { padding: 1rem; }
+}

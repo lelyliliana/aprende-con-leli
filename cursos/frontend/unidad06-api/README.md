@@ -1,5 +1,7 @@
 # Unidad 06. Consulta de datos y estados remotos
 
+**[Construcción paso a paso: Construir una consulta que distinga datos, vacío y error](DESARROLLO.md)**. Compara versiones ejecutables, sigue el recorrido y después resuelve los ejercicios.
+
 [Volver al índice](../README.md)
 
 ## Objetivos

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paso 4. Conservar tareas al recargar · Construcción Frontend</title>
+  <link rel="stylesheet" href="./base.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al plan</a>
+  <nav class="contenedor pasos" aria-label="Construcción paso a paso"><a href="./01-html.html">1. HTML</a><a href="./02-css.html">2. CSS</a><a href="./03-memoria.html">3. JavaScript</a><a href="./04-guardado.html" aria-current="page">4. JavaScript</a><a href="./05-react.html">5. React</a></nav>
+  <header class="contenedor"><p class="etiqueta">APRENDE CON LELI · CONSTRUCCIÓN FRONTEND</p><h1>Mi plan de estudio</h1><p>Paso 4. Conservar tareas al recargar</p></header>
+  <main id="contenido" class="contenedor">
+    <section class="tarjeta" aria-labelledby="plan-title" data-plan="guardado">
+      <h2 id="plan-title">Organiza tus tareas</h2>
+      <p>Esta práctica guarda en este navegador. Comparte sus tareas con el paso 5; utiliza una clave distinta de la aplicación completa.</p>
+      <p id="error" class="error" role="alert"></p>
+      <form>
+        <label for="titulo">Título de la tarea</label>
+        <p id="ayuda">De 1 a 80 unidades de longitud de texto. Hasta 100 tareas.</p>
+        <div class="acciones"><input id="titulo" aria-describedby="ayuda" required maxlength="80"><button>Agregar tarea</button></div>
+      </form>
+      <p id="mensaje" role="status"></p>
+      <p id="resumen"></p>
+      <label for="filtro">Mostrar</label>
+      <select id="filtro"><option value="todas">Todas</option><option value="pendientes">Pendientes</option><option value="completas">Completas</option></select>
+      <ul id="lista"></ul>
+    </section></main>
+  <footer class="contenedor"><a href="./index.html">Ver el recorrido</a> · <a href="../react.html">Ver la aplicación completa</a></footer>
+  <script type="module" src="./04-guardado.js"></script>
+</body>
+</html>

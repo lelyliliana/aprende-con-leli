@@ -1,5 +1,7 @@
 # Unidad 00. Ruta y entorno
 
+**[Construcción paso a paso: Preparar un proyecto y elegir un punto de partida](DESARROLLO.md)**. Compara versiones ejecutables, sigue el recorrido y después resuelve los ejercicios.
+
 [Volver al índice](../README.md)
 
 ## Objetivos
@@ -12,7 +14,7 @@ El proyecto es un plan de estudio con tareas: agregar, marcar como completa, eli
 
 No se exige haber cursado una asignatura universitaria. Si partes desde cero, consulta los temas públicos enlazados en cada unidad, realiza sus ejercicios y vuelve al proyecto. Si ya puedes resolver la comprobación, puedes pasar al siguiente punto.
 
-Para practicar necesitas Git, Node.js 24 LTS desde 24.15.0, npm, un editor y un navegador. Sigue el [arranque del laboratorio](../laboratorio/README.md). No se requiere Java, una base de datos externa, Docker ni servicios de pago.
+Para practicar necesitas Node.js 24 LTS desde 24.15.0, npm, un editor y un navegador. Git es opcional para descargar y actualizar; también puedes usar el ZIP del repositorio. Sigue el [arranque del laboratorio](../laboratorio/README.md). No se requiere Java, una base de datos externa, Docker ni servicios de pago.
 
 Comprueba con node --version y npm --version. Conserva abierta la terminal de npm run dev; detenerla deja de servir la aplicación. Las instrucciones se escriben para una terminal en Windows, macOS o Linux, pero la verificación registrada se ejecutó en Linux.
 

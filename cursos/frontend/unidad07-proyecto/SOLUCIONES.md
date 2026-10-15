@@ -1,9 +1,23 @@
-# Soluciones de la Unidad 07
+# Soluciones desarrolladas de la Unidad 07
 
-[Volver a la unidad](README.md)
+[Unidad](README.md) · [Construcción paso a paso](DESARROLLO.md)
 
-Intenta los ejercicios primero.
+Intenta primero los ejercicios. Compara el razonamiento y las condiciones, además del resultado visible.
 
-Una prueba de dominio comprueba reglas sin interfaz; una de componente evalúa interacción con respuestas controladas; HTTP prueba el servicio que escucha. dist incluye interfaz y assets, no el proceso Vite. La entrega debe justificar su mejora y declarar el comportamiento de datos locales y del endpoint de recursos.
+## Ejercicio 1. Alcance de las pruebas
 
-Para el reto, comprueba que tu propuesta satisface las condiciones de la unidad y explica una decisión. Puede haber varias implementaciones válidas; no basta cambiar la apariencia sin comprobar comportamiento.
+Dominio evalúa reglas; componente/DOM comprueba interacción en entorno controlado; HTTP consulta un servidor real escuchando. Ninguna por separado demuestra la apariencia y el teclado de todos los navegadores. Elige evidencia adecuada a la afirmación.
+
+## Ejercicio 2. Build y preview
+
+El build genera nueve páginas: tres principales, índice de construcción y cinco pasos. Preview permite servir ese resultado con el middleware de práctica. Un alojamiento estático de dist no lleva ese proceso de API. Comprueba ese límite antes de anunciar que todas las funciones remotas quedaron publicadas.
+
+## Ejercicio 3. README reproducible
+
+Indica requisitos de Node, carpeta laboratorio, npm ci, arranque, URLs, pruebas y build. Explica las dos claves de práctica y que no hay sincronización entre pestañas/equipos. Describe recuperación de una clave inválida sin borrar todo Storage del origen.
+
+## Reto desarrollado: búsqueda que conserva datos
+
+Requisito: filtrar por título sin cambiar el plan. Aceptación: crear A y B, buscar solo A, limpiar búsqueda y conservar ambos con sus ids y estados. Un fallo controlado consiste en asignar la vista filtrada a tareas: la prueba debe detectar pérdida de B. Restaura el modelo completo y verifica otra vez. Cambiar colores no demostraría este comportamiento.
+
+[Volver al desarrollo](DESARROLLO.md) · [Volver a la unidad](README.md)
