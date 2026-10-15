@@ -5,7 +5,7 @@
 #include <vector>
 
 int main() {
-    std::map<std::string, int> stock{{"S01", 5}, {"S02", 0}};
+    std::map<std::string, int> stock{ {"S01", 5}, {"S02", 0}};
     std::cout << "Paso 1: claves=" << stock.size() << '\n';
     const auto cero{stock.find("S02")};
     if (cero == stock.end()) { return 1; }

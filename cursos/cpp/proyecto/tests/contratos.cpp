@@ -52,7 +52,7 @@ int main() {
     rechaza([&vacia] { inventario::validar(vacia); });
     const std::vector<inventario::Producto> demasiados(10001, {"A", 0, 0});
     rechaza([&demasiados] { inventario::validar(demasiados); });
-    const std::vector<inventario::Producto> limites{{"A", 100000, 100000000}, {"B", 0, 0}};
+    const std::vector<inventario::Producto> limites{ {"A", 100000, 100000000}, {"B", 0, 0}};
     exigir(inventario::total(limites) == 10000000000000LL);
 
     std::filesystem::create_directories("salidas/contratos");
