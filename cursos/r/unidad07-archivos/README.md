@@ -30,7 +30,7 @@ El segundo ejemplo comprueba que no existan problemas en el CSV correcto. En la 
 
 ## Excel se interpreta por hoja y región
 
-Un libro puede contener varias hojas y encabezados que no empiezan en la primera fila. Consulta excel_sheets antes de elegir sheet. El ejemplo usa datasets.xlsx incluido en readxl y lee cinco filas de la hoja iris; el estudiante no necesita aportar un archivo propio.
+Un libro puede contener varias hojas y encabezados que no empiezan en la primera fila. Consulta excel_sheets antes de elegir sheet. El ejemplo usa datasets.xlsx incluido en readxl y lee cinco filas de la hoja mtcars; el estudiante no necesita aportar un archivo propio. La hoja mtcars está incluida tanto en la versión comprobada de readxl como en las versiones recientes del paquete; consulta siempre los nombres reales antes de leer un libro.
 
 Si un identificador tiene ceros iniciales, revisa su tipo de origen y lectura. Los formatos visuales de una celda no necesariamente representan el valor subyacente como texto. Evita concluir que una conversión conserva información solo porque se ve igual en pantalla.
 
@@ -88,9 +88,9 @@ d <- readr::read_csv("datos/encuesta.csv", na = "", show_col_types = FALSE,
 stopifnot(nrow(readr::problems(d)) == 0, nrow(d) == 36)
 libro <- readxl::readxl_example("datasets.xlsx")
 hojas <- readxl::excel_sheets(libro)
-excel <- readxl::read_excel(libro, sheet = "iris", n_max = 5)
-stopifnot("iris" %in% hojas, nrow(excel) == 5, ncol(excel) == 5)
-cat("readr: sin problemas de lectura; Excel iris: 5 filas y 5 columnas
+excel <- readxl::read_excel(libro, sheet = "mtcars", n_max = 5)
+stopifnot("mtcars" %in% hojas, nrow(excel) == 5, ncol(excel) == 11)
+cat("readr: sin problemas de lectura; Excel mtcars: 5 filas y 11 columnas
 ")
 ```
 
@@ -103,7 +103,7 @@ Rscript --vanilla unidad07-archivos/ejemplos/02.R
 Salida esperada:
 
 ```text
-readr: sin problemas de lectura; Excel iris: 5 filas y 5 columnas
+readr: sin problemas de lectura; Excel mtcars: 5 filas y 11 columnas
 ```
 
 ## Para avanzar

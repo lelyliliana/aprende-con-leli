@@ -6,7 +6,7 @@ d <- readr::read_csv("datos/encuesta.csv", na = "", show_col_types = FALSE,
 stopifnot(nrow(readr::problems(d)) == 0, nrow(d) == 36)
 libro <- readxl::readxl_example("datasets.xlsx")
 hojas <- readxl::excel_sheets(libro)
-excel <- readxl::read_excel(libro, sheet = "iris", n_max = 5)
-stopifnot("iris" %in% hojas, nrow(excel) == 5, ncol(excel) == 5)
-cat("readr: sin problemas de lectura; Excel iris: 5 filas y 5 columnas
+excel <- readxl::read_excel(libro, sheet = "mtcars", n_max = 5)
+stopifnot("mtcars" %in% hojas, nrow(excel) == 5, ncol(excel) == 11)
+cat("readr: sin problemas de lectura; Excel mtcars: 5 filas y 11 columnas
 ")
