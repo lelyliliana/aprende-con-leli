@@ -2,6 +2,8 @@
 
 [Volver al índice](../README.md)
 
+[Desarrollo del caso](DESARROLLO.md) · [Práctica paso a paso](PRACTICA.md)
+
 ## Objetivos
 
 - Consumir un proveedor con contrato y límites temporales.
@@ -10,13 +12,13 @@
 
 ## Explicación y práctica guiada
 
-A partir de esta unidad usa la [API integrada](https://github.com/lelyliliana/Curso-Spring-Boot/blob/main/ejemplos/api-productos/README.md), después de preparar las claves locales según el entorno público. Lee [ProveedorClient](https://github.com/lelyliliana/Curso-Spring-Boot/blob/main/ejemplos/api-productos/src/main/java/com/lelyliliana/productos/ProveedorClient.java).
+A partir de esta unidad usa la [API integrada](https://github.com/lelyliliana/Curso-Spring-Boot/blob/16c4f54d1271fa9d7a99ad4d6e990c49ed46cb11/ejemplos/api-productos/README.md), después de preparar las claves locales según el entorno público. Lee [ProveedorClient](https://github.com/lelyliliana/Curso-Spring-Boot/blob/16c4f54d1271fa9d7a99ad4d6e990c49ed46cb11/ejemplos/api-productos/src/main/java/com/lelyliliana/productos/ProveedorClient.java).
 
 Spring Boot actúa ahora como cliente frente a otra API. La URL base y los tiempos son configuración. El SKU se valida antes de construir el segmento de la petición. La respuesta debe corresponder al SKU solicitado y contener precio válido: recibir 200 no garantiza datos aceptables.
 
-Ejecuta la prueba de proveedor indicada en el [laboratorio público](https://github.com/lelyliliana/Curso-Spring-Boot/blob/main/unidad15-apis-externas/LABORATORIO.md). Un servidor HTTP local controla los escenarios. No necesitas encontrar un proveedor público para que tus pruebas sean reproducibles.
+Ejecuta la prueba de proveedor indicada en el [laboratorio público](https://github.com/lelyliliana/Curso-Spring-Boot/blob/16c4f54d1271fa9d7a99ad4d6e990c49ed46cb11/unidad15-apis-externas/LABORATORIO.md). Un servidor HTTP local controla los escenarios. No necesitas encontrar un proveedor público para que tus pruebas sean reproducibles.
 
-Consulta [APIs externas](https://github.com/lelyliliana/Curso-Spring-Boot/blob/main/unidad15-apis-externas/README.md) y [resiliencia](https://github.com/lelyliliana/Curso-Spring-Boot/blob/main/unidad16-resiliencia/README.md) si necesitas ampliar esas decisiones.
+Consulta [APIs externas](https://github.com/lelyliliana/Curso-Spring-Boot/blob/16c4f54d1271fa9d7a99ad4d6e990c49ed46cb11/unidad15-apis-externas/README.md) y [resiliencia](https://github.com/lelyliliana/Curso-Spring-Boot/blob/16c4f54d1271fa9d7a99ad4d6e990c49ed46cb11/unidad16-resiliencia/README.md) si necesitas ampliar esas decisiones.
 
 El contrato local traduce proveedor 404 a recurso no encontrado y fallos transitorios/datos inválidos a indisponibilidad. No entrega al cliente cuerpos brutos ni detalles internos del proveedor. La consulta de cotización no cambia el precio que ya guardaste en productos.
 

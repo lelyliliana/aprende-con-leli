@@ -2,6 +2,8 @@
 
 [Volver al índice](../README.md)
 
+[Desarrollo del caso](DESARROLLO.md) · [Práctica paso a paso](PRACTICA.md)
+
 ## Objetivos
 
 - Elegir pruebas según la frontera y el riesgo.
@@ -12,15 +14,15 @@
 
 Una prueba describe comportamiento, no solo que el programa compile. Antes de ejecutarla escribe el resultado esperado y qué fallo detectaría. Usa preparar, actuar y comprobar para separar escenario, acción y evidencia.
 
-Cada uno de los cuatro proyectos públicos se comprueba con mvn verify. Consulta [pruebas de servicios](https://github.com/lelyliliana/Curso-Spring-Boot/blob/main/unidad18-pruebas-unitarias/README.md), [MockMvc](https://github.com/lelyliliana/Curso-Spring-Boot/blob/main/unidad19-mockmvc/README.md), [JPA](https://github.com/lelyliliana/Curso-Spring-Boot/blob/main/unidad20-pruebas-jpa/README.md) e [integración](https://github.com/lelyliliana/Curso-Spring-Boot/blob/main/unidad21-integracion-tests/README.md) cuando necesites comprender una frontera.
+Cada uno de los cuatro proyectos públicos se comprueba con mvn verify. Consulta [pruebas de servicios](https://github.com/lelyliliana/Curso-Spring-Boot/blob/16c4f54d1271fa9d7a99ad4d6e990c49ed46cb11/unidad18-pruebas-unitarias/README.md), [MockMvc](https://github.com/lelyliliana/Curso-Spring-Boot/blob/16c4f54d1271fa9d7a99ad4d6e990c49ed46cb11/unidad19-mockmvc/README.md), [JPA](https://github.com/lelyliliana/Curso-Spring-Boot/blob/16c4f54d1271fa9d7a99ad4d6e990c49ed46cb11/unidad20-pruebas-jpa/README.md) e [integración](https://github.com/lelyliliana/Curso-Spring-Boot/blob/16c4f54d1271fa9d7a99ad4d6e990c49ed46cb11/unidad21-integracion-tests/README.md) cuando necesites comprender una frontera.
 
 Un mock permite controlar una dependencia; no demuestra por sí solo una restricción en la base. Un test de Repository puede probar UNIQUE/FK sobre el motor utilizado. MockMvc prueba el comportamiento web con su configuración; un JAR real añade evidencia de arranque, puerto y cliente HTTP.
 
-Ejecuta el [verificador público](https://github.com/lelyliliana/Curso-Spring-Boot/blob/main/docs/VERIFICACION.md) siguiendo el recorrido. Compila los proyectos, lee informes y arranca los JAR con claves ficticias generadas para las pruebas. No requiere tus credenciales reales.
+Ejecuta el [verificador público](https://github.com/lelyliliana/Curso-Spring-Boot/blob/16c4f54d1271fa9d7a99ad4d6e990c49ed46cb11/docs/VERIFICACION.md) siguiendo el recorrido. Compila los proyectos, lee informes y arranca los JAR con claves ficticias generadas para las pruebas. No requiere tus credenciales reales.
 
 La comprobación estándar usa H2. PostgreSQL y Docker son variantes adicionales con sus requisitos; no declares comprobados esos escenarios si solo ejecutaste la opción estándar. Un resultado verde cubre lo diseñado, no todos los casos futuros.
 
-Los pedidos de referencia permiten examinar estado, precio histórico y versiones. Lee [pedidos](https://github.com/lelyliliana/Curso-Spring-Boot/blob/main/docs/PEDIDOS.md) antes de interpretar su total: un borrador y un pedido confirmado no representan el mismo momento del precio.
+Los pedidos de referencia permiten examinar estado, precio histórico y versiones. Lee [pedidos](https://github.com/lelyliliana/Curso-Spring-Boot/blob/16c4f54d1271fa9d7a99ad4d6e990c49ed46cb11/docs/PEDIDOS.md) antes de interpretar su total: un borrador y un pedido confirmado no representan el mismo momento del precio.
 
 ## Ejercicios
 

@@ -2,6 +2,8 @@
 
 [Volver al índice](../README.md)
 
+[Desarrollo del caso](DESARROLLO.md) · [Práctica paso a paso](PRACTICA.md)
+
 ## Objetivos
 
 - Distinguir salud, métricas, logs y correlación.
@@ -16,9 +18,9 @@ Consulta /actuator/health y luego observa el cliente autorizado de métricas. He
 
 El filtro de request ID ayuda a relacionar una respuesta con registros locales. No identifica al usuario ni crea automáticamente una traza distribuida. Conserva datos útiles para diagnóstico sin registrar claves o cuerpos sensibles.
 
-Si necesitas profundizar, consulta [Actuator](https://github.com/lelyliliana/Curso-Spring-Boot/blob/main/unidad23-actuator/README.md), [métricas](https://github.com/lelyliliana/Curso-Spring-Boot/blob/main/unidad24-metricas/README.md) y [logging](https://github.com/lelyliliana/Curso-Spring-Boot/blob/main/unidad25-logging/README.md).
+Si necesitas profundizar, consulta [Actuator](https://github.com/lelyliliana/Curso-Spring-Boot/blob/16c4f54d1271fa9d7a99ad4d6e990c49ed46cb11/unidad23-actuator/README.md), [métricas](https://github.com/lelyliliana/Curso-Spring-Boot/blob/16c4f54d1271fa9d7a99ad4d6e990c49ed46cb11/unidad24-metricas/README.md) y [logging](https://github.com/lelyliliana/Curso-Spring-Boot/blob/16c4f54d1271fa9d7a99ad4d6e990c49ed46cb11/unidad25-logging/README.md).
 
-Para rendimiento, define demanda, duración, percentil de latencia, errores y entorno antes de elegir herramientas. Sigue [rendimiento](https://github.com/lelyliliana/Curso-Spring-Boot/blob/main/unidad26-rendimiento/README.md) para plantear carga/estrés. La prueba funcional del verificador no es un benchmark ni demuestra una capacidad de usuarios.
+Para rendimiento, define demanda, duración, percentil de latencia, errores y entorno antes de elegir herramientas. Sigue [rendimiento](https://github.com/lelyliliana/Curso-Spring-Boot/blob/16c4f54d1271fa9d7a99ad4d6e990c49ed46cb11/unidad26-rendimiento/README.md) para plantear carga/estrés. La prueba funcional del verificador no es un benchmark ni demuestra una capacidad de usuarios.
 
 Una latencia elevada puede venir de base, proveedor, CPU, bloqueos o cola. Mide y compara antes de “optimizar”. Un único promedio puede ocultar solicitudes lentas; documenta distribución y tasa de fallos.
 

@@ -2,6 +2,8 @@
 
 [Volver al índice](../README.md)
 
+[Desarrollo del caso](DESARROLLO.md) · [Práctica paso a paso](PRACTICA.md)
+
 ## Objetivos
 
 - Generar y verificar artefactos con configuración externa.
@@ -10,7 +12,7 @@
 
 ## Explicación y práctica guiada
 
-El JAR empaquetado no contiene por ello las credenciales de ejecución. Mantén configuración externa y sigue [producción](https://github.com/lelyliliana/Curso-Spring-Boot/blob/main/unidad27-produccion/README.md) y [operación](https://github.com/lelyliliana/Curso-Spring-Boot/blob/main/docs/OPERACION.md) antes de trasladar el proyecto a otro entorno.
+El JAR empaquetado no contiene por ello las credenciales de ejecución. Mantén configuración externa y sigue [producción](https://github.com/lelyliliana/Curso-Spring-Boot/blob/16c4f54d1271fa9d7a99ad4d6e990c49ed46cb11/unidad27-produccion/README.md) y [operación](https://github.com/lelyliliana/Curso-Spring-Boot/blob/16c4f54d1271fa9d7a99ad4d6e990c49ed46cb11/docs/OPERACION.md) antes de trasladar el proyecto a otro entorno.
 
 Para el proyecto propio, elige una necesidad pequeña: catálogo de materiales, libros o recursos de un equipo. Define una persona usuaria, entradas, respuestas, validaciones, permisos y duración de datos. Adapta en una copia propia sin cambiar el contrato de una sola capa.
 
@@ -30,7 +32,7 @@ No necesitas desplegar un proveedor de pago para terminar la ruta local. Un desp
 
 ## Reto
 
-Demuestra en cinco minutos un flujo, una entrada rechazada, una actualización concurrente y un diagnóstico, explicando qué evidencia respalda cada resultado.
+Demuestra en cinco minutos un flujo, una entrada rechazada, una actualización con versión antigua y un diagnóstico, explicando qué evidencia respalda cada resultado.
 
 ## Errores frecuentes
 

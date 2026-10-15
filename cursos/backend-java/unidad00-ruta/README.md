@@ -2,6 +2,8 @@
 
 [Volver al índice](../README.md)
 
+[Desarrollo del caso](DESARROLLO.md) · [Práctica paso a paso](PRACTICA.md)
+
 ## Objetivos
 
 - Elegir qué repasar según tareas que ya puedes realizar.
@@ -16,7 +18,7 @@ No necesitas completar todos los cursos previos si ya puedes aplicar sus temas. 
 
 Necesitas Java 21, Maven 3.9.x, Git y un editor. Python 3.11 o superior permite usar los clientes y el verificador públicos; no reemplaza Java ni es requisito para ejecutar los tests Maven. Docker y PostgreSQL no se requieren para comenzar.
 
-Sigue [ENTORNO](https://github.com/lelyliliana/Curso-Spring-Boot/blob/main/docs/ENTORNO.md) para preparar herramientas en tu sistema. Comprueba tanto java -version como mvn -version: Maven puede estar utilizando otro JDK.
+Sigue [ENTORNO](https://github.com/lelyliliana/Curso-Spring-Boot/blob/16c4f54d1271fa9d7a99ad4d6e990c49ed46cb11/docs/ENTORNO.md) para preparar herramientas en tu sistema. Comprueba tanto java -version como mvn -version: Maven puede estar utilizando otro JDK.
 
 Los laboratorios son proyectos independientes, no carpetas que debas unir. Fundamentos introduce servidor y configuración; REST usa un mapa en memoria; JPA añade base, categorías y versión; la API integrada añade proveedor, seguridad, métricas y pedidos. Cada proyecto tiene su pom.xml.
 

@@ -1,13 +1,25 @@
-# Soluciones de la Unidad 04
+# Soluciones desarrolladas de la Unidad 04
 
-[Volver a la unidad](README.md)
+[Unidad](README.md) · [Desarrollo](DESARROLLO.md) · [Práctica](PRACTICA.md) · [Soluciones](SOLUCIONES.md)
 
-Intenta los ejercicios antes de consultar.
+Contrasta tu evidencia con la secuencia y explica cualquier diferencia.
 
-1. Además del HTTP, se verifica SKU y precio positivo. Una respuesta formalmente válida puede no corresponder a la petición.
+## 1. Éxito de transporte y éxito del contrato
 
-2. Proveedor 404 se representa como recurso no encontrado; un fallo o cuerpo inválido puede traducirse a 503 según el contrato propio. El cliente no necesita conocer internals del proveedor.
+El cuerpo debe poder interpretarse como Cotizacion, tener SKU igual al solicitado y precio positivo. El experimento de otro SKU mantiene precio 75 válido para aislar la causa: debe devolver 503 aunque el proveedor haya respondido 200.
 
-3. GET de cotización consulta información externa; no realiza una escritura en el Repository de productos. Verifica con GET de producto antes/después.
+## 2. Tabla resuelta de fallos e intentos
 
-El reto debe controlar la respuesta del servidor local y esperar rechazo, no introducir un valor ficticio en la capa de presentación. El test pertenece al cliente de proveedor.
+404 externo produce 404 local y una llamada. 429 produce 503 local y una llamada. JSON roto u otro SKU producen 503 y una llamada. Un 503 seguido de 200 válido termina en 200 con dos llamadas; un 503 permanente termina en 503 con dos llamadas. Los errores locales exponen code y omiten trace.
+
+La política no es «reintentar cualquier error». El código solo repite respuestas 502/503/504 cuando queda otro intento. Los fallos de transporte siguen otro catch. Con la configuración normal de un intento no habría una segunda llamada.
+
+## 3. Precio persistido y cotización
+
+El producto se crea a 10. La cotización válida devuelve 75. La consulta posterior del producto conserva precio 10 y versión inicial. El experimento compara todo el recurso después de cada escenario: también un rechazo externo debe dejar intacto el catálogo.
+
+## Resolución del reto
+
+El proveedor de prueba devuelve un SKU distinto con precio positivo. La expectativa es 503/PROVIDER_UNAVAILABLE y una llamada. La prueba fallaría si el cliente dejara de comparar el SKU. Aceptar cualquier cuerpo 200 ocultaría el fallo de correspondencia.
+
+Para guardar una cotización sería necesario un comando autorizado con regla de procedencia/fecha y una actualización versionada. El GET actual no implementa ese cambio. Tampoco el resultado del experimento permite afirmar un plazo total de producción ni idempotencia de una operación de pago.

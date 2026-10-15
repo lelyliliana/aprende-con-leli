@@ -1,13 +1,23 @@
-# Soluciones de la Unidad 02
+# Soluciones desarrolladas de la Unidad 02
 
-[Volver a la unidad](README.md)
+[Unidad](README.md) · [Desarrollo](DESARROLLO.md) · [Práctica](PRACTICA.md) · [Soluciones](SOLUCIONES.md)
 
-Intenta los ejercicios antes de consultar.
+Contrasta tu evidencia con la secuencia y explica cualquier diferencia.
 
-1. POST crea con 201 y Location; GET consulta con 200; PUT devuelve el estado actualizado; DELETE termina con 204. Una consulta posterior del recurso eliminado devuelve 404.
+## 1. CRUD y forma de la respuesta
 
-2. Duplicado es conflicto con el estado actual (409); un precio que viola el DTO produce validación (400). Llegar al endpoint no implica satisfacer sus reglas.
+POST devuelve 201 y una Location que termina en el id recibido. GET de esa ruta devuelve el recurso. PUT válido conserva la identidad y devuelve datos actualizados. DELETE devuelve 204 sin cuerpo; el GET posterior devuelve 404. No se exige version porque no existe en el DTO REST.
 
-3. El mapa vive en una JVM. Detener el proceso elimina ese estado. Dos réplicas tendrían mapas diferentes aunque ejecutaran el mismo código.
+## 2. Rechazo desarrollado
 
-El reto necesita definir campos/tipos, unicidad, rutas y errores. Diseñar primero evita que cada cliente interprete una estructura distinta.
+A tiene BACK-A y precio 10; B tiene BACK-B y precio 20. PUT de A con BACK-B y precio 99 produce 409. GET de A debe conservar BACK-A y precio 10, además del nombre e id anteriores. comprobarSku se ejecuta antes de productos.put; sustituir primero y validar después rompería esta garantía.
+
+Precio 1.001 produce 400/VALIDATION_ERROR. El experimento envía también un SKU existente en esa petición, pero solo atribuye el rechazo a validación: el servicio todavía no demuestra unicidad en ese camino.
+
+## 3. Filtro, borrado y reinicio
+
+Con dos coincidencias, pagina=2 y tamano=1 devuelven contenido vacío y total 2. El total describe el conjunto filtrado, no la página actual. Borrar B reduce los datos de la JVM; reiniciar elimina también A y deja total 0 porque no hay almacenamiento externo.
+
+## Resolución del reto
+
+Un contrato de materiales mínimo define código único, nombre no blanco, precio positivo, id administrado y rutas. Incluye un válido, precio con tres decimales y duplicado. La garantía de unicidad del mapa pertenece a una instancia; una base compartida requerirá una restricción propia. El [experimento ejecutable](../docs/EXPERIMENTOS.md) permite contrastar estas expectativas con el código real.

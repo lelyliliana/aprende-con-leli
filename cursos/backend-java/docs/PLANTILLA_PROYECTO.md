@@ -43,3 +43,16 @@ Registra revisión, comandos, pruebas, motores y alcance. Incluye casos válidos
 ## Entrega y límites
 
 Explica empaquetado, comprobación del JAR, reproducibilidad y lo no implementado/probado. No presentes diseño de despliegue como una ejecución realizada.
+
+## Matriz de evidencia para cerrar
+
+| Criterio | Puntos máximos | Archivo, comando y resultado de tu evidencia |
+|---|---|---|
+| Problema y contrato | 15 | |
+| Flujo y capas | 20 | |
+| Reglas y errores | 20 | |
+| Persistencia y concurrencia | 15 | |
+| Pruebas y evidencia | 15 | |
+| Seguridad, configuración y entrega | 15 | |
+
+Usa la [bitácora](BITACORA.md) para conservar predicción, respuesta y dato posterior. Si un escenario solo está diseñado, indícalo como pendiente de ejecutar. Si comparaste dos versiones sucesivas, llámalo rechazo de versión antigua; para declarar una carrera concurrente necesitas coordinar peticiones simultáneas y registrar ambas respuestas.

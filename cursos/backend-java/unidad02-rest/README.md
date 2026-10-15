@@ -2,6 +2,8 @@
 
 [Volver al índice](../README.md)
 
+[Desarrollo del caso](DESARROLLO.md) · [Práctica paso a paso](PRACTICA.md)
+
 ## Objetivos
 
 - Definir entrada, respuesta, estados y reglas de un recurso.
@@ -10,11 +12,11 @@
 
 ## Explicación y práctica guiada
 
-Usa [REST en memoria](https://github.com/lelyliliana/Curso-Spring-Boot/blob/main/laboratorios/rest-memoria/README.md). El catálogo comienza vacío. POST recibe sku, nombre y precio; todavía no recibe categoría ni versión. Lee el [contrato de etapas](https://github.com/lelyliliana/Curso-Spring-Boot/blob/main/docs/CONTRATO_ETAPAS.md) antes de copiar una petición de otro proyecto.
+Usa [REST en memoria](https://github.com/lelyliliana/Curso-Spring-Boot/blob/16c4f54d1271fa9d7a99ad4d6e990c49ed46cb11/laboratorios/rest-memoria/README.md). El catálogo comienza vacío. POST recibe sku, nombre y precio; todavía no recibe categoría ni versión. Lee el [contrato de etapas](https://github.com/lelyliliana/Curso-Spring-Boot/blob/16c4f54d1271fa9d7a99ad4d6e990c49ed46cb11/docs/CONTRATO_ETAPAS.md) antes de copiar una petición de otro proyecto.
 
 Crea un producto y observa 201, Location y JSON. Utiliza el ID devuelto para consultarlo: no asumas que siempre será uno. Repite el SKU y anticipa 409. Envía un precio con más de dos decimales y explica el 400.
 
-Localiza Controller, DTO, Service y ApiErrorHandler. El Controller interpreta HTTP; el DTO define el contrato; el Service comprueba reglas del catálogo; el manejador representa errores. Para estudiar conceptos nuevos, consulta [DTO](https://github.com/lelyliliana/Curso-Spring-Boot/blob/main/unidad07-dto/README.md), [validación](https://github.com/lelyliliana/Curso-Spring-Boot/blob/main/unidad08-validacion/README.md) y [capas](https://github.com/lelyliliana/Curso-Spring-Boot/blob/main/unidad10-capas/README.md).
+Localiza Controller, DTO, Service y ApiErrorHandler. El Controller interpreta HTTP; el DTO define el contrato; el Service comprueba reglas del catálogo; el manejador representa errores. Para estudiar conceptos nuevos, consulta [DTO](https://github.com/lelyliliana/Curso-Spring-Boot/blob/16c4f54d1271fa9d7a99ad4d6e990c49ed46cb11/unidad07-dto/README.md), [validación](https://github.com/lelyliliana/Curso-Spring-Boot/blob/16c4f54d1271fa9d7a99ad4d6e990c49ed46cb11/unidad08-validacion/README.md) y [capas](https://github.com/lelyliliana/Curso-Spring-Boot/blob/16c4f54d1271fa9d7a99ad4d6e990c49ed46cb11/unidad10-capas/README.md).
 
 Una respuesta paginada incluye contenido y metadatos. GET no debe mutar productos al consultarlos. PUT y DELETE deben definir resultado para recursos inexistentes. DELETE correcto devuelve 204, sin cuerpo JSON que el cliente necesite analizar.
 

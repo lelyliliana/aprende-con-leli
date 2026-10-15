@@ -2,6 +2,8 @@
 
 [Volver al índice](../README.md)
 
+[Desarrollo del caso](DESARROLLO.md) · [Práctica paso a paso](PRACTICA.md)
+
 ## Objetivos
 
 - Separar identidad, permiso y validez de la entrada.
@@ -10,15 +12,15 @@
 
 ## Explicación y práctica guiada
 
-La API integrada utiliza cuentas editor y lector con claves externas al repositorio. Sigue [preparación de credenciales](https://github.com/lelyliliana/Curso-Spring-Boot/blob/main/docs/ENTORNO.md) en tu terminal; no pongas claves en Git ni en un comando que las imprima.
+La API integrada utiliza cuentas editor y lector con claves externas al repositorio. Sigue [preparación de credenciales](https://github.com/lelyliliana/Curso-Spring-Boot/blob/16c4f54d1271fa9d7a99ad4d6e990c49ed46cb11/docs/ENTORNO.md) en tu terminal; no pongas claves en Git ni en un comando que las imprima.
 
-Lee la sección de seguridad del [contrato](https://github.com/lelyliliana/Curso-Spring-Boot/blob/main/docs/CONTRATO_API.md). El cliente público obtiene /api/csrf, conserva cookie y utiliza el header indicado. Las escrituras necesitan además identidad con PRODUCT_WRITE. Las consultas del catálogo son públicas; no lo son todas las rutas de la aplicación.
+Lee la sección de seguridad del [contrato](https://github.com/lelyliliana/Curso-Spring-Boot/blob/16c4f54d1271fa9d7a99ad4d6e990c49ed46cb11/docs/CONTRATO_API.md). El cliente público obtiene /api/csrf, conserva cookie y utiliza el header indicado. Las escrituras necesitan además identidad con PRODUCT_WRITE. Las consultas del catálogo son públicas; no lo son todas las rutas de la aplicación.
 
 Un POST sin CSRF puede recibir 403 antes de comprobar identidad. Con token válido y sin autenticar se espera 401; con lector autenticado y sin permiso de escritura se espera 403. Solo después de pasar estos controles un caso inválido puede probar el DTO con 400.
 
 Usa el cliente público scripts/peticion.py, que solicita contraseña y gestiona token/cookie. No añadas --sin-csrf al integrado para imitar la etapa REST. Ese argumento corresponde a los laboratorios que no tienen Security.
 
-Consulta [Spring Security](https://github.com/lelyliliana/Curso-Spring-Boot/blob/main/unidad22-seguridad/README.md) cuando necesites comprender el filtro y las autoridades. Basic y cuentas en memoria son una elección educativa; fuera de HTTP local la identidad necesita transporte protegido, y una solución real debe definir usuarios/permisos adecuados al problema.
+Consulta [Spring Security](https://github.com/lelyliliana/Curso-Spring-Boot/blob/16c4f54d1271fa9d7a99ad4d6e990c49ed46cb11/unidad22-seguridad/README.md) cuando necesites comprender el filtro y las autoridades. Basic y cuentas en memoria son una elección educativa; fuera de HTTP local la identidad necesita transporte protegido, y una solución real debe definir usuarios/permisos adecuados al problema.
 
 La API de pedidos requiere escritura incluso en lectura. No supongas que todas las rutas GET son públicas porque el catálogo lo sea. Define la política de cada recurso antes de añadir otra ruta.
 

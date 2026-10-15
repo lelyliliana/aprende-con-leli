@@ -1,13 +1,25 @@
-# Soluciones de la Unidad 03
+# Soluciones desarrolladas de la Unidad 03
 
-[Volver a la unidad](README.md)
+[Unidad](README.md) · [Desarrollo](DESARROLLO.md) · [Práctica](PRACTICA.md) · [Soluciones](SOLUCIONES.md)
 
-Intenta los ejercicios antes de consultar.
+Contrasta tu evidencia con la secuencia y explica cualquier diferencia.
 
-1. La entrada contiene categoriaId y la base exige una referencia válida. Un ID inexistente se rechaza; no basta que sea un número positivo.
+## 1. Categoría y restricción
 
-2. La primera actualización usa la versión leída y el servidor la incrementa. Repetir la anterior produce 409; GET permite confirmar que el estado válido no se perdió.
+categoriaId se obtiene de la API, no de una suposición sobre la secuencia de otra base. El servicio busca la categoría; si falta, devuelve 404. El motor conserva una FK. Validar que un número sea positivo no demuestra que exista el registro referenciado.
 
-3. Recargar un cliente no reinicia Java. H2 en memoria pierde cambios al detenerlo; H2 en archivo conserva el registro si se abre la misma ruta. El motor real de cada prueba debe registrarse.
+## 2. Versión desarrollada
 
-Para el reto, dos POST del mismo SKU no deben producir dos filas. Espera una creación y un conflicto, respaldados por UNIQUE, y consulta el resultado final.
+Creación: precio 10/version 0. PUT válido: envía 0 y recibe precio 15/version 1. PUT viejo: envía 0 y precio 99, recibe 409. GET final: mantiene la respuesta válida. No sumes uno a la versión en el cliente como si pudieras decidir qué número acepta el servidor; envía la última que recibiste.
+
+La consulta explícita posterior es necesaria: un 409 aislado no prueba que no haya mutación. El servicio compara versión antes de cambiar campos y la base usa @Version para la escritura concurrente.
+
+## 3. Duración entre reinicios
+
+Recargar el cliente no termina Java. Reiniciar H2 en memoria pierde cambios. Reiniciar con el mismo archivo conserva id, precio, categoría y versión; una ruta relativa distinta podría abrir otra base. El experimento usa una ruta absoluta temporal y cierra el primer proceso antes del segundo.
+
+No se vuelven a insertar las migraciones ya aplicadas al abrir el mismo archivo. Se comprueba que BACK-DUR siga una sola vez. El archivo temporal desaparece al finalizar el programa, después de comprobar duración entre procesos.
+
+## Resolución del reto
+
+Dos creaciones simultáneas del mismo SKU deben dejar una sola fila. Se espera un 201 y un 409, con UNIQUE como garantía en el motor. Anota cómo coordinaste ambas peticiones y consulta la fila final. El verificador público tiene una variante PostgreSQL para esa carrera; el experimento de archivo de esta unidad demuestra otro riesgo y no debe presentarse como esa prueba concurrente.

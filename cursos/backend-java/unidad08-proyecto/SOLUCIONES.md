@@ -1,13 +1,25 @@
-# Soluciones de la Unidad 08
+# Soluciones desarrolladas de la Unidad 08
 
-[Volver a la unidad](README.md)
+[Unidad](README.md) · [Desarrollo](DESARROLLO.md) · [Práctica](PRACTICA.md) · [Soluciones](SOLUCIONES.md)
 
-Intenta los ejercicios antes de consultar.
+Contrasta tu evidencia con la secuencia y explica cualquier diferencia.
 
-1. Cada requisito necesita una acción y resultado observable: crear código válido, rechazar duplicado, actualizar con versión vigente y rechazar antigua. No basta listar tecnologías.
+## 1. Requisitos desarrollados
 
-2. Una guía reproducible señala versiones, carpetas, comandos, datos ficticios y configuración externa. “Ejecutar aquí” es ambiguo sin una ruta relativa a la raíz.
+«Usar Spring Boot» es una elección tecnológica. «Al crear dos veces el mismo SKU, la segunda petición devuelve 409 y queda una sola fila» es aceptación observable. Añade de la misma manera edición con versión vigente y rechazo de una vieja sin pérdida del dato aceptado.
 
-3. Justifica decisiones por necesidad: separación de Service, restricción de base, permisos o manejo de proveedor. Una limitación debe declarar qué no se implementó o no se probó.
+Si eliges máximo 500, la referencia todavía no lo implementa. Debes actualizar contrato, reglas de creación/actualización y pruebas del límite. Una captura con precio 400 no demuestra el rechazo de 500.01.
 
-El reto presenta evidencia y explicación, no una demostración solo del caso feliz. La rúbrica orienta autoevaluación; no acredita por sí sola un despliegue productivo.
+## 2. Instalación reproducible
+
+Una guía suficiente identifica la raíz del proyecto, revisión, JDK/Maven, comandos, datos ficticios, configuración externa, puerto y respuesta esperada. Debe distinguir iniciar el backend de abrir un cliente y explicar cómo detenerlo. La ruta de H2 en archivo necesita ser la misma después del reinicio.
+
+## 3. Decisiones justificadas
+
+Separar transporte y caso de uso permite probar la regla sin abrir HTTP. UNIQUE protege unicidad en el motor donde convergen transacciones. La versión evita sobrescribir una intención aceptada con una edición vieja. Un proveedor controlado hace repetibles fallos externos sin depender de Internet. Cada decisión se justifica por un riesgo concreto.
+
+## Resolución del reto y rúbrica
+
+La demostración presenta POST válido, rechazo de formato, actualización aceptada y otra vieja rechazada, GET posterior y un registro correlacionado. Dos peticiones sucesivas prueban versión antigua; una carrera real exige coordinarlas y registrar ambas respuestas. No confundas esos escenarios.
+
+Los seis criterios suman 100: 15 + 20 + 20 + 15 + 15 + 15. Adjunta evidencia en cada fila. Declara como límites lo que falta implementar o ejecutar, por ejemplo identidad externa, PostgreSQL o benchmark. El resultado mínimo es un backend pequeño que otra persona pueda ejecutar y explicar, con reglas completas para su alcance.

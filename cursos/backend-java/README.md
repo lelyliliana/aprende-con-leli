@@ -22,11 +22,13 @@ Debes poder trabajar con clases, colecciones, excepciones y pruebas sencillas de
 
 ## Cómo estudiar
 
-Predice una respuesta, ejecuta el laboratorio, observa, modifica y explica. Cada unidad incluye ejercicios, reto, soluciones y comprobación de cierre. Usa el tema del curso público cuando lo necesites y vuelve a esta ruta para aplicar la decisión.
+Predice una respuesta, ejecuta el laboratorio, observa, modifica y explica. Cada unidad incluye un desarrollo del caso, práctica paso a paso, ejercicios, reto, soluciones razonadas y comprobación de cierre. Usa el tema del curso público cuando lo necesites y vuelve a esta ruta para aplicar la decisión.
 
 ## Laboratorios y entrega
 
 - [Recorrido de las cuatro etapas](laboratorio/README.md).
+- [Cuatro experimentos aplicados de Backend](docs/EXPERIMENTOS.md): rechazo sin mutación, duración entre reinicios, proveedor controlado y permisos.
+- [Bitácora de decisiones y evidencia](docs/BITACORA.md).
 - [Plantilla de proyecto propio](docs/PLANTILLA_PROYECTO.md).
 - [Verificación registrada y límites](docs/VERIFICACION.md).
 
