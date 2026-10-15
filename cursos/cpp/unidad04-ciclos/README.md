@@ -10,7 +10,7 @@ Al terminar podrás:
 
 - Sumar 1 a 5.
 - Terminar una cuenta regresiva.
-- Contar[0, 5).
+- Contar [0, 5).
 
 Estudia primero la unidad anterior. Los ejemplos incorporan las herramientas ya presentadas y las nuevas se explican antes de usarlas. Todos los comandos parten de cursos/cpp.
 
@@ -31,7 +31,7 @@ suma empieza en 0 fuera del ciclo. En cada vuelta suma+=valor conserva el acumul
 
 ### Una condición se evalúa antes del cuerpo
 
-Si la condición inicial es falsa, for y while pueden ejecutar cero vueltas. while(pendientes>0) requiere que alguna instrucción reduzca pendientes oque otra decisión salga. Un ciclo sin cambio hacia su terminación puede repetirse indefinidamente aunque compile sin errores.
+Si la condición inicial es falsa, for y while pueden ejecutar cero vueltas. while(pendientes>0) requiere que alguna instrucción reduzca pendientes o que otra decisión salga. Un ciclo sin cambio hacia su terminación puede repetirse indefinidamente aunque compile sin errores.
 
 En el segundo ejemplo pendientes recorre 3, 2, 1 y termina en 0. El valor 0 no se imprime porque se evalúa de nuevo la condición antes del cuerpo siguiente. Escribe cuándo ocurre cada paso; adivinar desde el último mensaje suele producir errores de una iteración.
 
@@ -47,7 +47,7 @@ La suma de pares hasta 6 es 2+4+6=12. No confundas cantidad de valores que cumpl
 
 ### Haz visible la terminación
 
-Antes de ejecutar responde:¿qué cambia?, ¿qué hará falsa la condición?, ¿cuántas vueltas espero? Nuestros límites son pequeños y representables. Un contador entero con signo tampoco puede aumentar indefinidamente sin considerar su rango. La corrección de una repetición incluye tanto su resultado como sus condiciones de parada.
+Antes de ejecutar responde: ¿qué cambia?, ¿qué hará falsa la condición?, ¿cuántas vueltas espero? Nuestros límites son pequeños y representables. Un contador entero con signo tampoco puede aumentar indefinidamente sin considerar su rango. La corrección de una repetición incluye tanto su resultado como sus condiciones de parada.
 
 ## Ejemplo 1. Seguir un acumulador
 

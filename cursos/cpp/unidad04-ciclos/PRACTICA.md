@@ -16,7 +16,7 @@ Inicia 3 y reduce mientras sea positivo.
 
 **Pista:** Explica qué instrucción hace falsa la condición.
 
-## Paso 3. Contar[0, 5)
+## Paso 3. Contar [0, 5)
 
 Cuenta cuántas vueltas produce n<5 desde 0.
 
@@ -24,7 +24,7 @@ Cuenta cuántas vueltas produce n<5 desde 0.
 
 ## Reto de transferencia. Sumar pares hasta 10
 
-Acumula solo números pares entre 1 y10 incluidos.
+Acumula solo números pares entre 1 y 10 incluidos.
 
 **Pista:** La condición n%2==0 selecciona pares.
 

@@ -12,9 +12,9 @@ Se obtienen 1, 3, 6, 10, 15 y el final 15. El contador y el acumulador no repres
 
 Después de tres decrementos queda 0. Si no reduces el contador dentro del while, esa condición no cambia por sí sola.
 
-## Paso 3. Contar[0, 5)
+## Paso 3. Contar [0, 5)
 
-Son cinco valores:0, 1, 2, 3, 4. La condición se comprueba otra vez con 5 y no ejecuta ese cuerpo.
+Son cinco valores: 0, 1, 2, 3, 4. La condición se comprueba otra vez con 5 y no ejecuta ese cuerpo.
 
 ## Reto de transferencia. Sumar pares hasta 10
 

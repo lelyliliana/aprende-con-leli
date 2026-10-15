@@ -32,7 +32,7 @@ La primera condición del ejemplo usa puntaje&lt;0 || puntaje&gt;100. || signifi
 
 ### Combina sin ocultar la regla
 
-&& exige ambas condiciones. Para admitir horas usamos horas&gt;=0 && horas&lt;=40. ! niega una condición lógica. Los operadores lógicos && y|| incorporados realizan evaluación en cortocircuito: si la primera parte basta para decidir, no evalúan la segunda. Esto puede ser necesario para comprobar una precondición antes de una operación que la necesita, como que un denominador sea distinto de cero antes de dividir.
+&& exige ambas condiciones. Para admitir horas usamos horas&gt;=0 && horas&lt;=40. ! niega una condición lógica. Los operadores lógicos && y || incorporados realizan evaluación en cortocircuito: si la primera parte basta para decidir, no evalúan la segunda. Esto puede ser necesario para comprobar una precondición antes de una operación que la necesita, como que un denominador sea distinto de cero antes de dividir.
 
 No escribas 0&lt;=horas&lt;=40 esperando la notación matemática encadenada. En C++ no expresa dos comparaciones simultáneas de esa manera. Declara las dos y combínalas. Usa paréntesis para hacer visible una intención que pueda resultar ambigua; no dependas de recordar precedencias en una regla complicada.
 

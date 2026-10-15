@@ -20,15 +20,15 @@ La biblioteca estándar ofrece ordenación, búsqueda, conteo y acumulación. An
 
 ### Lee begin y end como límites
 
-begin apunta conceptualmente al primer elemento y end señala una posición posterior al último. El rango[begin, end) incluye el primero y excluye ese final. Un iterador permite recorrer posiciones; el operador* accede al elemento que observa cuando es válido. No desreferencies end:es una señal de terminación, no un dato adicional.
+begin apunta conceptualmente al primer elemento y end señala una posición posterior al último. El rango[begin, end) incluye el primero y excluye ese final. Un iterador permite recorrer posiciones; el operador* accede al elemento que observa cuando es válido. No desreferencies end: es una señal de terminación, no un dato adicional.
 
-std::find devuelve el iterador de una coincidencia o end si no encuentra. Por eso el ejemplo compara antes de usar*. La ausencia de un valor no debe convertirse en acceso ala última posición disponible ni en un cero inventado.
+std::find devuelve el iterador de una coincidencia o end si no encuentra. Por eso el ejemplo compara antes de usar*. La ausencia de un valor no debe convertirse en acceso a la última posición disponible ni en un cero inventado.
 
 ### Ordena una copia cuando debes conservar entrada
 
-std::sort modifica el rango que recibe. La copia ordenada del ejemplo pasa a2, 4, 6, 8, mientras original mantiene 8 como primer elemento. Para records más complejos, ordenaremos la fila completa y conservaremos su código junto a la cantidad.
+std::sort modifica el rango que recibe. La copia ordenada del ejemplo pasa a 2, 4, 6, 8, mientras original mantiene 8 como primer elemento. Para registros más complejos, ordenaremos la fila completa y conservaremos su código junto a la cantidad.
 
-El comparador define una relación estricta:para orden ascendente se usa a<b, no a<=b. Un criterio incoherente incumple precondiciones del algoritmo. std::sort no garantiza conservar el orden relativo de elementos equivalentes; si ese orden importa, necesitas otra elección y una justificación.
+El comparador define una relación estricta: para orden ascendente se usa a<b, no a<=b. Un criterio incoherente incumple precondiciones del algoritmo. std::sort no garantiza conservar el orden relativo de elementos equivalentes; si ese orden importa, necesitas otra elección y una justificación.
 
 ### Expresa una condición como función pequeña
 
@@ -110,7 +110,7 @@ Predice la salida antes de ejecutar. Este archivo tiene su propio main y se cons
 
 int main() {
     const std::vector<int> horas{2, 6, 4, 8};
-    const int umbral{5};
+    int umbral{5};
     const auto cumple{[umbral](int valor) { return valor >= umbral; }};
     const auto cantidad{std::count_if(horas.begin(), horas.end(), cumple)};
     const int suma{std::accumulate(horas.begin(), horas.end(), 0)};
