@@ -41,6 +41,26 @@
     "next": []
   },
   {
+    "id": "cpp",
+    "title": "C++ desde cero",
+    "area": "programacion",
+    "level": "Principiante a intermedio",
+    "status": "available",
+    "sourceRepository": "lelyliliana/aprende-con-leli",
+    "technologies": [
+      "C++20",
+      "STL",
+      "Objetos",
+      "RAII",
+      "CMake",
+      "Pruebas"
+    ],
+    "modules": 22,
+    "internalPath": "./cursos/cpp/",
+    "prerequisites": [],
+    "next": []
+  },
+  {
     "id": "python",
     "title": "Python desde cero",
     "area": "programacion",

@@ -1,0 +1,2 @@
+Stock: 3
+Rechazo sin cambiar stock: 3

@@ -1,0 +1,4 @@
+Paso 1: la línea conservada es 7
+Paso 2: entero interpretado=7
+Paso 3: minutos=420
+Reto: 7abc se rechaza porque sobran caracteres

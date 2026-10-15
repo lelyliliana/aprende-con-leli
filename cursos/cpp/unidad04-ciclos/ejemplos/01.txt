@@ -1,0 +1,4 @@
+valor=1; suma=1
+valor=2; suma=3
+valor=3; suma=6
+valor=4; suma=10

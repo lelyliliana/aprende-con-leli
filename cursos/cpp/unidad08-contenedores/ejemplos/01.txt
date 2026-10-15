@@ -1,0 +1,2 @@
+Tamaño fijo: 3
+Vector: 3; suma=12

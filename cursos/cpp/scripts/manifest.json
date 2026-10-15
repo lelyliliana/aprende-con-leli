@@ -1,0 +1,605 @@
+[
+  {
+    "unidad": 1,
+    "tipo": "ejemplo",
+    "target": "u01_e01",
+    "archivo": "unidad01-entorno/ejemplos/01.cpp",
+    "salida": "unidad01-entorno/ejemplos/01.txt",
+    "entrada": null,
+    "titulo": "Del código fuente al mensaje"
+  },
+  {
+    "unidad": 1,
+    "tipo": "ejemplo",
+    "target": "u01_e02",
+    "archivo": "unidad01-entorno/ejemplos/02.cpp",
+    "salida": "unidad01-entorno/ejemplos/02.txt",
+    "entrada": null,
+    "titulo": "Dos instrucciones en orden"
+  },
+  {
+    "unidad": 1,
+    "tipo": "solucion",
+    "target": "u01_sol",
+    "archivo": "unidad01-entorno/solucion.cpp",
+    "salida": "unidad01-entorno/solucion.txt",
+    "entrada": null,
+    "titulo": "Solución de los tres pasos y del reto"
+  },
+  {
+    "unidad": 2,
+    "tipo": "ejemplo",
+    "target": "u02_e01",
+    "archivo": "unidad02-tipos/ejemplos/01.cpp",
+    "salida": "unidad02-tipos/ejemplos/01.txt",
+    "entrada": null,
+    "titulo": "Inicializar y convertir unidades"
+  },
+  {
+    "unidad": 2,
+    "tipo": "ejemplo",
+    "target": "u02_e02",
+    "archivo": "unidad02-tipos/ejemplos/02.cpp",
+    "salida": "unidad02-tipos/ejemplos/02.txt",
+    "entrada": null,
+    "titulo": "División entera y decimal"
+  },
+  {
+    "unidad": 2,
+    "tipo": "solucion",
+    "target": "u02_sol",
+    "archivo": "unidad02-tipos/solucion.cpp",
+    "salida": "unidad02-tipos/solucion.txt",
+    "entrada": null,
+    "titulo": "Solución de los tres pasos y del reto"
+  },
+  {
+    "unidad": 3,
+    "tipo": "ejemplo",
+    "target": "u03_e01",
+    "archivo": "unidad03-decisiones/ejemplos/01.cpp",
+    "salida": "unidad03-decisiones/ejemplos/01.txt",
+    "entrada": null,
+    "titulo": "Validar el rango antes de clasificar"
+  },
+  {
+    "unidad": 3,
+    "tipo": "ejemplo",
+    "target": "u03_e02",
+    "archivo": "unidad03-decisiones/ejemplos/02.cpp",
+    "salida": "unidad03-decisiones/ejemplos/02.txt",
+    "entrada": null,
+    "titulo": "Categorías con switch"
+  },
+  {
+    "unidad": 3,
+    "tipo": "solucion",
+    "target": "u03_sol",
+    "archivo": "unidad03-decisiones/solucion.cpp",
+    "salida": "unidad03-decisiones/solucion.txt",
+    "entrada": null,
+    "titulo": "Solución de los tres pasos y del reto"
+  },
+  {
+    "unidad": 4,
+    "tipo": "ejemplo",
+    "target": "u04_e01",
+    "archivo": "unidad04-ciclos/ejemplos/01.cpp",
+    "salida": "unidad04-ciclos/ejemplos/01.txt",
+    "entrada": null,
+    "titulo": "Seguir un acumulador"
+  },
+  {
+    "unidad": 4,
+    "tipo": "ejemplo",
+    "target": "u04_e02",
+    "archivo": "unidad04-ciclos/ejemplos/02.cpp",
+    "salida": "unidad04-ciclos/ejemplos/02.txt",
+    "entrada": null,
+    "titulo": "Una condición de salida que cambia"
+  },
+  {
+    "unidad": 4,
+    "tipo": "solucion",
+    "target": "u04_sol",
+    "archivo": "unidad04-ciclos/solucion.cpp",
+    "salida": "unidad04-ciclos/solucion.txt",
+    "entrada": null,
+    "titulo": "Solución de los tres pasos y del reto"
+  },
+  {
+    "unidad": 5,
+    "tipo": "ejemplo",
+    "target": "u05_e01",
+    "archivo": "unidad05-entrada/ejemplos/01.cpp",
+    "salida": "unidad05-entrada/ejemplos/01.txt",
+    "entrada": "unidad05-entrada/ejemplos/01.entrada.txt",
+    "titulo": "Leer una línea completa"
+  },
+  {
+    "unidad": 5,
+    "tipo": "ejemplo",
+    "target": "u05_e02",
+    "archivo": "unidad05-entrada/ejemplos/02.cpp",
+    "salida": "unidad05-entrada/ejemplos/02.txt",
+    "entrada": "unidad05-entrada/ejemplos/02.entrada.txt",
+    "titulo": "Separar texto de conversión"
+  },
+  {
+    "unidad": 5,
+    "tipo": "solucion",
+    "target": "u05_sol",
+    "archivo": "unidad05-entrada/solucion.cpp",
+    "salida": "unidad05-entrada/solucion.txt",
+    "entrada": null,
+    "titulo": "Solución de los tres pasos y del reto"
+  },
+  {
+    "unidad": 6,
+    "tipo": "ejemplo",
+    "target": "u06_e01",
+    "archivo": "unidad06-funciones/ejemplos/01.cpp",
+    "salida": "unidad06-funciones/ejemplos/01.txt",
+    "entrada": null,
+    "titulo": "Devolver un resultado"
+  },
+  {
+    "unidad": 6,
+    "tipo": "ejemplo",
+    "target": "u06_e02",
+    "archivo": "unidad06-funciones/ejemplos/02.cpp",
+    "salida": "unidad06-funciones/ejemplos/02.txt",
+    "entrada": null,
+    "titulo": "Valor, referencia y referencia constante"
+  },
+  {
+    "unidad": 6,
+    "tipo": "solucion",
+    "target": "u06_sol",
+    "archivo": "unidad06-funciones/solucion.cpp",
+    "salida": "unidad06-funciones/solucion.txt",
+    "entrada": null,
+    "titulo": "Solución de los tres pasos y del reto"
+  },
+  {
+    "unidad": 7,
+    "tipo": "ejemplo",
+    "target": "u07_e01",
+    "archivo": "unidad07-texto/ejemplos/01.cpp",
+    "salida": "unidad07-texto/ejemplos/01.txt",
+    "entrada": null,
+    "titulo": "Comparar texto y buscar un separador"
+  },
+  {
+    "unidad": 7,
+    "tipo": "ejemplo",
+    "target": "u07_e02",
+    "archivo": "unidad07-texto/ejemplos/02.cpp",
+    "salida": "unidad07-texto/ejemplos/02.txt",
+    "entrada": null,
+    "titulo": "Recorrer bytes ASCII con una regla explícita"
+  },
+  {
+    "unidad": 7,
+    "tipo": "solucion",
+    "target": "u07_sol",
+    "archivo": "unidad07-texto/solucion.cpp",
+    "salida": "unidad07-texto/solucion.txt",
+    "entrada": null,
+    "titulo": "Solución de los tres pasos y del reto"
+  },
+  {
+    "unidad": 8,
+    "tipo": "ejemplo",
+    "target": "u08_e01",
+    "archivo": "unidad08-contenedores/ejemplos/01.cpp",
+    "salida": "unidad08-contenedores/ejemplos/01.txt",
+    "entrada": null,
+    "titulo": "Elegir tamaño fijo o dinámico"
+  },
+  {
+    "unidad": 8,
+    "tipo": "ejemplo",
+    "target": "u08_e02",
+    "archivo": "unidad08-contenedores/ejemplos/02.cpp",
+    "salida": "unidad08-contenedores/ejemplos/02.txt",
+    "entrada": null,
+    "titulo": "Índices y modificación por referencia"
+  },
+  {
+    "unidad": 8,
+    "tipo": "solucion",
+    "target": "u08_sol",
+    "archivo": "unidad08-contenedores/solucion.cpp",
+    "salida": "unidad08-contenedores/solucion.txt",
+    "entrada": null,
+    "titulo": "Solución de los tres pasos y del reto"
+  },
+  {
+    "unidad": 9,
+    "tipo": "ejemplo",
+    "target": "u09_e01",
+    "archivo": "unidad09-algoritmos/ejemplos/01.cpp",
+    "salida": "unidad09-algoritmos/ejemplos/01.txt",
+    "entrada": null,
+    "titulo": "Ordenar una copia y encontrar una identidad"
+  },
+  {
+    "unidad": 9,
+    "tipo": "ejemplo",
+    "target": "u09_e02",
+    "archivo": "unidad09-algoritmos/ejemplos/02.cpp",
+    "salida": "unidad09-algoritmos/ejemplos/02.txt",
+    "entrada": null,
+    "titulo": "Nombrar una condición con una lambda"
+  },
+  {
+    "unidad": 9,
+    "tipo": "solucion",
+    "target": "u09_sol",
+    "archivo": "unidad09-algoritmos/solucion.cpp",
+    "salida": "unidad09-algoritmos/solucion.txt",
+    "entrada": null,
+    "titulo": "Solución de los tres pasos y del reto"
+  },
+  {
+    "unidad": 10,
+    "tipo": "ejemplo",
+    "target": "u10_e01",
+    "archivo": "unidad10-registros/ejemplos/01.cpp",
+    "salida": "unidad10-registros/ejemplos/01.txt",
+    "entrada": null,
+    "titulo": "Agrupar datos que pertenecen al mismo registro"
+  },
+  {
+    "unidad": 10,
+    "tipo": "ejemplo",
+    "target": "u10_e02",
+    "archivo": "unidad10-registros/ejemplos/02.cpp",
+    "salida": "unidad10-registros/ejemplos/02.txt",
+    "entrada": null,
+    "titulo": "Un conjunto cerrado de estados"
+  },
+  {
+    "unidad": 10,
+    "tipo": "solucion",
+    "target": "u10_sol",
+    "archivo": "unidad10-registros/solucion.cpp",
+    "salida": "unidad10-registros/solucion.txt",
+    "entrada": null,
+    "titulo": "Solución de los tres pasos y del reto"
+  },
+  {
+    "unidad": 11,
+    "tipo": "ejemplo",
+    "target": "u11_e01",
+    "archivo": "unidad11-errores/ejemplos/01.cpp",
+    "salida": "unidad11-errores/ejemplos/01.txt",
+    "entrada": null,
+    "titulo": "Distinguir ausencia de un cero válido"
+  },
+  {
+    "unidad": 11,
+    "tipo": "ejemplo",
+    "target": "u11_e02",
+    "archivo": "unidad11-errores/ejemplos/02.cpp",
+    "salida": "unidad11-errores/ejemplos/02.txt",
+    "entrada": null,
+    "titulo": "Rechazar y observar una precondición"
+  },
+  {
+    "unidad": 11,
+    "tipo": "solucion",
+    "target": "u11_sol",
+    "archivo": "unidad11-errores/solucion.cpp",
+    "salida": "unidad11-errores/solucion.txt",
+    "entrada": null,
+    "titulo": "Solución de los tres pasos y del reto"
+  },
+  {
+    "unidad": 12,
+    "tipo": "ejemplo",
+    "target": "u12_e01",
+    "archivo": "unidad12-clases/ejemplos/01.cpp",
+    "salida": "unidad12-clases/ejemplos/01.txt",
+    "entrada": null,
+    "titulo": "Una clase conserva una regla"
+  },
+  {
+    "unidad": 12,
+    "tipo": "ejemplo",
+    "target": "u12_e02",
+    "archivo": "unidad12-clases/ejemplos/02.cpp",
+    "salida": "unidad12-clases/ejemplos/02.txt",
+    "entrada": null,
+    "titulo": "Componer objetos y consultar sin modificar"
+  },
+  {
+    "unidad": 12,
+    "tipo": "solucion",
+    "target": "u12_sol",
+    "archivo": "unidad12-clases/solucion.cpp",
+    "salida": "unidad12-clases/solucion.txt",
+    "entrada": null,
+    "titulo": "Solución de los tres pasos y del reto"
+  },
+  {
+    "unidad": 13,
+    "tipo": "ejemplo",
+    "target": "u13_e01",
+    "archivo": "unidad13-vida-util/ejemplos/01.cpp",
+    "salida": "unidad13-vida-util/ejemplos/01.txt",
+    "entrada": null,
+    "titulo": "Un puntero observa un objeto existente"
+  },
+  {
+    "unidad": 13,
+    "tipo": "ejemplo",
+    "target": "u13_e02",
+    "archivo": "unidad13-vida-util/ejemplos/02.cpp",
+    "salida": "unidad13-vida-util/ejemplos/02.txt",
+    "entrada": null,
+    "titulo": "El alcance determina la destrucción"
+  },
+  {
+    "unidad": 13,
+    "tipo": "solucion",
+    "target": "u13_sol",
+    "archivo": "unidad13-vida-util/solucion.cpp",
+    "salida": "unidad13-vida-util/solucion.txt",
+    "entrada": null,
+    "titulo": "Solución de los tres pasos y del reto"
+  },
+  {
+    "unidad": 14,
+    "tipo": "ejemplo",
+    "target": "u14_e01",
+    "archivo": "unidad14-propiedad/ejemplos/01.cpp",
+    "salida": "unidad14-propiedad/ejemplos/01.txt",
+    "entrada": null,
+    "titulo": "Transferir un propietario exclusivo"
+  },
+  {
+    "unidad": 14,
+    "tipo": "ejemplo",
+    "target": "u14_e02",
+    "archivo": "unidad14-propiedad/ejemplos/02.cpp",
+    "salida": "unidad14-propiedad/ejemplos/02.txt",
+    "entrada": null,
+    "titulo": "Un contenedor conserva propietarios"
+  },
+  {
+    "unidad": 14,
+    "tipo": "solucion",
+    "target": "u14_sol",
+    "archivo": "unidad14-propiedad/solucion.cpp",
+    "salida": "unidad14-propiedad/solucion.txt",
+    "entrada": null,
+    "titulo": "Solución de los tres pasos y del reto"
+  },
+  {
+    "unidad": 15,
+    "tipo": "ejemplo",
+    "target": "u15_e01",
+    "archivo": "unidad15-polimorfismo/ejemplos/01.cpp",
+    "salida": "unidad15-polimorfismo/ejemplos/01.txt",
+    "entrada": null,
+    "titulo": "Una interfaz y dos instancias"
+  },
+  {
+    "unidad": 15,
+    "tipo": "ejemplo",
+    "target": "u15_e02",
+    "archivo": "unidad15-polimorfismo/ejemplos/02.cpp",
+    "salida": "unidad15-polimorfismo/ejemplos/02.txt",
+    "entrada": null,
+    "titulo": "Sustituir una estrategia"
+  },
+  {
+    "unidad": 15,
+    "tipo": "solucion",
+    "target": "u15_sol",
+    "archivo": "unidad15-polimorfismo/solucion.cpp",
+    "salida": "unidad15-polimorfismo/solucion.txt",
+    "entrada": null,
+    "titulo": "Solución de los tres pasos y del reto"
+  },
+  {
+    "unidad": 16,
+    "tipo": "ejemplo",
+    "target": "u16_e01",
+    "archivo": "unidad16-mapas/ejemplos/01.cpp",
+    "salida": "unidad16-mapas/ejemplos/01.txt",
+    "entrada": null,
+    "titulo": "Buscar sin insertar una clave"
+  },
+  {
+    "unidad": 16,
+    "tipo": "ejemplo",
+    "target": "u16_e02",
+    "archivo": "unidad16-mapas/ejemplos/02.cpp",
+    "salida": "unidad16-mapas/ejemplos/02.txt",
+    "entrada": null,
+    "titulo": "Contar etiquetas y detectar repetición"
+  },
+  {
+    "unidad": 16,
+    "tipo": "solucion",
+    "target": "u16_sol",
+    "archivo": "unidad16-mapas/solucion.cpp",
+    "salida": "unidad16-mapas/solucion.txt",
+    "entrada": null,
+    "titulo": "Solución de los tres pasos y del reto"
+  },
+  {
+    "unidad": 17,
+    "tipo": "ejemplo",
+    "target": "u17_e01",
+    "archivo": "unidad17-archivos/ejemplos/01.cpp",
+    "salida": "unidad17-archivos/ejemplos/01.txt",
+    "entrada": null,
+    "titulo": "Leer líneas y distinguir fallo de apertura"
+  },
+  {
+    "unidad": 17,
+    "tipo": "ejemplo",
+    "target": "u17_e02",
+    "archivo": "unidad17-archivos/ejemplos/02.cpp",
+    "salida": "unidad17-archivos/ejemplos/02.txt",
+    "entrada": null,
+    "titulo": "Escribir un resultado y volver a leerlo"
+  },
+  {
+    "unidad": 17,
+    "tipo": "solucion",
+    "target": "u17_sol",
+    "archivo": "unidad17-archivos/solucion.cpp",
+    "salida": "unidad17-archivos/solucion.txt",
+    "entrada": null,
+    "titulo": "Solución de los tres pasos y del reto"
+  },
+  {
+    "unidad": 18,
+    "tipo": "ejemplo",
+    "target": "u18_e01",
+    "archivo": "unidad18-plantillas/ejemplos/01.cpp",
+    "salida": "unidad18-plantillas/ejemplos/01.txt",
+    "entrada": null,
+    "titulo": "Una función genérica restringida"
+  },
+  {
+    "unidad": 18,
+    "tipo": "ejemplo",
+    "target": "u18_e02",
+    "archivo": "unidad18-plantillas/ejemplos/02.cpp",
+    "salida": "unidad18-plantillas/ejemplos/02.txt",
+    "entrada": null,
+    "titulo": "Separar declaración y definición"
+  },
+  {
+    "unidad": 18,
+    "tipo": "solucion",
+    "target": "u18_sol",
+    "archivo": "unidad18-plantillas/solucion.cpp",
+    "salida": "unidad18-plantillas/solucion.txt",
+    "entrada": null,
+    "titulo": "Solución de los tres pasos y del reto"
+  },
+  {
+    "unidad": 19,
+    "tipo": "ejemplo",
+    "target": "u19_e01",
+    "archivo": "unidad19-cmake-pruebas/ejemplos/01.cpp",
+    "salida": "unidad19-cmake-pruebas/ejemplos/01.txt",
+    "entrada": null,
+    "titulo": "Comprobar sin depender de assert"
+  },
+  {
+    "unidad": 19,
+    "tipo": "ejemplo",
+    "target": "u19_e02",
+    "archivo": "unidad19-cmake-pruebas/ejemplos/02.cpp",
+    "salida": "unidad19-cmake-pruebas/ejemplos/02.txt",
+    "entrada": null,
+    "titulo": "Recorrer una tabla de casos"
+  },
+  {
+    "unidad": 19,
+    "tipo": "solucion",
+    "target": "u19_sol",
+    "archivo": "unidad19-cmake-pruebas/solucion.cpp",
+    "salida": "unidad19-cmake-pruebas/solucion.txt",
+    "entrada": null,
+    "titulo": "Solución de los tres pasos y del reto"
+  },
+  {
+    "unidad": 20,
+    "tipo": "ejemplo",
+    "target": "u20_e01",
+    "archivo": "unidad20-depuracion/ejemplos/01.cpp",
+    "salida": "unidad20-depuracion/ejemplos/01.txt",
+    "entrada": null,
+    "titulo": "Contar pasos sin prometer tiempos"
+  },
+  {
+    "unidad": 20,
+    "tipo": "ejemplo",
+    "target": "u20_e02",
+    "archivo": "unidad20-depuracion/ejemplos/02.cpp",
+    "salida": "unidad20-depuracion/ejemplos/02.txt",
+    "entrada": null,
+    "titulo": "Reducir un error lógico a un caso"
+  },
+  {
+    "unidad": 20,
+    "tipo": "solucion",
+    "target": "u20_sol",
+    "archivo": "unidad20-depuracion/solucion.cpp",
+    "salida": "unidad20-depuracion/solucion.txt",
+    "entrada": null,
+    "titulo": "Solución de los tres pasos y del reto"
+  },
+  {
+    "unidad": 21,
+    "tipo": "ejemplo",
+    "target": "u21_e01",
+    "archivo": "unidad21-proyecto/ejemplos/01.cpp",
+    "salida": "unidad21-proyecto/ejemplos/01.txt",
+    "entrada": null,
+    "titulo": "Leer el inventario validado"
+  },
+  {
+    "unidad": 21,
+    "tipo": "ejemplo",
+    "target": "u21_e02",
+    "archivo": "unidad21-proyecto/ejemplos/02.cpp",
+    "salida": "unidad21-proyecto/ejemplos/02.txt",
+    "entrada": null,
+    "titulo": "Una entrada contradictoria se rechaza"
+  },
+  {
+    "unidad": 21,
+    "tipo": "solucion",
+    "target": "u21_sol",
+    "archivo": "unidad21-proyecto/solucion.cpp",
+    "salida": "unidad21-proyecto/solucion.txt",
+    "entrada": null,
+    "titulo": "Solución de los tres pasos y del reto"
+  },
+  {
+    "unidad": 21,
+    "tipo": "etapa",
+    "target": "proyecto_paso1",
+    "archivo": "proyecto/pasos/01.cpp",
+    "salida": "proyecto/pasos/01.txt",
+    "entrada": null,
+    "titulo": "Etapa 1 del proyecto"
+  },
+  {
+    "unidad": 21,
+    "tipo": "etapa",
+    "target": "proyecto_paso2",
+    "archivo": "proyecto/pasos/02.cpp",
+    "salida": "proyecto/pasos/02.txt",
+    "entrada": null,
+    "titulo": "Etapa 2 del proyecto"
+  },
+  {
+    "unidad": 21,
+    "tipo": "etapa",
+    "target": "proyecto_paso3",
+    "archivo": "proyecto/pasos/03.cpp",
+    "salida": "proyecto/pasos/03.txt",
+    "entrada": null,
+    "titulo": "Etapa 3 del proyecto"
+  },
+  {
+    "unidad": 21,
+    "tipo": "etapa",
+    "target": "proyecto_paso4",
+    "archivo": "proyecto/pasos/04.cpp",
+    "salida": "proyecto/pasos/04.txt",
+    "entrada": null,
+    "titulo": "Etapa 4 del proyecto"
+  }
+]

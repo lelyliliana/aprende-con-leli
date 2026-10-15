@@ -1,0 +1,6 @@
+/build*/
+/salidas/
+.vs/
+*.exe
+*.obj
+*.o

@@ -1,0 +1,2 @@
+Cantidad: 7
+Sin objeto observado: true

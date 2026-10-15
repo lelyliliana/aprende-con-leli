@@ -1,0 +1,4 @@
+Paso 1: ID=S01
+Paso 2: subtotal=3000
+Paso 3: disponible=true
+Reto: total=9000 centavos

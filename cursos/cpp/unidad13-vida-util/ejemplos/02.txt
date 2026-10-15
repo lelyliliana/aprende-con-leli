@@ -1,0 +1,5 @@
+Antes del bloque
+Adquirir: archivo de práctica
+Dentro del bloque
+Liberar: archivo de práctica
+Después del bloque

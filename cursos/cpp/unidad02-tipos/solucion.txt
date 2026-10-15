@@ -1,0 +1,4 @@
+Paso 1: 105 minutos
+Paso 2: ID=007
+Paso 3: 7/2=3; 7.0/2=3.5
+Reto: total=5997 centavos

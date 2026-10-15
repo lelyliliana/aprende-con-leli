@@ -1,0 +1,4 @@
+Paso 1: inicial=5
+Paso 2: tras retirar 2=3
+Paso 3: rechazo conserva=3
+Reto: retirar exactamente lo disponible deja=0

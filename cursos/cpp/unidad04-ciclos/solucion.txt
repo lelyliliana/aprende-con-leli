@@ -1,0 +1,4 @@
+Paso 1: suma de 1 a 5=15
+Paso 2: contador final=0
+Paso 3: [0,5) tiene 5 iteraciones
+Reto: pares entre 1 y 10 suman 30

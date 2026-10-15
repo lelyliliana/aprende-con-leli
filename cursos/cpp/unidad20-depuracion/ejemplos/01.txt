@@ -1,0 +1,2 @@
+Lineal: 15 posiciones examinadas
+Binaria: 3 posiciones examinadas

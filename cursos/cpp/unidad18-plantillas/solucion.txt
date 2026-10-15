@@ -1,0 +1,4 @@
+Paso 1: mayor=9
+Paso 2: empate=5
+Paso 3: double fuera del concepto integral
+Reto: misma plantilla con long=12

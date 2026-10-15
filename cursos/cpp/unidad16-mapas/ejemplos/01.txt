@@ -1,0 +1,3 @@
+S02 presente con cantidad=0
+S03 presente: false
+Claves: 2

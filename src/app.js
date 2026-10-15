@@ -40,6 +40,7 @@ const COURSE_VISUALS = {
   "arduino": ["∞", "Arduino"],
   "esp32": ["IoT", "ESP32"],
   "c": ["C", "C17"],
+  "cpp": ["C++", "C++20 · Objetos · Recursos"],
   "python": ["Py", "Python"],
   "r": ["R", "Datos · Investigación"],
   "inteligencia-artificial": ["IA", "Fundamentos · Aplicaciones"],

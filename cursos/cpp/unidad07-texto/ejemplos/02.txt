@@ -1,0 +1,2 @@
+Código ASCII admitido: true
+Mayúsculas y minúsculas son distintas: true

@@ -1,0 +1,4 @@
+Paso 1: líneas=2
+Paso 2: resultado escrito
+Paso 3: resultado releído=2
+Reto: ruta compuesta coincide=true

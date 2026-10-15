@@ -1,0 +1,2 @@
+SENSOR;5
+CABLE;12

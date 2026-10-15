@@ -1,0 +1,4 @@
+Paso 1: 180 minutos
+Paso 2: original=5; copia=6
+Paso 3: referencia actualiza stock=6
+Reto: Código: S01

@@ -1,0 +1,2 @@
+Válido: 0
+Rechazo: Horas fuera de 0 a 40

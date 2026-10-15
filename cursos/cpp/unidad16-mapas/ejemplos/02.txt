@@ -1,0 +1,3 @@
+A: 2
+B: 1
+Etiquetas distintas: 2

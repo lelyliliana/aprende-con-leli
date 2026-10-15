@@ -1,0 +1,4 @@
+Paso 1: cero es un valor presente
+Paso 2: sufijo inválido rechazado
+Paso 3: 41 fuera del dominio
+Reto: vacío y entero fuera de representación rechazados

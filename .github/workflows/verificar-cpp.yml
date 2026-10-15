@@ -1,0 +1,64 @@
+name: Verificar curso C++
+on:
+  push:
+    paths: ['cursos/cpp/**', '.github/workflows/verificar-cpp.yml']
+  pull_request:
+    paths: ['cursos/cpp/**', '.github/workflows/verificar-cpp.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  curso-cpp:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            compiler: g++
+            label: gcc
+            config: Debug
+            sanitizer: 'OFF'
+          - os: ubuntu-latest
+            compiler: clang++
+            label: clang
+            config: Release
+            sanitizer: 'OFF'
+          - os: windows-latest
+            compiler: ''
+            label: msvc
+            config: Release
+            sanitizer: 'OFF'
+          - os: macos-latest
+            compiler: clang++
+            label: appleclang
+            config: Debug
+            sanitizer: 'OFF'
+          - os: ubuntu-latest
+            compiler: clang++
+            label: clang-sanitizers
+            config: Debug
+            sanitizer: 'ON'
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        working-directory: cursos/cpp
+    env:
+      ASAN_OPTIONS: detect_leaks=1:halt_on_error=1
+      UBSAN_OPTIONS: halt_on_error=1:print_stacktrace=1
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configurar MSVC
+        if: runner.os == 'Windows'
+        run: cmake -S . -B build
+      - name: Configurar GNU o Clang
+        if: runner.os != 'Windows'
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=${{ matrix.config }} -DCMAKE_CXX_COMPILER=${{ matrix.compiler }} -DCURSO_SANITIZERS=${{ matrix.sanitizer }}
+      - name: Construir
+        run: cmake --build build --config ${{ matrix.config }} --parallel 3
+      - name: Ejecutar pruebas
+        run: ctest --test-dir build -C ${{ matrix.config }} --output-on-failure --parallel 2
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cpp-${{ matrix.os }}-${{ matrix.label }}-${{ matrix.config }}
+          path: cursos/cpp/build/Testing/Temporary/

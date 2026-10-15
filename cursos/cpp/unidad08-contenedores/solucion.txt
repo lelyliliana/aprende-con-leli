@@ -1,0 +1,4 @@
+Paso 1: tamaño=4; suma=20
+Paso 2: seleccionados=6,8
+Paso 3: copia=12,16; original=6,8
+Reto: intervalo fijo=0,40

@@ -1,0 +1,4 @@
+Paso 1: 007 conserva 3 bytes ASCII
+Paso 2: S01 / 12
+Paso 3: separador ausente=true
+Reto: código con espacio admitido=false

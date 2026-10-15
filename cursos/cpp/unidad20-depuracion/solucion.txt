@@ -1,0 +1,4 @@
+Paso 1: lineal=15
+Paso 2: binaria=3
+Paso 3: ambas encuentran el objetivo
+Reto: objetivo ausente encontrado=false

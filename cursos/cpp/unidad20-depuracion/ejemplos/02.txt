@@ -1,0 +1,2 @@
+Caso que detecta el error: esperado=270; calculado=290
+Corrección: 270

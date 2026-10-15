@@ -1,0 +1,4 @@
+Paso 1: orden=2 4 6 8
+Paso 2: encontrado=6
+Paso 3: cumplen=2
+Reto: suma=20; original primero=8

@@ -1,0 +1,4 @@
+Paso 1: claves=2
+Paso 2: S02 tiene cero=0
+Paso 3: S03 ausente=true; claves=2
+Reto: repeticiones detectadas=1

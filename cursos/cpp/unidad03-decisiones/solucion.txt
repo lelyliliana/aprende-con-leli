@@ -1,0 +1,4 @@
+Paso 1: puntaje dentro del dominio
+Paso 2: el límite 60 se aprueba
+Paso 3: 101 se rechaza antes de clasificar
+Reto: Z no es una opción admitida

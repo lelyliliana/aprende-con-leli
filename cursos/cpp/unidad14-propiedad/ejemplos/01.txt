@@ -1,0 +1,2 @@
+Origen vacío: true
+Destino: 7

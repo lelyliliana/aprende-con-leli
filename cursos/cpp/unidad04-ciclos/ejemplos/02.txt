@@ -1,0 +1,4 @@
+Pendientes: 3
+Pendientes: 2
+Pendientes: 1
+Suma de pares: 12

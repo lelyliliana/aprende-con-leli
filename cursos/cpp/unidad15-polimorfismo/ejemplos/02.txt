@@ -1,0 +1,2 @@
+Normal: 100
+Reducido: 90

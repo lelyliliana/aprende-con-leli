@@ -1,0 +1,4 @@
+Copia local: 5
+Tras pasar por valor: 4
+Tras referencia: 5
+ID: S01

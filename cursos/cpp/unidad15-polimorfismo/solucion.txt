@@ -1,0 +1,4 @@
+Paso 1: área concreta=6
+Paso 2: área por interfaz=6
+Paso 3: suma=14
+Reto: propietarios restantes=0

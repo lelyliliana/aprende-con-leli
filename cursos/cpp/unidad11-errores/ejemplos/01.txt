@@ -1,0 +1,2 @@
+Cero conocido: 0
+Texto inválido tiene resultado: false

@@ -1,0 +1,2 @@
+1: SENSOR;5
+2: CABLE;12

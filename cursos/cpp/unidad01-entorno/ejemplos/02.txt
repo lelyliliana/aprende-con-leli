@@ -1,0 +1,2 @@
+Primero leo la pregunta.
+Después ejecuto el programa.
