@@ -6,6 +6,8 @@
 
 Abre [CRAN](https://cran.r-project.org/) y elige tu sistema. En Windows usa el instalador de R; en macOS elige el instalador compatible con tu arquitectura; en Linux sigue las instrucciones de la distribución. El mínimo del curso es R 4.3. No copies comandos de instalación de otro sistema como si fueran universales.
 
+En macOS instala también [XQuartz](https://www.xquartz.org/) para exportar los gráficos SVG utilizados en el curso. La distribución de R para macOS requiere sus bibliotecas X11 para esta salida; consulta los requisitos de tu versión en [R para macOS](https://mac.r-project.org/bin/macosx/). Completa el instalador y vuelve a abrir R/RStudio; si el instalador solicita cerrar sesión, hazlo antes de continuar. Si aparece un error sobre R_X11.so o libSM.6.dylib al guardar un SVG, comprueba primero esta instalación. No necesitas este paso en Windows o Linux.
+
 ## Paso 2. Elegir editor
 
 [RStudio Desktop](https://posit.co/download/rstudio-desktop/) es una opción gratuita para abrir el proyecto, editar scripts y ver gráficos. Instálalo después de R. También puedes usar R con otro editor. La interfaz puede variar entre versiones; los archivos y comandos del curso permiten comprobar la ejecución independientemente del panel elegido.
