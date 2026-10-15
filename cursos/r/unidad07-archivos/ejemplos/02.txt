@@ -1,0 +1,1 @@
+readr: sin problemas de lectura; Excel iris: 5 filas y 5 columnas

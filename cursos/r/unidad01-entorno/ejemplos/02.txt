@@ -1,0 +1,2 @@
+Datos: 7, 8, 9
+Media: 8

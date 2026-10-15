@@ -1,0 +1,2 @@
+Residuos no nulos; x=20 está fuera del rango observado [0,5]
+Un gráfico diagnóstico orienta revisión; no certifica por sí solo los supuestos.

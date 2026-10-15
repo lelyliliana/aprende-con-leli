@@ -1,0 +1,2 @@
+n=5; media=10; IC95%=[8.037, 11.963]; p=1.000
+Interpretación condicionada al diseño y supuestos; no prueba que la media sea exactamente 10.

@@ -1,0 +1,2 @@
+Tabla: 3 filas y 2 columnas
+Selección conservada como tabla: TRUE

@@ -308,6 +308,25 @@
     ]
   },
   {
+    "id": "r",
+    "title": "R para análisis de datos e investigación",
+    "area": "datos-ia",
+    "level": "Principiante a intermedio",
+    "status": "available",
+    "sourceRepository": "lelyliliana/aprende-con-leli",
+    "technologies": [
+      "R",
+      "dplyr",
+      "ggplot2",
+      "Estadística",
+      "Quarto"
+    ],
+    "modules": 19,
+    "internalPath": "./cursos/r/",
+    "prerequisites": [],
+    "next": []
+  },
+  {
     "id": "inteligencia-artificial",
     "title": "Inteligencia Artificial: fundamentos y aplicaciones",
     "area": "datos-ia",

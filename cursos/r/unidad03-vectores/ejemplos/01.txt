@@ -1,0 +1,2 @@
+Mayores que 5: 7, 10
+Índice 0: longitud 0 ; índice 4: NA

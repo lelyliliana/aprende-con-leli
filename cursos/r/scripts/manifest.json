@@ -1,0 +1,218 @@
+[
+  {
+    "unidad": 1,
+    "archivo": "unidad01-entorno/ejemplos/01.R",
+    "titulo": "Primera sesión comprobable",
+    "salida": "unidad01-entorno/ejemplos/01.txt"
+  },
+  {
+    "unidad": 1,
+    "archivo": "unidad01-entorno/ejemplos/02.R",
+    "titulo": "Consultar un resultado sin objetos previos",
+    "salida": "unidad01-entorno/ejemplos/02.txt"
+  },
+  {
+    "unidad": 2,
+    "archivo": "unidad02-objetos/ejemplos/01.R",
+    "titulo": "Asignación y unidades",
+    "salida": "unidad02-objetos/ejemplos/01.txt"
+  },
+  {
+    "unidad": 2,
+    "archivo": "unidad02-objetos/ejemplos/02.R",
+    "titulo": "Distinguir tipo y apariencia",
+    "salida": "unidad02-objetos/ejemplos/02.txt"
+  },
+  {
+    "unidad": 3,
+    "archivo": "unidad03-vectores/ejemplos/01.R",
+    "titulo": "Seleccionar sin cambiar el original",
+    "salida": "unidad03-vectores/ejemplos/01.txt"
+  },
+  {
+    "unidad": 3,
+    "archivo": "unidad03-vectores/ejemplos/02.R",
+    "titulo": "Reciclaje y orden por columnas",
+    "salida": "unidad03-vectores/ejemplos/02.txt"
+  },
+  {
+    "unidad": 4,
+    "archivo": "unidad04-faltantes-factores/ejemplos/01.R",
+    "titulo": "Faltante no equivale a cero",
+    "salida": "unidad04-faltantes-factores/ejemplos/01.txt"
+  },
+  {
+    "unidad": 4,
+    "archivo": "unidad04-faltantes-factores/ejemplos/02.R",
+    "titulo": "Factor y fecha explícitos",
+    "salida": "unidad04-faltantes-factores/ejemplos/02.txt"
+  },
+  {
+    "unidad": 5,
+    "archivo": "unidad05-tablas/ejemplos/01.R",
+    "titulo": "Una fila, una observación",
+    "salida": "unidad05-tablas/ejemplos/01.txt"
+  },
+  {
+    "unidad": 5,
+    "archivo": "unidad05-tablas/ejemplos/02.R",
+    "titulo": "Lista y control de identidad",
+    "salida": "unidad05-tablas/ejemplos/02.txt"
+  },
+  {
+    "unidad": 6,
+    "archivo": "unidad06-funciones/ejemplos/01.R",
+    "titulo": "Una función con contrato",
+    "salida": "unidad06-funciones/ejemplos/01.txt"
+  },
+  {
+    "unidad": 6,
+    "archivo": "unidad06-funciones/ejemplos/02.R",
+    "titulo": "Repetición y resultado equivalente",
+    "salida": "unidad06-funciones/ejemplos/02.txt"
+  },
+  {
+    "unidad": 7,
+    "archivo": "unidad07-archivos/ejemplos/01.R",
+    "titulo": "CSV con tipos y faltantes declarados",
+    "salida": "unidad07-archivos/ejemplos/01.txt"
+  },
+  {
+    "unidad": 7,
+    "archivo": "unidad07-archivos/ejemplos/02.R",
+    "titulo": "readr y un libro Excel de ejemplo",
+    "salida": "unidad07-archivos/ejemplos/02.txt"
+  },
+  {
+    "unidad": 8,
+    "archivo": "unidad08-limpieza/ejemplos/01.R",
+    "titulo": "Separar aceptados e incidencias",
+    "salida": "unidad08-limpieza/ejemplos/01.txt"
+  },
+  {
+    "unidad": 8,
+    "archivo": "unidad08-limpieza/ejemplos/02.R",
+    "titulo": "Auditar sin reemplazar el original",
+    "salida": "unidad08-limpieza/ejemplos/02.txt"
+  },
+  {
+    "unidad": 9,
+    "archivo": "unidad09-transformaciones/ejemplos/01.R",
+    "titulo": "Filtrar, crear y ordenar",
+    "salida": "unidad09-transformaciones/ejemplos/01.txt"
+  },
+  {
+    "unidad": 9,
+    "archivo": "unidad09-transformaciones/ejemplos/02.R",
+    "titulo": "Resumen y denominador explícito",
+    "salida": "unidad09-transformaciones/ejemplos/02.txt"
+  },
+  {
+    "unidad": 10,
+    "archivo": "unidad10-uniones/ejemplos/01.R",
+    "titulo": "Una unión muchos a uno comprobada",
+    "salida": "unidad10-uniones/ejemplos/01.txt"
+  },
+  {
+    "unidad": 10,
+    "archivo": "unidad10-uniones/ejemplos/02.R",
+    "titulo": "Buscar las claves sin correspondencia",
+    "salida": "unidad10-uniones/ejemplos/02.txt"
+  },
+  {
+    "unidad": 11,
+    "archivo": "unidad11-formatos/ejemplos/01.R",
+    "titulo": "Pasar mediciones a formato largo",
+    "salida": "unidad11-formatos/ejemplos/01.txt"
+  },
+  {
+    "unidad": 11,
+    "archivo": "unidad11-formatos/ejemplos/02.R",
+    "titulo": "Volver a ancho exige una clave",
+    "salida": "unidad11-formatos/ejemplos/02.txt"
+  },
+  {
+    "unidad": 12,
+    "archivo": "unidad12-graficos/ejemplos/01.R",
+    "titulo": "Distribución y observaciones visibles",
+    "salida": "unidad12-graficos/ejemplos/01.txt"
+  },
+  {
+    "unidad": 12,
+    "archivo": "unidad12-graficos/ejemplos/02.R",
+    "titulo": "Fechas ordenadas y series separadas",
+    "salida": "unidad12-graficos/ejemplos/02.txt"
+  },
+  {
+    "unidad": 13,
+    "archivo": "unidad13-descriptiva/ejemplos/01.R",
+    "titulo": "La media no describe sola la distribución",
+    "salida": "unidad13-descriptiva/ejemplos/01.txt"
+  },
+  {
+    "unidad": 13,
+    "archivo": "unidad13-descriptiva/ejemplos/02.R",
+    "titulo": "Proporciones con denominador conocido",
+    "salida": "unidad13-descriptiva/ejemplos/02.txt"
+  },
+  {
+    "unidad": 14,
+    "archivo": "unidad14-muestreo/ejemplos/01.R",
+    "titulo": "Muestreo aleatorio con semilla",
+    "salida": "unidad14-muestreo/ejemplos/01.txt"
+  },
+  {
+    "unidad": 14,
+    "archivo": "unidad14-muestreo/ejemplos/02.R",
+    "titulo": "Variabilidad entre medias de muestras",
+    "salida": "unidad14-muestreo/ejemplos/02.txt"
+  },
+  {
+    "unidad": 15,
+    "archivo": "unidad15-inferencia/ejemplos/01.R",
+    "titulo": "Intervalo de una media y contraste declarado",
+    "salida": "unidad15-inferencia/ejemplos/01.txt"
+  },
+  {
+    "unidad": 15,
+    "archivo": "unidad15-inferencia/ejemplos/02.R",
+    "titulo": "Dos grupos independientes y Welch",
+    "salida": "unidad15-inferencia/ejemplos/02.txt"
+  },
+  {
+    "unidad": 16,
+    "archivo": "unidad16-regresion/ejemplos/01.R",
+    "titulo": "Coeficientes y predicción dentro del rango",
+    "salida": "unidad16-regresion/ejemplos/01.txt"
+  },
+  {
+    "unidad": 16,
+    "archivo": "unidad16-regresion/ejemplos/02.R",
+    "titulo": "Residuos y extrapolación",
+    "salida": "unidad16-regresion/ejemplos/02.txt"
+  },
+  {
+    "unidad": 17,
+    "archivo": "unidad17-reproducibilidad/ejemplos/01.R",
+    "titulo": "Datos y entorno identificables",
+    "salida": "unidad17-reproducibilidad/ejemplos/01.txt"
+  },
+  {
+    "unidad": 17,
+    "archivo": "unidad17-reproducibilidad/ejemplos/02.R",
+    "titulo": "Repetir el cálculo conservando el resultado",
+    "salida": "unidad17-reproducibilidad/ejemplos/02.txt"
+  },
+  {
+    "unidad": 18,
+    "archivo": "unidad18-proyecto/ejemplos/01.R",
+    "titulo": "Ejecutar la entrega mínima",
+    "salida": "unidad18-proyecto/ejemplos/01.txt"
+  },
+  {
+    "unidad": 18,
+    "archivo": "unidad18-proyecto/ejemplos/02.R",
+    "titulo": "Transferir al caso ambiental",
+    "salida": "unidad18-proyecto/ejemplos/02.txt"
+  }
+]

@@ -1,0 +1,2 @@
+Población artificial: 1000; muestra: 50; repetición con semilla idéntica
+Una semilla controla el azar del código, no el sesgo de selección.

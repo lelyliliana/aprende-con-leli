@@ -1,0 +1,2 @@
+Caso ambiental ficticio: 12 registros, 11 conteos observados; 2 estaciones
+Un faltante no es cero y el total observado no mide por sí solo abundancia poblacional.

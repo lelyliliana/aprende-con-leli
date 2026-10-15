@@ -1,0 +1,19 @@
+project:
+  type: default
+  output-dir: salidas/informe
+  execute-dir: project
+  render:
+    - proyecto/informe.qmd
+lang: es
+format:
+  html:
+    minimal: true
+    css: proyecto/informe.css
+    toc: true
+    code-fold: false
+    embed-resources: true
+execute:
+  echo: true
+  message: false
+  warning: true
+  error: false

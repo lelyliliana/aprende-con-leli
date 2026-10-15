@@ -1,0 +1,2 @@
+Simulación: 500 muestras de 50; las medias varían entre muestras
+En esta simulación, su dispersión es menor que la de los valores individuales.

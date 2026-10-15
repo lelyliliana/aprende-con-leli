@@ -1,0 +1,7 @@
+if (!file.exists("Curso-R.Rproj")) stop("Trabaja desde la raíz del curso: cursos/r")
+args <- commandArgs(trailingOnly = TRUE)
+if (length(args) != 1L) stop("Indica un archivo del manifiesto o una solución del curso.")
+manifest <- jsonlite::read_json("scripts/manifest.json", simplifyVector = TRUE)
+soluciones <- unlist(jsonlite::read_json("scripts/soluciones.json"), use.names = FALSE)
+if (!args[1] %in% c(manifest$archivo, soluciones)) stop("Selecciona un ejemplo o solución del curso.")
+source(args[1], encoding = "UTF-8", local = new.env(parent = globalenv()))

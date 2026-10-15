@@ -1,0 +1,61 @@
+---
+title: "Encuesta de hábitos de estudio"
+subtitle: "Demostración con datos ficticios"
+author: "Leli Liliana Díaz Izquierdo"
+---
+
+## Pregunta y alcance
+
+¿Cómo se distribuyen los puntajes de los dos grupos del archivo de práctica? Este informe es un análisis **descriptivo** de 36 registros ficticios. No representa estudiantes reales ni estima un efecto causal de la modalidad de estudio.
+
+```{r}
+#| label: preparar
+source("src/curso.R", encoding = "UTF-8")
+comprobar_raiz()
+datos <- leer_encuesta()
+resumen <- resumir_encuesta(datos)
+```
+
+## Datos y calidad
+
+La unidad es un registro por participante ficticio. Hay `r nrow(datos)` registros y `r sum(is.na(datos$horas_semana))` valores faltantes en horas. Los faltantes se conservan como tales; no se sustituyen automáticamente por cero. El diccionario admite puntajes de 0 a 100 y verifica ID único y grupos A/B antes de calcular.
+
+## Resumen por grupo
+
+```{r}
+#| label: tabla-grupos
+knitr::kable(resumen, digits = 2,
+  col.names = c("Grupo", "Registros", "Horas observadas", "Media de horas", "Media de puntaje"),
+  caption = "Resumen descriptivo. La media de horas usa solo los valores observados.")
+```
+
+La cantidad de registros y el denominador de horas se muestran separados. El promedio de un grupo no describe por sí solo toda su distribución.
+
+## Distribución de los puntajes
+
+```{r}
+#| label: fig-puntajes
+#| fig-cap: "Puntajes ficticios por grupo. Los puntos muestran las observaciones; la caja resume la distribución."
+#| fig-alt: "Dos distribuciones de puntajes de grupos A y B, con sus observaciones individuales."
+#| fig-width: 7
+#| fig-height: 4.5
+figura_encuesta(datos)
+```
+
+## Interpretación y límites
+
+Los resúmenes y la figura permiten comparar las distribuciones dentro de este archivo. No hay un diseño de muestreo de una población real ni asignación aleatoria que justifique generalización o causalidad. No se añade un contraste estadístico únicamente porque esté disponible como función.
+
+La limpieza, el diseño de recolección y la interpretación forman parte del análisis. Una diferencia observada debe describirse con magnitud, denominadores y contexto antes de atribuirle una explicación.
+
+## Reproducir
+
+Desde la raíz del curso se ejecuta `quarto render proyecto/informe.qmd`. El código lee archivos del proyecto en una sesión de renderizado y no utiliza objetos guardados de una consola anterior.
+
+```{r}
+#| label: entorno
+list(R = as.character(getRversion()),
+     huella_datos = unname(tools::md5sum("datos/encuesta.csv")),
+     paquetes = vapply(c("dplyr", "ggplot2", "knitr"),
+                      function(p) as.character(utils::packageVersion(p)), character(1)))
+```

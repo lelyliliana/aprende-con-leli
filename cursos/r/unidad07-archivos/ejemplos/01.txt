@@ -1,0 +1,1 @@
+CSV: 36 filas, 3 faltantes en horas; ida y vuelta conservada

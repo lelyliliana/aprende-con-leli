@@ -1,0 +1,2 @@
+Con [ se obtiene lista: TRUE
+Con [[ se obtiene el valor: P1

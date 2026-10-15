@@ -1,0 +1,2 @@
+Registros: 3 ; observados: 2 ; faltantes: 1
+Media observada: 5

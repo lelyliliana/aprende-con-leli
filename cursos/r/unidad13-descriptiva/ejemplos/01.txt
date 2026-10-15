@@ -1,0 +1,2 @@
+Media: 29.2 ; mediana: 12 ; rango: 10 a 100
+La observación 100 se investiga; no se elimina solo por ser extrema.

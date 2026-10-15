@@ -1,0 +1,9 @@
+id,grupo,edad,horas_semana,puntaje,satisfaccion
+S01,A,21,5,70,media
+S02, b ,22,"7,5",80,alta
+S02,B,22,"7,5",80,alta
+S03,A,xx,3,90,alta
+S04,B,25,-2,60,baja
+S05,A,20,,75,media
+S06,C,21,4,85,alta
+S07,B,23,6,105,alta

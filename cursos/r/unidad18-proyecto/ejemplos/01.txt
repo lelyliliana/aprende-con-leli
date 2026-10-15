@@ -1,0 +1,1 @@
+Proyecto: resumen, gráfico y registro de ejecución generados con datos ficticios

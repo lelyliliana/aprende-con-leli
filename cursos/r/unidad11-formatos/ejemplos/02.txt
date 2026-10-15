@@ -1,0 +1,1 @@
+Diferencia por persona: 20, 20; clave duplicada detectada antes de pivotar

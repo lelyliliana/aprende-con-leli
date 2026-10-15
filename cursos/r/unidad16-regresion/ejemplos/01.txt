@@ -1,0 +1,2 @@
+Ajuste construido: intercepto=2; pendiente=3; predicción en x=2.5: 9.5
+La pendiente describe asociación en el modelo, no un efecto causal demostrado.

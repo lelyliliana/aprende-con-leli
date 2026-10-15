@@ -1,0 +1,2 @@
+Datos identificados por huella; sesión y versiones registradas
+El informe se renderiza desde el proyecto, no desde objetos de una consola anterior.

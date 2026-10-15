@@ -1,0 +1,20 @@
+[
+  "unidad01-entorno/solucion.R",
+  "unidad02-objetos/solucion.R",
+  "unidad03-vectores/solucion.R",
+  "unidad04-faltantes-factores/solucion.R",
+  "unidad05-tablas/solucion.R",
+  "unidad06-funciones/solucion.R",
+  "unidad07-archivos/solucion.R",
+  "unidad08-limpieza/solucion.R",
+  "unidad09-transformaciones/solucion.R",
+  "unidad10-uniones/solucion.R",
+  "unidad11-formatos/solucion.R",
+  "unidad12-graficos/solucion.R",
+  "unidad13-descriptiva/solucion.R",
+  "unidad14-muestreo/solucion.R",
+  "unidad15-inferencia/solucion.R",
+  "unidad16-regresion/solucion.R",
+  "unidad17-reproducibilidad/solucion.R",
+  "unidad18-proyecto/solucion.R"
+]

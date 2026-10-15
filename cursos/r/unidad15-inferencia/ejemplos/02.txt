@@ -1,0 +1,2 @@
+Ejercicio construido: dos grupos independientes; diferencia de medias=4.2
+Welch no supone varianzas iguales; siguen importando independencia y distribución.
