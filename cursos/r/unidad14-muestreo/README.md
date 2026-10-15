@@ -10,6 +10,94 @@
 - Repetir un cálculo aleatorio con semilla.
 - Separar variación muestral, sesgo y tamaño del estudio.
 
+## Clase guiada. El azar del programa y el diseño de selección
+
+Una muestra contiene unidades seleccionadas de una población definida. En los ejemplos la población es artificial y conocida:1000 posiciones con valores de 0 a 9 repetidos 100 veces. La media completa es 4.5. Conocerla nos permite estudiar cómo varían muestras del mismo mecanismo, sin atribuir esa población a personas reales.
+
+### 1. Distingue seleccionar unidades y observar valores
+
+En el laboratorio hay seis IDs y algunos valores repetidos. Seleccionar sin reemplazo impide repetir la misma unidad, pero dos IDs distintos pueden tener valor 2. No uses repetición de valores como evidencia de que el muestreo repitió personas. Para seguir identidad, selecciona IDs o posiciones y después recupera sus valores.
+
+### 2. Interpreta reemplazo y tamaño
+
+Sin reemplazo, cada ID elegido deja de estar disponible para otra selección de esa misma muestra. No puedes obtener 30 IDs distintos de una población de 10. Con reemplazo, cada extracción vuelve a dejar disponible el ID, por lo que 30 extracciones sí son posibles y necesariamente contienen repeticiones.
+
+### 3. Controla una secuencia reproducible
+
+set.seed establece el estado inicial del generador de números seudoaleatorios. Si restableces la misma semilla antes de las mismas operaciones, puedes reproducir la muestra en el entorno correspondiente. No pongas la misma semilla dentro de cada iteración de una simulación si quieres explorar muestras distintas: reiniciarías la secuencia continuamente.
+
+Una semilla no convierte una muestra conveniente en representativa ni elimina un sesgo de cobertura. Si eliges las primeras 100 posiciones de la población ordenada del curso, obtienes solo ceros: media 0 aunque el total tenga media 4.5. El problema está en el mecanismo de selección, no en que olvidaras una semilla.
+
+### 4. Simula una distribución de medias
+
+El código replicate(500, mean(sample(...))) repite la selección 500 veces y conserva una media por muestra. No guarda 500 personas ni 500 valores individuales. En cada iteración se seleccionan 50 unidades y se calcula un único resumen. La distribución de esas 500 medias permite explorar variabilidad del procedimiento.
+
+| Objeto | Cantidad | Qué representa |
+|---|---|---|
+| poblacion | 1000 | Valores de unidades artificiales |
+| Una muestra | 50 | Valores seleccionados en una repetición |
+| medias | 500 | Una media de cada muestra |
+
+En esta simulación las medias se dispersan menos que los valores individuales. Eso ilustra por qué la desviación entre personas y el error estándar de una media son cantidades conceptualmente diferentes. La observación depende del mecanismo y del tamaño empleados; no demuestra que toda muestra de 50 de cualquier proceso produzca una inferencia adecuada.
+
+## Laboratorio guiado
+
+[Archivo completo](ejemplos/laboratorio.R) · [Salida comprobada](ejemplos/laboratorio.txt)
+
+Predice primero, ejecuta el archivo completo y lee después la explicación.
+
+```r
+# Laboratorio guiado. Ejecutar desde cursos/r.
+poblacion <- data.frame(id = 1:6, valor = c(2, 2, 4, 6, 8, 8))
+set.seed(17)
+ids_a <- sample(poblacion$id, size = 4, replace = FALSE)
+set.seed(17)
+ids_b <- sample(poblacion$id, size = 4, replace = FALSE)
+stopifnot(identical(ids_a, ids_b), !anyDuplicated(ids_a))
+set.seed(17)
+con_reemplazo <- sample(poblacion$id, size = 20, replace = TRUE)
+stopifnot(length(con_reemplazo) == 20, anyDuplicated(con_reemplazo) > 0)
+cat("Misma semilla y mismas operaciones: los cuatro IDs se repiten.\n")
+cat("Sin reemplazo no se repite ID; valores iguales pueden pertenecer a IDs distintos.\n")
+cat("Veinte extracciones de seis IDs con reemplazo contienen repeticiones.\n")
+```
+
+Desde la terminal del proyecto:
+
+```text
+Rscript --vanilla unidad14-muestreo/ejemplos/laboratorio.R
+```
+
+Salida esperada:
+
+```text
+Misma semilla y mismas operaciones: los cuatro IDs se repiten.
+Sin reemplazo no se repite ID; valores iguales pueden pertenecer a IDs distintos.
+Veinte extracciones de seis IDs con reemplazo contienen repeticiones.
+```
+
+### Lectura del laboratorio
+
+Las comprobaciones revisan identidad de las muestras repetidas y límites del muestreo con reemplazo. Los mensajes no publican una lista aleatoria como si fuera una conclusión sobre una población: explican qué regla se verificó. Si comparas secuencias entre versiones de R, registra también versión y configuración del generador.
+
+## Experimenta
+
+Coloca una sola semilla antes de un ciclo de cinco muestras y registra cinco medias. Después, en una copia, reinicia la misma semilla dentro del ciclo y observa la repetición artificial. Explica por qué el segundo procedimiento no explora la variación que buscabas.
+
+## Errores frecuentes
+
+| Error | Cómo reconocerlo |
+|---|---|
+| Repetir valores significa repetir IDs | Contrasta la identidad de las unidades |
+| Una semilla garantiza representatividad | Revisa el marco y el mecanismo de selección |
+| 500 medias son 500 personas | Sigue qué conserva cada repetición |
+| Reiniciar la semilla en cada vuelta | Revisa si todas las muestras se vuelven idénticas |
+
+## Autoevaluación
+
+¿Qué cambia con replace=TRUE? ¿Por qué pueden repetirse valores sin repetir unidades? ¿Qué controla la semilla y qué no? ¿Cuál es la unidad de cada elemento de medias?
+
+
 ## La población se define antes de seleccionar
 
 Una población es el conjunto sobre el que se plantea una pregunta. Una muestra contiene unidades seleccionadas mediante un procedimiento. El tamaño por sí solo no explica de qué población procede ni si el mecanismo permite generalizar.

@@ -2,23 +2,42 @@
 
 [Lección](README.md) · [Soluciones](SOLUCIONES.md)
 
-Completa un paso antes de pasar al siguiente. Usa datos de práctica y conserva el original.
+Trabaja un paso cada vez. Guarda una predicción antes de ejecutar y comprueba su resultado antes de continuar. Las pistas orientan; la solución completa está en un archivo separado.
 
-## Paso 1
+## Paso 1. Construir una máscara
 
-Con 2,4,6,8,10, selecciona los valores mayores o iguales que 6 y conserva el vector original.
+Con x=c(2, 4, 6, 8, 10), crea la condición x>=6 y muéstrala antes de usarla. Conserva los valores seleccionados en otro nombre.
 
-## Paso 2
+**Pista:** La máscara debe tener una respuesta por elemento.
 
-Excluye la primera posición y explica por qué el original no cambia sin reasignación.
+## Paso 2. Excluir sin sobrescribir
 
-## Paso 3
+Obtén un vector sin la primera posición. Comprueba que x siga teniendo sus cinco cantidades originales.
 
-Dibuja una matriz 2×3 creada con 1:6. Calcula el resultado de sumar un vector de cuatro valores y otro de dos.
+**Pista:** Un índice negativo excluye posiciones.
+
+## Paso 3. Trazar matriz y reciclaje
+
+Dibuja matrix(1:6, nrow=2). Predice m[1, 2] y las dos filas. Después calcula 1:4+c(10, 20) e indica qué valores se reutilizaron.
+
+**Pista:** La matriz se llena por columnas si no indicas byrow.
+
+## Reto de transferencia. Combinar límites
+
+Selecciona del mismo x los valores entre 4 y 8, incluyendo límites. Construye dos condiciones y combínalas por elemento.
+
+**Pista:** Usa & y escribe la referencia a x en ambas comparaciones.
 
 ## Evidencia de cierre
 
-Entrega pregunta, entrada, predicción, código ejecutado, resultado y explicación. Identifica una limitación de lo que comprobaste. Puedes utilizar la [bitácora](../docs/BITACORA.md).
+Entrega las respuestas de los tres pasos y del reto. Incluye entrada, predicción, código o cuenta, salida e interpretación. Explica un caso que falle y qué decisión tomarías. No basta una captura de la ejecución.
+
+## Comprobación antes de avanzar
+
+- [ ] Puedo explicar cada transformación sin leer la solución.
+- [ ] Contrasté la salida con una predicción o una cuenta independiente.
+- [ ] Distinguí datos, resultados y límites de la interpretación.
+- [ ] Respondí la autoevaluación de la lección.
 
 ---
 

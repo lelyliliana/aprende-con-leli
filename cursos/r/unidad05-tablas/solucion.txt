@@ -1,0 +1,4 @@
+Paso 1: los IDs A y B comparten valor 5; ambos se conservan.
+Paso 2: tabla de 3 filas y 1 columna.
+Paso 3: [ conserva lista; [[ extrae texto; la clave repetida es ID y momento.
+Reto: la quinta fila repite la clave de la primera.

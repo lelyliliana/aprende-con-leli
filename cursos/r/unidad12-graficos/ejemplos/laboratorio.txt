@@ -1,0 +1,2 @@
+Figura guardada: salidas/graficos/laboratorio.svg
+Cuatro puntos, horas en x y puntaje en y; asociación descriptiva.

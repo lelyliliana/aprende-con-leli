@@ -1,0 +1,5 @@
+  original candidato fallo_conversion
+1     7,5        7.5            FALSE
+2                 NA            FALSE
+3    texto        NA             TRUE
+4        0       0.0            FALSE

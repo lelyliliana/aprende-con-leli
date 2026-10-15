@@ -2,23 +2,42 @@
 
 [Lección](README.md) · [Soluciones](SOLUCIONES.md)
 
-Completa un paso antes de pasar al siguiente. Usa datos de práctica y conserva el original.
+Trabaja un paso cada vez. Guarda una predicción antes de ejecutar y comprueba su resultado antes de continuar. Las pistas orientan; la solución completa está en un archivo separado.
 
-## Paso 1
+## Paso 1. Definir pregunta y unidad
 
-Escribe una pregunta descriptiva sobre una tabla de encuesta e identifica qué representa cada fila.
+Usa la encuesta ficticia del curso. Escribe una pregunta descriptiva sobre puntaje por grupo. Indica qué representa una fila, qué columna mide el resultado y qué columna permite agrupar. No atribuyas una causa a la diferencia.
 
-## Paso 2
+**Pista:** Redacta «en este archivo» para delimitar el alcance; consulta datos/README.md.
 
-Calcula la media de 2, 4 y 6. Explica qué harías si faltara el tercer dato, sin asignarle cero automáticamente.
+## Paso 2. Calcular con un faltante
 
-## Paso 3
+Calcula a mano la media de 2, 4, 6. Después supone que el tercer dato es desconocido y calcula la media de los observados. Escribe suma, denominador y qué no puedes recuperar.
 
-Distingue dos filas de una persona por error de dos mediciones previstas en momentos distintos. Indica qué información necesitas para decidir.
+**Pista:** Un dato que falta no aporta una medición cero.
+
+## Paso 3. Decidir si hay duplicación
+
+Compara P01/Antes y P01/Después con dos filas P01/Antes. Explica qué clave usarías y qué información revisarías antes de eliminar una fila.
+
+**Pista:** La clave debe distinguir la medición prevista, no solo a la persona.
+
+## Reto de transferencia. Personas y mediciones
+
+Con P01/Antes=2, P01/Después=4, P02/Antes=6 y P02/Después vacío, cuenta personas, mediciones y valores conocidos. Escribe una limitación de promediar todas las filas sin considerar momentos.
+
+**Pista:** Tres cuentas diferentes pueden describir la misma tabla.
 
 ## Evidencia de cierre
 
-Entrega pregunta, entrada, predicción, código ejecutado, resultado y explicación. Identifica una limitación de lo que comprobaste. Puedes utilizar la [bitácora](../docs/BITACORA.md).
+Entrega las respuestas de los tres pasos y del reto. Incluye entrada, predicción, código o cuenta, salida e interpretación. Explica un caso que falle y qué decisión tomarías. No basta una captura de la ejecución.
+
+## Comprobación antes de avanzar
+
+- [ ] Puedo explicar cada transformación sin leer la solución.
+- [ ] Contrasté la salida con una predicción o una cuenta independiente.
+- [ ] Distinguí datos, resultados y límites de la interpretación.
+- [ ] Respondí la autoevaluación de la lección.
 
 ---
 

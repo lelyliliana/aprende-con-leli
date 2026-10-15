@@ -2,23 +2,42 @@
 
 [Lección](README.md) · [Soluciones](SOLUCIONES.md)
 
-Completa un paso antes de pasar al siguiente. Usa datos de práctica y conserva el original.
+Trabaja un paso cada vez. Guarda una predicción antes de ejecutar y comprueba su resultado antes de continuar. Las pistas orientan; la solución completa está en un archivo separado.
 
-## Paso 1
+## Paso 1. Interpretar y predecir
 
-Interpreta intercepto y pendiente del caso construido y calcula la predicción en x=2.5.
+Construye el caso y=2+3*horas+residuos con horas 0:5 y desviaciones 1, -1, 0, 0, -1, 1. Ajusta lm y reconstruye la predicción en 2.5 horas con su ecuación.
 
-## Paso 2
+**Pista:** Extrae coeficientes por nombre y separa intercepto de pendiente.
 
-Pasa x de horas a minutos, ajusta otra vez y comprueba que 150 minutos y 2.5 horas produzcan la misma predicción.
+## Paso 2. Cambiar unidad
 
-## Paso 3
+Convierte horas a minutos, reajusta y predice en 150 minutos. Contrasta con 2.5 horas y explica el cambio de pendiente.
 
-Abre el gráfico de diagnóstico, identifica el rango observado y explica por qué x=20 es extrapolación y por qué asociación no demuestra causa.
+**Pista:** La misma entrada física necesita la unidad del modelo que recibe predict.
+
+## Paso 3. Abrir diagnóstico y revisar rango
+
+Genera un gráfico de residuos, ábrelo y describe qué puedes observar sin certificar supuestos. Identifica rango de horas y clasifica 20 como interpolación oextrapolación.
+
+**Pista:** Una función puede devolver un número fuera del soporte observado.
+
+## Reto de transferencia. Reconstruir los observados
+
+Comprueba para cada fila que ajustado+residuo reproduce el observado dentro de tolerancia. Explica por qué tener residuos no nulos no implica que deban borrarse esas filas.
+
+**Pista:** Usa fitted y residuals con el mismo modelo.
 
 ## Evidencia de cierre
 
-Entrega pregunta, entrada, predicción, código ejecutado, resultado y explicación. Identifica una limitación de lo que comprobaste. Puedes utilizar la [bitácora](../docs/BITACORA.md).
+Entrega las respuestas de los tres pasos y del reto. Incluye entrada, predicción, código o cuenta, salida e interpretación. Explica un caso que falle y qué decisión tomarías. No basta una captura de la ejecución.
+
+## Comprobación antes de avanzar
+
+- [ ] Puedo explicar cada transformación sin leer la solución.
+- [ ] Contrasté la salida con una predicción o una cuenta independiente.
+- [ ] Distinguí datos, resultados y límites de la interpretación.
+- [ ] Respondí la autoevaluación de la lección.
 
 ---
 

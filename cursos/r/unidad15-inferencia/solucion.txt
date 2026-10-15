@@ -1,0 +1,4 @@
+Paso 1: media=10; IC95%=[8.037, 11.963]; parámetro=media.
+Paso 2: n_x=5; n_y=6; diferencia=4.2; IC95%=[1.618, 6.782].
+Paso 3: seis pares; cambios=1,2,1,3,2,3; cambio medio=2.
+Reto: intervalo de Welch contrastado con error estándar y grados de libertad.

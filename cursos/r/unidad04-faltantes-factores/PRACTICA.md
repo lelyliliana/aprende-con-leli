@@ -2,23 +2,42 @@
 
 [Lección](README.md) · [Soluciones](SOLUCIONES.md)
 
-Completa un paso antes de pasar al siguiente. Usa datos de práctica y conserva el original.
+Trabaja un paso cada vez. Guarda una predicción antes de ejecutar y comprueba su resultado antes de continuar. Las pistas orientan; la solución completa está en un archivo separado.
 
-## Paso 1
+## Paso 1. Contar antes de promediar
 
-Calcula la media de 0,NA,20, indicando cuántos valores entraron. No reemplaces el faltante por cero.
+Para 0, NA, 20 calcula media observada, cantidad total y cantidad conocida. Conserva el cero y explica por qué entra en el cálculo.
 
-## Paso 2
+**Pista:** Utiliza is.na y su negación para contar observados.
 
-Calcula una media cuando todos faltan y explica la diferencia entre NaN, NA y cero en esta operación.
+## Paso 2. Investigar todo faltante
 
-## Paso 3
+Calcula mean(c(NA_real_, NA_real_), na.rm=TRUE). Comprueba is.nan e is.na y explica por qué no es una media cero.
 
-Construye un factor con niveles baja,media,alta y una etiqueta desconocida. Identifica qué conversión genera un faltante nuevo.
+**Pista:** Retirar ambos faltantes deja un vector sin observaciones.
+
+## Paso 3. Detectar etiqueta desconocida
+
+Usa baja, media, alta, desconocida. Conserva los textos, identifica valores fuera del diccionario y construye un factor ordenado con los tres niveles admitidos.
+
+**Pista:** Contrasta la máscara de desconocidos con la de faltantes del factor.
+
+## Reto de transferencia. Fechas y etiquetas numéricas
+
+Calcula días entre 15/01/2026 y 18/01/2026 con formato explícito. Con un factor de etiquetas 10, 20 compara as.numeric directo y conversión pasando por as.character.
+
+**Pista:** Los códigos internos del factor no son necesariamente las cantidades de sus etiquetas.
 
 ## Evidencia de cierre
 
-Entrega pregunta, entrada, predicción, código ejecutado, resultado y explicación. Identifica una limitación de lo que comprobaste. Puedes utilizar la [bitácora](../docs/BITACORA.md).
+Entrega las respuestas de los tres pasos y del reto. Incluye entrada, predicción, código o cuenta, salida e interpretación. Explica un caso que falle y qué decisión tomarías. No basta una captura de la ejecución.
+
+## Comprobación antes de avanzar
+
+- [ ] Puedo explicar cada transformación sin leer la solución.
+- [ ] Contrasté la salida con una predicción o una cuenta independiente.
+- [ ] Distinguí datos, resultados y límites de la interpretación.
+- [ ] Respondí la autoevaluación de la lección.
 
 ---
 

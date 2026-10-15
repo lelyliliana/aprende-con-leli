@@ -1,0 +1,4 @@
+Paso 1: 36 filas, 6 columnas, ID de texto y 3 horas faltantes.
+Paso 2: ida y vuelta conserva datos, columnas y faltantes.
+Paso 3: texto inválido identificado; el NA nuevo requiere revisión.
+Reto: hoja mtcars comprobada; 5 filas y 11 columnas leídas.

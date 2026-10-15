@@ -1,0 +1,10 @@
+# Laboratorio guiado. Ejecutar desde cursos/r.
+personas <- data.frame(id = c("P1", "P2", "P3"), grupo = c("A", "A", "C"))
+catalogo <- data.frame(grupo = c("A", "B"), modalidad = c("Guiada", "Autónoma"))
+unidas <- dplyr::left_join(personas, catalogo, by = "grupo", relationship = "many-to-one")
+print(unidas)
+sin_catalogo <- dplyr::anti_join(personas, catalogo, by = "grupo")
+print(sin_catalogo$id)
+interseccion <- dplyr::inner_join(personas, catalogo, by = "grupo", relationship = "many-to-one")
+print(c(izquierda = nrow(unidas), interna = nrow(interseccion)))
+stopifnot(nrow(unidas) == 3, is.na(unidas$modalidad[3]), identical(sin_catalogo$id, "P3"))

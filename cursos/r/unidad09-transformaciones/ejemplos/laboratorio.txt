@@ -1,0 +1,7 @@
+  id minutos
+1  A     120
+2  C     240
+3  D     360
+  grupo n n_horas media
+1     X 2       1     2
+2     Y 2       2     5

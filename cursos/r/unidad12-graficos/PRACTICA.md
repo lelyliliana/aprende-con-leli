@@ -2,23 +2,42 @@
 
 [Lección](README.md) · [Soluciones](SOLUCIONES.md)
 
-Completa un paso antes de pasar al siguiente. Usa datos de práctica y conserva el original.
+Trabaja un paso cada vez. Guarda una predicción antes de ejecutar y comprueba su resultado antes de continuar. Las pistas orientan; la solución completa está en un archivo separado.
 
-## Paso 1
+## Paso 1. Elegir y explicar una distribución
 
-Elige una figura para distribución de puntajes e identifica qué aporta la caja y qué aportan los puntos.
+Usa figura_encuesta y explica qué aporta la caja y qué aportan sus puntos. Comprueba dos grupos y 36 observaciones representadas.
 
-## Paso 2
+**Pista:** La caja no reemplaza los datos individuales; el jitter horizontal facilita distinguir coincidencias.
 
-Genera el SVG y comprueba título, unidades y cantidad de observaciones. Revisa el archivo, además de que exista.
+## Paso 2. Exportar e inspeccionar
 
-## Paso 3
+Guarda el SVG con dimensiones declaradas. Ábrelo y comprueba título, ejes, unidades y alcance ficticio. Anota una observación de legibilidad.
 
-Construye un histograma con ancho declarado, verifica que sus frecuencias sumen los registros observados y explica cómo cambiaría con otro ancho.
+**Pista:** El tamaño del archivo no demuestra que las etiquetas se lean.
+
+## Paso 3. Contrastar dos anchos
+
+Construye histogramas de puntaje con ancho 10 y 5 y boundary=0. Comprueba que ambas frecuencias sumen 36. Guarda y abre los dos para comparar el aspecto.
+
+**Pista:** El ancho cambia cómo agrupas las observaciones, no las observaciones de entrada.
+
+## Reto de transferencia. Declarar ausencias de otra variable
+
+Si construyes una figura solo con horas conocidas, calcula cuántos registros se representarían y cuántos faltan. Escribe una leyenda con ambas cifras.
+
+**Pista:** Cuenta antes de retirar ausencias y no las conviertas en 0.
 
 ## Evidencia de cierre
 
-Entrega pregunta, entrada, predicción, código ejecutado, resultado y explicación. Identifica una limitación de lo que comprobaste. Puedes utilizar la [bitácora](../docs/BITACORA.md).
+Entrega las respuestas de los tres pasos y del reto. Incluye entrada, predicción, código o cuenta, salida e interpretación. Explica un caso que falle y qué decisión tomarías. No basta una captura de la ejecución.
+
+## Comprobación antes de avanzar
+
+- [ ] Puedo explicar cada transformación sin leer la solución.
+- [ ] Contrasté la salida con una predicción o una cuenta independiente.
+- [ ] Distinguí datos, resultados y límites de la interpretación.
+- [ ] Respondí la autoevaluación de la lección.
 
 ---
 

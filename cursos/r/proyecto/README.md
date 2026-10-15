@@ -2,6 +2,8 @@
 
 [Curso](../README.md) · [Unidad final](../unidad18-proyecto/README.md) · [Informe de muestra](../muestra/informe.html)
 
+[**Construirlo una etapa cada vez**](CONSTRUCCION.md). Empieza por esa guía si es tu primera entrega completa; los comandos de esta página sirven para reconstruir la versión terminada.
+
 ## Paso 1. Definir pregunta y unidad
 
 Describe la distribución de puntajes por grupo en encuesta.csv. Una fila es un participante ficticio y el ID es único. Conserva el [diccionario](../datos/README.md). El objetivo es descriptivo; el archivo no contiene un diseño real para inferir causalidad o generalizar a una población.

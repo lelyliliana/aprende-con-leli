@@ -1,0 +1,2 @@
+Recta: puntaje = 2.0 + 3.0 * horas
+Para 2.5 horas: 9.5; primera fila: observado=3, ajustado=2.0, residuo=1.0

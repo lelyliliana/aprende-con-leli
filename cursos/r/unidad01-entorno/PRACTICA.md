@@ -2,23 +2,42 @@
 
 [Lección](README.md) · [Soluciones](SOLUCIONES.md)
 
-Completa un paso antes de pasar al siguiente. Usa datos de práctica y conserva el original.
+Trabaja un paso cada vez. Guarda una predicción antes de ejecutar y comprueba su resultado antes de continuar. Las pistas orientan; la solución completa está en un archivo separado.
 
-## Paso 1
+## Paso 1. Comprobar versión y carpeta
 
-Comprueba versión de R y carpeta del proyecto en la consola. Explica qué evidencia aporta cada comprobación.
+Desde la consola del proyecto consulta R.version.string, getwd() y file.exists("Curso-R.Rproj"). Registra cada respuesta y explica qué comprueba. Si la última es FALSE, corrige la apertura del proyecto antes de seguir.
 
-## Paso 2
+**Pista:** No interpretes que una versión correcta demuestra una carpeta correcta.
 
-Ejecuta primero el Ejemplo 01 desde una terminal y después el Ejemplo 02. Registra predicción y resultado.
+## Paso 2. Ejecutar dos archivos completos
 
-## Paso 3
+Predice las salidas de los ejemplos 01 y 02. Ejecuta cada archivo con Rscript --vanilla desde la terminal de cursos/r. Repite en otra sesión. Registra si coincidieron y conserva el comando utilizado.
 
-Calcula 2+3*4 y (2+3)*4 en un archivo propio. Explica la diferencia entre código R, consola y comando Rscript.
+**Pista:** No escribas Rscript como expresión dentro de la consola R.
+
+## Paso 3. Explicar precedencia
+
+Guarda en un archivo propio 2+3*4 y (2+3)*4. Muestra sus resultados y explica el orden de cálculo. Distingue el archivo escrito, la consola que explora y el comando que ejecuta.
+
+**Pista:** Multiplicación tiene prioridad salvo que un paréntesis cambie el orden.
+
+## Reto de transferencia. Convertir una hora y media
+
+Escribe una expresión que convierta una hora más media hora a minutos. Predice, muestra y comprueba su resultado sin depender de un objeto creado antes en la consola.
+
+**Pista:** Agrupa la suma antes de multiplicar por 60.
 
 ## Evidencia de cierre
 
-Entrega pregunta, entrada, predicción, código ejecutado, resultado y explicación. Identifica una limitación de lo que comprobaste. Puedes utilizar la [bitácora](../docs/BITACORA.md).
+Entrega las respuestas de los tres pasos y del reto. Incluye entrada, predicción, código o cuenta, salida e interpretación. Explica un caso que falle y qué decisión tomarías. No basta una captura de la ejecución.
+
+## Comprobación antes de avanzar
+
+- [ ] Puedo explicar cada transformación sin leer la solución.
+- [ ] Contrasté la salida con una predicción o una cuenta independiente.
+- [ ] Distinguí datos, resultados y límites de la interpretación.
+- [ ] Respondí la autoevaluación de la lección.
 
 ---
 

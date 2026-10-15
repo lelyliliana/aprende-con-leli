@@ -2,23 +2,42 @@
 
 [Lección](README.md) · [Soluciones](SOLUCIONES.md)
 
-Completa un paso antes de pasar al siguiente. Usa datos de práctica y conserva el original.
+Trabaja un paso cada vez. Guarda una predicción antes de ejecutar y comprueba su resultado antes de continuar. Las pistas orientan; la solución completa está en un archivo separado.
 
-## Paso 1
+## Paso 1. Construir validar_horas por etapas
 
-Escribe validar_horas para una cantidad numérica, finita y escalar entre 0 y 40.
+Escribe una función que admita una única cantidad numérica, conocida y finita entre 0 y 40. Revisa tipo antes de longitud y contenido. Devuelve el valor aceptado y usa mensajes para los rechazos.
 
-## Paso 2
+**Pista:** Comienza con una condición por if; no compactes todas antes de comprender el orden.
 
-Comprueba que 0 y 40 se acepten. Prueba -1,41,NA,"5" y un vector de dos valores, y explica cada rechazo.
+## Paso 2. Probar límites y rechazos
 
-## Paso 3
+Acepta 0 y 40. Prueba-1, 41, NA, "5" y c(1, 2). Registra qué regla incumple cada entrada y comprueba que la llamada termina con error.
 
-Sigue el ciclo que calcula suma y cantidad observada. Contrástalo con mean y describe qué pasa si no hay ningún valor observado.
+**Pista:** tryCatch permite observar un rechazo previsto sin detener todas las pruebas.
+
+## Paso 3. Reconstruir una media con ciclo
+
+Recorre 3, NA, 5, 7 y registra por vuelta suma y n_observados. Compara el resultado con mean. Añade un rechazo cuando ningún valor sea observado.
+
+**Pista:** Inicializa acumuladores antes del for y actualiza ambos dentro del caso observado.
+
+## Reto de transferencia. Reutilizar una validación
+
+Construye minutos_validos(horas) que primero llame validar_horas y después convierta a minutos. Comprueba 1.5 y rechaza Inf.
+
+**Pista:** Validar y convertir son responsabilidades que puedes conectar sin duplicar las reglas.
 
 ## Evidencia de cierre
 
-Entrega pregunta, entrada, predicción, código ejecutado, resultado y explicación. Identifica una limitación de lo que comprobaste. Puedes utilizar la [bitácora](../docs/BITACORA.md).
+Entrega las respuestas de los tres pasos y del reto. Incluye entrada, predicción, código o cuenta, salida e interpretación. Explica un caso que falle y qué decisión tomarías. No basta una captura de la ejecución.
+
+## Comprobación antes de avanzar
+
+- [ ] Puedo explicar cada transformación sin leer la solución.
+- [ ] Contrasté la salida con una predicción o una cuenta independiente.
+- [ ] Distinguí datos, resultados y límites de la interpretación.
+- [ ] Respondí la autoevaluación de la lección.
 
 ---
 

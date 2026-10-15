@@ -10,6 +10,95 @@
 - Detectar expansión por duplicados y claves sin correspondencia.
 - Distinguir conservación de filas de integridad del resultado.
 
+## Clase guiada. Relacionar tablas por una clave
+
+Una unión añade información relacionando claves. En el laboratorio cada persona tiene un grupo y el catálogo asocia grupo con modalidad. A aparece en dos personas, pero una sola vez en el catálogo. Esa relación es muchos a uno: varias filas de la izquierda pueden encontrar la misma fila de la derecha.
+
+### 1. Dibuja las correspondencias antes de unir
+
+P1/A encuentra A/Guiada; P2/A encuentra la misma modalidad; P3/C no encuentra ninguna fila del catálogo. B/Autónoma existe en el catálogo, pero no tiene personas asociadas en este ejemplo. La correspondencia depende de la clave, no de que las filas ocupen la misma posición.
+
+| Persona | Clave | Resultado de buscar en el catálogo |
+|---|---|---|
+| P1 | A | Guiada |
+| P2 | A | Guiada |
+| P3 | C | Sin correspondencia |
+
+### 2. Elige la conservación de filas según la pregunta
+
+left_join conserva las tres personas y añade NA a la modalidad de P3. inner_join conserva solo las dos con coincidencia. anti_join devuelve las personas sin correspondencia y sirve para auditarlas. Una tabla interna más pequeña no demuestra que resolviste C: puede haber ocultado la fila que necesitaba investigación.
+
+### 3. Comprueba la cardinalidad
+
+Si el catálogo contiene dos filas con grupo A, P1 y P2 pueden encontrar dos correspondencias cada una y multiplicarse. relationship="many-to-one" exige que cada fila de la izquierda encuentre como máximo una fila de la derecha. Un rechazo aquí es información sobre un contrato incumplido. No lo «soluciones» retirando relationship sin decidir qué catálogo necesitas.
+
+Ese argumento no exige que todas las claves existan: C puede producir NA en un left_join que cumple muchos a uno. Por eso combinamos dos revisiones, unicidad de catálogo y claves sin correspondencia. También revisamos filas e IDs antes y después.
+
+### 4. Separa el experimento de los datos admitidos
+
+El diccionario de encuesta admite A y B. Introducir C en una copia sirve para estudiar una falta de correspondencia; no convierte C en un grupo válido. Si la fuente real necesita otra categoría, tendrías que revisar diccionario, catálogo, validación e interpretación de manera coherente.
+
+El orden del catálogo se puede invertir sin cambiar las modalidades de las personas. Esa es una comprobación útil de que relacionaste por clave y no por posición. En comparaciones posteriores ordena explícitamente por ID cuando el orden de filas no sea parte del contrato de tu operación.
+
+## Laboratorio guiado
+
+[Archivo completo](ejemplos/laboratorio.R) · [Salida comprobada](ejemplos/laboratorio.txt)
+
+Predice primero, ejecuta el archivo completo y lee después la explicación.
+
+```r
+# Laboratorio guiado. Ejecutar desde cursos/r.
+personas <- data.frame(id = c("P1", "P2", "P3"), grupo = c("A", "A", "C"))
+catalogo <- data.frame(grupo = c("A", "B"), modalidad = c("Guiada", "Autónoma"))
+unidas <- dplyr::left_join(personas, catalogo, by = "grupo", relationship = "many-to-one")
+print(unidas)
+sin_catalogo <- dplyr::anti_join(personas, catalogo, by = "grupo")
+print(sin_catalogo$id)
+interseccion <- dplyr::inner_join(personas, catalogo, by = "grupo", relationship = "many-to-one")
+print(c(izquierda = nrow(unidas), interna = nrow(interseccion)))
+stopifnot(nrow(unidas) == 3, is.na(unidas$modalidad[3]), identical(sin_catalogo$id, "P3"))
+```
+
+Desde la terminal del proyecto:
+
+```text
+Rscript --vanilla unidad10-uniones/ejemplos/laboratorio.R
+```
+
+Salida esperada:
+
+```text
+id grupo modalidad
+1 P1     A    Guiada
+2 P2     A    Guiada
+3 P3     C      <NA>
+[1] "P3"
+izquierda   interna
+        3         2
+```
+
+### Lectura del laboratorio
+
+La tabla izquierda tiene tres filas y una modalidad ausente. anti_join imprime P3. La última línea compara tamaños: izquierda=3, interna=2. Esas cifras solo tienen sentido junto a la explicación de qué filas se conservaron.
+
+## Experimenta
+
+Agrega una fila C/Otra al catálogo de laboratorio y predice qué cambiará: left seguirá con tres filas, inner pasará a tres y anti quedará vacía. Ese experimento cambia el catálogo artificial, no el diccionario oficial de la encuesta. En otra copia repite A e identifica por qué relationship rechaza la unión.
+
+## Errores frecuentes
+
+| Error | Evidencia para detectarlo |
+|---|---|
+| Unir por la posición de las filas | Invierte el catálogo y contrasta IDs/modalidad |
+| Descartar desconocidos con inner sin auditarlos | Consulta anti_join antes de descartar |
+| Aceptar más filas sin investigar | Comprueba unicidad de catálogo y cardinalidad |
+| Confundir relación válida con cobertura completa | Revisa también claves sin coincidencia |
+
+## Autoevaluación
+
+¿Qué conserva left_join que puede perder inner_join? ¿Por qué dos personas del grupo A no violan muchos a uno? ¿Qué problema no evita por sí solo relationship?
+
+
 ## Una unión relaciona identidades
 
 La encuesta contiene muchas personas de cada grupo y el catálogo describe una modalidad por grupo. La relación prevista es muchos a uno. Se une por grupo explícitamente; no por posición de fila ni por columnas coincidentes elegidas sin revisar.

@@ -1,0 +1,4 @@
+Paso 1: 1.75 horas = 105 minutos.
+Paso 2: texto 007 conservado; copia numérica=7.
+Paso 3: integer y double ; igual valor, tipos distintos.
+Reto: antes de recalcular=120; después=240 minutos.

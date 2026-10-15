@@ -1,0 +1,4 @@
+Paso 1: media=10; observados=2; registros=3.
+Paso 2: NaN es detectado por is.nan e is.na; no es cero.
+Paso 3: un NA nuevo proviene de la etiqueta desconocida.
+Reto: diferencia=3 días; etiquetas numéricas=10,20; códigos=1,2.

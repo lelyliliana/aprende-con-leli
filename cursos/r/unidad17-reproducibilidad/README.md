@@ -10,6 +10,91 @@
 - Registrar datos, entorno y límites de reproducibilidad.
 - Renderizar un informe sin depender de objetos guardados.
 
+## Clase guiada. Construir un informe que vuelva a calcular sus números
+
+Un análisis reproducible conserva entradas, instrucciones y condiciones de ejecución identificables. Un documento que copia a mano una media puede quedar desactualizado cuando cambia el CSV. Quarto permite escribir texto junto a código R que se ejecuta al renderizar, de modo que las cifras calculadas y la figura proceden de las fuentes del proyecto.
+
+### 1. Reconoce las tres piezas de un archivo qmd
+
+El encabezado YAML, entre líneas de tres guiones, contiene título y opciones. El cuerpo tiene texto Markdown. Los bloques marcados como código R ejecutable producen objetos, tablas o figuras. Una expresión R en línea inserta un número dentro de una oración. No pegues un resultado fijo donde esperas que se recalcule.
+
+En proyecto/informe.qmd, el bloque preparar carga funciones, lee la encuesta y construye resumen. El bloque tabla-grupos recibe ese resumen y lo presenta con knitr::kable. El de figura llama figura_encuesta. Lee primero los objetos que cada bloque crea y después los que consume; el orden de ejecución sigue siendo parte del programa.
+
+### 2. Fija desde dónde se interpretan las rutas
+
+El proyecto declara execute-dir:project en _quarto.y ml. Por eso datos/encuesta.csv se busca desde cursos/r aunque el documento viva dentro de proyecto. No dependas de haber creado datos manualmente en la consola antes de renderizar. El informe prepara su propia sesión de cálculo.
+
+### 3. Comprueba que las cifras son calculadas
+
+El HTML debe mostrar 36 registros y 3 horas faltantes porque se obtienen de los datos. La tabla utiliza 18 registros por grupo y 17/16 horas conocidas. Primero contrasta con leer_encuesta; después revisa las frases, títulos y límites del documento. Un renderizado exitoso puede producir un informe mal interpretado si el texto afirma más de lo que el diseño sostiene.
+
+### 4. Haz un experimento en una copia completa
+
+Cierra el proyecto, duplica cursos/r como r-practica-repro y abre el Curso-R.Rproj de esa copia. Verifica getwd antes de editar. Cambia en su CSV el puntaje de la primera fila en+1, conservando el dominio 0 a 100; guarda y renderiza allí. La media del grupo de esa fila debe aumentar 1/18. Reabre después el proyecto original y confirma que no lo modificaste.
+
+El laboratorio prepara esa comparación en memoria, sin tocar el archivo original. La práctica añade el renderizado de la copia para comprobar que el documento consume la entrada cambiada. Son evidencias distintas: repetir una función no demuestra por sí solo que se reconstruyó el HTML.
+
+### 5. Identifica entorno y datos con límites claros
+
+sessionInfo registra versiones y plataforma. tools::md5 sum aporta una huella útil para detectar cambios de archivo en este flujo docente; no prueba autenticidad, calidad de datos ni integridad frente a ataques. Registrar versiones no las instala ni las congela. Un entorno bloqueado necesitaría un mecanismo adicional de resolución y restauración de dependencias, fuera de esta primera ruta.
+
+## Laboratorio guiado
+
+[Archivo completo](ejemplos/laboratorio.R) · [Salida comprobada](ejemplos/laboratorio.txt)
+
+Predice primero, ejecuta el archivo completo y lee después la explicación.
+
+```r
+# Laboratorio guiado. Ejecutar desde cursos/r.
+source("src/curso.R", encoding = "UTF-8")
+original <- leer_encuesta()
+copia <- original
+copia$puntaje[1] <- copia$puntaje[1] + 1
+validar_encuesta(copia)
+a <- resumir_encuesta(original)
+b <- resumir_encuesta(copia)
+grupo_cambiado <- original$grupo[1]
+diferencia <- b$media_puntaje[b$grupo == grupo_cambiado] - a$media_puntaje[a$grupo == grupo_cambiado]
+stopifnot(abs(diferencia - 1 / 18) < 1e-10, identical(original, leer_encuesta()))
+cat("Una modificación de +1 cambia la media de su grupo en 1/18.\n")
+cat("La copia cambia; el archivo original y sus 36 registros se conservan.\n")
+```
+
+Desde la terminal del proyecto:
+
+```text
+Rscript --vanilla unidad17-reproducibilidad/ejemplos/laboratorio.R
+```
+
+Salida esperada:
+
+```text
+Una modificación de +1 cambia la media de su grupo en 1/18.
+La copia cambia; el archivo original y sus 36 registros se conservan.
+```
+
+### Lectura del laboratorio
+
+El código crea original y copia, cambia solo un puntaje, valida y calcula dos resúmenes. El grupo afectado se identifica desde la fila original, evitando asumir su etiqueta. La diferencia debe ser 1/18 porque se sumó una unidad entre 18 registros. La última comprobación vuelve a leer el archivo para demostrar que no se editó durante el experimento.
+
+## Experimenta
+
+Antes de ejecutar, predice el cambio que produciría sumar 2 a un puntaje:2/18 en la media de su grupo. Comprueba primero que el valor siga siendo admisible. Luego cambia una hora en vez del puntaje y explica por qué su denominador puede ser 17 o16 en lugar de 18.
+
+## Errores frecuentes
+
+| Error | Revisión |
+|---|---|
+| El informe funciona solo después de preparar la consola | Haz que su bloque inicial lea y calcule entradas |
+| Editar el original para un experimento | Abre y comprueba la ruta de una copia completa |
+| Un número fijo queda igual tras cambiar datos | Revisa si está calculado o escrito a mano |
+| Afirmar entorno congelado por guardar sessionInfo | Distingue registro, resolución e instalación |
+
+## Autoevaluación
+
+¿Qué ejecuta renderizar y qué conserva el HTML? ¿Por qué cambiar un puntaje en+1 afecta la media en 1/18? ¿Qué no demuestra una huella del CSV? ¿Qué diferencia hay entre registrar y bloquear versiones?
+
+
 ## Un proyecto conserva rutas y decisiones
 
 Curso-R.Rproj fija una raíz de trabajo y evita restaurar automáticamente un espacio de objetos. Los datos, funciones, ejemplos e informe tienen rutas relativas a esa raíz. Una entrega no debe depender de que otra persona cree antes una variable en una consola privada.

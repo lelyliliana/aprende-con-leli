@@ -2,23 +2,42 @@
 
 [Lección](README.md) · [Soluciones](SOLUCIONES.md)
 
-Completa un paso antes de pasar al siguiente. Usa datos de práctica y conserva el original.
+Trabaja un paso cada vez. Guarda una predicción antes de ejecutar y comprueba su resultado antes de continuar. Las pistas orientan; la solución completa está en un archivo separado.
 
-## Paso 1
+## Paso 1. Conservar dos personas con el mismo valor
 
-Crea una tabla de tres IDs distintos donde dos registros compartan valor 5. Selecciona ambos sin eliminar uno por tener el mismo valor.
+Crea IDs A, B, C y valores 5, 5, 8. Selecciona todas las filas de valor 5 y conserva sus IDs. Explica por qué no eliminas una.
 
-## Paso 2
+**Pista:** La identidad está en id, no en que valor sea distinto.
 
-Conserva una selección de una columna como tabla usando drop=FALSE. Comprueba nrow y ncol.
+## Paso 2. Conservar forma de tabla
 
-## Paso 3
+Selecciona valor con drop=FALSE. Comprueba clase, filas y columnas. Contrasta con d[["valor"]].
 
-Compara [ y [[ sobre una lista. Define la clave que necesitarías si cada persona se midiera dos veces.
+**Pista:** Pregunta tanto por el contenido como por su estructura.
+
+## Paso 3. Extraer una lista y definir clave
+
+Compara lista["id"] y lista[["id"]] en una lista con texto y mediciones. Construye IDs A, A, B, B con momentos 1, 2, 1, 2 y decide si hay claves compuestas repetidas.
+
+**Pista:** El contenedor de una pieza y su contenido pueden tener clases diferentes.
+
+## Reto de transferencia. Duplicar una medición
+
+Agrega al final una copia de A/momento 1. Identifica la posición de la primera repetición de ID/momento y explica por qué no basta revisar ID solo.
+
+**Pista:** anyDuplicated devuelve la posición de una repetición encontrada o0 si no existe.
 
 ## Evidencia de cierre
 
-Entrega pregunta, entrada, predicción, código ejecutado, resultado y explicación. Identifica una limitación de lo que comprobaste. Puedes utilizar la [bitácora](../docs/BITACORA.md).
+Entrega las respuestas de los tres pasos y del reto. Incluye entrada, predicción, código o cuenta, salida e interpretación. Explica un caso que falle y qué decisión tomarías. No basta una captura de la ejecución.
+
+## Comprobación antes de avanzar
+
+- [ ] Puedo explicar cada transformación sin leer la solución.
+- [ ] Contrasté la salida con una predicción o una cuenta independiente.
+- [ ] Distinguí datos, resultados y límites de la interpretación.
+- [ ] Respondí la autoevaluación de la lección.
 
 ---
 

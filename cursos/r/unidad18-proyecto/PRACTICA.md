@@ -2,23 +2,42 @@
 
 [Lección](README.md) · [Soluciones](SOLUCIONES.md)
 
-Completa un paso antes de pasar al siguiente. Usa datos de práctica y conserva el original.
+Trabaja un paso cada vez. Guarda una predicción antes de ejecutar y comprueba su resultado antes de continuar. Las pistas orientan; la solución completa está en un archivo separado.
 
-## Paso 1
+## Paso 1. Construir y revisar la entrega
 
-Ejecuta proyecto/analizar.R y revisa resumen.csv, puntajes.svg, registro.json y sesion.txt en salidas/proyecto.
+Completa primero las cuatro etapas de proyecto/CONSTRUCCION.md. Después ejecuta analizar.R. Lee resumen.csv y registro.json y abre puntajes.svg y sesion.txt. Contrasta contenidos, además de existencia.
 
-## Paso 2
+**Pista:** Debes recuperar 2 grupos, 36 registros y 33 horas observadas.
 
-Introduce un puntaje negativo en un CSV temporal y comprueba que la ejecución lo rechace antes de crear la salida.
+## Paso 2. Probar rechazo previo
 
-## Paso 3
+Crea un CSV temporal con un puntaje-1 y elige una carpeta de salida nueva. Llama ejecutar_analisis y comprueba rechazo y carpeta no creada. Conserva la encuesta original.
 
-Renderiza el informe, autoevalúa los cinco criterios y adapta una pregunta descriptiva al caso ambiental declarando unidad y denominador.
+**Pista:** Usa una carpeta que no exista para poder observar el orden de validación y escritura.
+
+## Paso 3. Comunicar y transferir
+
+Renderiza el informe, aplica los cinco criterios de la rúbrica y escribe evidencia para cada uno. Luego resume ambiental.csv por estación, con registros, observados, total observado y faltantes. Declara clave y límites.
+
+**Pista:** No pases ese archivo al validador de encuesta: tiene otra unidad y otras columnas.
+
+## Reto de transferencia. Defender un límite
+
+Explica por escrito por qué total observado no demuestra abundancia poblacional y por qué el rechazo previo no garantiza transacciones de disco. Completa el conteo de faltantes por estación sin imputarlos.
+
+**Pista:** Separa garantías del programa, información disponible y diseño del estudio.
 
 ## Evidencia de cierre
 
-Entrega pregunta, entrada, predicción, código ejecutado, resultado y explicación. Identifica una limitación de lo que comprobaste. Puedes utilizar la [bitácora](../docs/BITACORA.md).
+Entrega las respuestas de los tres pasos y del reto. Incluye entrada, predicción, código o cuenta, salida e interpretación. Explica un caso que falle y qué decisión tomarías. No basta una captura de la ejecución.
+
+## Comprobación antes de avanzar
+
+- [ ] Puedo explicar cada transformación sin leer la solución.
+- [ ] Contrasté la salida con una predicción o una cuenta independiente.
+- [ ] Distinguí datos, resultados y límites de la interpretación.
+- [ ] Respondí la autoevaluación de la lección.
 
 ---
 

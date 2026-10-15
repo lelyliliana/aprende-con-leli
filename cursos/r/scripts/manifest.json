@@ -1,6 +1,12 @@
 [
   {
     "unidad": 1,
+    "archivo": "unidad01-entorno/ejemplos/laboratorio.R",
+    "titulo": "Leer, predecir y ejecutar sin objetos anteriores",
+    "salida": "unidad01-entorno/ejemplos/laboratorio.txt"
+  },
+  {
+    "unidad": 1,
     "archivo": "unidad01-entorno/ejemplos/01.R",
     "titulo": "Primera sesión comprobable",
     "salida": "unidad01-entorno/ejemplos/01.txt"
@@ -10,6 +16,12 @@
     "archivo": "unidad01-entorno/ejemplos/02.R",
     "titulo": "Consultar un resultado sin objetos previos",
     "salida": "unidad01-entorno/ejemplos/02.txt"
+  },
+  {
+    "unidad": 2,
+    "archivo": "unidad02-objetos/ejemplos/laboratorio.R",
+    "titulo": "Una asignación no es una fórmula enlazada",
+    "salida": "unidad02-objetos/ejemplos/laboratorio.txt"
   },
   {
     "unidad": 2,
@@ -25,6 +37,12 @@
   },
   {
     "unidad": 3,
+    "archivo": "unidad03-vectores/ejemplos/laboratorio.R",
+    "titulo": "Construir la máscara antes de seleccionar",
+    "salida": "unidad03-vectores/ejemplos/laboratorio.txt"
+  },
+  {
+    "unidad": 3,
     "archivo": "unidad03-vectores/ejemplos/01.R",
     "titulo": "Seleccionar sin cambiar el original",
     "salida": "unidad03-vectores/ejemplos/01.txt"
@@ -34,6 +52,12 @@
     "archivo": "unidad03-vectores/ejemplos/02.R",
     "titulo": "Reciclaje y orden por columnas",
     "salida": "unidad03-vectores/ejemplos/02.txt"
+  },
+  {
+    "unidad": 4,
+    "archivo": "unidad04-faltantes-factores/ejemplos/laboratorio.R",
+    "titulo": "Seguir el denominador y las categorías desconocidas",
+    "salida": "unidad04-faltantes-factores/ejemplos/laboratorio.txt"
   },
   {
     "unidad": 4,
@@ -49,6 +73,12 @@
   },
   {
     "unidad": 5,
+    "archivo": "unidad05-tablas/ejemplos/laboratorio.R",
+    "titulo": "Fila, columna y contenido de una lista",
+    "salida": "unidad05-tablas/ejemplos/laboratorio.txt"
+  },
+  {
+    "unidad": 5,
     "archivo": "unidad05-tablas/ejemplos/01.R",
     "titulo": "Una fila, una observación",
     "salida": "unidad05-tablas/ejemplos/01.txt"
@@ -58,6 +88,12 @@
     "archivo": "unidad05-tablas/ejemplos/02.R",
     "titulo": "Lista y control de identidad",
     "salida": "unidad05-tablas/ejemplos/02.txt"
+  },
+  {
+    "unidad": 6,
+    "archivo": "unidad06-funciones/ejemplos/laboratorio.R",
+    "titulo": "De una función pequeña a una decisión y un ciclo",
+    "salida": "unidad06-funciones/ejemplos/laboratorio.txt"
   },
   {
     "unidad": 6,
@@ -73,6 +109,12 @@
   },
   {
     "unidad": 7,
+    "archivo": "unidad07-archivos/ejemplos/laboratorio.R",
+    "titulo": "Leer un CSV pequeño y revisar su estructura",
+    "salida": "unidad07-archivos/ejemplos/laboratorio.txt"
+  },
+  {
+    "unidad": 7,
     "archivo": "unidad07-archivos/ejemplos/01.R",
     "titulo": "CSV con tipos y faltantes declarados",
     "salida": "unidad07-archivos/ejemplos/01.txt"
@@ -82,6 +124,12 @@
     "archivo": "unidad07-archivos/ejemplos/02.R",
     "titulo": "readr y un libro Excel de ejemplo",
     "salida": "unidad07-archivos/ejemplos/02.txt"
+  },
+  {
+    "unidad": 8,
+    "archivo": "unidad08-limpieza/ejemplos/laboratorio.R",
+    "titulo": "Separar original, candidato y motivo de revisión",
+    "salida": "unidad08-limpieza/ejemplos/laboratorio.txt"
   },
   {
     "unidad": 8,
@@ -97,6 +145,12 @@
   },
   {
     "unidad": 9,
+    "archivo": "unidad09-transformaciones/ejemplos/laboratorio.R",
+    "titulo": "Ver la tabla después de cada verbo",
+    "salida": "unidad09-transformaciones/ejemplos/laboratorio.txt"
+  },
+  {
+    "unidad": 9,
     "archivo": "unidad09-transformaciones/ejemplos/01.R",
     "titulo": "Filtrar, crear y ordenar",
     "salida": "unidad09-transformaciones/ejemplos/01.txt"
@@ -106,6 +160,12 @@
     "archivo": "unidad09-transformaciones/ejemplos/02.R",
     "titulo": "Resumen y denominador explícito",
     "salida": "unidad09-transformaciones/ejemplos/02.txt"
+  },
+  {
+    "unidad": 10,
+    "archivo": "unidad10-uniones/ejemplos/laboratorio.R",
+    "titulo": "Predecir las filas de una unión pequeña",
+    "salida": "unidad10-uniones/ejemplos/laboratorio.txt"
   },
   {
     "unidad": 10,
@@ -121,6 +181,12 @@
   },
   {
     "unidad": 11,
+    "archivo": "unidad11-formatos/ejemplos/laboratorio.R",
+    "titulo": "Identificar qué cambia al pasar de ancho a largo",
+    "salida": "unidad11-formatos/ejemplos/laboratorio.txt"
+  },
+  {
+    "unidad": 11,
     "archivo": "unidad11-formatos/ejemplos/01.R",
     "titulo": "Pasar mediciones a formato largo",
     "salida": "unidad11-formatos/ejemplos/01.txt"
@@ -130,6 +196,12 @@
     "archivo": "unidad11-formatos/ejemplos/02.R",
     "titulo": "Volver a ancho exige una clave",
     "salida": "unidad11-formatos/ejemplos/02.txt"
+  },
+  {
+    "unidad": 12,
+    "archivo": "unidad12-graficos/ejemplos/laboratorio.R",
+    "titulo": "Construir datos, ejes, geometría y etiquetas",
+    "salida": "unidad12-graficos/ejemplos/laboratorio.txt"
   },
   {
     "unidad": 12,
@@ -145,6 +217,12 @@
   },
   {
     "unidad": 13,
+    "archivo": "unidad13-descriptiva/ejemplos/laboratorio.R",
+    "titulo": "Reconstruir una media y dos denominadores",
+    "salida": "unidad13-descriptiva/ejemplos/laboratorio.txt"
+  },
+  {
+    "unidad": 13,
     "archivo": "unidad13-descriptiva/ejemplos/01.R",
     "titulo": "La media no describe sola la distribución",
     "salida": "unidad13-descriptiva/ejemplos/01.txt"
@@ -154,6 +232,12 @@
     "archivo": "unidad13-descriptiva/ejemplos/02.R",
     "titulo": "Proporciones con denominador conocido",
     "salida": "unidad13-descriptiva/ejemplos/02.txt"
+  },
+  {
+    "unidad": 14,
+    "archivo": "unidad14-muestreo/ejemplos/laboratorio.R",
+    "titulo": "Distinguir ID, valor y extracción con reemplazo",
+    "salida": "unidad14-muestreo/ejemplos/laboratorio.txt"
   },
   {
     "unidad": 14,
@@ -169,6 +253,12 @@
   },
   {
     "unidad": 15,
+    "archivo": "unidad15-inferencia/ejemplos/laboratorio.R",
+    "titulo": "Construir el intervalo antes de leer t.test",
+    "salida": "unidad15-inferencia/ejemplos/laboratorio.txt"
+  },
+  {
+    "unidad": 15,
     "archivo": "unidad15-inferencia/ejemplos/01.R",
     "titulo": "Intervalo de una media y contraste declarado",
     "salida": "unidad15-inferencia/ejemplos/01.txt"
@@ -178,6 +268,12 @@
     "archivo": "unidad15-inferencia/ejemplos/02.R",
     "titulo": "Dos grupos independientes y Welch",
     "salida": "unidad15-inferencia/ejemplos/02.txt"
+  },
+  {
+    "unidad": 16,
+    "archivo": "unidad16-regresion/ejemplos/laboratorio.R",
+    "titulo": "Reconstruir predicción y residuo en una fila",
+    "salida": "unidad16-regresion/ejemplos/laboratorio.txt"
   },
   {
     "unidad": 16,
@@ -193,6 +289,12 @@
   },
   {
     "unidad": 17,
+    "archivo": "unidad17-reproducibilidad/ejemplos/laboratorio.R",
+    "titulo": "Recalcular una copia y detectar qué cambió",
+    "salida": "unidad17-reproducibilidad/ejemplos/laboratorio.txt"
+  },
+  {
+    "unidad": 17,
     "archivo": "unidad17-reproducibilidad/ejemplos/01.R",
     "titulo": "Datos y entorno identificables",
     "salida": "unidad17-reproducibilidad/ejemplos/01.txt"
@@ -205,6 +307,12 @@
   },
   {
     "unidad": 18,
+    "archivo": "unidad18-proyecto/ejemplos/laboratorio.R",
+    "titulo": "Traducir una pregunta en comprobaciones de entrega",
+    "salida": "unidad18-proyecto/ejemplos/laboratorio.txt"
+  },
+  {
+    "unidad": 18,
     "archivo": "unidad18-proyecto/ejemplos/01.R",
     "titulo": "Ejecutar la entrega mínima",
     "salida": "unidad18-proyecto/ejemplos/01.txt"
@@ -214,5 +322,33 @@
     "archivo": "unidad18-proyecto/ejemplos/02.R",
     "titulo": "Transferir al caso ambiental",
     "salida": "unidad18-proyecto/ejemplos/02.txt"
+  },
+  {
+    "unidad": 18,
+    "tipo": "etapa",
+    "archivo": "proyecto/pasos/01-leer.R",
+    "titulo": "Construcción del proyecto: etapa 1",
+    "salida": "proyecto/pasos/01-leer.txt"
+  },
+  {
+    "unidad": 18,
+    "tipo": "etapa",
+    "archivo": "proyecto/pasos/02-resumir.R",
+    "titulo": "Construcción del proyecto: etapa 2",
+    "salida": "proyecto/pasos/02-resumir.txt"
+  },
+  {
+    "unidad": 18,
+    "tipo": "etapa",
+    "archivo": "proyecto/pasos/03-graficar.R",
+    "titulo": "Construcción del proyecto: etapa 3",
+    "salida": "proyecto/pasos/03-graficar.txt"
+  },
+  {
+    "unidad": 18,
+    "tipo": "etapa",
+    "archivo": "proyecto/pasos/04-entregar.R",
+    "titulo": "Construcción del proyecto: etapa 4",
+    "salida": "proyecto/pasos/04-entregar.txt"
   }
 ]

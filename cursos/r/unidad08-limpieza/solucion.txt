@@ -1,0 +1,4 @@
+Paso 1: aceptadas=1,2,6; duplicada equivalente=3; inválidas=4,5,7,8.
+Paso 2: original conserva 7,5; candidato=7.5; vacío de S05 sigue NA.
+Paso 3: duplicado contradictorio rechazado.
+Reto: una ausencia original, una conversión fallida y un cero observado.

@@ -1,0 +1,4 @@
+Paso 1: dos grupos, caja de resumen y 36 puntos individuales.
+Paso 2: SVG generado con título y unidad de puntaje; falta la inspección humana del archivo.
+Paso 3: anchos 10 y 5; ambos conservan frecuencia total=36.
+Reto: una figura solo de horas observadas usa 33 registros y declara 3 faltantes.

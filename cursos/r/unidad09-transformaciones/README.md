@@ -10,6 +10,100 @@
 - Separar cantidad de registros y cantidad observada.
 - Controlar agrupación y estado del resultado.
 
+## Clase guiada. Una transformación pequeña por verbo
+
+dplyr ofrece operaciones con nombres que expresan qué cambia en una tabla. filter selecciona filas; select elige columnas; mutate crea o transforma columnas; arrange ordena filas; summarise produce resúmenes. group_by indica qué filas deben resumirse juntas. No todos esos verbos conservan la cantidad de registros.
+
+### 1. Empieza por observar cada resultado intermedio
+
+El laboratorio tiene cuatro IDs. X posee dos filas pero una hora conocida; Y posee dos filas y dos horas conocidas. filter(!is.na(horas)) conserva A, C, D. mutate(minutos=horas*60) añade la nueva unidad sin cambiar esas tres filas. El original d conserva sus cuatro registros y no incorpora minutos porque guardamos la transformación en otro nombre.
+
+La expresión paquete::funcion identifica qué paquete aporta una operación. Así dplyr::filter no se confunde con otra función llamada filter. No hace falta cargar todos los paquetes del ecosistema para ejecutar estos ejemplos.
+
+### 2. Lee la tubería de izquierda a derecha
+
+El operador |> pasa el resultado de la izquierda como primer argumento de la llamada siguiente. d |> dplyr::group_by(grupo) se puede leer como «toma d y agrupa por grupo». La llamada posterior summarise recibe esa tabla agrupada. Una tubería no modifica por sí misma el objeto inicial: la asignación exterior determina qué nombre conserva la salida.
+
+Dentro de los verbos escribimos nombres de columnas, como horas, sin d$. Esa forma pertenece a la evaluación de dplyr; fuera de ella, horas no aparece mágicamente como objeto de la consola. Si trabajas en R base, utiliza la selección de columnas que ya aprendiste.
+
+### 3. Separa cantidad de filas y denominador de una media
+
+En summarise, n() cuenta filas del grupo; sum(!is.na(horas)) cuenta cantidades conocidas. Para X se informa n=2, n_horas=1, media=2; para Y, n=2, n_horas=2, media=5. Una media sin denominador oculta esta diferencia de información.
+
+| Operación | Filas del laboratorio | Qué representa la salida |
+|---|---|---|
+| Entrada | 4 | Personas ficticias |
+| filter de horas conocidas | 3 | Personas con medición disponible |
+| mutate de minutos | 3 | Las mismas personas, otra variable |
+| summarise por grupo sobre la entrada | 2 | Un resumen por grupo |
+
+### 4. Declara el caso sin mediciones
+
+mean de un grupo totalmente faltante con na.rm=TRUE produce NaN. resumir_encuesta elige comunicar NA_real_ y n_horas=0. all(is.na(horas)) identifica ese caso antes de calcular. .groups="drop" devuelve el resumen sin agrupación para que una operación posterior no herede grupos sin que el lector lo advierta.
+
+La selección del caso se explica por la información disponible, no por buscar el promedio que luzca mejor. Si el original tiene 36 participantes y filtras 17 con horas del grupo A, el resumen describe esos 17 observados, no todas las personas que podrían pertenecer al grupo en una población real.
+
+## Laboratorio guiado
+
+[Archivo completo](ejemplos/laboratorio.R) · [Salida comprobada](ejemplos/laboratorio.txt)
+
+Predice primero, ejecuta el archivo completo y lee después la explicación.
+
+```r
+# Laboratorio guiado. Ejecutar desde cursos/r.
+d <- data.frame(id = c("A", "B", "C", "D"), grupo = c("X", "X", "Y", "Y"),
+                horas = c(2, NA_real_, 4, 6))
+observadas <- dplyr::filter(d, !is.na(horas))
+transformadas <- dplyr::mutate(observadas, minutos = horas * 60)
+print(transformadas[c("id", "minutos")])
+resumen <- d |>
+  dplyr::group_by(grupo) |>
+  dplyr::summarise(n = dplyr::n(), n_horas = sum(!is.na(horas)),
+                   media = mean(horas, na.rm = TRUE), .groups = "drop")
+print(as.data.frame(resumen))
+stopifnot(nrow(d) == 4, !"minutos" %in% names(d), identical(resumen$n_horas, c(1L, 2L)))
+```
+
+Desde la terminal del proyecto:
+
+```text
+Rscript --vanilla unidad09-transformaciones/ejemplos/laboratorio.R
+```
+
+Salida esperada:
+
+```text
+id minutos
+1  A     120
+2  C     240
+3  D     360
+  grupo n n_horas media
+1     X 2       1     2
+2     Y 2       2     5
+```
+
+### Lectura del laboratorio
+
+La primera tabla muestra IDs A, C, D y minutos 120, 240, 360. La segunda resume la entrada completa, no esa selección: X conserva n=2 aunque solo se use una hora conocida. Se convierte a data.frame al imprimir para que la salida muestre la tabla completa sin abreviaturas de impresión de tibbles.
+
+## Experimenta
+
+Cambia la hora faltante de B por 6. Predice n=2, n_horas=2, media=4 para X. Después deja todas las horas de X como NA en una copia y revisa la política de resumir_encuesta con la encuesta del curso. El tamaño del grupo no cambia por dejar de conocer su medición.
+
+## Errores frecuentes
+
+| Error | Revisión |
+|---|---|
+| Tratar n() como observados de cualquier variable | Cuenta ausencias de la variable analizada |
+| Usar summarise esperando conservar cada persona | Comprueba el cambio de unidad de salida |
+| Promediar antes de revisar tipo | Inspecciona la columna y su diccionario |
+| Ignorar grupos heredados | Consulta is_grouped_df y declara .groups |
+
+## Autoevaluación
+
+¿Qué diferencia hay entre mutate y summarise? ¿Por qué X tiene dos filas pero media basada en una sola cantidad? ¿Qué significa devolver NA y n_horas=0?
+
+
 ## Cada verbo responde a una operación
 
 filter selecciona filas, select columnas, mutate crea o transforma columnas y arrange ordena. El operador |> pasa el resultado a la siguiente función. La secuencia hace visible qué cambia primero; no reemplaza la necesidad de revisar tipos y unidades.

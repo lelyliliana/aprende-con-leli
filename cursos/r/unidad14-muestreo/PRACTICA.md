@@ -2,23 +2,42 @@
 
 [Lección](README.md) · [Soluciones](SOLUCIONES.md)
 
-Completa un paso antes de pasar al siguiente. Usa datos de práctica y conserva el original.
+Trabaja un paso cada vez. Guarda una predicción antes de ejecutar y comprueba su resultado antes de continuar. Las pistas orientan; la solución completa está en un archivo separado.
 
-## Paso 1
+## Paso 1. Repetir una muestra
 
-Repite una muestra de la población artificial con la misma semilla. Cambia después la semilla y distingue repetibilidad de representatividad.
+Usa la población artificial de 1000 valores. Selecciona 50 sin reemplazo dos veces restableciendo la misma semilla. Luego cambia la semilla antes de otra selección y explica el alcance de la repetibilidad.
 
-## Paso 2
+**Pista:** Restablece antes de repetir las mismas operaciones; no confundas otra secuencia con mejor diseño.
 
-Sigue las 500 medias y explica por qué su variación es diferente de la dispersión entre valores individuales.
+## Paso 2. Seguir 500 medias
 
-## Paso 3
+Simula 500 muestras de 50 y guarda una media por muestra. Comprueba cantidad de resultados y compara su desviación con la de los valores individuales.
 
-Selecciona treinta IDs a partir de diez con y sin reemplazo y justifica el resultado.
+**Pista:** En replicate, la expresión conservada es la media, no la muestra completa.
+
+## Paso 3. Seleccionar 30 de 10
+
+Extrae 30 IDs a partir de 1:10 con reemplazo. Después intenta sin reemplazo y explica el rechazo. Distingue ID repetido de valor repetido.
+
+**Pista:** No existen 30 unidades distintas dentro de un conjunto de 10.
+
+## Reto de transferencia. Detectar sesgo de selección
+
+Selecciona las primeras 100 posiciones de la población ordenada 0:9 repetida 100 veces por valor. Compara su media con la de la población y explica si una semilla arreglaría ese mecanismo.
+
+**Pista:** La primera centena contiene un único valor aunque haya 100 posiciones distintas.
 
 ## Evidencia de cierre
 
-Entrega pregunta, entrada, predicción, código ejecutado, resultado y explicación. Identifica una limitación de lo que comprobaste. Puedes utilizar la [bitácora](../docs/BITACORA.md).
+Entrega las respuestas de los tres pasos y del reto. Incluye entrada, predicción, código o cuenta, salida e interpretación. Explica un caso que falle y qué decisión tomarías. No basta una captura de la ejecución.
+
+## Comprobación antes de avanzar
+
+- [ ] Puedo explicar cada transformación sin leer la solución.
+- [ ] Contrasté la salida con una predicción o una cuenta independiente.
+- [ ] Distinguí datos, resultados y límites de la interpretación.
+- [ ] Respondí la autoevaluación de la lección.
 
 ---
 

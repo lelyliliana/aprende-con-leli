@@ -34,6 +34,87 @@ La terminal del proyecto puede ejecutar `Rscript --vanilla unidad01-entorno/ejem
 
 Predice 2+3×4 antes de ejecutar: multiplicar tiene prioridad sobre sumar. El segundo ejemplo calcula la media de tres valores y no necesita que hayas creado antes un objeto en la consola. Si falta una herramienta, corrige el entorno antes de alterar el ejercicio.
 
+[Apoyo de consulta: cómo leer el código](../docs/LECTURA-DE-CODIGO.md). Busca una expresión cuando la necesites y vuelve a esta lección.
+
+## Clase guiada. Tu primer archivo, desde una sesión vacía
+
+R interpreta instrucciones y calcula. RStudio es una aplicación que facilita escribirlas y ejecutarlas. Un archivo terminado en .R conserva las instrucciones como texto; un resultado que apareció en una consola no queda automáticamente guardado como programa. Quarto combinará texto y cálculo en un informe, pero todavía no es necesario para esta primera clase.
+
+### 1. Reconoce dónde estás escribiendo
+
+En la consola de R suele aparecer el indicador `>`. Es una señal de que espera una expresión, no algo que debas copiar al archivo. Si queda un paréntesis o una comilla sin cerrar puede aparecer `+`: R espera el resto de esa misma expresión. Completa el cierre o cancela la instrucción antes de comenzar otra. No copies los indicadores como parte del código.
+
+La terminal del sistema recibe comandos como Rscript. La consola recibe expresiones como `2 + 3`. RStudio puede mostrar ambos paneles; el nombre del panel y el tipo de instrucción importan más que su posición exacta en la pantalla.
+
+### 2. Comprueba primero la carpeta
+
+Abre Curso-R.Rproj y consulta getwd(). Una ruta como datos/encuesta.csv significa «entra en datos desde la carpeta de trabajo». No significa «busca el archivo en todo el computador». El proyecto debe situarte en cursos/r. file.exists("Curso-R.Rproj") comprueba que allí esté el archivo esperado; si devuelve FALSE, corrige la carpeta antes de modificar el código.
+
+### 3. Predice dos expresiones
+
+En `2 + 3 * 4`, primero se multiplica 3 por 4 y luego se suma 2: resultado 14. En `(2 + 3) * 4`, el paréntesis obliga a sumar antes: resultado 20. Escribe ambas predicciones antes de ejecutar. Esto permite distinguir una sorpresa del lenguaje de un error al copiar.
+
+### 4. Guarda y ejecuta un archivo completo
+
+El laboratorio guarda cada resultado con `<-`, que significa asignar un nombre a un valor. print muestra el contenido de ese nombre. stopifnot revisa que las condiciones escritas sean verdaderas; si no lo son, detiene el archivo. No calcula una respuesta correcta por ti: convierte una expectativa explícita en una comprobación. cat escribe un mensaje de cierre y `\n` añade un salto de línea.
+
+Ejecuta el archivo completo desde la raíz. Si modificas una expresión, guarda antes de volver a usar Rscript: la terminal lee la versión del disco. Ejecutar una línea seleccionada del editor no necesariamente ejecuta las instrucciones anteriores que necesita.
+
+## Laboratorio guiado
+
+[Archivo completo](ejemplos/laboratorio.R) · [Salida comprobada](ejemplos/laboratorio.txt)
+
+Predice primero, ejecuta el archivo completo y lee después la explicación.
+
+```r
+# Laboratorio guiado. Ejecutar desde cursos/r.
+# El archivo contiene todas las entradas que necesita.
+sin_parentesis <- 2 + 3 * 4
+con_parentesis <- (2 + 3) * 4
+print(sin_parentesis)
+print(con_parentesis)
+stopifnot(sin_parentesis == 14, con_parentesis == 20)
+cat("Las dos expresiones se calcularon desde este archivo.\n")
+```
+
+Desde la terminal del proyecto:
+
+```text
+Rscript --vanilla unidad01-entorno/ejemplos/laboratorio.R
+```
+
+Salida esperada:
+
+```text
+[1] 14
+[1] 20
+Las dos expresiones se calcularon desde este archivo.
+```
+
+### Lectura del laboratorio
+
+Las dos primeras asignaciones son las entradas del cálculo. Después, print muestra 14 y 20 en ese orden. R añade `[1]` al imprimir un vector: indica que el primer elemento mostrado ocupa la posición uno; no es parte del resultado numérico. La línea stopifnot confirma las dos predicciones y no imprime nada cuando se cumplen. Un archivo silencioso no necesariamente está detenido.
+
+Ejecuta de nuevo desde otra sesión limpia. Debes obtener lo mismo porque todas las entradas están en el archivo. Con source desde una consola puedes obtener el mismo resultado, pero esa consola también puede contener objetos anteriores; la sesión limpia ayuda a detectar dependencias accidentales.
+
+## Experimenta
+
+Cambia únicamente 4 por 5 en las dos expresiones y predice 17 y 25. Ajusta también las expectativas del laboratorio de tu copia, explicando primero la cuenta. Después vuelve al ejemplo original. Cambiar una comprobación sin entender por qué fallaba elimina evidencia útil.
+
+## Errores frecuentes
+
+| Señal | Revisión concreta |
+|---|---|
+| Rscript no se reconoce en la consola R | Usa la terminal o source con la ruta del archivo |
+| No se puede abrir el archivo | Comprueba getwd, nombre y proyecto extraído del ZIP |
+| Sigue apareciendo el resultado antiguo | Guarda el archivo antes de ejecutarlo |
+| Aparece el indicador + | Revisa comillas y paréntesis sin cerrar |
+
+## Autoevaluación
+
+¿Qué diferencia hay entre escribir código, guardarlo y ejecutarlo? ¿Por qué getwd no informa la versión de R? ¿Qué demuestra que una sesión limpia obtenga 14 y 20? Responde antes de mirar las soluciones.
+
+
 ## Ejemplos completos
 
 Ejecuta uno cada vez desde la raíz del curso. Predice la salida antes de comprobarla. Las condiciones stopifnot comprueban expectativas y detienen el archivo si no se cumplen.

@@ -10,6 +10,93 @@
 - Declarar denominadores para frecuencias y proporciones.
 - Investigar extremos antes de excluirlos.
 
+## Clase guiada. Elegir un resumen y explicar qué representa
+
+La estadística descriptiva organiza los valores observados. Una media o una proporción resume una parte de la tabla, pero no reemplaza su distribución, su unidad ni el origen de los registros. Comenzamos con cinco cantidades pequeñas para que puedas reconstruir los cálculos antes de usar el archivo completo.
+
+### 1. Reconstruye la media
+
+Para 10, 11, 12, 13, 100, suma 146 y divide entre cinco: 29.2. La media usa todos los valores y cambia cuando un extremo cambia. Ninguna observación del ejemplo es igual a 29.2: el promedio no tiene que coincidir con un caso real ni representar por sí solo un valor típico.
+
+### 2. Compara con la mediana y la dispersión
+
+Ordenados los cinco datos, la posición central es la tercera: mediana 12. Si hubiera un número par de observaciones, la mediana numérica se obtiene con los dos valores centrales. El mínimo 10 y el máximo 100 describen extremos; la amplitud es 90. La desviación estándar resume variación respecto a la media y conserva la unidad de la variable. No confundas dispersión entre observaciones con incertidumbre de una media.
+
+Los cuartiles describen posiciones de la distribución y el rango intercuartílico resume la separación entre Q1 y Q3. Para conjuntos pequeños hay convenciones de cálculo: si comparas software, declara el método de cuantiles en lugar de asumir que cualquier diferencia es un error. La caja de la unidad anterior utiliza resúmenes de distribución y no marca datos imposibles por sí sola.
+
+### 3. Investiga un extremo sin borrarlo por comodidad
+
+El valor 100 podría ser válido en un puntaje de 0 a 100. Revisa archivo de origen, unidad, captura y contexto. Excluirlo hipotéticamente cambia la media a 11.5, pero esa sensibilidad no justifica una eliminación real. Conserva el original y comunica el criterio si finalmente corriges o excluyes una observación.
+
+### 4. Pon nombre al denominador de un porcentaje
+
+En alta, alta, baja, NA hay cuatro registros, tres respuestas conocidas y dos respuestas altas. Entre las respuestas conocidas, alta representa 2/3 (66.67%); entre todos los registros, representa 2/4 (50%). Ambas cuentas pueden ser correctas si explicas la pregunta. La ausencia no es una cuarta categoría de satisfacción ni autoriza a clasificarla como baja.
+
+| Pregunta | Numerador | Denominador |
+|---|---|---|
+| ¿Qué fracción de respuestas conocidas es alta? | 2 | 3 |
+| ¿Qué fracción de registros tiene respuesta alta? | 2 | 4 |
+
+En la encuesta hay 36 registros y 34 respuestas de satisfacción. table con useNA="ifany" incluye la cuenta de faltantes; con useNA="no" resume solo respuestas. prop.table normaliza la tabla que recibe: si excluiste las ausencias, sus proporciones suman uno entre las respuestas disponibles.
+
+## Laboratorio guiado
+
+[Archivo completo](ejemplos/laboratorio.R) · [Salida comprobada](ejemplos/laboratorio.txt)
+
+Predice primero, ejecuta el archivo completo y lee después la explicación.
+
+```r
+# Laboratorio guiado. Ejecutar desde cursos/r.
+x <- c(10, 11, 12, 13, 100)
+print(sum(x))
+print(length(x))
+print(sum(x) / length(x))
+print(median(x))
+respuestas <- c("alta", "alta", "baja", NA_character_)
+n_alta <- sum(respuestas == "alta", na.rm = TRUE)
+n_observadas <- sum(!is.na(respuestas))
+cat(sprintf("Entre respuestas: %.2f%%; entre registros: %.2f%%\n", 100 * n_alta / n_observadas, 100 * n_alta / length(respuestas)))
+stopifnot(mean(x) == 29.2, median(x) == 12, n_observadas == 3)
+```
+
+Desde la terminal del proyecto:
+
+```text
+Rscript --vanilla unidad13-descriptiva/ejemplos/laboratorio.R
+```
+
+Salida esperada:
+
+```text
+[1] 146
+[1] 5
+[1] 29.2
+[1] 12
+Entre respuestas: 66.67%; entre registros: 50.00%
+```
+
+### Lectura del laboratorio
+
+Las cuatro primeras impresiones reconstruyen suma 146, tamaño 5, media 29.2 y mediana 12. La última línea calcula dos porcentajes con el mismo numerador. Lee el nombre de cada denominador: cambiarlo altera la pregunta aunque los datos no cambien.
+
+## Experimenta
+
+Reemplaza 100 por 14 en una copia: la media y la mediana serán 12. Después añade una segunda ausencia en las respuestas de satisfacción. Cuenta de nuevo observados y total antes de expresar porcentajes. No omitas esa decisión porque prop.table ejecute sin error.
+
+## Errores frecuentes
+
+| Error | Revisión |
+|---|---|
+| Informar solo media ante un extremo | Añade mediana, tamaño, dispersión y contexto |
+| Excluir 100 porque eleva el promedio | Investiga dominio y procedencia |
+| Comparar porcentajes con bases distintas | Explicita numerador y denominador |
+| Tratar faltante como insatisfacción | Conserva la ausencia como información desconocida |
+
+## Autoevaluación
+
+¿Por qué media 29.2 y mediana 12 no se contradicen? ¿Cuándo usarías 34 y cuándo 36 en la encuesta? ¿Qué necesitas revisar antes de eliminar un dato extremo?
+
+
 ## Una medida resume una pregunta, no toda la distribución
 
 La media de 10,11,12,13,100 es 29.2 y la mediana es 12. Ninguna es un error: responden a definiciones distintas. La media utiliza magnitudes de todos los valores; la mediana ubica el centro del orden. La observación 100 tiene gran influencia en la media.

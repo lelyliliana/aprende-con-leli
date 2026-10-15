@@ -2,23 +2,42 @@
 
 [Lección](README.md) · [Soluciones](SOLUCIONES.md)
 
-Completa un paso antes de pasar al siguiente. Usa datos de práctica y conserva el original.
+Trabaja un paso cada vez. Guarda una predicción antes de ejecutar y comprueba su resultado antes de continuar. Las pistas orientan; la solución completa está en un archivo separado.
 
-## Paso 1
+## Paso 1. Inspeccionar el archivo completo
 
-Lee encuesta.csv y registra columnas, filas, tipos y cantidad de horas faltantes.
+Lee encuesta.csv con leer_encuesta. Registra nombres, dimensiones, tipos y horas faltantes. Contrasta cada propiedad con el diccionario.
 
-## Paso 2
+**Pista:** nrow no detecta por sí mismo que un identificador haya perdido representación.
 
-Exporta una copia con row.names=FALSE, léela de nuevo y compara datos. Explica qué se perdería al convertir un identificador a número.
+## Paso 2. Exportar y releer una copia
 
-## Paso 3
+Usa una ruta temporal, row.names=FALSE, na="" y UTF-8. Lee la copia con las mismas reglas y compara contenido. Explica qué pasaría con un ID "007" convertido a número.
 
-Crea un CSV temporal con una columna numérica y un texto inválido. Consulta readr::problems antes de decidir qué hacer con el NA generado.
+**Pista:** Conserva nombres, tipos y ausencias; elimina solo tu archivo temporal al terminar.
+
+## Paso 3. Auditar una conversión fallida
+
+Crea un CSV temporal con encabezado valor y entradas 3 y texto. Declara columna numérica en readr y consulta problems. Identifica el contenido que originó el NA.
+
+**Pista:** La solución captura la advertencia prevista y después comprueba la incidencia; no borra la evidencia.
+
+## Reto de transferencia. Elegir una hoja Excel
+
+Localiza datasets.xlsx incluido en readxl. Consulta sus hojas, exige que exista mtcars y lee cinco filas. Comprueba dimensiones antes de usar los datos.
+
+**Pista:** No supongas que todos los libros tienen las mismas hojas o una única tabla.
 
 ## Evidencia de cierre
 
-Entrega pregunta, entrada, predicción, código ejecutado, resultado y explicación. Identifica una limitación de lo que comprobaste. Puedes utilizar la [bitácora](../docs/BITACORA.md).
+Entrega las respuestas de los tres pasos y del reto. Incluye entrada, predicción, código o cuenta, salida e interpretación. Explica un caso que falle y qué decisión tomarías. No basta una captura de la ejecución.
+
+## Comprobación antes de avanzar
+
+- [ ] Puedo explicar cada transformación sin leer la solución.
+- [ ] Contrasté la salida con una predicción o una cuenta independiente.
+- [ ] Distinguí datos, resultados y límites de la interpretación.
+- [ ] Respondí la autoevaluación de la lección.
 
 ---
 

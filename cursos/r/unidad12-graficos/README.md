@@ -10,6 +10,88 @@
 - Declarar unidades, denominadores y tratamiento de faltantes.
 - Guardar figuras que puedan reproducirse desde el código.
 
+## Clase guiada. Construir una figura por capas
+
+Una figura debe responder una pregunta y permitir leer variables y unidades. El laboratorio comienza con cuatro pares de horas y puntaje. Un diagrama de puntos permite ver cada par; una caja de distribución o una media sola respondería otra pregunta y ocultaría parte de esa correspondencia.
+
+### 1. Define datos y estética
+
+ggplot(d, aes(x=horas, y=puntaje)) declara la tabla y asigna columnas a los ejes. aes significa mapeo: relaciona variables con propiedades visuales. geom_point añade una marca por observación. Escribir colour="#235789" fuera de aes fija el mismo color para todos; poner una variable dentro de aes permitiría mapearla a colores según sus categorías.
+
+El signo + añade componentes de la figura. Debe quedar al final de la línea que continúa. No es la tubería |>: ggplot construye un objeto gráfico y cada capa aporta una parte de su representación. Guardar ese objeto como g permite imprimirlo o exportarlo después.
+
+### 2. Pon el significado en las etiquetas
+
+labs declara título y nombres de ejes. «Horas semanales» y «Puntaje (0 a 100)» permiten leer las escalas. «Datos ficticios» delimita el origen. theme_minimal cambia la presentación, no los cálculos. Una figura decorada no es evidencia adicional sobre el estudio.
+
+### 3. Exporta y abre el archivo
+
+ggsave recibe ruta, objeto, ancho, alto y dispositivo SVG. Las dimensiones del ejemplo se expresan en pulgadas porque esa es la unidad predeterminada de ggsave. El dispositivo grDevices::svg usa soporte Cairo; la guía de entorno explica el requisito de XQuartz en macOS. Si falla la biblioteca gráfica, corrige el entorno antes de cambiar las mediciones.
+
+La comprobación de existencia y tamaño detecta una exportación ausente o vacía, pero no demuestra que se lean las etiquetas. Abre el SVG, revisa ejes, unidades, títulos, puntos cortados y superposición. La verificación automática complementa esa inspección.
+
+### 4. Escoge otra geometría con una razón
+
+Para comparar distribución de puntajes por grupo usamos caja más puntos. La caja resume cuartiles y mediana; los puntos conservan observaciones individuales. El jitter desplaza ligeramente en horizontal para distinguir coincidencias; height=0 conserva el puntaje vertical. La semilla fija ese desplazamiento y no modifica las mediciones.
+
+Un histograma agrupa una variable numérica en intervalos. Su aspecto depende del ancho y del origen de los cortes. Declarar binwidth y boundary hace esa elección visible; sumar las frecuencias debe recuperar las observaciones incluidas. Para series temporales, las líneas deben relacionar fechas ordenadas dentro de cada estación, evitando conectar estaciones distintas como una sola trayectoria.
+
+## Laboratorio guiado
+
+[Archivo completo](ejemplos/laboratorio.R) · [Salida comprobada](ejemplos/laboratorio.txt)
+
+Predice primero, ejecuta el archivo completo y lee después la explicación.
+
+```r
+# Laboratorio guiado. Ejecutar desde cursos/r.
+d <- data.frame(horas = c(1, 2, 3, 4), puntaje = c(50, 60, 65, 80))
+g <- ggplot2::ggplot(d, ggplot2::aes(x = horas, y = puntaje)) +
+  ggplot2::geom_point(size = 3, colour = "#235789") +
+  ggplot2::labs(title = "Cuatro observaciones ficticias", x = "Horas semanales", y = "Puntaje (0 a 100)") +
+  ggplot2::theme_minimal()
+dir.create("salidas/graficos", recursive = TRUE, showWarnings = FALSE)
+archivo <- "salidas/graficos/laboratorio.svg"
+ggplot2::ggsave(archivo, g, width = 7, height = 4, device = grDevices::svg)
+stopifnot(nrow(ggplot2::ggplot_build(g)$data[[1]]) == 4, file.info(archivo)$size > 1000)
+cat("Figura guardada: salidas/graficos/laboratorio.svg\n")
+cat("Cuatro puntos, horas en x y puntaje en y; asociación descriptiva.\n")
+```
+
+Desde la terminal del proyecto:
+
+```text
+Rscript --vanilla unidad12-graficos/ejemplos/laboratorio.R
+```
+
+Salida esperada:
+
+```text
+Figura guardada: salidas/graficos/laboratorio.svg
+Cuatro puntos, horas en x y puntaje en y; asociación descriptiva.
+```
+
+### Lectura del laboratorio
+
+El archivo guardado contiene cuatro puntos con horas en x y puntaje en y. ggplot_build permite revisar la información utilizada por la capa; no necesitas memorizar su estructura interna para diseñar una figura. Aquí comprueba que existen cuatro observaciones representadas. La inspección visual sigue siendo una parte explícita de la práctica.
+
+## Experimenta
+
+Reemplaza el punto de cuatro horas/80 por cuatro horas/50 en una copia. Predice qué marca se moverá y en qué eje. Después añade una segunda observación idéntica: puede quedar superpuesta aunque existan cinco filas. Justifica cuándo mostrarías transparencia o jitter y qué cantidad no debería desplazarse.
+
+## Errores frecuentes
+
+| Error | Revisión |
+|---|---|
+| Omitir unidad o faltantes | Etiqueta la magnitud y declara registros excluidos |
+| Interpretar una línea como prueba causal | Distingue representación y diseño del estudio |
+| Comparar histogramas con cortes ocultos | Declara ancho y límites para la comparación |
+| Considerar un archivo existente como figura legible | Ábrelo y revisa el contenido |
+
+## Autoevaluación
+
+¿Qué separa aes de geom_point? ¿Por qué el jitter del ejemplo no debe cambiar el puntaje? ¿Por qué dos histogramas de los mismos datos pueden verse distintos?
+
+
 ## Una figura responde a una pregunta
 
 Para comparar distribuciones de puntajes por grupo, una caja y los puntos individuales muestran aspectos complementarios. La caja resume y los puntos hacen visibles las observaciones. Un gráfico de barras con una media podría ocultar dispersión y tamaño; no es una elección neutral si la pregunta es cómo se distribuyen los valores.

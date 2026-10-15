@@ -1,0 +1,1 @@
+Etapa 3: SVG en salidas/construccion/puntajes.svg.

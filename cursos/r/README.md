@@ -2,9 +2,11 @@
 
 **[Comenzar por la Unidad 00](unidad00-ruta/README.md)** · [Ver el curso](https://lelyliliana.github.io/aprende-con-leli/cursos/r/)
 
-Curso abierto de nivel principiante a intermedio para pasar de una pregunta y un archivo de datos a un análisis explicado y reproducible. Incluye **19 unidades, 36 ejemplos comprobables, 18 soluciones ejecutables y un proyecto con informe Quarto**.
+Curso abierto de nivel principiante a intermedio para pasar de una pregunta y un archivo de datos a un análisis explicado y reproducible. Incluye **19 unidades, 54 ejemplos comprobables, 18 soluciones ejecutables completas y un proyecto construido en cuatro etapas con informe Quarto**.
 
 No exige conocer Python ni haber programado. Necesitas manejar archivos y operaciones aritméticas básicas; la ruta introduce programación y los conceptos estadísticos utilizados. Se trabaja con datos ficticios suministrados en el curso.
+
+Cada unidad desarrolla una clase escrita, un laboratorio guiado cuando corresponde, experimentos, errores frecuentes, una práctica en tres pasos, un reto y respuestas de autoevaluación. Las soluciones explican todos los pasos y los retos; los archivos ejecutables acompañan esa explicación.
 
 ## Qué aprenderás a entregar
 
@@ -42,7 +44,7 @@ Una tabla leída con su diccionario, decisiones de calidad trazables, transforma
 4. Resuelve la práctica antes de consultar la solución.
 5. Conserva una decisión justificada y un caso que pueda detectar un error.
 
-[Preparar el entorno](docs/ENTORNO.md) · [Datos y diccionario](datos/README.md) · [Bitácora](docs/BITACORA.md) · [Diagnóstico](docs/DIAGNOSTICO.md)
+[Cómo leer el código](docs/LECTURA-DE-CODIGO.md) · [Preparar el entorno](docs/ENTORNO.md) · [Datos y diccionario](datos/README.md) · [Bitácora](docs/BITACORA.md) · [Diagnóstico](docs/DIAGNOSTICO.md)
 
 ## Herramientas y comprobaciones
 
@@ -64,7 +66,7 @@ Rscript --vanilla scripts/verificar.R --quarto
 
 ## Proyecto final
 
-[Guía de entrega](proyecto/README.md) · [Informe de ejemplo](muestra/informe.html) · [Código de análisis](proyecto/analizar.R)
+[Construcción por etapas](proyecto/CONSTRUCCION.md) · [Guía de entrega](proyecto/README.md) · [Informe de ejemplo](muestra/informe.html) · [Código de análisis](proyecto/analizar.R)
 
 Los registros de encuesta y ambientales son ficticios. La interpretación distingue descripción, incertidumbre y causalidad. Se registran versiones comprobadas y mínimos requeridos; ese registro no es un bloqueo de dependencias. Los archivos de resultados se escriben directamente y no ofrecen transacciones ni recuperación ante interrupciones.
 

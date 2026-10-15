@@ -1,0 +1,8 @@
+  id momento puntaje
+1  A   antes      60
+2  A despues      72
+3  B   antes      70
+4  B despues      75
+  personas mediciones
+         2          4
+[1] 12  5

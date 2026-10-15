@@ -2,23 +2,42 @@
 
 [Lección](README.md) · [Soluciones](SOLUCIONES.md)
 
-Completa un paso antes de pasar al siguiente. Usa datos de práctica y conserva el original.
+Trabaja un paso cada vez. Guarda una predicción antes de ejecutar y comprueba su resultado antes de continuar. Las pistas orientan; la solución completa está en un archivo separado.
 
-## Paso 1
+## Paso 1. Filtrar y conservar entrada
 
-Filtra puntajes mayores o iguales que 80 y ordena por ID. Conserva el original.
+Filtra puntajes>=80 de la encuesta y ordena por ID. Comprueba condición, identidad y que el original mantiene 36 filas.
 
-## Paso 2
+**Pista:** Asigna el resultado a otro nombre.
 
-Contrasta los IDs con una selección equivalente de R base. Describe qué propiedad esperas que coincida.
+## Paso 2. Contrastar una segunda implementación
 
-## Paso 3
+Obtén los mismos IDs con selección de R base. Ordena ambas salidas y compara. Explica qué propiedad investigas sin copiar el resultado del primer filtro.
 
-Resume por grupo mostrando n, n_horas y media. Explica qué ocurriría si un grupo tuviera todas las horas faltantes y por qué se elimina la agrupación al devolver el resumen.
+**Pista:** La misma condición sobre la misma entrada debería seleccionar las mismas identidades.
+
+## Paso 3. Resumir y estudiar un caso sin horas
+
+Genera n, n_horas y media por grupo. En una copia deja todas las horas de A como NA y repite. Comprueba n_horas, media y agrupación residual.
+
+**Pista:** El resumen del caso vacío debe comunicar ausencia de información, no una media cero.
+
+## Reto de transferencia. Transformar unidades conservando filas
+
+Añade minutos_semana a partir de horas. Comprueba el tamaño, las ausencias y la igualdad de conversión solo donde hay cantidades conocidas.
+
+**Pista:** mutate conserva personas; multiplicar NA no crea una medición conocida.
 
 ## Evidencia de cierre
 
-Entrega pregunta, entrada, predicción, código ejecutado, resultado y explicación. Identifica una limitación de lo que comprobaste. Puedes utilizar la [bitácora](../docs/BITACORA.md).
+Entrega las respuestas de los tres pasos y del reto. Incluye entrada, predicción, código o cuenta, salida e interpretación. Explica un caso que falle y qué decisión tomarías. No basta una captura de la ejecución.
+
+## Comprobación antes de avanzar
+
+- [ ] Puedo explicar cada transformación sin leer la solución.
+- [ ] Contrasté la salida con una predicción o una cuenta independiente.
+- [ ] Distinguí datos, resultados y límites de la interpretación.
+- [ ] Respondí la autoevaluación de la lección.
 
 ---
 

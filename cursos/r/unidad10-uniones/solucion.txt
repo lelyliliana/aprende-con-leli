@@ -1,0 +1,4 @@
+Paso 1: catálogo con clave única; unión muchos a uno.
+Paso 2: 36 filas e IDs conservados; catálogo duplicado rechazado.
+Paso 3: anti_join identifica 1 fila; inner conserva 35 y left conserva 36.
+Reto: invertir el catálogo conserva modalidades e identidad.

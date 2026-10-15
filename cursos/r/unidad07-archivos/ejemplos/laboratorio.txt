@@ -1,0 +1,5 @@
+[1] "id"    "horas"
+[1] "007" "008"
+[1] 2.5  NA
+    filas  columnas faltantes
+        2         2         1

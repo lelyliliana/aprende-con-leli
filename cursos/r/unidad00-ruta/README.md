@@ -10,6 +10,58 @@
 - Distinguir registro, variable, población, muestra y pregunta de análisis.
 - Elegir un recorrido inicial sin depender de Python.
 
+## Clase guiada. Del archivo a una pregunta que se pueda responder
+
+Imagina una hoja con cuatro columnas: ID, grupo, horas y puntaje. Antes de calcular, explica una fila completa: «P01 pertenece al grupo A, declaró dos horas semanales y obtuvo 70 puntos». Esa frase identifica la persona, las variables, las unidades y un resultado observado. Un número separado de ese contexto puede inducir una interpretación equivocada.
+
+### 1. Identifica la unidad de observación
+
+La unidad es aquello sobre lo que se registra una medición. En una encuesta de una sola aplicación puede ser una persona. Si se aplica antes y después, una fila puede representar una persona en un momento. Por eso preguntar «¿cuántas filas hay?» y «¿cuántas personas hay?» no siempre produce la misma respuesta.
+
+| ID | Momento | Horas semanales |
+|---|---|---|
+| P01 | Antes | 2 |
+| P01 | Después | 4 |
+| P02 | Antes | 6 |
+
+Hay tres mediciones y dos personas. La combinación ID y momento distingue las mediciones. Borrar la segunda fila solo porque vuelve a aparecer P01 destruiría una observación prevista. En cambio, dos filas P01/Antes necesitarían revisión. Una clave representa una decisión del estudio, no una instrucción para borrar repeticiones automáticamente.
+
+### 2. Distingue variable, valor y unidad
+
+«Horas semanales» es una variable; 2 es un valor; horas por semana es su unidad. Grupo es una categoría, no una cantidad que debas promediar. El ID identifica y no mide: calcular su media carece de sentido aunque esté compuesto por dígitos. Una celda vacía significa que falta información según la convención del archivo; no afirma que la cantidad sea cero.
+
+### 3. Formula una pregunta descriptiva
+
+«¿Cómo se distribuyen los puntajes por grupo en este archivo?» especifica una variable, una agrupación y un alcance. «¿La modalidad provoca mejores resultados?» introduce causalidad y necesita un diseño que esta tabla ficticia no proporciona. Aprender a ejecutar un contraste no resuelve esa diferencia.
+
+Población es el conjunto sobre el que querrías conocer algo; muestra es el subconjunto observado mediante un mecanismo de selección. El archivo docente es construido, por lo que no lo presentaremos como una muestra real de estudiantes. Más adelante simularemos una población artificial para entender el procedimiento.
+
+### 4. Haz primero una cuenta pequeña
+
+Para 2, 4 y 6 horas, suma 12 y divide entre tres: media 4. Si el último dato falta, suma los dos conocidos (6) y divide entre dos: media observada 3. El segundo resultado no estima qué respondió la tercera persona ni recupera la media completa. Esta distinción será importante en cada resumen.
+
+## Experimenta sin programar
+
+Agrega a la tabla una fila P02/Después con horas vacías. Cuenta personas, mediciones previstas y valores observados. Obtienes dos personas, cuatro mediciones y tres cantidades conocidas. Escribe los tres denominadores con su nombre; conservar solo el número «4» no comunica qué contaste.
+
+## Errores frecuentes
+
+| Confusión | Cómo revisarla |
+|---|---|
+| Cada fila es una persona distinta | Comprueba si hay momentos o visitas repetidas |
+| Un espacio vacío equivale a cero | Consulta la convención de faltantes del diccionario |
+| Una diferencia demuestra una causa | Revisa selección, asignación y variables no medidas |
+| El archivo ficticio representa una población real | Declara su origen docente y limita la interpretación |
+
+## Autoevaluación antes de continuar
+
+1. ¿Por qué pueden existir cuatro filas y solo dos personas?
+2. ¿Qué cambia en la media cuando excluyes un faltante?
+3. ¿Qué debe contener una pregunta para saber qué tabla y resumen necesitas?
+
+Comprueba las respuestas en las soluciones después de escribir las tuyas. Puedes avanzar cuando distingas pregunta, unidad, variable, clave y denominador con un ejemplo propio.
+
+
 ## Una pregunta antes de elegir una función
 
 El curso parte de esta pregunta: ¿cómo se distribuyen los puntajes de dos grupos de una encuesta de práctica? Para responder necesitamos saber qué representa cada fila, qué mide cada columna, qué valores faltan y de dónde salieron los registros. Una tabla que se abre sin errores todavía no garantiza un análisis válido.

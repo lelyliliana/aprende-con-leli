@@ -10,6 +10,92 @@
 - Distinguir texto, número entero, número real y lógico.
 - Conservar unidades e identificadores durante una transformación.
 
+## Clase guiada. Nombres, valores y cambios de estado
+
+Una asignación tiene una expresión a la derecha y un nombre a la izquierda. En `horas <- 2`, R evalúa 2 y asocia ese valor con horas. En `minutos <- horas * 60`, consulta horas en ese momento, calcula 120 y guarda el resultado. No almacena una fórmula enlazada como suele ocurrir en una celda de hoja de cálculo.
+
+### 1. Sigue las instrucciones en orden
+
+Si después escribes horas <- 3, horas cambia; minutos conserva 120. Para obtener 180 debes ejecutar otra vez el cálculo. Un programa describe una secuencia de operaciones: aprender a seguir qué valor tiene cada nombre evita atribuirle actualizaciones que no existen.
+
+| Instrucción ejecutada | horas | minutos |
+|---|---|---|
+| horas <- 2 | 2 | Aún no existe en esta sesión |
+| minutos <- horas * 60 | 2 | 120 |
+| horas <- 3 | 3 | 120 |
+| minutos <- horas * 60 | 3 | 180 |
+
+### 2. Elige nombres que expliquen la magnitud
+
+horas_semana comunica más que x cuando trabajas con una encuesta. Evita espacios y nombres de funciones conocidas. R distingue horas de Horas. Un mensaje de «objeto no encontrado» puede indicar que no ejecutaste la asignación o que cambiaste una mayúscula. No se resuelve creando un valor cualquiera para que desaparezca el error.
+
+### 3. Separa número, texto y lógico
+
+`2.5` es una cantidad numérica y usa punto decimal en el código R. `"2.5"` es texto porque está entre comillas. TRUE y FALSE son valores lógicos producidos, por ejemplo, por minutos > 100. `3L` indica un entero; `3` normalmente es un número de tipo double. typeof consulta el almacenamiento y no la unidad física.
+
+El operador = también aparece para indicar argumentos, como na.rm = TRUE dentro de una función. Durante el curso usamos <- para asignaciones y == para comparar igualdad de valores: escribir uno cuando querías el otro cambia la operación. identical exige coincidencia más estricta, incluidos tipos en este ejemplo.
+
+### 4. Conserva identificadores como texto
+
+El código "007" no representa siete unidades de algo. Su representación tiene tres caracteres. Una copia convertida con as.numeric vale 7 y pierde los ceros iniciales; conservar el original permite explicar esa pérdida. Que una conversión sea posible no significa que sea apropiada para la variable.
+
+## Laboratorio guiado
+
+[Archivo completo](ejemplos/laboratorio.R) · [Salida comprobada](ejemplos/laboratorio.txt)
+
+Predice primero, ejecuta el archivo completo y lee después la explicación.
+
+```r
+# Laboratorio guiado. Ejecutar desde cursos/r.
+horas <- 2
+minutos <- horas * 60
+horas <- 3
+print(horas)
+print(minutos)
+minutos <- horas * 60
+print(minutos)
+codigo <- "007"
+print(codigo)
+stopifnot(horas == 3, minutos == 180, nchar(codigo) == 3)
+```
+
+Desde la terminal del proyecto:
+
+```text
+Rscript --vanilla unidad02-objetos/ejemplos/laboratorio.R
+```
+
+Salida esperada:
+
+```text
+[1] 3
+[1] 120
+[1] 180
+[1] "007"
+```
+
+### Lectura del laboratorio
+
+Las primeras impresiones son 3 y 120: una comprueba la reasignación y otra demuestra que no hubo recálculo. La siguiente impresión muestra 180 después de volver a evaluar la multiplicación. El texto "007" aparece entre comillas al imprimirlo; las comillas indican su representación textual y no forman parte de los tres caracteres almacenados.
+
+## Experimenta
+
+Crea horas=1.5 y calcula segundos=horas*60*60. Predice 5400. Cambia horas a 2 sin recalcular y consulta segundos; después vuelve a ejecutar la fórmula. Explica por qué el valor anterior sigue siendo 5400 hasta el nuevo cálculo. Conserva las unidades en cada línea de tu bitácora.
+
+## Errores frecuentes
+
+| Error | Razón y corrección |
+|---|---|
+| Escribir 1, 5 como número R | La coma separa argumentos; usa 1.5 en el código |
+| Comparar integer y double solo con identical | Separa igualdad numérica de igualdad de tipo |
+| Convertir todos los IDs a número | Puedes perder representación sin ganar significado |
+| Esperar que minutos cambie al cambiar horas | Repite explícitamente el cálculo |
+
+## Autoevaluación
+
+¿Puede un cálculo ser correcto en sintaxis y mezclar horas con minutos? ¿Qué conserva "007" que no conserva 7? ¿Por qué 3L == 3 puede ser TRUE y identical(3L, 3) FALSE? Justifica con tipo, valor y unidad.
+
+
 ## Asignar conserva un resultado para usarlo después
 
 En R, `<-` asocia un nombre con un valor. Si horas vale 2.5, minutos puede calcularse como horas*60. El nombre no añade una unidad física al objeto: documentar horas y minutos sigue siendo responsabilidad de quien analiza. Mezclar mediciones en unidades distintas puede producir un cálculo válido en sintaxis e incorrecto en significado.

@@ -1,0 +1,5 @@
+Paso 1: huella de datos y sesión registradas; no prueban validez científica.
+Paso 2: fuentes presentes; el informe debe mostrar 36 registros y 3 horas faltantes.
+El renderizado real de Quarto se ejecuta con verificar.R --quarto.
+Paso 3: copia válida cambia la media en 1/18; original y su huella intactos.
+Reto: releer el original recupera el mismo resumen; registrar versiones no las bloquea.

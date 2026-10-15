@@ -10,6 +10,90 @@
 - Rechazar datos fuera del contrato antes de generar resultados.
 - Transferir el razonamiento a otra unidad de observación.
 
+## Clase guiada. Construir y defender una entrega completa
+
+El proyecto reúne las decisiones de las unidades anteriores. La meta no es ejecutar un archivo desconocido: debes poder explicar lectura, validación, resumen, figura, escritura y comunicación. Utiliza la [construcción por etapas](../proyecto/CONSTRUCCION.md), que permite completar y comprobar una parte antes de añadir la siguiente.
+
+### 1. Traduce la pregunta en productos
+
+La pregunta descriptiva exige distribución de puntajes por grupo. El CSV de resumen comunica tamaños y medias; el SVG muestra distribución e individuos; el registro identifica entrada y ejecución; el HTML explica las decisiones. Cada producto responde a una necesidad diferente. Acumular archivos sin revisar su contenido no completa el análisis.
+
+### 2. Decide qué debe fallar antes de escribir
+
+La encuesta requiere ID único, columnas esperadas, edades y puntajes en sus dominios y ausencias solo donde el diccionario las admite. La función leer_encuesta valida antes de devolver. ejecutar_analisis calcula antes de crear la carpeta de salida. La prueba con puntaje-1 permite comprobar ese orden en un directorio nuevo.
+
+La garantía es acotada: esa entrada rechazada no crea su carpeta de resultados. No significa que los cuatro archivos se escriban de manera transaccional frente a un corte de energía. Conserva datos originales y no uses salidas de práctica como única copia de documentos personales.
+
+### 3. Revisa números, figura y texto juntos
+
+La suma de n debe ser 36 y la de n_horas33. La tabla final tiene dos grupos. La figura debe mostrar 36 puntos y sus unidades; el registro debe identificar datos ficticios. El texto debe conservar el alcance descriptivo. Si las cifras son correctas pero el párrafo atribuye un efecto causal a la modalidad, la entrega necesita corrección.
+
+### 4. Usa una rúbrica con evidencia observable
+
+En cada criterio de 20 puntos, reserva 10 para el producto verificable y 10 para explicar sus decisiones. Por ejemplo, tener una tabla correcta puede cubrir la primera parte de transformación; justificar por qué horas tiene denominador 17/16 y no 18 cubre la explicación. Una captura aislada no permite reconstruir ni defender el proceso.
+
+Si falta la evidencia de un criterio, anota qué archivo o explicación lo resolverá. La autoevaluación organiza una revisión: no es una certificación ni convierte estos datos en una investigación validada. El curso termina con una entrega pequeña, revisable y explícita sobre sus límites.
+
+### 5. Transfiere el razonamiento antes de reutilizar código
+
+En ambiental.csv la unidad es estación/fecha, no participante. Hay 12 registros y 11 conteos conocidos. Para resumir por estación necesitas distinguir visitas previstas, observadas y ausentes. La clave compuesta impide confundir dos fechas de la misma estación con un duplicado.
+
+La suma de conteos es total observado del archivo; no estima automáticamente abundancia poblacional. Esa inferencia requeriría diseño, esfuerzo y detección, entre otros elementos. No pases ambiental.csv a leer_encuesta: sus columnas y su contrato son distintos. Reutiliza las preguntas de calidad y construye validaciones apropiadas para el nuevo diccionario.
+
+## Laboratorio guiado
+
+[Archivo completo](ejemplos/laboratorio.R) · [Salida comprobada](ejemplos/laboratorio.txt)
+
+Predice primero, ejecuta el archivo completo y lee después la explicación.
+
+```r
+# Laboratorio guiado. Ejecutar desde cursos/r.
+source("proyecto/analizar.R", encoding = "UTF-8")
+r <- ejecutar_analisis("datos/encuesta.csv", "salidas/laboratorio-final")
+archivos <- c("resumen.csv", "puntajes.svg", "registro.json", "sesion.txt")
+stopifnot(all(file.exists(file.path("salidas/laboratorio-final", archivos))))
+stopifnot(sum(r$resumen$n) == 36, sum(r$resumen$n_horas) == 33)
+registro <- jsonlite::read_json("salidas/laboratorio-final/registro.json", simplifyVector = TRUE)
+stopifnot(registro$datos_ficticios, registro$filas == 36)
+cat("Entrega: cuatro archivos; 36 registros y 33 horas observadas.\n")
+cat("Las comprobaciones se conectan con pregunta, diccionario y procedencia.\n")
+```
+
+Desde la terminal del proyecto:
+
+```text
+Rscript --vanilla unidad18-proyecto/ejemplos/laboratorio.R
+```
+
+Salida esperada:
+
+```text
+Entrega: cuatro archivos; 36 registros y 33 horas observadas.
+Las comprobaciones se conectan con pregunta, diccionario y procedencia.
+```
+
+### Lectura del laboratorio
+
+Se llama la entrega completa en una carpeta de práctica y se comprueban los cuatro productos. Después se lee el JSON para contrastar su contenido, no solo su existencia. Esa revisión mínima no sustituye abrir el gráfico y el HTML, ni valorar si la interpretación responde a la pregunta.
+
+## Experimenta
+
+Antes de volver a ejecutar, identifica qué productos deberían cambiar si el CSV cambia y cuáles solo registran el entorno. En una copia, utiliza una entrada rechazada y una carpeta nueva: predice que no se crearán productos allí. No ensayes sobre una carpeta que contenga resultados que necesites preservar.
+
+## Errores frecuentes
+
+| Error | Revisión |
+|---|---|
+| Entregar solo el HTML | Incluye fuentes, diccionario y comandos para reconstruir |
+| Considerar un rechazo como fallo que debe ocultarse | Comprueba si protegió el contrato esperado |
+| Copiar la encuesta para cualquier CSV | Redefine unidad, columnas y dominios |
+| Interpretar conteo observado como abundancia | Revisa diseño y esfuerzo de observación |
+
+## Autoevaluación
+
+¿Por qué cada producto tiene un propósito? ¿Qué garantiza el rechazo previo y qué no? ¿Por qué la transferencia ambiental necesita otro contrato? ¿Qué evidencia mostrarías para justificar cada criterio de la rúbrica?
+
+
 ## Define una entrega pequeña y completa
 
 El proyecto responde cómo se distribuyen puntajes por grupo en una encuesta ficticia. Entrega entrada, diccionario, código, resumen CSV, figura SVG, registro de ejecución e informe HTML. Otra persona debe poder reconstruirlo desde la raíz del curso.

@@ -1,0 +1,10 @@
+# Laboratorio guiado. Ejecutar desde cursos/r.
+source("proyecto/analizar.R", encoding = "UTF-8")
+r <- ejecutar_analisis("datos/encuesta.csv", "salidas/laboratorio-final")
+archivos <- c("resumen.csv", "puntajes.svg", "registro.json", "sesion.txt")
+stopifnot(all(file.exists(file.path("salidas/laboratorio-final", archivos))))
+stopifnot(sum(r$resumen$n) == 36, sum(r$resumen$n_horas) == 33)
+registro <- jsonlite::read_json("salidas/laboratorio-final/registro.json", simplifyVector = TRUE)
+stopifnot(registro$datos_ficticios, registro$filas == 36)
+cat("Entrega: cuatro archivos; 36 registros y 33 horas observadas.\n")
+cat("Las comprobaciones se conectan con pregunta, diccionario y procedencia.\n")

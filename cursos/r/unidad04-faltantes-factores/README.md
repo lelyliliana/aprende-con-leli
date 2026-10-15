@@ -10,6 +10,90 @@
 - Declarar niveles y orden de una variable categórica.
 - Interpretar fechas con formato explícito.
 
+## Clase guiada. Un faltante tiene consecuencias distintas de un cero
+
+Considera tres registros con horas 0, vacío y 20. La primera persona declaró cero horas; de la segunda no tienes cantidad. En R representamos ese vacío permitido con NA. Si sustituyes NA por cero, introduces una respuesta que nadie registró y la media cambia de 10 (dos conocidos) a 6.67 (tres valores, uno inventado).
+
+### 1. Detecta y cuenta antes de resumir
+
+is.na(horas) produce FALSE, TRUE, FALSE. ! invierte esa máscara, y sum cuenta los TRUE como unos: hay dos valores observados. mean(horas) no resuelve por ti el faltante y devuelve NA en este caso. mean(horas, na.rm=TRUE) calcula solo con los conocidos; acompáñala siempre de n_observados y n_total.
+
+No compares con == NA para buscar ausencias: la comparación con un desconocido sigue siendo desconocida. Usa is.na. Si todos faltan, retirar NA deja cero datos y mean produce NaN. is.nan detecta ese resultado, mientras is.na detecta tanto NA como NaN. Por eso una función puede devolver NA explícito para comunicar «sin observaciones» sin confundirlo con cero.
+
+### 2. Modela categorías con un diccionario
+
+Un factor representa una variable categórica con niveles. Para satisfacción declaramos baja, media, alta. ordered=TRUE comunica ese orden; no afirma que la distancia entre baja y media sea numéricamente igual a la distancia entre media y alta. No calcules la media de sus códigos como si fueran una escala de intervalos validada.
+
+Antes de factorizar, compara las etiquetas con el diccionario. "otra" está fuera de él. Si construyes directamente el factor, esa etiqueta se convierte en NA: debes registrar que el faltante fue creado por la conversión y conservar el texto de origen para investigarlo.
+
+### 3. Convierte fechas con una regla explícita
+
+as.Date interpreta el texto según el formato indicado. %d corresponde al día, %m al mes y %Y al año de cuatro cifras. Entre 15/01/2026 y 18/01/2026 hay tres días. Un orden de día/mes diferente puede cambiar una fecha válida sin que el programa se detenga, de modo que un resultado sin error no reemplaza la revisión del formato.
+
+Las fechas de esta unidad no incluyen hora ni zona. Si una investigación necesita instantes o cambios de zona, Date ya no expresa toda la información. Primero define qué mide tu columna y después selecciona su tipo.
+
+## Laboratorio guiado
+
+[Archivo completo](ejemplos/laboratorio.R) · [Salida comprobada](ejemplos/laboratorio.txt)
+
+Predice primero, ejecuta el archivo completo y lee después la explicación.
+
+```r
+# Laboratorio guiado. Ejecutar desde cursos/r.
+horas <- c(0, NA_real_, 20)
+observado <- !is.na(horas)
+print(observado)
+print(sum(observado))
+print(mean(horas, na.rm = TRUE))
+etiquetas <- c("baja", "alta", "otra")
+desconocida <- !etiquetas %in% c("baja", "media", "alta")
+print(desconocida)
+f <- factor(etiquetas, levels = c("baja", "media", "alta"), ordered = TRUE)
+print(is.na(f))
+fechas <- as.Date(c("15/01/2026", "18/01/2026"), format = "%d/%m/%Y")
+print(as.numeric(fechas[2] - fechas[1]))
+stopifnot(sum(observado) == 2, sum(is.na(f)) == 1)
+```
+
+Desde la terminal del proyecto:
+
+```text
+Rscript --vanilla unidad04-faltantes-factores/ejemplos/laboratorio.R
+```
+
+Salida esperada:
+
+```text
+[1]  TRUE FALSE  TRUE
+[1] 2
+[1] 10
+[1] FALSE FALSE  TRUE
+[1] FALSE FALSE  TRUE
+[1] 3
+```
+
+### Lectura del laboratorio
+
+La máscara de observados produce dos TRUE y su suma es 2. La media muestra 10 porque incluye el cero real y el veinte. La máscara de categorías desconocidas y la máscara de NA del factor coinciden en la tercera posición: no existía un vacío original allí. La diferencia de fechas se convierte a número solo para mostrar los tres días del ejemplo.
+
+## Experimenta
+
+En una copia, cambia el NA de horas por 10. Ahora hay tres observados y la media sigue siendo 10; el mismo promedio no implica la misma información disponible. Después prueba un vector totalmente faltante y consulta is.nan. Por último sustituye "otra" por "media": el factor tendrá cero faltantes nuevos.
+
+## Errores frecuentes
+
+| Error | Qué comprobar |
+|---|---|
+| Usar x == NA | Emplea is.na(x) |
+| Tratar NaN como media cero | Cuenta los valores disponibles antes de interpretar |
+| Convertir factor con as.numeric sin revisar | Obtienes códigos internos, no sus etiquetas |
+| Suponer que una fecha válida tiene formato correcto | Contrasta día, mes y diccionario con casos conocidos |
+
+## Autoevaluación
+
+¿Por qué 0 participa en la media y NA no se sustituye automáticamente? ¿Qué diferencia hay entre una ausencia original y una categoría incompatible? ¿Qué información comunica un factor ordenado que no comunica un vector de texto?
+
+
 ## Un dato faltante cambia qué sabes y qué calculas
 
 NA indica un valor no disponible. No es una medición cero. La media de 0,10,NA es NA si no especificas cómo tratar el faltante. Con na.rm=TRUE la media de los dos observados es 5. Debes informar que el denominador fue 2, no 3, y qué observaciones quedaron fuera.

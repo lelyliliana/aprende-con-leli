@@ -2,23 +2,42 @@
 
 [Lección](README.md) · [Soluciones](SOLUCIONES.md)
 
-Completa un paso antes de pasar al siguiente. Usa datos de práctica y conserva el original.
+Trabaja un paso cada vez. Guarda una predicción antes de ejecutar y comprueba su resultado antes de continuar. Las pistas orientan; la solución completa está en un archivo separado.
 
-## Paso 1
+## Paso 1. Registrar datos y sesión
 
-Ejecuta el ejemplo que registra sessionInfo y huella de encuesta.csv. Explica qué identifica cada registro y qué no valida.
+Ejecuta el Ejemplo 01 y revisa la huella de encuesta.csv y el archivo de sesión. Explica qué identifica cada uno y qué no demuestra sobre calidad oautenticidad.
 
-## Paso 2
+**Pista:** No trates una huella MD5 como validación científica oseguridad contra ataques.
 
-Renderiza el informe desde la raíz con Quarto y abre el HTML. Comprueba los 36 registros y tres horas faltantes frente a la tabla original.
+## Paso 2. Renderizar y contrastar
 
-## Paso 3
+Desde cursos/r ejecuta quarto render proyecto/informe.qmd. Abre salidas/informe/proyecto/informe.html. Contrasta 36 registros, 3 horas faltantes y denominadores 17/16 con leer_encuesta y resumir_encuesta.
 
-En una copia de práctica modifica una entrada válida, vuelve a renderizar y revisa qué resultado cambia. Distingue registro de versiones de un entorno bloqueado.
+**Pista:** Revisa que las cifras provengan del código en línea y de la tabla calculada.
+
+## Paso 3. Experimentar en otra copia del proyecto
+
+Duplica la carpeta completa como r-practica-repro y abre su proyecto. Comprueba la ruta; cambia en su CSV el primer puntaje en+1 y renderiza allí. Contrasta la media del grupo y regresa al proyecto original sin editarlo.
+
+**Pista:** La lección explica la copia segura. El script de solución usa un CSV temporal para el cálculo, pero el paso pide además reconstruir el HTML.
+
+## Reto de transferencia. Reproducir desde el original
+
+Vuelve a leer y resumir el original. Comprueba que coincida con el resumen inicial. Explica por qué guardar versiones no equivale a instalar exactamente esas versiones en otro equipo.
+
+**Pista:** Distingue entrada conservada, programa ejecutable y registro del entorno.
 
 ## Evidencia de cierre
 
-Entrega pregunta, entrada, predicción, código ejecutado, resultado y explicación. Identifica una limitación de lo que comprobaste. Puedes utilizar la [bitácora](../docs/BITACORA.md).
+Entrega las respuestas de los tres pasos y del reto. Incluye entrada, predicción, código o cuenta, salida e interpretación. Explica un caso que falle y qué decisión tomarías. No basta una captura de la ejecución.
+
+## Comprobación antes de avanzar
+
+- [ ] Puedo explicar cada transformación sin leer la solución.
+- [ ] Contrasté la salida con una predicción o una cuenta independiente.
+- [ ] Distinguí datos, resultados y límites de la interpretación.
+- [ ] Respondí la autoevaluación de la lección.
 
 ---
 

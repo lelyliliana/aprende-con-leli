@@ -1,0 +1,4 @@
+Paso 1: filtro de puntajes aplicado; el original conserva 36 filas.
+Paso 2: los mismos IDs con dplyr y R base.
+Paso 3: n=18/18; n_horas=17/16; un grupo sin horas devuelve NA y n_horas=0.
+Reto: minutos calculados, 36 filas y 3 faltantes conservados.

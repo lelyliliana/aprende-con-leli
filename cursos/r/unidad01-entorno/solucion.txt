@@ -1,0 +1,8 @@
+Paso 1: R compatible y raíz del curso comprobados.
+R compatible: TRUE
+2 + 3 * 4 = 14
+Datos: 7, 8, 9
+Media: 8
+Paso 2: ejemplos 01 y 02 ejecutados.
+Paso 3: sin paréntesis=14; con paréntesis=20.
+Reto: una hora y media equivale a 90 minutos.

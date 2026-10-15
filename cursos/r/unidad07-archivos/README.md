@@ -10,6 +10,95 @@
 - Comprobar incidencias de lectura antes de analizar.
 - Verificar una exportación sin agregar columnas accidentales.
 
+## Clase guiada. Importar es interpretar una representación
+
+Un CSV es texto organizado con un separador. No guarda por sí mismo todos los tipos y reglas de la tabla que representa. La primera línea suele contener nombres de columnas; cada línea posterior aporta campos. Una coma dentro de un campo puede estar protegida por comillas. No conviene abrir el archivo y reemplazar todas las comas sin conocer su función.
+
+### 1. Reconoce encabezado, separador y ausencia
+
+El laboratorio construye un archivo pequeño con encabezado id, horas. La fila 007, 2.5 contiene un identificador textual y una cantidad; 008, deja vacío el segundo campo. na.strings="" declara que ese vacío significa ausencia. colClasses fija texto para la primera columna y número para la segunda: así 007 conserva sus tres caracteres.
+
+tempfile propone una ruta temporal y writeLines escribe allí las líneas. Ese recurso permite experimentar sin alterar la encuesta del curso. unlink elimina el archivo temporal cuando termina la comprobación. No uses esa instrucción con una carpeta personal que quieras conservar.
+
+### 2. Verifica estructura antes de calcular
+
+Después de read.csv, consulta names, nrow, ncol y str. Si esperabas dos columnas y aparece una, revisa el separador; si una medición aparece como texto, busca formatos mezclados. La importación no termina cuando ves una tabla: contrasta nombres, tipos, filas, faltantes y dominio con el diccionario.
+
+| Elemento del archivo | Interpretación declarada | Comprobación |
+|---|---|---|
+| 007 | Identificador textual | Conserva ceros iniciales |
+| 2.5 | Horas numéricas | Puede participar en un cálculo |
+| Campo vacío | NA permitido | Se cuenta como ausencia, no como cero |
+
+La función leer_encuesta del curso concentra estas decisiones para el archivo de 36 filas. source carga su definición desde src/curso.R; leer_encuesta() la llama. Abre su implementación para reconocer read.csv y validar_encuesta. Usar una función compartida evita copiar reglas distintas en cada unidad, pero debes saber qué verifica.
+
+### 3. Exporta una copia y vuelve a leerla
+
+write.csv puede escribir nombres de fila como columna adicional. row.names=FALSE evita ese índice artificial. na="" mantiene la convención del archivo docente, y fileEncoding="UTF-8" declara la codificación de texto. Ninguna de estas opciones sustituye el diccionario. Una ida y vuelta comprueba que tu escritura y tu lectura acuerdan una representación.
+
+### 4. Investiga las conversiones fallidas
+
+readr permite declarar cada columna con col_types. Si esperaba número y encuentra "texto", puede producir NA y registrar el problema. problems devuelve las incidencias para inspeccionar fila, columna y contenido real. La solución captura esa advertencia únicamente porque después comprueba la incidencia prevista; no recomienda ocultar advertencias de archivos desconocidos.
+
+Excel añade hojas y regiones. Primero consulta excel_sheets y elige sheet por nombre. El ejemplo utiliza mtcars del libro incluido en readxl. No hace falta un archivo personal ni instalar Excel para leerlo con este paquete.
+
+## Laboratorio guiado
+
+[Archivo completo](ejemplos/laboratorio.R) · [Salida comprobada](ejemplos/laboratorio.txt)
+
+Predice primero, ejecuta el archivo completo y lee después la explicación.
+
+```r
+# Laboratorio guiado. Ejecutar desde cursos/r.
+archivo <- tempfile(fileext = ".csv")
+writeLines(c("id,horas", "007,2.5", "008,"), archivo)
+d <- read.csv(archivo, colClasses = c("character", "numeric"), na.strings = "")
+print(names(d))
+print(d$id)
+print(d$horas)
+print(c(filas = nrow(d), columnas = ncol(d), faltantes = sum(is.na(d$horas))))
+stopifnot(identical(d$id, c("007", "008")), sum(is.na(d$horas)) == 1)
+unlink(archivo)
+```
+
+Desde la terminal del proyecto:
+
+```text
+Rscript --vanilla unidad07-archivos/ejemplos/laboratorio.R
+```
+
+Salida esperada:
+
+```text
+[1] "id"    "horas"
+[1] "007" "008"
+[1] 2.5  NA
+    filas  columnas faltantes
+        2         2         1
+```
+
+### Lectura del laboratorio
+
+Las impresiones muestran los nombres id, horas, los textos "007", "008", las cantidades 2.5 y NA, y el resumen 2 filas, 2 columnas, 1 faltante. Cada salida responde una pregunta diferente. Comprobar solo nrow no detectaría una conversión indebida del identificador.
+
+## Experimenta
+
+En una copia del laboratorio, cambia el segundo campo vacío por 0. Predice que el número de filas seguirá siendo dos y los faltantes bajarán a cero. Después vuelve a dejarlo vacío. Así puedes explicar por qué el tamaño de la tabla no informa cuántas mediciones están disponibles.
+
+## Errores frecuentes
+
+| Señal | Qué revisar |
+|---|---|
+| Tabla con una sola columna inesperada | Separador real del archivo |
+| Ceros iniciales perdidos | Tipo declarado para el identificador |
+| Aparece una columna X al releer | Se exportaron nombres de fila |
+| Aumentaron los NA | Problemas de conversión frente a ausencias de origen |
+
+## Autoevaluación
+
+¿Qué aporta colClasses que no aporta nrow? ¿Por qué exportar y releer necesita las mismas reglas de ausencia? ¿Qué revisarías antes de elegir una hoja Excel?
+
+
 ## Un archivo no es todavía una tabla validada
 
 CSV almacena texto separado por delimitadores. La extensión no declara tipos ni unidades. Una lectura puede parecer correcta y conservar horas como texto por una coma decimal o una etiqueta inesperada. Antes de analizar, revisa nombres, dimensiones, tipos y problemas de conversión.

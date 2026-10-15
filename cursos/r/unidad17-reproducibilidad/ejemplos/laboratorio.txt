@@ -1,0 +1,2 @@
+Una modificación de +1 cambia la media de su grupo en 1/18.
+La copia cambia; el archivo original y sus 36 registros se conservan.

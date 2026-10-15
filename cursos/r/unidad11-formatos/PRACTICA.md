@@ -2,23 +2,42 @@
 
 [Lección](README.md) · [Soluciones](SOLUCIONES.md)
 
-Completa un paso antes de pasar al siguiente. Usa datos de práctica y conserva el original.
+Trabaja un paso cada vez. Guarda una predicción antes de ejecutar y comprueba su resultado antes de continuar. Las pistas orientan; la solución completa está en un archivo separado.
 
-## Paso 1
+## Paso 1. Transformar dos personas
 
-Pasa dos personas con antes/despues a formato largo y escribe la clave de cada fila.
+Construye A:antes 60/despues 72 y B:antes 70/despues 75. Pasa a largo y escribe la clave de una medición. Conserva id.
 
-## Paso 2
+**Pista:** names_to guarda los nombres antes/despues y values_to sus cantidades.
 
-Comprueba cuatro filas, dos personas y cuatro combinaciones distintas de ID/momento.
+## Paso 2. Contar sin crear personas
 
-## Paso 3
+Comprueba cuatro filas, dos IDs distintos y cuatro combinaciones ID/momento. Explica por qué no son cuatro personas independientes.
 
-Duplica una combinación y define una función que la rechace antes de pivot_wider. Calcula el cambio individual solo después de validar la identidad.
+**Pista:** El pivote cambia representación y unidad por fila, no el diseño de medición.
+
+## Paso 3. Validar antes de ensanchar
+
+Define a_ancho_seguro que rechace clave ausente o repetida antes de pivot_wider. Calcula cambios por persona. Prueba una copia con una fila duplicada.
+
+**Pista:** Revisa las dos columnas de la clave, no solo ID.
+
+## Reto de transferencia. Invertir el orden
+
+Invierte las cuatro filas largas. Vuelve a ancho y ordena por ID antes de comparar cambios.
+
+**Pista:** El orden de aparición puede cambiar sin cambiar la correspondencia de valores.
 
 ## Evidencia de cierre
 
-Entrega pregunta, entrada, predicción, código ejecutado, resultado y explicación. Identifica una limitación de lo que comprobaste. Puedes utilizar la [bitácora](../docs/BITACORA.md).
+Entrega las respuestas de los tres pasos y del reto. Incluye entrada, predicción, código o cuenta, salida e interpretación. Explica un caso que falle y qué decisión tomarías. No basta una captura de la ejecución.
+
+## Comprobación antes de avanzar
+
+- [ ] Puedo explicar cada transformación sin leer la solución.
+- [ ] Contrasté la salida con una predicción o una cuenta independiente.
+- [ ] Distinguí datos, resultados y límites de la interpretación.
+- [ ] Respondí la autoevaluación de la lección.
 
 ---
 

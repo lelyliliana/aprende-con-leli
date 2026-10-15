@@ -2,23 +2,42 @@
 
 [Lección](README.md) · [Soluciones](SOLUCIONES.md)
 
-Completa un paso antes de pasar al siguiente. Usa datos de práctica y conserva el original.
+Trabaja un paso cada vez. Guarda una predicción antes de ejecutar y comprueba su resultado antes de continuar. Las pistas orientan; la solución completa está en un archivo separado.
 
-## Paso 1
+## Paso 1. Reconstruir cinco medidas
 
-Resume 10,11,12,13,100 con n, media, mediana, mínimo y máximo. Explica por qué las dos medidas centrales difieren.
+Con 10, 11, 12, 13, 100 calcula n, media, mediana, mínimo y máximo. Repite la media como suma/n y escribe por qué puede diferir de la mediana.
 
-## Paso 2
+**Pista:** Ordena los cinco datos y señala el central.
 
-Propón qué revisarías sobre 100 antes de eliminarlo. Distingue dato extremo y dato imposible según un dominio.
+## Paso 2. Investigar un extremo
 
-## Paso 3
+Supón que esas cantidades son puntajes de 0 a 100. Decide qué revisarías antes de eliminar 100. Distingue raro de imposible bajo ese dominio.
 
-Cuenta satisfacción con y sin faltantes y declara cuándo usarías denominador 34 o 36.
+**Pista:** La influencia sobre una media no demuestra error de captura.
+
+## Paso 3. Declarar dos denominadores
+
+Cuenta satisfacción con y sin faltantes en encuesta.csv. Calcula proporciones de las categorías con denominadores 34 y 36; explica qué pregunta responde cada una.
+
+**Pista:** La tabla de categorías sin ausencias suma 34.
+
+## Reto de transferencia. Medir sensibilidad sin borrar
+
+En una copia excluye 100 y calcula la nueva media. Conserva el vector original y escribe qué demuestra ese cambio y qué no justifica.
+
+**Pista:** Una comparación hipotética no es una política de exclusión.
 
 ## Evidencia de cierre
 
-Entrega pregunta, entrada, predicción, código ejecutado, resultado y explicación. Identifica una limitación de lo que comprobaste. Puedes utilizar la [bitácora](../docs/BITACORA.md).
+Entrega las respuestas de los tres pasos y del reto. Incluye entrada, predicción, código o cuenta, salida e interpretación. Explica un caso que falle y qué decisión tomarías. No basta una captura de la ejecución.
+
+## Comprobación antes de avanzar
+
+- [ ] Puedo explicar cada transformación sin leer la solución.
+- [ ] Contrasté la salida con una predicción o una cuenta independiente.
+- [ ] Distinguí datos, resultados y límites de la interpretación.
+- [ ] Respondí la autoevaluación de la lección.
 
 ---
 

@@ -10,6 +10,93 @@
 - Reconocer reciclaje y longitudes de operaciones.
 - Leer el llenado de una matriz por columnas.
 
+## Clase guiada. Seleccionar con una pregunta por posición
+
+Un vector reúne valores de un tipo común. `c(2, 4, 6, 8)` combina cuatro números y length informa su cantidad. Los corchetes seleccionan. En R la primera posición es 1: horas[1] devuelve 2, mientras horas[2] devuelve 4. Esas posiciones no son IDs de personas y pueden cambiar al ordenar el vector.
+
+### 1. Construye la condición sin seleccionar todavía
+
+La comparación horas >= 6 produce FALSE, FALSE, TRUE, TRUE. Cada respuesta corresponde al elemento de la misma posición. Guardar ese resultado como mascara permite inspeccionarlo antes de utilizarlo. Después, horas[mascara] conserva las posiciones verdaderas y devuelve 6, 8.
+
+| Posición | horas | horas >= 6 | ¿Se conserva? |
+|---|---|---|---|
+| 1 | 2 | FALSE | No |
+| 2 | 4 | FALSE | No |
+| 3 | 6 | TRUE | Sí |
+| 4 | 8 | TRUE | Sí |
+
+### 2. Incluye, excluye o combina condiciones
+
+horas[c(1, 3)] obtiene la primera y la tercera posición. horas[-1] excluye la primera. Ninguna selección modifica horas sin una asignación posterior. Para seleccionar entre 4 y 8, combina horas >= 4 & horas <= 8: & exige que las dos comparaciones sean verdaderas en cada posición. Con | basta que se cumpla una. ! invierte una respuesta lógica.
+
+No uses && para filtrar un vector completo: se reserva para decisiones escalares y puede producir un error cuando recibe varias respuestas. En la siguiente unidad añadirás máscaras para faltantes, porque una pregunta sobre un dato desconocido puede no tener una respuesta TRUE/FALSE conocida.
+
+### 3. Comprueba la correspondencia antes de operar vectores
+
+En 1:4 + c(10, 20), R reutiliza 10, 20 para las cuatro posiciones. El resultado es 11, 22, 13, 24. La ausencia de advertencia solo indica que esa combinación de longitudes encaja con la regla; no demuestra que corresponda a tus observaciones. Si cada número pertenece a una persona, conserva sus IDs en una tabla.
+
+### 4. Lee una matriz en dos dimensiones
+
+matrix(1:6, nrow=2) coloca 1 y 2 en la primera columna, 3 y 4 en la segunda y 5 y 6 en la tercera. `m[1,2]` consulta fila uno y columna dos: 3. La coma divide las dimensiones. Una matriz sirve para magnitudes de tipo común; una encuesta con IDs textuales necesita una tabla.
+
+## Laboratorio guiado
+
+[Archivo completo](ejemplos/laboratorio.R) · [Salida comprobada](ejemplos/laboratorio.txt)
+
+Predice primero, ejecuta el archivo completo y lee después la explicación.
+
+```r
+# Laboratorio guiado. Ejecutar desde cursos/r.
+horas <- c(2, 4, 6, 8)
+mascara <- horas >= 6
+print(mascara)
+seleccion <- horas[mascara]
+print(seleccion)
+print(horas[-1])
+m <- matrix(1:6, nrow = 2)
+print(m)
+stopifnot(identical(seleccion, c(6, 8)), m[1, 2] == 3)
+```
+
+Desde la terminal del proyecto:
+
+```text
+Rscript --vanilla unidad03-vectores/ejemplos/laboratorio.R
+```
+
+Salida esperada:
+
+```text
+[1] FALSE FALSE  TRUE  TRUE
+[1] 6 8
+[1] 4 6 8
+     [,1] [,2] [,3]
+[1,]    1    3    5
+[2,]    2    4    6
+```
+
+### Lectura del laboratorio
+
+Primero aparece la máscara completa; luego, los dos valores seleccionados. La impresión de horas[-1] muestra 4, 6, 8. La matriz impresa tiene primera fila 1, 3, 5 y segunda 2, 4, 6. Lee las etiquetas de fila y columna que añade R como orientación de la impresión, no como datos adicionales.
+
+## Experimenta
+
+Cambia >= 6 por > 6: quedará solo 8. Después aplica >= 4 & <= 8 escribiendo el nombre horas en ambas comparaciones; obtendrás 4, 6, 8. Finalmente dibuja la matriz creada con byrow=TRUE: ahora las filas son 1, 2, 3 y 4, 5, 6. Explica qué argumento modificó la construcción, sin atribuir el cambio a la impresión.
+
+## Errores frecuentes
+
+| Confusión | Revisión |
+|---|---|
+| x[0] obtiene el primer dato | Los índices positivos comienzan en 1 |
+| El valor 6 siempre está en la posición 3 | La posición depende del contenido y su orden |
+| Seleccionar modifica el original | Comprueba si hubo reasignación |
+| Reciclar confirma el emparejamiento | Revisa longitud, unidad e identidad de cada entrada |
+
+## Autoevaluación
+
+¿Qué diferencia hay entre x[3] y x[x>=6]? ¿Por qué seleccionar 6 y 8 necesita cuatro respuestas lógicas en el laboratorio? ¿Qué contiene m[2, 3] en la matriz por columnas? Dibuja antes de ejecutar.
+
+
 ## Un vector contiene varios valores de un tipo común
 
 c(4,7,10) construye un vector numérico. length informa cuántos elementos contiene. La posición inicial es 1: x[1] obtiene 4. x[0] no obtiene el primer elemento, sino una selección vacía. Pedir una posición positiva fuera del vector devuelve NA en este caso; no equivale a un valor cero.

@@ -2,23 +2,42 @@
 
 [Lección](README.md) · [Soluciones](SOLUCIONES.md)
 
-Completa un paso antes de pasar al siguiente. Usa datos de práctica y conserva el original.
+Trabaja un paso cada vez. Guarda una predicción antes de ejecutar y comprueba su resultado antes de continuar. Las pistas orientan; la solución completa está en un archivo separado.
 
-## Paso 1
+## Paso 1. Conservar la unidad
 
-Crea horas=1.75 y calcula minutos. Conserva la unidad en el nombre o descripción.
+Crea horas=1.75 y calcula minutos. Muestra ambos nombres y justifica la operación con sus unidades.
 
-## Paso 2
+**Pista:** No cambies la unidad solo en el texto de una etiqueta.
 
-Guarda el código 007 como texto y conviértelo en una copia a número. Describe qué información cambia.
+## Paso 2. Proteger un identificador
 
-## Paso 3
+Guarda "007" como texto. Convierte una copia a número y compara valor, tipo y longitud de la representación. Conserva el original.
 
-Compara 3L y 3 con ==, identical y typeof. Explica por qué las respuestas no se contradicen.
+**Pista:** as.numeric devuelve un resultado; guarda la copia con otro nombre.
+
+## Paso 3. Comparar valor y tipo
+
+Compara 3L y 3 con ==, identical y typeof. Escribe las tres respuestas y explica por qué no se contradicen.
+
+**Pista:** Una igualdad numérica no exige siempre el mismo almacenamiento.
+
+## Reto de transferencia. Seguir una reasignación
+
+Asigna horas=2 y minutos=horas*60. Cambia horas a 4. Predice minutos antes y después de repetir la multiplicación. Anota la traza.
+
+**Pista:** La asignación conserva un valor calculado en ese momento.
 
 ## Evidencia de cierre
 
-Entrega pregunta, entrada, predicción, código ejecutado, resultado y explicación. Identifica una limitación de lo que comprobaste. Puedes utilizar la [bitácora](../docs/BITACORA.md).
+Entrega las respuestas de los tres pasos y del reto. Incluye entrada, predicción, código o cuenta, salida e interpretación. Explica un caso que falle y qué decisión tomarías. No basta una captura de la ejecución.
+
+## Comprobación antes de avanzar
+
+- [ ] Puedo explicar cada transformación sin leer la solución.
+- [ ] Contrasté la salida con una predicción o una cuenta independiente.
+- [ ] Distinguí datos, resultados y límites de la interpretación.
+- [ ] Respondí la autoevaluación de la lección.
 
 ---
 

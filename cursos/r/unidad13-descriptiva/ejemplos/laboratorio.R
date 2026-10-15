@@ -1,0 +1,11 @@
+# Laboratorio guiado. Ejecutar desde cursos/r.
+x <- c(10, 11, 12, 13, 100)
+print(sum(x))
+print(length(x))
+print(sum(x) / length(x))
+print(median(x))
+respuestas <- c("alta", "alta", "baja", NA_character_)
+n_alta <- sum(respuestas == "alta", na.rm = TRUE)
+n_observadas <- sum(!is.na(respuestas))
+cat(sprintf("Entre respuestas: %.2f%%; entre registros: %.2f%%\n", 100 * n_alta / n_observadas, 100 * n_alta / length(respuestas)))
+stopifnot(mean(x) == 29.2, median(x) == 12, n_observadas == 3)

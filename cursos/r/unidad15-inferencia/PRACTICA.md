@@ -2,23 +2,42 @@
 
 [Lección](README.md) · [Soluciones](SOLUCIONES.md)
 
-Completa un paso antes de pasar al siguiente. Usa datos de práctica y conserva el original.
+Trabaja un paso cada vez. Guarda una predicción antes de ejecutar y comprueba su resultado antes de continuar. Las pistas orientan; la solución completa está en un archivo separado.
 
-## Paso 1
+## Paso 1. Interpretar una media y un intervalo
 
-Explica a qué parámetro corresponde el intervalo del Ejemplo 01 y por qué no contiene necesariamente al 95% de los individuos.
+Para 8, 9, 10, 11, 12 registra n, media e IC 95%. Explica el parámetro del intervalo y por qué no describe al 95% de individuos. Interpreta p=1 sin afirmar igualdad demostrada.
 
-## Paso 2
+**Pista:** Separa dato individual, estimación y procedimiento de cobertura.
 
-Para dos grupos independientes, registra diferencia estimada, tamaños e intervalo de Welch. Explica qué supuesto de igualdad no exige y cuáles siguen importando.
+## Paso 2. Completar la salida de Welch
 
-## Paso 3
+Usa x=12, 13, 11, 16, 14 ey=8, 9, 10, 7, 12, 8. Registra dirección x-y, tamaños, diferencia e intervalo. Explica qué supuesto de igualdad no requiere y qué condiciones siguen importando.
 
-Une seis mediciones antes/después por ID con la segunda tabla invertida. Calcula diferencias y justifica un análisis pareado sin interpretar p como probabilidad de una hipótesis.
+**Pista:** Guarda la respuesta de t.test y consulta conf.int; el mensaje del ejemplo no muestra todos los campos.
+
+## Paso 3. Respetar los pares
+
+Construye los seis pares de la solución con el archivo después en orden inverso. Une por ID, calcula diferencias y prueba paired=TRUE. Explica por qué no son 12 unidades independientes.
+
+**Pista:** Valida una fila antes y después por persona antes de restar.
+
+## Reto de transferencia. Reconstruir Welch
+
+Calcula su error estándar como raíz de s_x²/n_x+s_y²/n_y. Usa los grados de libertad de Welch explicados en la solución y contrasta el intervalo manual con conf.int.
+
+**Pista:** El reto extiende el cálculo de una media; no introduce una selección universal de pruebas.
 
 ## Evidencia de cierre
 
-Entrega pregunta, entrada, predicción, código ejecutado, resultado y explicación. Identifica una limitación de lo que comprobaste. Puedes utilizar la [bitácora](../docs/BITACORA.md).
+Entrega las respuestas de los tres pasos y del reto. Incluye entrada, predicción, código o cuenta, salida e interpretación. Explica un caso que falle y qué decisión tomarías. No basta una captura de la ejecución.
+
+## Comprobación antes de avanzar
+
+- [ ] Puedo explicar cada transformación sin leer la solución.
+- [ ] Contrasté la salida con una predicción o una cuenta independiente.
+- [ ] Distinguí datos, resultados y límites de la interpretación.
+- [ ] Respondí la autoevaluación de la lección.
 
 ---
 

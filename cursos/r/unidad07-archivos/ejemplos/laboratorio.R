@@ -1,0 +1,10 @@
+# Laboratorio guiado. Ejecutar desde cursos/r.
+archivo <- tempfile(fileext = ".csv")
+writeLines(c("id,horas", "007,2.5", "008,"), archivo)
+d <- read.csv(archivo, colClasses = c("character", "numeric"), na.strings = "")
+print(names(d))
+print(d$id)
+print(d$horas)
+print(c(filas = nrow(d), columnas = ncol(d), faltantes = sum(is.na(d$horas))))
+stopifnot(identical(d$id, c("007", "008")), sum(is.na(d$horas)) == 1)
+unlink(archivo)

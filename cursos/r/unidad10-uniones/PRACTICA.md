@@ -2,23 +2,42 @@
 
 [Lección](README.md) · [Soluciones](SOLUCIONES.md)
 
-Completa un paso antes de pasar al siguiente. Usa datos de práctica y conserva el original.
+Trabaja un paso cada vez. Guarda una predicción antes de ejecutar y comprueba su resultado antes de continuar. Las pistas orientan; la solución completa está en un archivo separado.
 
-## Paso 1
+## Paso 1. Verificar y unir el catálogo
 
-Revisa que grupos.csv tenga una sola fila por clave y une modalidad a la encuesta mediante grupo.
+Lee grupos.csv y comprueba que grupo no falte ni se repita. Une modalidad a la encuesta por grupo con relación muchos a uno. Predice cuántas filas debe devolver.
 
-## Paso 2
+**Pista:** Dos personas de A pueden encontrar la misma fila de catálogo sin duplicarlo.
 
-Comprueba n antes/después, orden de IDs y modalidades faltantes. Repite A en una copia del catálogo y observa el rechazo de la relación.
+## Paso 2. Detectar multiplicación
 
-## Paso 3
+Comprueba filas, IDs en orden y modalidades ausentes. En una copia del catálogo repite A e intenta la misma unión. Registra el rechazo y su razón.
 
-Introduce C en una copia de la encuesta y usa anti_join. Explica por qué inner_join podría ocultar esa fila sin resolver el error.
+**Pista:** No retires relationship para hacer desaparecer una comprobación incumplida.
+
+## Paso 3. Investigar una clave desconocida
+
+Introduce C en la primera fila de una copia de encuesta. Compara anti_join, inner_join y left_join. Identifica la fila que cada operación conserva u omite.
+
+**Pista:** Esta copia es un escenario de auditoría, no una encuesta válida bajo el diccionario A/B.
+
+## Reto de transferencia. Invertir el catálogo
+
+Invierte sus dos filas y vuelve a unir con la encuesta original. Compara ID y modalidad con la primera unión.
+
+**Pista:** La correspondencia se debe a la clave, no al lugar que ocupa en el archivo.
 
 ## Evidencia de cierre
 
-Entrega pregunta, entrada, predicción, código ejecutado, resultado y explicación. Identifica una limitación de lo que comprobaste. Puedes utilizar la [bitácora](../docs/BITACORA.md).
+Entrega las respuestas de los tres pasos y del reto. Incluye entrada, predicción, código o cuenta, salida e interpretación. Explica un caso que falle y qué decisión tomarías. No basta una captura de la ejecución.
+
+## Comprobación antes de avanzar
+
+- [ ] Puedo explicar cada transformación sin leer la solución.
+- [ ] Contrasté la salida con una predicción o una cuenta independiente.
+- [ ] Distinguí datos, resultados y límites de la interpretación.
+- [ ] Respondí la autoevaluación de la lección.
 
 ---
 

@@ -1,0 +1,7 @@
+  id grupo modalidad
+1 P1     A    Guiada
+2 P2     A    Guiada
+3 P3     C      <NA>
+[1] "P3"
+izquierda   interna
+        3         2

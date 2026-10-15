@@ -1,0 +1,5 @@
+Paso 1: productos leídos; 2 grupos, 36 registros y 33 horas observadas.
+Paso 2: puntaje negativo rechazado antes de crear la salida.
+Paso 3: unidad estación-fecha; 12 registros y 11 conteos observados.
+Renderizado y rúbrica requieren además revisar el HTML y justificar decisiones.
+Reto: 1 conteo faltante declarado; total observado no equivale a abundancia poblacional.

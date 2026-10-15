@@ -2,23 +2,42 @@
 
 [Lección](README.md) · [Soluciones](SOLUCIONES.md)
 
-Completa un paso antes de pasar al siguiente. Usa datos de práctica y conserva el original.
+Trabaja un paso cada vez. Guarda una predicción antes de ejecutar y comprueba su resultado antes de continuar. Las pistas orientan; la solución completa está en un archivo separado.
 
-## Paso 1
+## Paso 1. Clasificar las ocho filas
 
-Clasifica las ocho filas de encuesta_sucia.csv antes de ejecutar la función. Distingue vacío permitido y conversión fallida.
+Lee encuesta_sucia.csv como texto y clasifica a mano cada fila: válida, equivalente repetida o inválida con motivo. Distingue ausencia de horas permitida y edad no convertible.
 
-## Paso 2
+**Pista:** Usa una tabla con número de fila, ID y motivo antes de ejecutar limpiar_entrada.
 
-Ejecuta limpiar_entrada y contrasta cada fila con su incidencia. Comprueba que el original conserve 7,5 y el candidato contenga 7.5.
+## Paso 2. Contrastar auditoría y original
 
-## Paso 3
+Ejecuta limpiar_entrada. Compara tu clasificación con incidencias y validas. Verifica el texto 7, 5 original, el número 7.5 aceptado y las horas faltantes de S05.
 
-Cambia en una copia el puntaje de la segunda aparición de S02. Predice el rechazo y explica por qué no se conserva automáticamente la primera en una contradicción.
+**Pista:** La fila del archivo y la posición en la tabla de válidas no tienen por qué coincidir.
+
+## Paso 3. Crear una contradicción en una copia
+
+En un CSV temporal cambia a 81 el puntaje de la segunda aparición de S02. Predice el rechazo y comprueba su causa sin modificar la fuente original.
+
+**Pista:** Si el mismo ID tiene dos respuestas incompatibles, conservar primero no resuelve la contradicción.
+
+## Reto de transferencia. Separar tres situaciones
+
+Convierte el vector de texto NA, "texto", "0". Construye una máscara de fallos de conversión y explica por qué solo debe marcar una posición.
+
+**Pista:** Una ausencia original, una conversión fallida y un cero son casos diferentes.
 
 ## Evidencia de cierre
 
-Entrega pregunta, entrada, predicción, código ejecutado, resultado y explicación. Identifica una limitación de lo que comprobaste. Puedes utilizar la [bitácora](../docs/BITACORA.md).
+Entrega las respuestas de los tres pasos y del reto. Incluye entrada, predicción, código o cuenta, salida e interpretación. Explica un caso que falle y qué decisión tomarías. No basta una captura de la ejecución.
+
+## Comprobación antes de avanzar
+
+- [ ] Puedo explicar cada transformación sin leer la solución.
+- [ ] Contrasté la salida con una predicción o una cuenta independiente.
+- [ ] Distinguí datos, resultados y límites de la interpretación.
+- [ ] Respondí la autoevaluación de la lección.
 
 ---
 

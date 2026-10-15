@@ -10,6 +10,123 @@
 - Utilizar if con una condición escalar.
 - Comparar un ciclo con una operación vectorizada.
 
+## Clase guiada. Construir una función antes de exigirle validaciones
+
+Una función reúne instrucciones y les da un nombre. La primera del laboratorio convierte horas a minutos. Comienza con una sola entrada y una sola salida para que puedas reconocer cada pieza antes de añadir decisiones, rechazos o repetición.
+
+### 1. Define y luego llama
+
+En minutos_desde_horas <- function(horas), el nombre de la izquierda guardará la función. function anuncia su definición y horas es el parámetro. Las llaves delimitan el cuerpo. La asignación interna calcula minutos y return entrega ese valor al lugar de la llamada. Definir no ejecuta todavía ese cálculo.
+
+En resultado <- minutos_desde_horas(1.5), 1.5 es el argumento concreto que recibe horas. La función multiplica y devuelve 90; la asignación exterior conserva ese 90 como resultado. El objeto minutos pertenece a la evaluación de la función y no necesitas crearlo antes en la consola.
+
+| Momento | Qué ocurre |
+|---|---|
+| Definición | Se guarda cómo convertir una entrada futura |
+| Llamada con 1.5 | El parámetro horas recibe 1.5 |
+| Cálculo interno | minutos toma el valor 90 |
+| return | Entrega 90 y termina esa llamada |
+| Asignación exterior | resultado conserva el valor entregado |
+
+### 2. Mostrar y devolver cumplen propósitos diferentes
+
+print muestra un valor y puede servir para explorar; return declara de forma explícita qué valor entrega la función y termina esa ejecución. R también devuelve el resultado de la última expresión evaluada si no escribes return. Además, print devuelve invisiblemente el objeto mostrado. Por eso no conviene trasladar sin revisión reglas de otros lenguajes: aquí usamos return explícito para que la intención de cálculo sea clara y print fuera para presentar la salida.
+
+### 3. Decide con una condición escalar
+
+clasificar recibe una cantidad. Si horas >= 5 es TRUE, entrega «cinco o más»; si es FALSE, entra en else y entrega «menos de cinco». El límite 5 pertenece al primer caso por usar >=. Antes de añadir validación, esta versión supone una entrada numérica única y conocida: es un ejemplo de flujo, no una función preparada para datos externos.
+
+if requiere una respuesta única que pueda interpretarse. Un vector de varias respuestas o NA no expresa esa decisión. La solución construye validar_horas de manera gradual: primero tipo, después longitud, ausencia, finitud y rango. El orden evita intentar operar con una entrada que ya falló una precondición.
+
+### 4. Repite y sigue el estado
+
+El ciclo for recorre 2, 4, 6. suma comienza en 0. En cada vuelta, valor recibe el siguiente elemento y suma conserva el acumulado anterior más ese elemento. Las impresiones serán 2, 6, 12. El nombre suma mantiene estado entre vueltas; inicializarlo dentro del ciclo borraría el acumulado en cada paso.
+
+| Vuelta | valor | suma anterior | suma nueva |
+|---|---|---|---|
+| 1 | 2 | 0 | 2 |
+| 2 | 4 | 2 | 6 |
+| 3 | 6 | 6 | 12 |
+
+### 5. Añade faltantes y rechazos solo después
+
+Para la media de 3, NA, 5, 7, necesitas dos acumuladores: suma y cantidad conocida. El NA no incrementa ninguno; al final divides 15 entre 3. Si no hubo valores conocidos, decides cómo comunicarlo antes de dividir. mean(x, na.rm=TRUE) expresa el cálculo compacto, mientras la traza te permite explicar su denominador.
+
+stop interrumpe una entrada no admitida con un mensaje. tryCatch permite observar ese rechazo en una prueba: su manejador error recibe la condición. inherits(resultado, "error") comprueba qué ocurrió. Se utiliza para los casos que deliberadamente deben fallar; no para ocultar cualquier problema y seguir como si los datos fueran correctos.
+
+## Laboratorio guiado
+
+[Archivo completo](ejemplos/laboratorio.R) · [Salida comprobada](ejemplos/laboratorio.txt)
+
+Predice primero, ejecuta el archivo completo y lee después la explicación.
+
+```r
+# Laboratorio guiado. Ejecutar desde cursos/r.
+minutos_desde_horas <- function(horas) {
+  minutos <- horas * 60
+  return(minutos)
+}
+resultado <- minutos_desde_horas(1.5)
+print(resultado)
+clasificar <- function(horas) {
+  if (horas >= 5) {
+    return("cinco o más")
+  } else {
+    return("menos de cinco")
+  }
+}
+print(clasificar(3))
+print(clasificar(5))
+suma <- 0
+for (valor in c(2, 4, 6)) {
+  suma <- suma + valor
+  print(suma)
+}
+stopifnot(resultado == 90, suma == 12)
+```
+
+Desde la terminal del proyecto:
+
+```text
+Rscript --vanilla unidad06-funciones/ejemplos/laboratorio.R
+```
+
+Salida esperada:
+
+```text
+[1] 90
+[1] "menos de cinco"
+[1] "cinco o más"
+[1] 2
+[1] 6
+[1] 12
+```
+
+### Lectura del laboratorio
+
+El primer print muestra 90, entregado por la función. Después aparecen las clasificaciones de 3 y 5. Las tres impresiones del ciclo muestran sus estados, no tres resultados finales de funciones distintas. Distingue el recorrido del programa del valor que una llamada devuelve.
+
+Una función puede recibir argumentos por nombre, como minutos_desde_horas(horas=1.5). Si más adelante añades un valor predeterminado, se usará cuando la llamada omita ese argumento; conviene reservarlo para una elección que tenga sentido en el problema. Las funciones del proyecto reciben archivo y carpeta para hacer visibles sus entradas y sus efectos de escritura.
+
+## Experimenta
+
+Cambia el argumento de conversión a 2 y predice 120. Después cambia la clasificación de >=5 a >5: explica por qué el caso exactamente 5 cambia de rama. Por último mueve suma <- 0 dentro del ciclo en una copia: las impresiones pasarán a 2, 4, 6. Recupera el acumulador fuera y escribe qué estado necesita conservarse.
+
+## Errores frecuentes
+
+| Error | Causa y corrección |
+|---|---|
+| Definir una función y esperar que ya haya convertido | Falta la llamada con un argumento |
+| Depender de un objeto de otra consola | Recibe la entrada mediante un parámetro |
+| Usar if con toda una columna | Decide sobre un escalar o construye una máscara vectorial |
+| Aumentar el denominador al pasar por NA | Actualiza suma y cantidad solo para observados |
+| Capturar cualquier error y devolver cero | Conserva el rechazo y explica la entrada que lo causó |
+
+## Autoevaluación
+
+¿Qué diferencia hay entre parámetro y argumento? ¿Qué devuelve la función de conversión y cuándo se ejecuta? ¿Por qué una media necesita cantidad además de suma? ¿Por qué una función que rechaza ausencia no debería comenzar comparando x < 0 sin revisar tipo y longitud?
+
+
 ## Una función declara qué acepta y qué devuelve
 
 Una función reusable recibe argumentos y devuelve un resultado. media_observada acepta un vector numérico con al menos un valor observado, retira NA para su cálculo y devuelve una media. Ese es un contrato concreto: otra función podría elegir devolver NA si no hay observaciones, pero debe explicarlo.

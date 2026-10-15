@@ -1,0 +1,4 @@
+Paso 1: seleccionados=6,8,10.
+Paso 2: sin primero=4,6,8,10; original=2,4,6,8,10.
+Paso 3: filas de matriz=1,3,5 / 2,4,6; suma=11,22,13,24.
+Reto: intervalo cerrado de 4 a 8=4,6,8.

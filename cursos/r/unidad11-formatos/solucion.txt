@@ -1,0 +1,4 @@
+Paso 1: clave de una fila larga=ID y momento.
+Paso 2: 4 mediciones, 2 personas y 4 claves distintas.
+Paso 3: cambios A=12 y B=5; duplicado rechazado.
+Reto: invertir filas no altera los cambios después de ordenar por ID.

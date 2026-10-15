@@ -1,0 +1,4 @@
+Paso 1: n=5; media=29.2; mediana=12; mínimo=10; máximo=100.
+Paso 2: 100 está dentro del dominio; revisar origen y unidad antes de excluir.
+Paso 3: proporciones entre respuestas usan 34; entre registros usan 36.
+Reto: media sin 100=11.5; original conservado; no es autorización para eliminarlo.

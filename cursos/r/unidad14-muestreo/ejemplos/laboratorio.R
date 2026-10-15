@@ -1,0 +1,13 @@
+# Laboratorio guiado. Ejecutar desde cursos/r.
+poblacion <- data.frame(id = 1:6, valor = c(2, 2, 4, 6, 8, 8))
+set.seed(17)
+ids_a <- sample(poblacion$id, size = 4, replace = FALSE)
+set.seed(17)
+ids_b <- sample(poblacion$id, size = 4, replace = FALSE)
+stopifnot(identical(ids_a, ids_b), !anyDuplicated(ids_a))
+set.seed(17)
+con_reemplazo <- sample(poblacion$id, size = 20, replace = TRUE)
+stopifnot(length(con_reemplazo) == 20, anyDuplicated(con_reemplazo) > 0)
+cat("Misma semilla y mismas operaciones: los cuatro IDs se repiten.\n")
+cat("Sin reemplazo no se repite ID; valores iguales pueden pertenecer a IDs distintos.\n")
+cat("Veinte extracciones de seis IDs con reemplazo contienen repeticiones.\n")

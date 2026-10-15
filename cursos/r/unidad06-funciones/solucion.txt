@@ -1,0 +1,4 @@
+Paso 1: validar devuelve una cantidad numérica admitida.
+Paso 2: 0 y 40 aceptados; cinco entradas inválidas rechazadas.
+Paso 3: suma=15; n=3; media=5; todo faltante rechazado.
+Reto: conversión válida=90 minutos; infinito rechazado.

@@ -10,6 +10,89 @@
 - Seleccionar columnas conservando su estructura cuando corresponda.
 - Definir una clave según la unidad de observación.
 
+## Clase guiada. Elegir una estructura según lo que representa
+
+Una tabla de datos organiza variables en columnas y observaciones en filas. El laboratorio tiene tres personas, identificadas por A, B, C. Dos tienen el mismo número de horas (5), pero siguen siendo registros diferentes. Una tabla permite que id sea texto y horas sea número sin convertir toda la estructura a un tipo común.
+
+### 1. Lee los dos lugares dentro del corchete
+
+En d[filas, columnas], lo que va antes de la coma selecciona filas y lo que va después selecciona columnas. Un lugar vacío conserva todas las posiciones de esa dimensión. d[, "horas", drop=FALSE] selecciona esa columna para las tres filas y conserva una tabla. nrow y ncol deben indicar 3 y 1.
+
+d[["horas"]] extrae el vector almacenado en la columna. Tiene tres elementos, pero ya no es una tabla de una columna. Esta diferencia importa si la siguiente operación espera nombres de columnas o un vector numérico. str y class ayudan a revisar la forma antes de llamar a otra función.
+
+### 2. Selecciona filas sin confundir valor e identidad
+
+La expresión d$horas == 5 produce TRUE, TRUE, FALSE. Usarla en las filas conserva A y B. El operador $ extrae una columna por nombre; la máscara se aplica a toda la tabla para conservar el ID al lado de su medición. Si extraes horas por separado y las reordenas, puedes perder esa correspondencia.
+
+duplicated(d$id) investiga repetición de identificadores; duplicated(d$horas) investiga valores repetidos. Son preguntas diferentes. Un criterio de deduplicación debe partir de la clave prevista y no de que las cantidades se repitan.
+
+### 3. Distingue una lista de su contenido
+
+Una lista puede guardar piezas distintas: un texto id y un vector mediciones. registro["id"] produce otra lista con una pieza; registro[["id"]] extrae esa pieza y devuelve "A". Piensa en la diferencia entre una caja pequeña dentro de otra caja y el objeto que sacas de ella. La analogía ayuda, pero comprueba también is.list e is.character.
+
+### 4. Define una clave para mediciones repetidas
+
+Si una persona tiene dos momentos, el ID por sí solo deja de ser único. La combinación ID/momento puede distinguir cada medición. Comprobar anyDuplicated(d[c("id", "momento")]) revisa esa combinación de columnas. Un cero indica que no encontró combinaciones repetidas en esa tabla; todavía debes revisar claves vacías y coherencia del diseño.
+
+## Laboratorio guiado
+
+[Archivo completo](ejemplos/laboratorio.R) · [Salida comprobada](ejemplos/laboratorio.txt)
+
+Predice primero, ejecuta el archivo completo y lee después la explicación.
+
+```r
+# Laboratorio guiado. Ejecutar desde cursos/r.
+d <- data.frame(id = c("A", "B", "C"), horas = c(5, 5, 8))
+columna <- d[, "horas", drop = FALSE]
+valores <- d[["horas"]]
+print(c(nrow(columna), ncol(columna)))
+print(valores)
+seleccion <- d[d$horas == 5, , drop = FALSE]
+print(seleccion$id)
+registro <- list(id = "A", mediciones = c(5, 6))
+print(is.list(registro["id"]))
+print(registro[["id"]])
+stopifnot(nrow(seleccion) == 2, !anyDuplicated(d$id))
+```
+
+Desde la terminal del proyecto:
+
+```text
+Rscript --vanilla unidad05-tablas/ejemplos/laboratorio.R
+```
+
+Salida esperada:
+
+```text
+[1] 3 1
+[1] 5 5 8
+[1] "A" "B"
+[1] TRUE
+[1] "A"
+```
+
+### Lectura del laboratorio
+
+La primera impresión muestra 3, 1, dimensiones de la tabla conservada. La siguiente muestra 5, 5, 8, contenido del vector extraído. La consulta devuelve A, B. Finalmente TRUE confirma que [ conserva una lista y "A" muestra el valor extraído con [[. El objetivo es poder anticipar tanto el contenido como la estructura.
+
+## Experimenta
+
+Selecciona solo la fila C conservando las columnas id y horas; comprueba dimensiones 1×2. Después intercambia el orden de esas columnas y verifica que los nombres cambien de posición pero no la relación de C con sus ocho horas. Utiliza nombres explícitos cuando el contrato no deba depender del orden de las columnas.
+
+## Errores frecuentes
+
+| Confusión | Comprobación |
+|---|---|
+| Dos valores iguales son registros duplicados | Compara la clave que identifica observaciones |
+| Una columna siempre conserva forma de tabla | Consulta class y usa drop=FALSE cuando haga falta |
+| [ y [[ devuelven lo mismo en una lista | Revisa clase, longitud y contenido del resultado |
+| Ordenar solo una columna ordena la tabla | Ordena las filas completas para conservar identidad |
+
+## Autoevaluación
+
+¿Qué significan los dos lugares de d[filas, columnas]? ¿Por qué d[["horas"]] puede enviarse a mean y d[, "horas", drop=FALSE] es otra estructura? ¿Cuándo necesitarías ID y momento como clave?
+
+
 ## Una tabla separa variables de tipos distintos
 
 Un data.frame combina columnas de igual longitud que pueden tener tipos diferentes: id como texto y horas como número. Cada fila representa una observación definida por el análisis. A diferencia de la matriz, no exige convertir todas sus columnas al mismo tipo.

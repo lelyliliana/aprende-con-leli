@@ -1,8 +1,31 @@
-# Solución ejecutable. Intentar primero la práctica.
+# Solución completa. Intenta antes la práctica y el reto.
+# Paso 1. Leer, validar y describir la tabla del curso.
+source("src/curso.R", encoding = "UTF-8")
+d <- leer_encuesta()
+tipos <- vapply(d, typeof, character(1))
+stopifnot(nrow(d) == 36, ncol(d) == 6, sum(is.na(d$horas_semana)) == 3)
+stopifnot(tipos[["id"]] == "character", tipos[["horas_semana"]] == "double")
+cat("Paso 1: 36 filas, 6 columnas, ID de texto y 3 horas faltantes.\n")
+# Paso 2. Exportación temporal sin índice artificial.
+archivo <- tempfile(fileext = ".csv")
+write.csv(d, archivo, row.names = FALSE, na = "", fileEncoding = "UTF-8")
+copia <- leer_encuesta(archivo)
+stopifnot(identical(d, copia), identical(names(d), names(copia)))
+unlink(archivo)
+stopifnot(as.numeric("007") == 7)
+cat("Paso 2: ida y vuelta conserva datos, columnas y faltantes.\n")
+# Paso 3. Identificar el dato que falló en la conversión.
 archivo <- tempfile(fileext = ".csv")
 writeLines(c("valor", "3", "texto"), archivo)
 r <- suppressWarnings(readr::read_csv(archivo, col_types = readr::cols(valor = readr::col_double())))
 problemas <- readr::problems(r)
-stopifnot(nrow(problemas) == 1, is.na(r$valor[2]))
+stopifnot(nrow(problemas) == 1, problemas$actual[1] == "texto", is.na(r$valor[2]))
 unlink(archivo)
-cat("Conversión fallida detectada: una incidencia; NA no se acepta sin revisión\n")
+cat("Paso 3: texto inválido identificado; el NA nuevo requiere revisión.\n")
+# Reto. El libro es un recurso del paquete, no un archivo personal.
+libro <- readxl::readxl_example("datasets.xlsx")
+hojas <- readxl::excel_sheets(libro)
+stopifnot("mtcars" %in% hojas)
+excel <- readxl::read_excel(libro, sheet = "mtcars", n_max = 5)
+stopifnot(nrow(excel) == 5, ncol(excel) == 11)
+cat("Reto: hoja mtcars comprobada; 5 filas y 11 columnas leídas.\n")

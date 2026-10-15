@@ -1,0 +1,5 @@
+Paso 1: misma semilla reproduce la muestra; otra semilla inicia otra secuencia.
+Paso 2: 500 medias; su dispersión es menor en esta simulación.
+Paso 3: con reemplazo se repiten IDs; sin reemplazo la petición es imposible.
+Reto: primeras 100 unidades, media=0; población artificial, media=4.5.
+Una semilla no corrige un mecanismo de selección sesgado.

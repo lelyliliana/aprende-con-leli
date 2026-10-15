@@ -1,0 +1,3 @@
+Misma semilla y mismas operaciones: los cuatro IDs se repiten.
+Sin reemplazo no se repite ID; valores iguales pueden pertenecer a IDs distintos.
+Veinte extracciones de seis IDs con reemplazo contienen repeticiones.

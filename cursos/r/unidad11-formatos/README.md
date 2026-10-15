@@ -10,6 +10,95 @@
 - Comprobar una clave compuesta antes de volver a formato ancho.
 - Distinguir número de filas y número de unidades independientes.
 
+## Clase guiada. Cambiar la forma sin cambiar quién fue medido
+
+En formato ancho hay una fila por persona y columnas antes, despues. En largo hay una fila por medición, una columna momento y otra puntaje. Ninguno es siempre superior: elegimos la forma según la operación y conservamos la identidad para regresar o comparar correctamente.
+
+### 1. Separa identificador y mediciones
+
+La tabla inicial del laboratorio tiene A con 60/72 y B con 70/75. pivot_longer recibe cols=c(antes, despues) para indicar exactamente qué columnas transformará. names_to="momento" guarda los nombres de esas columnas como valores y values_to="puntaje" guarda sus cantidades. ID permanece al lado de cada medición.
+
+| ID | Momento | Puntaje |
+|---|---|---|
+| A | antes | 60 |
+| A | despues | 72 |
+| B | antes | 70 |
+| B | despues | 75 |
+
+Hay cuatro filas y dos personas. La transformación no creó participantes ni cuatro observaciones independientes. La dependencia entre medidas de A sigue existiendo aunque sus valores aparezcan en filas distintas.
+
+### 2. Declara la clave compuesta
+
+ID/momento identifica cada medición. anyDuplicated sobre esas dos columnas debe devolver cero. Revisar solo ID señalaría repeticiones esperadas y llevaría a descartar datos válidos. Revisar solo puntaje tampoco representa la identidad.
+
+### 3. Vuelve a ancho después de validar
+
+pivot_wider usa names_from=momento para crear nombres de columnas y values_from=puntaje para llenarlas. Si existe más de un puntaje para A/antes, no hay un valor único que colocar. La función de la solución rechaza claves ausentes o duplicadas antes del pivote. Elegir una agregación como media para resolver la duplicación requeriría una justificación del diseño, no solo eliminar una advertencia.
+
+### 4. Calcula diferencias dentro de una persona
+
+Con la tabla ancha validada, despues-antes produce 12 para A y 5 para B. Si recibes dos archivos separados no debes restarlos por posición: primero únelos por ID como aprenderás en el ejemplo pareado de inferencia. Al invertir el orden de las filas largas, el orden de las personas de salida puede cambiar; ordenar por ID permite contrastar el contenido.
+
+Una ida y vuelta conserva información cuando las claves y la estructura lo permiten. No basta que ambas tablas tengan las mismas dimensiones: compara IDs, momentos y valores. Un número de filas correcto puede coexistir con valores asignados a la persona equivocada.
+
+## Laboratorio guiado
+
+[Archivo completo](ejemplos/laboratorio.R) · [Salida comprobada](ejemplos/laboratorio.txt)
+
+Predice primero, ejecuta el archivo completo y lee después la explicación.
+
+```r
+# Laboratorio guiado. Ejecutar desde cursos/r.
+ancha <- data.frame(id = c("A", "B"), antes = c(60, 70), despues = c(72, 75))
+larga <- tidyr::pivot_longer(ancha, cols = c(antes, despues), names_to = "momento", values_to = "puntaje")
+print(as.data.frame(larga))
+print(c(personas = length(unique(larga$id)), mediciones = nrow(larga)))
+vuelta <- tidyr::pivot_wider(larga, names_from = momento, values_from = puntaje)
+print(vuelta$despues - vuelta$antes)
+stopifnot(!anyDuplicated(larga[c("id", "momento")]), nrow(vuelta) == 2)
+```
+
+Desde la terminal del proyecto:
+
+```text
+Rscript --vanilla unidad11-formatos/ejemplos/laboratorio.R
+```
+
+Salida esperada:
+
+```text
+id momento puntaje
+1  A   antes      60
+2  A despues      72
+3  B   antes      70
+4  B despues      75
+  personas mediciones
+         2          4
+[1] 12  5
+```
+
+### Lectura del laboratorio
+
+La tabla impresa permite seguir cómo los dos nombres de columnas pasan a momento. La cuenta personas=2, mediciones=4 explicita el cambio de unidad por fila. Los cambios 12 y 5 pertenecen a A y B en ese orden de salida; guarda siempre el ID cuando informes esos resultados.
+
+## Experimenta
+
+Invierte las filas largas y vuelve a ancho. Ordena después por ID y contrasta cambios. En otra copia duplica A/antes; no promedies los valores para que el pivote continúe. Explica primero si se trata de repetición accidental, otra visita no identificada o contradicción.
+
+## Errores frecuentes
+
+| Confusión | Cómo revisarla |
+|---|---|
+| Cuatro filas largas son cuatro personas | Cuenta IDs distintos y explica el momento |
+| ID repetido implica duplicado | Revisa la clave ID/momento |
+| El pivote valida todo el estudio | Comprueba claves, tipos y correspondencias |
+| Orden de salida equivale a identidad | Conserva ID y ordena explícitamente al comparar |
+
+## Autoevaluación
+
+¿Qué guardan names_to y values_to? ¿Por qué se duplica el número de filas? ¿Qué debes resolver antes de pivotar si hay dos puntajes para A/antes?
+
+
 ## Dos personas no se vuelven cuatro al pivotar
 
 Una tabla ancha puede tener una fila por persona y columnas antes/despues. Una tabla larga representa una fila por persona y momento. Para dos personas con dos momentos hay cuatro filas, pero siguen siendo dos personas con mediciones relacionadas.

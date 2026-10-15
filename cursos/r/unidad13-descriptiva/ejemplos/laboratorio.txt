@@ -1,0 +1,5 @@
+[1] 146
+[1] 5
+[1] 29.2
+[1] 12
+Entre respuestas: 66.67%; entre registros: 50.00%
