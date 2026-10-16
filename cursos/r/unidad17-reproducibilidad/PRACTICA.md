@@ -6,9 +6,9 @@ Trabaja un paso cada vez. Guarda una predicción antes de ejecutar y comprueba s
 
 ## Paso 1. Registrar datos y sesión
 
-Ejecuta el Ejemplo 01 y revisa la huella de encuesta.csv y el archivo de sesión. Explica qué identifica cada uno y qué no demuestra sobre calidad oautenticidad.
+Ejecuta el Ejemplo 01 y revisa la huella de encuesta.csv y el archivo de sesión. Explica qué identifica cada uno y qué no demuestra sobre calidad o autenticidad.
 
-**Pista:** No trates una huella MD5 como validación científica oseguridad contra ataques.
+**Pista:** No trates una huella MD5 como validación científica o seguridad contra ataques.
 
 ## Paso 2. Renderizar y contrastar
 
@@ -18,7 +18,7 @@ Desde cursos/r ejecuta quarto render proyecto/informe.qmd. Abre salidas/informe/
 
 ## Paso 3. Experimentar en otra copia del proyecto
 
-Duplica la carpeta completa como r-practica-repro y abre su proyecto. Comprueba la ruta; cambia en su CSV el primer puntaje en+1 y renderiza allí. Contrasta la media del grupo y regresa al proyecto original sin editarlo.
+Duplica la carpeta completa como r-practica-repro y abre su proyecto. Comprueba la ruta; cambia en su CSV el primer puntaje en 1 punto y renderiza allí. Contrasta la media del grupo y regresa al proyecto original sin editarlo.
 
 **Pista:** La lección explica la copia segura. El script de solución usa un CSV temporal para el cálculo, pero el paso pide además reconstruir el HTML.
 

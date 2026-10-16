@@ -1,0 +1,4 @@
+Curva creciente: Pearson=0.979; Spearman=1.000; n=6.
+Pearson: IC95%=[0.814, 0.998]; p=0.000662.
+Faltantes: 8 filas, 6 pares completos y 2 filas excluidas.
+Curva en U: Pearson=0.000; cero no significa ausencia de relación.

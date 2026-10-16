@@ -24,3 +24,19 @@ cat("Paso 3: diagnóstico generado; rango=[0,5]; 20 horas es extrapolación.\n")
 stopifnot(max(abs(d$y - (fitted(m_horas) + residuals(m_horas)))) < 1e-10)
 stopifnot(sum(residuals(m_horas)^2) > 0)
 cat("Reto: observados reconstruidos; residuos no nulos; asociación no demuestra causa.\n")
+# Ampliación. Otra curva monótona y cambio de dirección.
+x <- 1:6
+y <- c(1, 2, 4, 8, 16, 32)
+grDevices::svg("salidas/graficos/practica-correlacion.svg", width = 7, height = 4)
+plot(x, y, xlab = "x", ylab = "y", main = "Curva creciente construida", pch = 19)
+invisible(dev.off())
+stopifnot(file.info("salidas/graficos/practica-correlacion.svg")$size > 1000)
+r <- cor(x, y)
+rho <- cor(x, y, method = "spearman")
+stopifnot(r > 0.9, r < 0.95, abs(rho - 1) < 1e-12)
+d_pares <- data.frame(x = c(x, NA), y = c(y, 64))
+stopifnot(sum(complete.cases(d_pares)) == 6,
+          abs(cor(d_pares$x, d_pares$y, use = "complete.obs") - r) < 1e-12)
+stopifnot(abs(cor(x, -y) + r) < 1e-12,
+          abs(cor(x, -y, method = "spearman") + 1) < 1e-12)
+cat(sprintf("Ampliación: Pearson=%.3f; Spearman=%.3f; 6 pares; al negar y cambia el signo.\n", r, rho))

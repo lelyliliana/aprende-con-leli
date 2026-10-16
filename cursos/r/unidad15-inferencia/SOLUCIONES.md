@@ -6,7 +6,7 @@ Consulta cada sección después de intentar el paso correspondiente. Si tu resul
 
 ## Paso 1. Parámetro y alcance
 
-La media es 10 con n=5 y el IC 95% aproximadamente[8.037, 11.963]. Bajo el modelo y condiciones del procedimiento, el intervalo estima una media poblacional. No es un rango de 95% de observaciones. p=1 refleja estadístico coincidente con la hipótesis nula en este caso; no prueba igualdad exacta ni equivalencia.
+La media es 10 con n=5 y el IC 95% aproximadamente [8.037, 11.963]. Bajo el modelo y condiciones del procedimiento, el intervalo estima una media poblacional. No es un rango de 95% de observaciones. p=1 refleja estadístico coincidente con la hipótesis nula en este caso; no prueba igualdad exacta ni equivalencia.
 
 ## Paso 2. Diferencia con dirección
 

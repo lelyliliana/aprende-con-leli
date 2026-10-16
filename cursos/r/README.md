@@ -2,7 +2,7 @@
 
 **[Comenzar por la Unidad 00](unidad00-ruta/README.md)** · [Ver el curso](https://lelyliliana.github.io/aprende-con-leli/cursos/r/)
 
-Curso abierto de nivel principiante a intermedio para pasar de una pregunta y un archivo de datos a un análisis explicado y reproducible. Incluye **19 unidades, 54 ejemplos comprobables, 18 soluciones ejecutables completas y un proyecto construido en cuatro etapas con informe Quarto**.
+Curso abierto de nivel principiante a intermedio para pasar de una pregunta y un archivo de datos a un análisis explicado y reproducible. Incluye **19 unidades, 55 ejemplos comprobables, 18 soluciones ejecutables completas y un proyecto construido en cuatro etapas con informe Quarto**.
 
 No exige conocer Python ni haber programado. Necesitas manejar archivos y operaciones aritméticas básicas; la ruta introduce programación y los conceptos estadísticos utilizados. Se trabaja con datos ficticios suministrados en el curso.
 

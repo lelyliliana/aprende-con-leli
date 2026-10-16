@@ -288,6 +288,12 @@
     "salida": "unidad16-regresion/ejemplos/02.txt"
   },
   {
+    "unidad": 16,
+    "archivo": "unidad16-regresion/ejemplos/03.R",
+    "titulo": "Pearson, Spearman y pares completos",
+    "salida": "unidad16-regresion/ejemplos/03.txt"
+  },
+  {
     "unidad": 17,
     "archivo": "unidad17-reproducibilidad/ejemplos/laboratorio.R",
     "titulo": "Recalcular una copia y detectar qué cambió",

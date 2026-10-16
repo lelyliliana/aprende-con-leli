@@ -10,7 +10,7 @@ La construcción añade lectura, resumen, figura y escritura en etapas. El resum
 
 ## Paso 2. Rechazo observable
 
-El puntaje-1 incumple el dominio y se rechaza al leer antes de crear la carpeta nueva. La prueba confirma un error y que esa carpeta sigue sin existir. No modifica el origen. Una carpeta preexistente no serviría para demostrar que no se creó, por eso la prueba usa una nueva.
+El puntaje de -1 incumple el dominio y se rechaza al leer antes de crear la carpeta nueva. La prueba confirma un error y que esa carpeta sigue sin existir. No modifica el origen. Una carpeta preexistente no serviría para demostrar que no se creó, por eso la prueba usa una nueva.
 
 ## Paso 3. Rúbrica y otro contrato
 

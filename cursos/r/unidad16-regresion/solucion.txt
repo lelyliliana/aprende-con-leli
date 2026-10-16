@@ -2,3 +2,4 @@ Paso 1: intercepto=2; pendiente=3 por hora; predicción=9.5.
 Paso 2: pendiente=0.05 por minuto; misma predicción en 150 minutos.
 Paso 3: diagnóstico generado; rango=[0,5]; 20 horas es extrapolación.
 Reto: observados reconstruidos; residuos no nulos; asociación no demuestra causa.
+Ampliación: Pearson=0.906; Spearman=1.000; 6 pares; al negar y cambia el signo.

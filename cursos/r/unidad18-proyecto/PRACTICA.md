@@ -12,7 +12,7 @@ Completa primero las cuatro etapas de proyecto/CONSTRUCCION.md. Después ejecuta
 
 ## Paso 2. Probar rechazo previo
 
-Crea un CSV temporal con un puntaje-1 y elige una carpeta de salida nueva. Llama ejecutar_analisis y comprueba rechazo y carpeta no creada. Conserva la encuesta original.
+Crea un CSV temporal con un puntaje de -1 y elige una carpeta de salida nueva. Llama ejecutar_analisis y comprueba rechazo y carpeta no creada. Conserva la encuesta original.
 
 **Pista:** Usa una carpeta que no exista para poder observar el orden de validación y escritura.
 

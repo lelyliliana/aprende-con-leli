@@ -26,7 +26,7 @@ Compara lista["id"] y lista[["id"]] en una lista con texto y mediciones. Constru
 
 Agrega al final una copia de A/momento 1. Identifica la posición de la primera repetición de ID/momento y explica por qué no basta revisar ID solo.
 
-**Pista:** anyDuplicated devuelve la posición de una repetición encontrada o0 si no existe.
+**Pista:** anyDuplicated devuelve la posición de una repetición encontrada o 0 si no existe.
 
 ## Evidencia de cierre
 

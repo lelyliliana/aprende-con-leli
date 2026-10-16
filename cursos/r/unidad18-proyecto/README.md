@@ -20,13 +20,13 @@ La pregunta descriptiva exige distribución de puntajes por grupo. El CSV de res
 
 ### 2. Decide qué debe fallar antes de escribir
 
-La encuesta requiere ID único, columnas esperadas, edades y puntajes en sus dominios y ausencias solo donde el diccionario las admite. La función leer_encuesta valida antes de devolver. ejecutar_analisis calcula antes de crear la carpeta de salida. La prueba con puntaje-1 permite comprobar ese orden en un directorio nuevo.
+La encuesta requiere ID único, columnas esperadas, edades y puntajes en sus dominios y ausencias solo donde el diccionario las admite. La función leer_encuesta valida antes de devolver. ejecutar_analisis calcula antes de crear la carpeta de salida. La prueba con puntaje de -1 permite comprobar ese orden en un directorio nuevo.
 
 La garantía es acotada: esa entrada rechazada no crea su carpeta de resultados. No significa que los cuatro archivos se escriban de manera transaccional frente a un corte de energía. Conserva datos originales y no uses salidas de práctica como única copia de documentos personales.
 
 ### 3. Revisa números, figura y texto juntos
 
-La suma de n debe ser 36 y la de n_horas33. La tabla final tiene dos grupos. La figura debe mostrar 36 puntos y sus unidades; el registro debe identificar datos ficticios. El texto debe conservar el alcance descriptivo. Si las cifras son correctas pero el párrafo atribuye un efecto causal a la modalidad, la entrega necesita corrección.
+La suma de n debe ser 36 y la de n_horas debe ser 33. La tabla final tiene dos grupos. La figura debe mostrar 36 puntos y sus unidades; el registro debe identificar datos ficticios. El texto debe conservar el alcance descriptivo. Si las cifras son correctas pero el párrafo atribuye un efecto causal a la modalidad, la entrega necesita corrección.
 
 ### 4. Usa una rúbrica con evidencia observable
 

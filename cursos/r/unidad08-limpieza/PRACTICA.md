@@ -12,7 +12,7 @@ Lee encuesta_sucia.csv como texto y clasifica a mano cada fila: válida, equival
 
 ## Paso 2. Contrastar auditoría y original
 
-Ejecuta limpiar_entrada. Compara tu clasificación con incidencias y validas. Verifica el texto 7, 5 original, el número 7.5 aceptado y las horas faltantes de S05.
+Ejecuta limpiar_entrada. Compara tu clasificación con incidencias y validas. Verifica el texto «7,5» original, el número 7.5 aceptado y las horas faltantes de S05.
 
 **Pista:** La fila del archivo y la posición en la tabla de válidas no tienen por qué coincidir.
 

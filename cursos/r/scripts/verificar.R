@@ -17,13 +17,13 @@ correr <- function(archivo, indice) {
 }
 manifest <- jsonlite::read_json("scripts/manifest.json", simplifyVector = TRUE)
 etapas <- startsWith(manifest$archivo, "proyecto/pasos/")
-stopifnot(nrow(manifest) == 58L, sum(etapas) == 4L, sum(!etapas) == 54L)
+stopifnot(nrow(manifest) == 59L, sum(etapas) == 4L, sum(!etapas) == 55L)
 for (i in seq_len(nrow(manifest))) {
   actual <- correr(manifest$archivo[i], paste0("ejemplo-", i))
   esperado <- normalizar(readLines(manifest$salida[i], warn = FALSE, encoding = "UTF-8"))
   if (!identical(actual, esperado)) stop("Salida distinta: ", manifest$archivo[i])
 }
-cat("Ejemplos: 54 y etapas del proyecto: 4 correctos en procesos limpios\n")
+cat("Ejemplos: 55 y etapas del proyecto: 4 correctos en procesos limpios\n")
 soluciones <- unlist(jsonlite::read_json("scripts/soluciones.json"), use.names = FALSE)
 stopifnot(length(soluciones) == 18L)
 for (i in seq_along(soluciones)) {
@@ -53,6 +53,8 @@ for (archivo in archivos) {
   }
 }
 cat("Enlaces locales:", enlaces, "\n")
+figuras <- correr("scripts/generar_figuras.R", "figuras-doc")
+cat(tail(figuras, 1), "\n")
 renderizado <- FALSE
 if ("--quarto" %in% args) {
   quarto <- Sys.which("quarto")
@@ -65,7 +67,7 @@ if ("--quarto" %in% args) {
   renderizado <- TRUE; cat("Informe Quarto renderizado correctamente\n")
 }
 versiones <- vapply(c("dplyr", "tidyr", "ggplot2", "readr", "readxl", "knitr", "rmarkdown", "jsonlite"), function(p) as.character(utils::packageVersion(p)), character(1))
-jsonlite::write_json(list(ejemplos = 54L, etapas_proyecto = 4L, soluciones = 18L, contratos = tail(contratos, 1), enlaces = enlaces,
+jsonlite::write_json(list(ejemplos = 55L, etapas_proyecto = 4L, soluciones = 18L, contratos = tail(contratos, 1), enlaces = enlaces,
  quarto = renderizado, R = as.character(getRversion()), paquetes = as.list(versiones)),
  "salidas/verificacion/resultado.json", auto_unbox = TRUE, pretty = TRUE)
 cat("Verificación completa\n")

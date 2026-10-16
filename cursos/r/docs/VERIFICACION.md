@@ -6,7 +6,7 @@ La revisión utiliza datos ficticios y ejecución desde una sesión limpia. El v
 
 ## Qué ejecuta
 
-- Los 54 ejemplos y las cuatro etapas ejecutables del proyecto en procesos Rscript separados, comparando sus salidas de texto.
+- Los 55 ejemplos y las cuatro etapas ejecutables del proyecto en procesos Rscript separados, comparando sus salidas de texto.
 - Las 18 soluciones completas, sus condiciones de comprobación y la correspondencia de su salida con el texto publicado.
 - Grupos de contratos sobre importación, dominio, identidad, faltantes, limpieza, uniones, pivotes, cálculos y entrega.
 - Enlaces locales, bloques de código y marcas de codificación en los documentos.
@@ -31,6 +31,12 @@ La comparación de texto normaliza finales de línea y espacios finales. Los cá
 La página se revisó a 320, 375, 768 y 1280 px en claro y oscuro, con 57 enlaces distintos de unidades y tema persistente. El catálogo incluye R en Datos e IA y lo encuentra al buscar Quarto. El informe de muestra se comprobó en móvil y escritorio con sus números calculados, tabla, figura y texto alternativo.
 
 La ampliación desarrolla explicación del código, trazas cuando aportan claridad, experimentos, errores frecuentes y autoevaluación. Cada práctica mantiene tres pasos y añade un reto de transferencia. Sus soluciones responden tanto tareas de código como interpretación; el renderizado y la inspección de figuras/HTML se distinguen de las comprobaciones de los scripts.
+
+## Revisión del 16 de octubre de 2026
+
+Se añadió un ejemplo de correlación con Pearson, Spearman, pares completos y contraste; la práctica y su solución incluyen otra curva y un cambio de signo. El curso tiene ahora 55 ejemplos y mantiene cuatro etapas del proyecto y 18 soluciones ejecutables. Se incorporaron siete figuras visibles con texto alternativo e interpretación, y se corrigieron espacios y expresiones en la prosa.
+
+El verificador también ejecuta `scripts/generar_figuras.R` para comprobar que las figuras pueden reconstruirse. La revisión visual de las imágenes publicadas complementa ese control. La comprobación local del 16 de octubre completó 55 ejemplos, cuatro etapas, 18 soluciones, 36 comprobaciones de contratos, 534 enlaces locales, la generación de siete figuras y el informe Quarto. Se contrastaron también 77 bloques completos con sus scripts y se inspeccionaron las siete imágenes. La tabla del 15 de octubre describe la ejecución anterior y se conserva como registro histórico.
 
 ## Repetir paso a paso
 

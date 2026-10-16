@@ -18,7 +18,7 @@ Convierte horas a minutos, reajusta y predice en 150 minutos. Contrasta con 2.5 
 
 ## Paso 3. Abrir diagnóstico y revisar rango
 
-Genera un gráfico de residuos, ábrelo y describe qué puedes observar sin certificar supuestos. Identifica rango de horas y clasifica 20 como interpolación oextrapolación.
+Genera un gráfico de residuos, ábrelo y describe qué puedes observar sin certificar supuestos. Identifica rango de horas y clasifica 20 como interpolación o extrapolación.
 
 **Pista:** Una función puede devolver un número fuera del soporte observado.
 
@@ -27,6 +27,12 @@ Genera un gráfico de residuos, ábrelo y describe qué puedes observar sin cert
 Comprueba para cada fila que ajustado+residuo reproduce el observado dentro de tolerancia. Explica por qué tener residuos no nulos no implica que deban borrarse esas filas.
 
 **Pista:** Usa fitted y residuals con el mismo modelo.
+
+## Ampliación. Comprueba la correlación antes de interpretarla
+
+Usa `x <- 1:6` e `y <- c(1, 2, 4, 8, 16, 32)`. Dibuja los pares, calcula Pearson y Spearman y explica por qué sus valores difieren. Agrega una fila con x ausente e y conocido; informa cuántos pares conserva el análisis. Después cambia y por `-y` y predice el signo de ambos coeficientes antes de ejecutar.
+
+**Pista:** Compara distancias con orden. Mantén cada par en una misma fila y no interpretes el coeficiente como causalidad.
 
 ## Evidencia de cierre
 

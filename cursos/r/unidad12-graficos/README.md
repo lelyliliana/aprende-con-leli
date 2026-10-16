@@ -70,6 +70,10 @@ Figura guardada: salidas/graficos/laboratorio.svg
 Cuatro puntos, horas en x y puntaje en y; asociación descriptiva.
 ```
 
+![Cuatro observaciones ficticias: horas en el eje horizontal y puntaje en el vertical.](figuras/dispersion.png)
+
+**Qué observar:** el punto (4, 80) está arriba y a la derecha del punto (1, 50). Describe la asociación visible; cuatro datos artificiales no permiten atribuir un efecto causal a las horas.
+
 ### Lectura del laboratorio
 
 El archivo guardado contiene cuatro puntos con horas en x y puntaje en y. ggplot_build permite revisar la información utilizada por la capa; no necesitas memorizar su estructura interna para diseñar una figura. Aquí comprueba que existen cuatro observaciones representadas. La inspección visual sigue siendo una parte explícita de la práctica.
@@ -154,6 +158,10 @@ Salida esperada:
 Gráfico SVG: distribución y 36 observaciones; unidad de puntaje declarada
 ```
 
+![Distribución de puntajes ficticios por grupo mediante cajas y 36 puntos individuales.](figuras/distribucion.png)
+
+**Qué observar:** la línea interior de cada caja representa la mediana, no la media. La caja abarca del primer al tercer cuartil; los puntos permiten ver dispersión y superposición. Compara ambas distribuciones sin afirmar que el grupo causa diferencias. Los bigotes no son intervalos de confianza.
+
 ### Ejemplo 2. Fechas ordenadas y series separadas
 
 [Archivo R](ejemplos/02.R) · [Salida](ejemplos/02.txt)
@@ -186,6 +194,22 @@ Salida esperada:
 ```text
 Serie temporal: dos estaciones separadas; 6 fechas por estación
 ```
+
+![Temperaturas ficticias en seis fechas por estación, con líneas separadas.](figuras/temperatura.png)
+
+**Qué observar:** sigue cada estación por separado de izquierda a derecha. Una línea conecta mediciones de la misma estación; no une el final de una con el comienzo de otra.
+
+## Comparar histogramas antes de interpretar
+
+La [solución de la práctica](SOLUCIONES.md) produce ambas figuras con los mismos 36 puntajes.
+
+![Histograma de los 36 puntajes con intervalos de ancho 10 y límite de referencia cero.](figuras/histograma-10.png)
+
+![Histograma de los mismos 36 puntajes con intervalos de ancho 5 y límite de referencia cero.](figuras/histograma-5.png)
+
+**Qué observar:** al reducir el ancho aparecen más barras y cambia la apariencia de la distribución. El eje vertical cuenta registros por intervalo; no muestra porcentajes ni densidad. Suma las frecuencias: ambos gráficos conservan los 36 registros. Decide qué ancho comunica mejor la pregunta, sin escogerlo solo por su aspecto.
+
+Las imágenes son ejecuciones de referencia, no se actualizan al cambiar tus datos. Puedes reconstruirlas desde la raíz del curso con `Rscript --vanilla scripts/generar_figuras.R`; se guardan en `salidas/figuras-doc`. El [script](../scripts/generar_figuras.R) reutiliza los ejemplos y la solución para conservar sus datos y cálculos.
 
 ## Para avanzar
 

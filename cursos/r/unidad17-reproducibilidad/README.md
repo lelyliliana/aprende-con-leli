@@ -30,7 +30,7 @@ El HTML debe mostrar 36 registros y 3 horas faltantes porque se obtienen de los 
 
 ### 4. Haz un experimento en una copia completa
 
-Cierra el proyecto, duplica cursos/r como r-practica-repro y abre el Curso-R.Rproj de esa copia. Verifica getwd antes de editar. Cambia en su CSV el puntaje de la primera fila en+1, conservando el dominio 0 a 100; guarda y renderiza allí. La media del grupo de esa fila debe aumentar 1/18. Reabre después el proyecto original y confirma que no lo modificaste.
+Cierra el proyecto, duplica cursos/r como r-practica-repro y abre el Curso-R.Rproj de esa copia. Verifica getwd antes de editar. Cambia en su CSV el puntaje de la primera fila en 1 punto, conservando el dominio 0 a 100; guarda y renderiza allí. La media del grupo de esa fila debe aumentar 1/18. Reabre después el proyecto original y confirma que no lo modificaste.
 
 El laboratorio prepara esa comparación en memoria, sin tocar el archivo original. La práctica añade el renderizado de la copia para comprobar que el documento consume la entrada cambiada. Son evidencias distintas: repetir una función no demuestra por sí solo que se reconstruyó el HTML.
 
@@ -79,7 +79,7 @@ El código crea original y copia, cambia solo un puntaje, valida y calcula dos r
 
 ## Experimenta
 
-Antes de ejecutar, predice el cambio que produciría sumar 2 a un puntaje:2/18 en la media de su grupo. Comprueba primero que el valor siga siendo admisible. Luego cambia una hora en vez del puntaje y explica por qué su denominador puede ser 17 o16 en lugar de 18.
+Antes de ejecutar, predice el cambio que produciría sumar 2 a un puntaje: 2/18 en la media de su grupo. Comprueba primero que el valor siga siendo admisible. Luego cambia una hora en vez del puntaje y explica por qué su denominador puede ser 17 o 16 en lugar de 18.
 
 ## Errores frecuentes
 
@@ -92,7 +92,7 @@ Antes de ejecutar, predice el cambio que produciría sumar 2 a un puntaje:2/18 e
 
 ## Autoevaluación
 
-¿Qué ejecuta renderizar y qué conserva el HTML? ¿Por qué cambiar un puntaje en+1 afecta la media en 1/18? ¿Qué no demuestra una huella del CSV? ¿Qué diferencia hay entre registrar y bloquear versiones?
+¿Qué ejecuta renderizar y qué conserva el HTML? ¿Por qué cambiar un puntaje en 1 punto afecta la media en 1/18? ¿Qué no demuestra una huella del CSV? ¿Qué diferencia hay entre registrar y bloquear versiones?
 
 
 ## Un proyecto conserva rutas y decisiones

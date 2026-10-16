@@ -6,9 +6,41 @@
 
 ## Objetivos
 
+- Calcular e interpretar Pearson y Spearman, conservando los pares observados.
 - Leer pendiente, intercepto y unidad de predicción.
 - Examinar residuos y rango de datos.
 - Separar asociación, ajuste, incertidumbre y causalidad.
+
+## Antes de ajustar una recta: comprender la correlación
+
+Cada punto debe reunir dos mediciones de la misma unidad. La correlación no tiene unidades: describe asociación y está entre -1 y 1. El signo indica la dirección; su magnitud necesita contexto, gráfico y tamaño de muestra. No hay un umbral universal que convierta un coeficiente en una relación importante.
+
+### Pearson y Spearman responden preguntas diferentes
+
+| Método | Qué resume | Qué revisar antes de interpretarlo |
+|---|---|---|
+| Pearson | Asociación lineal entre dos variables cuantitativas | Dispersión, valores extremos, variación y rango observado |
+| Spearman | Asociación monótona mediante rangos (tendencia a aumentar o disminuir) | Orden significativo, empates y forma de la relación |
+
+Para `x = 1:6` e `y = x^2`, los valores aumentan juntos, pero forman una curva. Pearson es aproximadamente 0.979 y Spearman es 1: los rangos coinciden exactamente. Spearman no demuestra linealidad. Tampoco se elige un método buscando el p-valor más pequeño: declara primero qué asociación quieres estudiar. Para categorías sin orden, asignar números arbitrarios no justifica ninguno de los dos.
+
+Pearson se reconstruye centrando cada variable, sumando los productos de desviaciones y dividiendo por la raíz del producto de las dos sumas de cuadrados. El Ejemplo 3 contrasta esa cuenta con `cor`. Si una variable es constante, su dispersión es cero y la correlación queda indefinida; no reemplaces ese resultado por cero.
+
+### Primero mira la forma
+
+![Dos casos construidos: una curva creciente tiene Spearman igual a uno; una curva en U tiene Pearson igual a cero aunque existe una relación determinista.](figuras/correlacion.png)
+
+A la izquierda, el orden aumenta aunque la pendiente cambia. A la derecha, los valores de `y = x^2` bajan y luego suben: Pearson es cero por simetría. El gráfico muestra por qué **cero no implica ausencia de cualquier relación**. Los puntos son construidos para aprender; no representan una muestra real.
+
+### Conservar los pares y contar las exclusiones
+
+Si a una fila le falta x o y, falta el par para este cálculo. `complete.cases(d)` identifica filas completas; el ejemplo conserva seis de ocho y declara las dos excluidas. Quitar los NA de cada columna por separado puede emparejar personas distintas. Trabajar con pares completos tampoco demuestra que los faltantes sean aleatorios ni elimina un posible sesgo.
+
+### Qué añade cor.test
+
+`cor` devuelve el coeficiente; `cor.test` añade un contraste bajo supuestos. Con Pearson, `estimate` es r, `conf.int` contiene el intervalo y `p.value` el p-valor para la hipótesis de correlación poblacional cero. La inferencia clásica exige pares independientes y un modelo apropiado (normal bivariado para la prueba t exacta); calcular el coeficiente descriptivo no exige por sí solo esa normalidad.
+
+El Ejemplo 3 permite inspeccionar esos campos con seis pares artificiales. El intervalo de Pearson usa una aproximación de Fisher y con tan pocos pares merece especial cautela. El p-valor no expresa la probabilidad de que haya causalidad ni de que la hipótesis sea verdadera. Para Spearman, la aproximación del contraste depende del tamaño y de los empates; `cor.test` no entrega el mismo intervalo de Pearson. Consulta la ayuda de [cor](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/cor.html) y [cor.test](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/cor.test.html).
 
 ## Clase guiada. Leer una recta ajustada sin confundirla con una causa
 
@@ -40,7 +72,7 @@ Los mínimos cuadrados eligen coeficientes que minimizan la suma de residuos al 
 
 ### 5. Cambia unidades, no el fenómeno
 
-Al expresar horas en minutos, la pendiente pasa de 3 por hora a 0.05 por minuto. La predicción en 150 minutos sigue siendo 9.5. El número del coeficiente aislado carece de interpretación sin unidad. Pedir una predicción en 20 horas, fuera de[0, 5], es extrapolar: el software puede calcularla aunque no exista soporte observado para ese rango.
+Al expresar horas en minutos, la pendiente pasa de 3 por hora a 0.05 por minuto. La predicción en 150 minutos sigue siendo 9.5. El número del coeficiente aislado carece de interpretación sin unidad. Pedir una predicción en 20 horas, fuera de [0, 5], es extrapolar: el software puede calcularla aunque no exista soporte observado para ese rango.
 
 ## Laboratorio guiado
 
@@ -93,6 +125,8 @@ Calcula la predicción en 3 horas mediante la ecuación y con predict: ambas deb
 | Confiar en cualquier valor que predict devuelve | Comprueba el rango observado y el propósito |
 
 ## Autoevaluación
+
+¿Por qué Spearman es 1 en la curva creciente? ¿Por qué Pearson es cero en la curva en U? ¿Qué filas excluyes al trabajar con pares completos?
 
 ¿Qué significa ~ en el ajuste? ¿Por qué la pendiente cambia al pasar a minutos? ¿Qué indica un residuo positivo? ¿Qué información faltaría para atribuir causalidad a una pendiente?
 
@@ -196,6 +230,59 @@ Salida esperada:
 ```text
 Residuos no nulos; x=20 está fuera del rango observado [0,5]
 Un gráfico diagnóstico orienta revisión; no certifica por sí solo los supuestos.
+```
+
+![Residuos frente a valores ajustados y gráfico Q-Q del modelo construido de seis observaciones.](figuras/residuos.png)
+
+**Qué observar:** en el panel izquierdo hay residuos positivos, negativos y cero. La línea horizontal es una referencia, no el ajuste de otra regresión. En el Q-Q, compara puntos y recta de referencia; con seis datos construidos no concluyas que se ha comprobado normalidad. Estas imágenes se reconstruyen con el [script de figuras](../scripts/generar_figuras.R).
+
+## Ejemplo 3. Correlación, contraste y faltantes
+
+[Archivo R](ejemplos/03.R) · [Salida](ejemplos/03.txt)
+
+```r
+# Pearson, Spearman y una relación que un coeficiente puede ocultar.
+# Ejecutar desde cursos/r. Datos construidos, sin inferencia poblacional real.
+x <- 1:6
+y <- x^2
+pearson <- cor(x, y, method = "pearson")
+spearman <- cor(x, y, method = "spearman")
+manual <- sum((x - mean(x)) * (y - mean(y))) /
+  sqrt(sum((x - mean(x))^2) * sum((y - mean(y))^2))
+stopifnot(abs(pearson - manual) < 1e-12, pearson < 1,
+          abs(spearman - 1) < 1e-12)
+prueba <- cor.test(x, y, method = "pearson", conf.level = 0.95)
+stopifnot(abs(unname(prueba$estimate) - pearson) < 1e-12,
+          unname(prueba$parameter) == 4, length(prueba$conf.int) == 2)
+cat(sprintf("Curva creciente: Pearson=%.3f; Spearman=%.3f; n=%d.\n",
+            pearson, spearman, length(x)))
+cat(sprintf("Pearson: IC95%%=[%.3f, %.3f]; p=%.6f.\n",
+            prueba$conf.int[1], prueba$conf.int[2], prueba$p.value))
+# Conservar los pares: nunca eliminar faltantes de cada columna por separado.
+d <- data.frame(x = c(x, NA, 8), y = c(y, 49, NA))
+completos <- complete.cases(d)
+stopifnot(sum(completos) == 6, sum(!completos) == 2,
+          abs(cor(d$x, d$y, use = "complete.obs") - pearson) < 1e-12)
+cat("Faltantes: 8 filas, 6 pares completos y 2 filas excluidas.\n")
+u <- -3:3
+r_curva <- cor(u, u^2)
+stopifnot(abs(r_curva) < 1e-12)
+cat(sprintf("Curva en U: Pearson=%.3f; cero no significa ausencia de relación.\n", r_curva))
+```
+
+Desde la raíz del curso:
+
+```text
+Rscript --vanilla unidad16-regresion/ejemplos/03.R
+```
+
+Salida esperada:
+
+```text
+Curva creciente: Pearson=0.979; Spearman=1.000; n=6.
+Pearson: IC95%=[0.814, 0.998]; p=0.000662.
+Faltantes: 8 filas, 6 pares completos y 2 filas excluidas.
+Curva en U: Pearson=0.000; cero no significa ausencia de relación.
 ```
 
 ## Para avanzar

@@ -18,7 +18,7 @@ La inferencia requiere conectar un diseño de observación con un modelo y una p
 
 Para 8, 9, 10, 11, 12 calculamos una media 10. El parámetro del modelo es la media poblacional, que se distingue de esa media observada. n=5 cuenta observaciones; sd(x) describe dispersión muestral; sd(x)/sqrt(n) es el error estándar de la media bajo las condiciones del procedimiento.
 
-El laboratorio calcula primero el error estándar y después el margen. qt(0.975, df=4) proporciona el cuantil de t para un intervalo bilateral de 95%: queda 2.5% en cada extremo del modelo de referencia. Multiplicar ese cuantil por el error estándar produce un margen aproximado 1.963. Restarlo y sumarlo a 10 da[8.037, 11.963].
+El laboratorio calcula primero el error estándar y después el margen. qt(0.975, df=4) proporciona el cuantil de t para un intervalo bilateral de 95%: queda 2.5% en cada extremo del modelo de referencia. Multiplicar ese cuantil por el error estándar produce un margen aproximado 1.963. Restarlo y sumarlo a 10 da [8.037, 11.963].
 
 ### 2. Lee los componentes de la respuesta
 
