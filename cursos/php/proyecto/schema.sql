@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS talleres (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    titulo TEXT NOT NULL CHECK (length(trim(titulo)) BETWEEN 3 AND 100),
+    cupo INTEGER NOT NULL CHECK (typeof(cupo) = 'integer' AND cupo BETWEEN 1 AND 100)
+);
+CREATE TABLE IF NOT EXISTS usuarios (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre TEXT NOT NULL UNIQUE,
+    hash TEXT NOT NULL
+);

@@ -1,0 +1,1 @@
+{"error":{"code":"titulo_requerido","message":"Escribe el título del taller"}}

@@ -1,0 +1,3 @@
+Categoría permitida: aceptar
+Categoría ausente: rechazar
+Categoría desconocida: rechazar

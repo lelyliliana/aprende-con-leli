@@ -41,6 +41,7 @@ const COURSE_VISUALS = {
   "esp32": ["IoT", "ESP32"],
   "c": ["C", "C17"],
   "cpp": ["C++", "C++20 · Objetos · Recursos"],
+  "php": ["PHP", "PHP · Web · SQLite"],
   "python": ["Py", "Python"],
   "r": ["R", "Datos · Investigación"],
   "inteligencia-artificial": ["IA", "Fundamentos · Aplicaciones"],

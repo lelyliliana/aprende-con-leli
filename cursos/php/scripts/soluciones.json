@@ -1,0 +1,90 @@
+[
+  {
+    "file": "unidad00-entorno/soluciones/reto.php",
+    "expected": "unidad00-entorno/soluciones/reto.txt"
+  },
+  {
+    "file": "unidad01-variables/soluciones/reto.php",
+    "expected": "unidad01-variables/soluciones/reto.txt"
+  },
+  {
+    "file": "unidad02-decisiones/soluciones/reto.php",
+    "expected": "unidad02-decisiones/soluciones/reto.txt"
+  },
+  {
+    "file": "unidad03-ciclos/soluciones/reto.php",
+    "expected": "unidad03-ciclos/soluciones/reto.txt"
+  },
+  {
+    "file": "unidad04-arreglos/soluciones/reto.php",
+    "expected": "unidad04-arreglos/soluciones/reto.txt"
+  },
+  {
+    "file": "unidad05-funciones/soluciones/reto.php",
+    "expected": "unidad05-funciones/soluciones/reto.txt"
+  },
+  {
+    "file": "unidad06-texto/soluciones/reto.php",
+    "expected": "unidad06-texto/soluciones/reto.txt"
+  },
+  {
+    "file": "unidad07-archivos/soluciones/reto.php",
+    "expected": "unidad07-archivos/soluciones/reto.txt"
+  },
+  {
+    "file": "unidad08-errores/soluciones/reto.php",
+    "expected": "unidad08-errores/soluciones/reto.txt"
+  },
+  {
+    "file": "unidad09-web/soluciones/reto.php",
+    "expected": "unidad09-web/soluciones/reto.txt"
+  },
+  {
+    "file": "unidad10-formularios/soluciones/reto.php",
+    "expected": "unidad10-formularios/soluciones/reto.txt"
+  },
+  {
+    "file": "unidad11-sesiones/soluciones/reto.php",
+    "expected": "unidad11-sesiones/soluciones/reto.txt"
+  },
+  {
+    "file": "unidad12-pdo/soluciones/reto.php",
+    "expected": "unidad12-pdo/soluciones/reto.txt"
+  },
+  {
+    "file": "unidad13-crud/soluciones/reto.php",
+    "expected": "unidad13-crud/soluciones/reto.txt"
+  },
+  {
+    "file": "unidad14-objetos/soluciones/reto.php",
+    "expected": "unidad14-objetos/soluciones/reto.txt"
+  },
+  {
+    "file": "unidad15-composer/soluciones/reto.php",
+    "expected": "unidad15-composer/soluciones/reto.txt"
+  },
+  {
+    "file": "unidad16-autenticacion/soluciones/reto.php",
+    "expected": "unidad16-autenticacion/soluciones/reto.txt"
+  },
+  {
+    "file": "unidad17-api/soluciones/reto.php",
+    "expected": "unidad17-api/soluciones/reto.txt"
+  },
+  {
+    "file": "unidad18-pruebas/soluciones/reto.php",
+    "expected": "unidad18-pruebas/soluciones/reto.txt"
+  },
+  {
+    "file": "unidad19-arquitectura/soluciones/reto.php",
+    "expected": "unidad19-arquitectura/soluciones/reto.txt"
+  },
+  {
+    "file": "unidad20-despliegue/soluciones/reto.php",
+    "expected": "unidad20-despliegue/soluciones/reto.txt"
+  },
+  {
+    "file": "unidad21-proyecto/soluciones/reto.php",
+    "expected": "unidad21-proyecto/soluciones/reto.txt"
+  }
+]

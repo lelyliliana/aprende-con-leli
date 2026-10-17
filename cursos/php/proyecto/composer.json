@@ -1,0 +1,8 @@
+{
+  "name": "aprende-con-leli/talleres-php",
+  "description": "Proyecto educativo del curso PHP desde cero",
+  "type": "project",
+  "require": {"php": ">=8.4", "ext-pdo": "*", "ext-pdo_sqlite": "*", "ext-mbstring": "*"},
+  "autoload": {"psr-4": {"Aprende\\": "src/"}, "files": ["src/validacion.php"]},
+  "scripts": {"test": "php tests/integracion.php"}
+}

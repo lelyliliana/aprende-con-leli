@@ -1,0 +1,32 @@
+name: Verificar curso PHP
+on:
+  push:
+    paths: ['cursos/php/**', 'src/data/courses.json', '.github/workflows/verificar-php.yml']
+  pull_request:
+    paths: ['cursos/php/**', 'src/data/courses.json', '.github/workflows/verificar-php.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  curso-php:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php: ['8.4', '8.5']
+    defaults:
+      run:
+        working-directory: cursos/php
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: pdo_sqlite, mbstring
+          coverage: none
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: python scripts/verificar_materiales.py
+      - run: php scripts/verificar.php
+      - run: php proyecto/tests/integracion.php
+      - run: python scripts/verificar_http.py

@@ -1,0 +1,178 @@
+[
+  {
+    "file": "unidad00-entorno/ejemplos/01.php",
+    "expected": "unidad00-entorno/ejemplos/01.txt"
+  },
+  {
+    "file": "unidad00-entorno/ejemplos/02.php",
+    "expected": "unidad00-entorno/ejemplos/02.txt"
+  },
+  {
+    "file": "unidad01-variables/ejemplos/01.php",
+    "expected": "unidad01-variables/ejemplos/01.txt"
+  },
+  {
+    "file": "unidad01-variables/ejemplos/02.php",
+    "expected": "unidad01-variables/ejemplos/02.txt"
+  },
+  {
+    "file": "unidad02-decisiones/ejemplos/01.php",
+    "expected": "unidad02-decisiones/ejemplos/01.txt"
+  },
+  {
+    "file": "unidad02-decisiones/ejemplos/02.php",
+    "expected": "unidad02-decisiones/ejemplos/02.txt"
+  },
+  {
+    "file": "unidad03-ciclos/ejemplos/01.php",
+    "expected": "unidad03-ciclos/ejemplos/01.txt"
+  },
+  {
+    "file": "unidad03-ciclos/ejemplos/02.php",
+    "expected": "unidad03-ciclos/ejemplos/02.txt"
+  },
+  {
+    "file": "unidad04-arreglos/ejemplos/01.php",
+    "expected": "unidad04-arreglos/ejemplos/01.txt"
+  },
+  {
+    "file": "unidad04-arreglos/ejemplos/02.php",
+    "expected": "unidad04-arreglos/ejemplos/02.txt"
+  },
+  {
+    "file": "unidad05-funciones/ejemplos/01.php",
+    "expected": "unidad05-funciones/ejemplos/01.txt"
+  },
+  {
+    "file": "unidad05-funciones/ejemplos/02.php",
+    "expected": "unidad05-funciones/ejemplos/02.txt"
+  },
+  {
+    "file": "unidad06-texto/ejemplos/01.php",
+    "expected": "unidad06-texto/ejemplos/01.txt"
+  },
+  {
+    "file": "unidad06-texto/ejemplos/02.php",
+    "expected": "unidad06-texto/ejemplos/02.txt"
+  },
+  {
+    "file": "unidad07-archivos/ejemplos/01.php",
+    "expected": "unidad07-archivos/ejemplos/01.txt"
+  },
+  {
+    "file": "unidad07-archivos/ejemplos/02.php",
+    "expected": "unidad07-archivos/ejemplos/02.txt"
+  },
+  {
+    "file": "unidad08-errores/ejemplos/01.php",
+    "expected": "unidad08-errores/ejemplos/01.txt"
+  },
+  {
+    "file": "unidad08-errores/ejemplos/02.php",
+    "expected": "unidad08-errores/ejemplos/02.txt"
+  },
+  {
+    "file": "unidad09-web/ejemplos/01.php",
+    "expected": "unidad09-web/ejemplos/01.txt"
+  },
+  {
+    "file": "unidad09-web/ejemplos/02.php",
+    "expected": "unidad09-web/ejemplos/02.txt"
+  },
+  {
+    "file": "unidad10-formularios/ejemplos/01.php",
+    "expected": "unidad10-formularios/ejemplos/01.txt"
+  },
+  {
+    "file": "unidad10-formularios/ejemplos/02.php",
+    "expected": "unidad10-formularios/ejemplos/02.txt"
+  },
+  {
+    "file": "unidad11-sesiones/ejemplos/01.php",
+    "expected": "unidad11-sesiones/ejemplos/01.txt"
+  },
+  {
+    "file": "unidad11-sesiones/ejemplos/02.php",
+    "expected": "unidad11-sesiones/ejemplos/02.txt"
+  },
+  {
+    "file": "unidad12-pdo/ejemplos/01.php",
+    "expected": "unidad12-pdo/ejemplos/01.txt"
+  },
+  {
+    "file": "unidad12-pdo/ejemplos/02.php",
+    "expected": "unidad12-pdo/ejemplos/02.txt"
+  },
+  {
+    "file": "unidad13-crud/ejemplos/01.php",
+    "expected": "unidad13-crud/ejemplos/01.txt"
+  },
+  {
+    "file": "unidad13-crud/ejemplos/02.php",
+    "expected": "unidad13-crud/ejemplos/02.txt"
+  },
+  {
+    "file": "unidad14-objetos/ejemplos/01.php",
+    "expected": "unidad14-objetos/ejemplos/01.txt"
+  },
+  {
+    "file": "unidad14-objetos/ejemplos/02.php",
+    "expected": "unidad14-objetos/ejemplos/02.txt"
+  },
+  {
+    "file": "unidad15-composer/ejemplos/01.php",
+    "expected": "unidad15-composer/ejemplos/01.txt"
+  },
+  {
+    "file": "unidad15-composer/ejemplos/02.php",
+    "expected": "unidad15-composer/ejemplos/02.txt"
+  },
+  {
+    "file": "unidad16-autenticacion/ejemplos/01.php",
+    "expected": "unidad16-autenticacion/ejemplos/01.txt"
+  },
+  {
+    "file": "unidad16-autenticacion/ejemplos/02.php",
+    "expected": "unidad16-autenticacion/ejemplos/02.txt"
+  },
+  {
+    "file": "unidad17-api/ejemplos/01.php",
+    "expected": "unidad17-api/ejemplos/01.txt"
+  },
+  {
+    "file": "unidad17-api/ejemplos/02.php",
+    "expected": "unidad17-api/ejemplos/02.txt"
+  },
+  {
+    "file": "unidad18-pruebas/ejemplos/01.php",
+    "expected": "unidad18-pruebas/ejemplos/01.txt"
+  },
+  {
+    "file": "unidad18-pruebas/ejemplos/02.php",
+    "expected": "unidad18-pruebas/ejemplos/02.txt"
+  },
+  {
+    "file": "unidad19-arquitectura/ejemplos/01.php",
+    "expected": "unidad19-arquitectura/ejemplos/01.txt"
+  },
+  {
+    "file": "unidad19-arquitectura/ejemplos/02.php",
+    "expected": "unidad19-arquitectura/ejemplos/02.txt"
+  },
+  {
+    "file": "unidad20-despliegue/ejemplos/01.php",
+    "expected": "unidad20-despliegue/ejemplos/01.txt"
+  },
+  {
+    "file": "unidad20-despliegue/ejemplos/02.php",
+    "expected": "unidad20-despliegue/ejemplos/02.txt"
+  },
+  {
+    "file": "unidad21-proyecto/ejemplos/01.php",
+    "expected": "unidad21-proyecto/ejemplos/01.txt"
+  },
+  {
+    "file": "unidad21-proyecto/ejemplos/02.php",
+    "expected": "unidad21-proyecto/ejemplos/02.txt"
+  }
+]

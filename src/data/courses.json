@@ -61,6 +61,26 @@
     "next": []
   },
   {
+    "id": "php",
+    "title": "PHP desde cero",
+    "area": "programacion",
+    "level": "Principiante a intermedio",
+    "status": "available",
+    "sourceRepository": "lelyliliana/aprende-con-leli",
+    "technologies": [
+      "PHP",
+      "Desarrollo web",
+      "PDO",
+      "SQLite",
+      "Sesiones",
+      "APIs JSON"
+    ],
+    "modules": 22,
+    "internalPath": "./cursos/php/",
+    "prerequisites": [],
+    "next": []
+  },
+  {
     "id": "python",
     "title": "Python desde cero",
     "area": "programacion",
