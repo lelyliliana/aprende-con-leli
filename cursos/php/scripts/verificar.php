@@ -24,12 +24,13 @@ foreach ($archivos as $archivo) {
 }
 $casos = json_decode(file_get_contents(__DIR__ . '/ejemplos.json'), true, 512, JSON_THROW_ON_ERROR);
 $casos = array_merge($casos, json_decode(file_get_contents(__DIR__ . '/soluciones.json'), true, 512, JSON_THROW_ON_ERROR));
+$casos = array_merge($casos, json_decode(file_get_contents(__DIR__ . '/laboratorios.json'), true, 512, JSON_THROW_ON_ERROR));
 foreach ($casos as $caso) {
-    [$codigo, $salida, $error] = ejecutar([PHP_BINARY, '-d', 'display_errors=stderr', '-d', 'error_reporting=-1', $raiz . '/' . $caso['file']]);
+    [$codigo, $salida, $error] = ejecutar([PHP_BINARY, '-d', 'display_errors=stderr', '-d', 'error_reporting=-1', $raiz . '/' . $caso['file'], ...($caso['args'] ?? [])]);
     $esperada = file_get_contents($raiz . '/' . $caso['expected']);
     // Normalizar solamente finales de línea de Windows.
-    if ($codigo !== 0 || $error !== '' || str_replace("\r\n", "\n", $salida) !== str_replace("\r\n", "\n", $esperada)) {
+    if ($codigo !== ($caso['exit'] ?? 0) || $error !== '' || str_replace("\r\n", "\n", $salida) !== str_replace("\r\n", "\n", $esperada)) {
         throw new RuntimeException($caso['file'] . "\nEsperada: " . $esperada . "\nObtenida: " . $salida . "\n" . $error);
     }
 }
-echo "$revisados archivos PHP sin errores de sintaxis; " . count($casos) . " programas con salida correcta.\n";
+echo "$revisados archivos PHP sin errores de sintaxis; " . count($casos) . " ejecuciones con salida y código de terminación esperados.\n";

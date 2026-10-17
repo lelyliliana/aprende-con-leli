@@ -174,5 +174,93 @@
   {
     "file": "unidad21-proyecto/ejemplos/02.php",
     "expected": "unidad21-proyecto/ejemplos/02.txt"
+  },
+  {
+    "file": "unidad00-entorno/ejemplos/03.php",
+    "expected": "unidad00-entorno/ejemplos/03.txt"
+  },
+  {
+    "file": "unidad01-variables/ejemplos/03.php",
+    "expected": "unidad01-variables/ejemplos/03.txt"
+  },
+  {
+    "file": "unidad02-decisiones/ejemplos/03.php",
+    "expected": "unidad02-decisiones/ejemplos/03.txt"
+  },
+  {
+    "file": "unidad03-ciclos/ejemplos/03.php",
+    "expected": "unidad03-ciclos/ejemplos/03.txt"
+  },
+  {
+    "file": "unidad04-arreglos/ejemplos/03.php",
+    "expected": "unidad04-arreglos/ejemplos/03.txt"
+  },
+  {
+    "file": "unidad05-funciones/ejemplos/03.php",
+    "expected": "unidad05-funciones/ejemplos/03.txt"
+  },
+  {
+    "file": "unidad06-texto/ejemplos/03.php",
+    "expected": "unidad06-texto/ejemplos/03.txt"
+  },
+  {
+    "file": "unidad07-archivos/ejemplos/03.php",
+    "expected": "unidad07-archivos/ejemplos/03.txt"
+  },
+  {
+    "file": "unidad08-errores/ejemplos/03.php",
+    "expected": "unidad08-errores/ejemplos/03.txt"
+  },
+  {
+    "file": "unidad09-web/ejemplos/03.php",
+    "expected": "unidad09-web/ejemplos/03.txt"
+  },
+  {
+    "file": "unidad10-formularios/ejemplos/03.php",
+    "expected": "unidad10-formularios/ejemplos/03.txt"
+  },
+  {
+    "file": "unidad11-sesiones/ejemplos/03.php",
+    "expected": "unidad11-sesiones/ejemplos/03.txt"
+  },
+  {
+    "file": "unidad12-pdo/ejemplos/03.php",
+    "expected": "unidad12-pdo/ejemplos/03.txt"
+  },
+  {
+    "file": "unidad13-crud/ejemplos/03.php",
+    "expected": "unidad13-crud/ejemplos/03.txt"
+  },
+  {
+    "file": "unidad14-objetos/ejemplos/03.php",
+    "expected": "unidad14-objetos/ejemplos/03.txt"
+  },
+  {
+    "file": "unidad15-composer/ejemplos/03.php",
+    "expected": "unidad15-composer/ejemplos/03.txt"
+  },
+  {
+    "file": "unidad16-autenticacion/ejemplos/03.php",
+    "expected": "unidad16-autenticacion/ejemplos/03.txt"
+  },
+  {
+    "file": "unidad17-api/ejemplos/03.php",
+    "expected": "unidad17-api/ejemplos/03.txt"
+  },
+  {
+    "file": "unidad18-pruebas/ejemplos/03.php",
+    "expected": "unidad18-pruebas/ejemplos/03.txt"
+  },
+  {
+    "file": "unidad19-arquitectura/ejemplos/03.php",
+    "expected": "unidad19-arquitectura/ejemplos/03.txt"
+  },
+  {
+    "file": "unidad20-despliegue/ejemplos/03.php",
+    "expected": "unidad20-despliegue/ejemplos/03.txt"
+  },
+  {
+    "file": "unidad21-proyecto/ejemplos/03.php",
+    "expected": "unidad21-proyecto/ejemplos/03.txt"
   }
 ]

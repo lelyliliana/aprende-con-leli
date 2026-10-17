@@ -30,3 +30,4 @@ jobs:
       - run: php scripts/verificar.php
       - run: php proyecto/tests/integracion.php
       - run: python scripts/verificar_http.py
+      - run: python scripts/verificar_laboratorios.py

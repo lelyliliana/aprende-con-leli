@@ -33,3 +33,11 @@ La salida HTML contiene Ana &amp; Luis. El navegador presentará el ampersand or
 ## Revisión
 
 Contrasta el resultado con el contrato y ejecuta también el caso límite que propusiste. No basta con que el programa termine: debes explicar por qué su resultado satisface las reglas.
+
+## Solución razonada del taller de profundización
+
+El laboratorio responde GET con 200 y Content-Type text/html. La consulta es parte de la URL, no el nombre de un archivo del disco. En HTML el ampersand debe aparecer como &amp; dentro del documento; en JSON puede conservarse como & dentro de una cadena correctamente codificada.
+
+Para el nombre con <b>, la evidencia debe mostrar &lt;b&gt; en el cuerpo y las marcas visibles como texto en pantalla. La página de talleres utiliza una sola estructura ul con tres li. Escapar todo el documento haría visibles también sus etiquetas; escapar únicamente los títulos mantiene la estructura y protege los datos variables.
+
+[Volver al tercer ejemplo](ejemplos/03.php). Compara tus decisiones con las reglas descritas, sin exigir que los nombres de las variables sean iguales.

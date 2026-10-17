@@ -37,3 +37,11 @@ El resultado es cero. La transacción se revirtió; una aplicación real debe us
 ## Revisión
 
 Contrasta el resultado con el contrato y ejecuta también el caso límite que propusiste. No basta con que el programa termine: debes explicar por qué su resultado satisface las reglas.
+
+## Solución razonada del taller de profundización
+
+La categoría se describe una vez en categorias; talleres conserva categoria_id. Para Web con dos talleres y Robótica sin ninguno, LEFT JOIN con COUNT(t.id) produce 2 y 0. INNER JOIN omite la categoría vacía y COUNT(*) puede contar la fila exterior de otra manera: debes elegir según la pregunta del informe.
+
+Con PRAGMA foreign_keys activo, un ID de categoría inexistente provoca una excepción y no crea el taller. En la transacción, toma un conteo antes, inserta una fila válida, intenta la fila inválida y ejecuta rollBack en el catch si inTransaction devuelve true. El conteo final debe coincidir con el inicial; mostrar solo el mensaje de excepción no demuestra que se revirtió la primera operación.
+
+[Volver al tercer ejemplo](ejemplos/03.php). Compara tus decisiones con las reglas descritas, sin exigir que los nombres de las variables sean iguales.

@@ -35,3 +35,11 @@ Con 12 años y 9 inscritos se permite. Con 11 años o 10 inscritos se rechaza. C
 ## Revisión
 
 Contrasta el resultado con el contrato y ejecuta también el caso límite que propusiste. No basta con que el programa termine: debes explicar por qué su resultado satisface las reglas.
+
+## Solución razonada del taller de profundización
+
+&& produce verdadero solo cuando ambas reglas son verdaderas; || lo produce en tres de las cuatro combinaciones. Para la temperatura, el primer if puede ser <18, el elseif <=28 y el else el resto. El primer descarte ya garantiza que la segunda rama empieza en 18. No necesitas repetirlo, aunque puedes hacerlo si ayuda a explicar.
+
+Una nota 4 satisface >=3, de modo que nunca alcanza el elseif. Preguntar primero >=4 corrige ese orden. Con una regla de apertura, la admisión requiere edadPermitida && hayCupo && inscripcionAbierta. Una persona de 12 años con 9 inscritos se rechaza si la apertura es false; ese caso comprueba la nueva regla sin mezclar otro motivo de rechazo.
+
+[Volver al tercer ejemplo](ejemplos/03.php). Compara tus decisiones con las reglas descritas, sin exigir que los nombres de las variables sean iguales.

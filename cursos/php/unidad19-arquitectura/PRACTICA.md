@@ -15,8 +15,17 @@ Explica con tus palabras: Separar validación, persistencia y presentación sin 
 ## Entrega y autocontrol
 
 - Un archivo propio que resuelva el reto, sin copiar primero la solución.
-- Una predicción y la salida real de los dos ejemplos; explica cualquier diferencia.
+- Una predicción y la salida real de los tres ejemplos; explica cualquier diferencia.
 - Un caso normal y uno límite o inválido con resultado esperado.
 - Un párrafo sobre el error que encontraste y cómo lo investigaste.
 
 Compara después con SOLUCIONES.md. Si tu respuesta difiere, comprueba el contrato antes de cambiarla: puede haber varias soluciones correctas.
+
+## Taller de profundización
+
+1. **Mapa:** sigue un POST de creación por public/index.php, validacion.php, TallerRepository.php y la redirección. Ubica cada responsabilidad.
+2. **Dependencia:** prueba prepararAlta con un callback que cuente invocaciones y demuestra cero para la entrada inválida.
+3. **Ampliación:** diseña el impacto de añadir categoría obligatoria: datos existentes, esquema, vista, validación, repositorio, API y pruebas.
+4. **Revisión:** encuentra una responsabilidad que no debería cambiar al añadir categoría y explica por qué una dependencia oculta la volvería frágil.
+
+Conserva tu primera versión y una corregida. Justifica cada cambio con una entrada concreta; no reemplaces una explicación por «ahora funciona».

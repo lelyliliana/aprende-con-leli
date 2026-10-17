@@ -1,0 +1,22 @@
+[
+  {
+    "file": "laboratorios/12-sql/informe.php",
+    "expected": "laboratorios/12-sql/informe.txt"
+  },
+  {
+    "file": "laboratorios/15-autoload/ejecutar.php",
+    "expected": "laboratorios/15-autoload/ejecutar.txt"
+  },
+  {
+    "file": "laboratorios/18-pruebas/ejecutar.php",
+    "expected": "laboratorios/18-pruebas/correcta.txt"
+  },
+  {
+    "file": "laboratorios/18-pruebas/ejecutar.php",
+    "args": [
+      "--defectuosa"
+    ],
+    "exit": 1,
+    "expected": "laboratorios/18-pruebas/defectuosa.txt"
+  }
+]

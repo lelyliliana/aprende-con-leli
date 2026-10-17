@@ -1,0 +1,2 @@
+Rechazada: La configuración debe ser un arreglo
+Recurso de práctica liberado

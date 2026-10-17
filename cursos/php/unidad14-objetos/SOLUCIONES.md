@@ -37,3 +37,11 @@ El resultado es 2 y con una lista vacía es 0. El constructor recibe los datos e
 ## Revisión
 
 Contrasta el resultado con el contrato y ejecuta también el caso límite que propusiste. No basta con que el programa termine: debes explicar por qué su resultado satisface las reglas.
+
+## Solución razonada del taller de profundización
+
+El constructor debe comprobar tipo y dominio en la frontera apropiada: con parámetros tipados ya normalizados, revisa trim y longitud del título y rango del cupo. Un objeto inválido debe lanzar una excepción antes de quedar disponible. readonly puede ayudar a conservar un valor válido, pero no reemplaza esa validación.
+
+Las dos variables del ejemplo comparten una instancia hasta que se clona. La interfaz de conteo declara total(): int; la implementación fija devuelve una cantidad conocida y la de memoria count de su colección. El servicio utiliza una base, no es una base: composición hace visible esa relación y permite cambiar la dependencia sin atribuirle todas las capacidades de PDO.
+
+[Volver al tercer ejemplo](ejemplos/03.php). Compara tus decisiones con las reglas descritas, sin exigir que los nombres de las variables sean iguales.

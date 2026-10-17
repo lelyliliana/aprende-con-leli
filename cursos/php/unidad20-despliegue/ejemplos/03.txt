@@ -1,0 +1,2 @@
+var/talleres.sqlite
+Falta APP_DB en producción

@@ -42,7 +42,7 @@ El catálogo reúne **20 cursos en cinco áreas**. El nivel indica el alcance de
 
 ### Incorporaciones recientes
 
-- **[PHP desde cero](cursos/php/README.md):** 22 unidades, 44 ejemplos, 22 prácticas y retos resueltos. Proyecto de talleres con SQLite/PDO, sesiones, CSRF, acceso administrativo, API JSON y pruebas.
+- **[PHP desde cero](cursos/php/README.md):** 22 unidades desarrolladas, 66 ejemplos, 10 laboratorios y 22 prácticas ampliadas con soluciones razonadas. Proyecto de talleres con SQLite/PDO, sesiones, CSRF, acceso administrativo, API JSON y pruebas.
 
 - **[R para análisis de datos e investigación](cursos/r/README.md):** 19 unidades, 55 ejemplos, 18 soluciones ejecutables y un proyecto en cuatro etapas con informe Quarto. Incluye limpieza y transformación, visualización, estadística introductoria, correlación y regresión, con figuras explicadas.
 - **[C++ desde cero](cursos/cpp/README.md):** 22 unidades de nivel principiante a intermedio, con C++20, biblioteca estándar, objetos, gestión de recursos con RAII, CMake y pruebas.

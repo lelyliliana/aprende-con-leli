@@ -37,3 +37,11 @@ El fallo se comunica antes de dividir. Una prueba complementaria debe confirmar 
 ## Revisión
 
 Contrasta el resultado con el contrato y ejecuta también el caso límite que propusiste. No basta con que el programa termine: debes explicar por qué su resultado satisface las reglas.
+
+## Solución razonada del taller de profundización
+
+Una comilla sin cerrar sirve para el fallo de sintaxis; cupo negativo para el dominio; sumar precio y cantidad en lugar de multiplicarlos para la lógica. Los dos últimos se ejecutan y requieren distintas estrategias de detección. La excepción de formato debe capturarse con JsonException, la de estructura con InvalidArgumentException.
+
+Para el temporal, verifica primero que tempnam devolvió una ruta. Dentro de try escribe y provoca el fallo; en finally elimina ese archivo. La comprobación exterior debe confirmar que ya no existe. Una regresión del subtotal usa un precio y cantidad cuyo producto difiera de la suma, como 2500 y 3; esperar 7500 detecta el operador equivocado de manera inequívoca.
+
+[Volver al tercer ejemplo](ejemplos/03.php). Compara tus decisiones con las reglas descritas, sin exigir que los nombres de las variables sean iguales.

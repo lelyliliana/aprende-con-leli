@@ -1,0 +1,5 @@
+Web: 2 talleres, 20 plazas
+Datos: 1 taller, 10 plazas
+Robótica: 0 talleres, 0 plazas
+Operación revertida
+Filas finales: 3

@@ -1,0 +1,5 @@
+{
+  "name": "aprende-con-leli/laboratorio-autoload",
+  "require": {"php": ">=8.4"},
+  "autoload": {"psr-4": {"AprendeLab\\": "src/"}}
+}

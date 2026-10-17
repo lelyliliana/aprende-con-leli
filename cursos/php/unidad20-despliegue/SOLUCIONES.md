@@ -36,3 +36,11 @@ La salida es Ruta vacía. En el despliegue además debes comprobar que la ruta s
 ## Revisión
 
 Contrasta el resultado con el contrato y ejecuta también el caso límite que propusiste. No basta con que el programa termine: debes explicar por qué su resultado satisface las reglas.
+
+## Solución razonada del taller de profundización
+
+La copia debe ejecutarse con su propia APP_DB y no depender del archivo de estudio anterior. El respaldo restaurado debe conservar una fila conocida y permitir una consulta desde una conexión nueva. La prueba no sobrescribe el original; si la copia no funciona, todavía tienes la fuente intacta para investigar.
+
+Las rutas privadas no deben servirse desde public. .gitignore solo evita incluir archivos en Git: no impone reglas HTTP. Para MySQL revisa DSN y credenciales, tipos y autoincremento, funciones de búsqueda, restricciones e índices, estrategia transaccional y transferencia de datos. Finalmente ejecuta las pruebas en el motor nuevo; pasar con SQLite no demuestra compatibilidad total.
+
+[Volver al tercer ejemplo](ejemplos/03.php). Compara tus decisiones con las reglas descritas, sin exigir que los nombres de las variables sean iguales.

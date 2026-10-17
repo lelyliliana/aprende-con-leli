@@ -4,3 +4,7 @@ coverage/
 .env
 .env.local
 .env.*.local
+
+# Herramientas opcionales del curso PHP
+cursos/php/**/vendor/
+cursos/php/**/__pycache__/

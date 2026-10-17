@@ -34,3 +34,11 @@ La ruta es src/Servicio/Inscripcion.php. Respeta mayúsculas: un error que pasa 
 ## Revisión
 
 Contrasta el resultado con el contrato y ejecuta también el caso límite que propusiste. No basta con que el programa termine: debes explicar por qué su resultado satisface las reglas.
+
+## Solución razonada del taller de profundización
+
+AprendeLab\\Saludo se resuelve como src/Saludo.php dentro del laboratorio. La primera referencia carga su definición y las siguientes crean instancias a partir de ella. use facilita referenciar el nombre, pero no reemplaza el cargador ni require.
+
+La ruta debe respetar mayúsculas y la convención que eligió el proyecto. Se conservan composer.json, composer.lock cuando hay resolución fijada, fuentes y pruebas; vendor se regenera con install. No basta con subir únicamente composer.json si esperas reproducir exactamente versiones de dependencias ya resueltas, ni con conservar una carpeta vendor cuyo origen nadie documentó.
+
+[Volver al tercer ejemplo](ejemplos/03.php). Compara tus decisiones con las reglas descritas, sin exigir que los nombres de las variables sean iguales.

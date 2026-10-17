@@ -15,6 +15,14 @@ for unit in units:
     for path in (unit / 'ejemplos').glob('*.php'):
         assert path.read_text().strip() in (unit / 'README.md').read_text(), f'Lección y código difieren: {path}'
     assert (unit / 'soluciones/reto.php').read_text().strip() in (unit / 'SOLUCIONES.md').read_text(), f'Solución y código difieren: {unit}'
+manifest = json.loads((ROOT / 'scripts/ejemplos.json').read_text())
+assert len(manifest) == 66, 'Se esperan tres ejemplos por unidad'
+assert len({item['file'] for item in manifest}) == 66, 'Hay ejemplos repetidos en el manifiesto'
+for item in manifest:
+    assert (ROOT / item['file']).is_file() and (ROOT / item['expected']).is_file(), f"Falta un ejemplo: {item}"
+lab_guides = sorted((ROOT / 'laboratorios').glob('*/README.md'))
+assert len(lab_guides) == 10, 'Se esperan diez guías de laboratorio'
+assert all('Lectura por estados' in (unit / 'README.md').read_text() for unit in units), 'Falta la lectura de ejemplos'
 links = 0
 for path in ROOT.rglob('*.md'):
     for target in re.findall(r'\]\(([^)]+)\)', path.read_text()):
@@ -42,4 +50,4 @@ php = [course for course in courses if course['id'] == 'php']
 assert len(php) == 1 and php[0]['modules'] == len(units), 'Catálogo incoherente'
 assert (REPO / php[0]['internalPath'] / 'index.html').is_file(), 'Falta la portada'
 assert '20 cursos' in (REPO / 'README.md').read_text() and len(courses) == 20, 'Conteo de cursos incoherente'
-print(f'22 unidades y catálogo coherentes; {links} enlaces locales y de código comprobados.')
+print(f'22 unidades, 66 ejemplos, 10 laboratorios y catálogo coherentes; {links} enlaces locales y de código comprobados.')

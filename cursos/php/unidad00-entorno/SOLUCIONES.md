@@ -32,3 +32,11 @@ Los tres saltos de línea separan las acciones. Si falta un punto y coma, revisa
 ## Revisión
 
 Contrasta el resultado con el contrato y ejecuta también el caso límite que propusiste. No basta con que el programa termine: debes explicar por qué su resultado satisface las reglas.
+
+## Solución razonada del taller de profundización
+
+El archivo se guarda en disco desde el editor; la terminal entrega la ruta al intérprete, y este emite texto que la terminal presenta. En el programa de cuatro pasos deben observarse cuatro líneas, no el comentario. Una ruta incorrecta impide abrir el archivo antes de ejecutar sus instrucciones: cambiar echo no resolvería ese fallo.
+
+Para servir una página hace falta un servidor HTTP que invoque PHP y un navegador que lo solicite. El navegador recibe el resultado; no necesitas mover las instrucciones al navegador. La evidencia mínima son el código guardado, el comando exacto y las cuatro líneas obtenidas. Si un compañero no puede repetirlo, aclara desde qué carpeta debe ejecutar.
+
+[Volver al tercer ejemplo](ejemplos/03.php). Compara tus decisiones con las reglas descritas, sin exigir que los nombres de las variables sean iguales.

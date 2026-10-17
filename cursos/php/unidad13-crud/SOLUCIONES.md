@@ -37,3 +37,11 @@ Queda una fila, Web. Ejecutar el mismo borrado otra vez no debería anunciar que
 ## Revisión
 
 Contrasta el resultado con el contrato y ejecuta también el caso límite que propusiste. No basta con que el programa termine: debes explicar por qué su resultado satisface las reglas.
+
+## Solución razonada del taller de profundización
+
+Crear válido usa POST y modifica una fila; editar un ID inexistente devuelve 404 y no modifica; borrar con ID mal formado devuelve 400; leer una lista vacía devuelve 200 con conjunto vacío. No interpretes todos los conjuntos vacíos como errores del servidor.
+
+La búsqueda comienza en página uno y los enlaces siguientes conservan su filtro. Para el conflicto, el formulario envía la versión que leyó y el UPDATE incluye WHERE id=:id AND version=:version; si tiene éxito incrementa version. Una actualización sin coincidencia exige distinguir ausencia y conflicto para informar 404 o 409 según el diseño. Eso es una ampliación propuesta, no una característica ya implementada en el proyecto básico.
+
+[Volver al tercer ejemplo](ejemplos/03.php). Compara tus decisiones con las reglas descritas, sin exigir que los nombres de las variables sean iguales.

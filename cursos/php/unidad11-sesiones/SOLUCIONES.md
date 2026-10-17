@@ -35,3 +35,11 @@ php unidad11-sesiones/soluciones/reto.php
 ## Revisión
 
 Contrasta el resultado con el contrato y ejecuta también el caso límite que propusiste. No basta con que el programa termine: debes explicar por qué su resultado satisface las reglas.
+
+## Solución razonada del taller de profundización
+
+La primera respuesta puede establecer el ID mediante Set-Cookie; la siguiente petición devuelve ese identificador mediante Cookie. El arreglo con la nota se conserva en el servidor, no dentro de la cookie. Un perfil sin esa cookie inicia otra sesión y no hereda la nota.
+
+Los dos POST inválidos deben rechazarse antes de la asignación a $_SESSION. Tras entrar se renueva el ID y el token; al salir se elimina la identidad y las rutas vuelven a denegar el acceso. El escape HTML hace que una nota se presente como texto en la página: no crea una sesión ni demuestra que quien envía una petición tuviera permiso.
+
+[Volver al tercer ejemplo](ejemplos/03.php). Compara tus decisiones con las reglas descritas, sin exigir que los nombres de las variables sean iguales.

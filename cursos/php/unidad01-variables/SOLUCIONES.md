@@ -35,3 +35,11 @@ El total es 9000 y el cambio 1000. Con cantidad cero, el total es cero; en una c
 ## Revisión
 
 Contrasta el resultado con el contrato y ejecuta también el caso límite que propusiste. No basta con que el programa termine: debes explicar por qué su resultado satisface las reglas.
+
+## Solución razonada del taller de profundización
+
+En la traza, libres termina en 17 aunque reservas sea 5; una nueva resta lo cambiaría a 15. Los subtotales del presupuesto son 3750 y 1600, y el total es 5350 centavos. Separarlos permite comprobar qué precio y cantidad participaron en cada cálculo.
+
+echo de false no agrega caracteres visibles, mientras var_dump identifica bool(false). Para el descuento, 15 % de 999 son 149,85 centavos: el negocio debe decidir si redondea el descuento o el total y con qué criterio. No hay una única respuesta sin esa regla. La práctica se completa al señalar la decisión pendiente, no al inventar una precisión que el problema no definió.
+
+[Volver al tercer ejemplo](ejemplos/03.php). Compara tus decisiones con las reglas descritas, sin exigir que los nombres de las variables sean iguales.

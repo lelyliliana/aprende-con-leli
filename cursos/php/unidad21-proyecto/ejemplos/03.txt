@@ -1,0 +1,3 @@
+Creado: Taller PHP
+Cupo editado: 20
+Registros finales: 0

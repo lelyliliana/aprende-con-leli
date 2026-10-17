@@ -33,3 +33,11 @@ Un cliente puede usar code sin depender de la redacción del mensaje. En HTTP de
 ## Revisión
 
 Contrasta el resultado con el contrato y ejecuta también el caso límite que propusiste. No basta con que el programa termine: debes explicar por qué su resultado satisface las reglas.
+
+## Solución razonada del taller de profundización
+
+El laboratorio separa el endpoint GET de lista del POST de validación sin escritura. JSON mal formado produce 400; un documento válido con estructura o dominio incorrectos produce 422 según ese contrato. El primer error es de formato, el segundo de esquema y el tercero de regla de negocio.
+
+array_values recupera claves consecutivas después de filtrar. La interfaz muestra un estado vacío solo si la lectura 200 entrega una colección vacía; ante 401 ofrece iniciar sesión y ante 500 informa que no pudo consultar y permite reintentar. Presentar los tres como «no hay talleres» ocultaría tanto un problema de acceso como una indisponibilidad real.
+
+[Volver al tercer ejemplo](ejemplos/03.php). Compara tus decisiones con las reglas descritas, sin exigir que los nombres de las variables sean iguales.

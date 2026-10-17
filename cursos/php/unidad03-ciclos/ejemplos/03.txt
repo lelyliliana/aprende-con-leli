@@ -1,0 +1,4 @@
+Grupo 1: entregados=2; quedan=10
+Grupo 2: entregados=4; quedan=8
+Grupo 3: entregados=6; quedan=6
+Grupos procesados: 3

@@ -2,6 +2,8 @@
 
 [Curso](../README.md) · [Referencia ejecutable](README.md) · [Rúbrica](RUBRICA.md)
 
+[Laboratorios preparatorios](../laboratorios/README.md): si aún no puedes seguir una petición pequeña o una consulta relacional, completa la práctica correspondiente antes de combinar ambas en el proyecto.
+
 Tu objetivo es resolver una necesidad y poder explicar el código. Antes de mirar la implementación, crea una carpeta de trabajo propia fuera de public. No sirvas archivos de prácticas con claves o bases. Todos los comandos de esta guía se ejecutan desde cursos/php.
 
 ## Problema y criterios de aceptación

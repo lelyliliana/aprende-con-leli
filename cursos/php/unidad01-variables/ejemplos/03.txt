@@ -1,0 +1,4 @@
+string: 007
+Cantidad actual: 3
+Total guardado: 9000
+Literal: $cantidad

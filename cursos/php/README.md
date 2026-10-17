@@ -1,8 +1,8 @@
 # PHP desde cero: de tu primer programa a una aplicación web
 
-Curso abierto de **Aprende con Leli**, elaborado por Leli Liliana Díaz Izquierdo. Aprende a tu ritmo con 22 unidades, 44 ejemplos con salida esperada, 22 prácticas y 22 retos con solución ejecutable. No necesitas conocimientos previos de programación.
+Curso abierto de **Aprende con Leli**, elaborado por Leli Liliana Díaz Izquierdo. Aprende a tu ritmo con 22 unidades, 66 ejemplos con salida esperada, 22 prácticas ampliadas y 22 retos con solución ejecutable. No necesitas conocimientos previos de programación.
 
-**[Comenzar por la unidad 0](unidad00-entorno/README.md)** · [Proyecto guiado](proyecto/CONSTRUCCION.md) · [Guía de errores frecuentes](docs/ERRORES.md)
+**[Comenzar por la unidad 0](unidad00-entorno/README.md)** · [Proyecto guiado](proyecto/CONSTRUCCION.md) · [Diez laboratorios progresivos](laboratorios/README.md) · [Guía de errores frecuentes](docs/ERRORES.md)
 
 ## Qué podrás construir
 
@@ -47,18 +47,20 @@ Descarga este repositorio como ZIP y abre cursos/php. Todos los comandos parten 
 - Unidades 14–18: separa responsabilidades, verifica contraseñas y prueba reglas y acceso.
 - Unidades 19–21: completa y explica el proyecto con sus evidencias y limitaciones.
 
-Cada unidad incluye lección, dos programas, salidas comprobables, práctica y solución razonada del reto. Lleva una bitácora; si no puedes explicar un ejemplo, vuelve a ejecutarlo con datos más pequeños.
+Cada unidad incluye una clase escrita con conceptos desarrollados, tres programas, lecturas por estados, salidas comprobables, experimentos y una práctica ampliada con soluciones razonadas. Los diez laboratorios conectan HTTP, formularios, sesiones, SQL, CRUD, autoload, acceso, API, pruebas y restauración antes de la entrega final. Lleva una bitácora; si no puedes explicar un ejemplo, vuelve a ejecutarlo con datos más pequeños.
 
 ## Ejecutar y verificar
 
 ```sh
 php unidad00-entorno/ejemplos/01.php
+python3 scripts/verificar_materiales.py
 php scripts/verificar.php
 php proyecto/tests/integracion.php
 python3 scripts/verificar_http.py
+python3 scripts/verificar_laboratorios.py
 ```
 
-El último comando requiere Python 3 solo como herramienta de comprobación HTTP; no necesitas saber Python. Abre un servidor temporal en una dirección local, usa una base y sesiones temporales y no toca tu base de estudio. El proyecto tiene instrucciones propias para inicializarlo y ejecutarlo manualmente. Las comprobaciones también se ejecutan en GitHub Actions para PHP 8.4 y 8.5.
+Los verificadores escritos en Python requieren Python 3 solo como herramienta de comprobación; no necesitas saber Python. La comprobación HTTP abre un servidor temporal en una dirección local, usa una base y sesiones temporales y no toca tu base de estudio. El proyecto tiene instrucciones propias para inicializarlo y ejecutarlo manualmente. Las comprobaciones también se ejecutan en GitHub Actions para PHP 8.4 y 8.5.
 
 ## Referencias para ampliar
 

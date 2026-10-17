@@ -35,3 +35,11 @@ Falta un rol autorizado, por eso se deniega. No deduzcas el permiso de un campo 
 ## Revisión
 
 Contrasta el resultado con el contrato y ejecuta también el caso límite que propusiste. No basta con que el programa termine: debes explicar por qué su resultado satisface las reglas.
+
+## Solución razonada del taller de profundización
+
+La clave se compara con el hash guardado y la sesión conserva el ID, no la contraseña original. Para exportar, decide el permiso en una lista del servidor; un rol desconocido continúa denegado. La prueba de cierre usa una petición nueva a la API y espera 401, no una inspección visual de un enlace.
+
+HTTPS protege el transporte, un limitador compartido reduce intentos de adivinación y una recuperación con tokens limitados permite restablecer acceso sin conocer la clave original. Además hacen falta políticas de cuentas, registros y permisos por recurso según el servicio. Estas son tareas de diseño para una ampliación: no están implementadas solo por haber creado el login educativo.
+
+[Volver al tercer ejemplo](ejemplos/03.php). Compara tus decisiones con las reglas descritas, sin exigir que los nombres de las variables sean iguales.

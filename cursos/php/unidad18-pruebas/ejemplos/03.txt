@@ -1,0 +1,2 @@
+Correcta: 0 fallos
+Defectuosa: 1 fallos

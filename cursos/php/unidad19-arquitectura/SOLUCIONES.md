@@ -37,3 +37,11 @@ La función devuelve false para 101 caracteres. Comparte la misma función entre
 ## Revisión
 
 Contrasta el resultado con el contrato y ejecuta también el caso límite que propusiste. No basta con que el programa termine: debes explicar por qué su resultado satisface las reglas.
+
+## Solución razonada del taller de profundización
+
+El controlador procesa método, token e identidad antes de validar. La función normaliza y devuelve errores; el repositorio ejecuta SQL; el controlador guarda un flash y responde 303. La plantilla GET muestra el resultado escapado. Un rechazo de validación no debe invocar la persistencia.
+
+Una categoría obligatoria requiere decidir cómo migrar talleres previos, agregar relación y restricciones, ofrecer opciones permitidas, comprobar existencia y documentar la representación API. Sus pruebas incluyen categoría válida, ausente y desconocida. La generación de tokens, la verificación de contraseña y el mecanismo de redirección no dependen de ese campo: si hay que reescribirlos, probablemente el diseño mezcló reglas de contenido con infraestructura de acceso.
+
+[Volver al tercer ejemplo](ejemplos/03.php). Compara tus decisiones con las reglas descritas, sin exigir que los nombres de las variables sean iguales.
